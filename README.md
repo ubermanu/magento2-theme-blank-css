@@ -15,3 +15,12 @@ The font sizes are meant to be responsive.<br>
 To avoid variables for each breakpoint, use the `clamp` function. 
 
 > The **lib-font-size** mixin is not available.
+
+### Email
+
+Emails are not supported since CSS variables are not working in most of the major web clients.
+
+### Prefixes
+
+Property prefixes should be added with any preprocessor if needed.<br>
+E.g: `-webkit-*` or `-moz-*`
