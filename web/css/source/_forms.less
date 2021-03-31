@@ -1,10 +1,11 @@
-
 //
 //  Variables
 //  _____________________________________________
 
---form-field__vertical-indent__desktop: 29px;
---form-calendar-icon__color: var(--primary__color);
+:root {
+    --form-field__vertical-indent__desktop: 29px;
+    --form-calendar-icon__color: var(--primary__color);
+}
 
 //
 //  Common
@@ -13,6 +14,7 @@
 & when (@media-common = true) {
     .fieldset {
         .lib-form-fieldset();
+
         &:last-child {
             margin-bottom: var(--indent__base);
         }
@@ -111,6 +113,7 @@
 
     .field .tooltip {
         .lib-tooltip(right);
+
         .tooltip-content {
             min-width: 200px;
             white-space: normal;
@@ -126,12 +129,12 @@
         ~ .ui-datepicker-trigger {
             .lib-button-reset();
             .lib-icon-font(
-            --_icon-font-content: var(--icon-calendar),
-            --_icon-font-color: var(--primary__color__lighter),
-            --_icon-font-size: var(--icon-calendar__font-size),
-            --_icon-font-line-height: var(--icon-calendar__font-size),
-            --_icon-font-display: block,
-            --_icon-font-text-hide: true
+                @_icon-font-content: var(--icon-calendar),
+                @_icon-font-color: var(--primary__color__lighter),
+                @_icon-font-size: var(--icon-calendar__font-size),
+                @_icon-font-line-height: var(--icon-calendar__font-size),
+                @_icon-font-display: block,
+                @_icon-font-text-hide: true
             );
             display: inline-block;
             vertical-align: middle;
@@ -154,7 +157,7 @@
             > .field:not(.choice) >,
             .fields > .field {
                 &:not(:last-child) {
-                    margin: 0 0 --form-field__vertical-indent;
+                    margin: 0 0 var(--form-field__vertical-indent);
                 }
 
                 .label {
@@ -184,7 +187,7 @@
 
         > .field {
             .lib-form-field-type-revert();
-            margin: 0 0 --form-field__vertical-indent__desktop;
+            margin: 0 0 var(--form-field__vertical-indent__desktop);
         }
     }
 }

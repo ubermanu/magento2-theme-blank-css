@@ -1,9 +1,10 @@
-
 //
 //  Variables
 //  _____________________________________________
 
---popup-marker__size: 7px;
+:root {
+    --popup-marker__size: 7px;
+}
 
 //
 //  Common
@@ -25,21 +26,21 @@
                     width: 40px;
                     z-index: 1001;
                     .lib-popup-button-close-icon(
-                    @popup-button-close__icon,
-                    @popup-icon-font__content,
-                    @popup-icon-font,
-                    @popup-icon-font__size,
-                    @popup-icon-font__line-height,
-                    @popup-icon-font__color,
-                    @popup-icon-font__color-hover,
-                    @popup-icon-font__color-active,
-                    @popup-icon-font__margin,
-                    @popup-icon-font__vertical-align,
-                    @popup-icon-font__position,
-                    @popup-icon-font__text-hide
+                        @popup-button-close__icon,
+                        @popup-icon-font__content,
+                        @popup-icon-font,
+                        @popup-icon-font__size,
+                        @popup-icon-font__line-height,
+                        @popup-icon-font__color,
+                        @popup-icon-font__color-hover,
+                        @popup-icon-font__color-active,
+                        @popup-icon-font__margin,
+                        @popup-icon-font__vertical-align,
+                        @popup-icon-font__position,
+                        @popup-icon-font__text-hide
                     );
                     ._lib-popup-button-close-reset(
-                    @popup-button-close__reset
+                        @popup-button-close__reset
                     );
                 }
             }
@@ -48,11 +49,11 @@
 
     .popup-pointer {
         .lib-pointer(
-        --_size: var(--popup-marker__size),
-        --_background-color: var(--popup__background),
-        --_border-color: var(--popup__border-color),
-        --_position__vertical__value: 2px,
-        --_position__horizontal__value: 2px
+            @_size: var(--popup-marker__size),
+            @_background-color: var(--popup__background),
+            @_border-color: var(--popup__border-color),
+            @_position__vertical__value: 2 px,
+            @_position__horizontal__value: 2 px
         );
         margin-left: -@popup-marker__size * 2;
         position: absolute;

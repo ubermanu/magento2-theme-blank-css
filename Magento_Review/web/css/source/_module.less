@@ -1,10 +1,11 @@
-
 //
 //  Variables
 //  _____________________________________________
 
---review-ratings-left: 280px;
---reviews-indent-desktop: 30px;
+:root {
+    --review-ratings-left: 280px;
+    --reviews-indent-desktop: 30px;
+}
 
 //
 //  Common
@@ -235,7 +236,7 @@
 
     .review {
         &-toolbar {
-            border-top: 1px solid --color-gray79;
+            border-top: 1px solid var(--color-gray79);
             margin: 0 0 var(--indent__base);
             text-align: center;
 
@@ -244,7 +245,7 @@
             }
 
             .pages {
-                border-bottom: 1px solid --color-gray79;
+                border-bottom: 1px solid var(--color-gray79);
                 display: block;
                 padding: var(--indent__base) 0;
                 text-align: center;
@@ -294,7 +295,7 @@
 
         &-item {
             .lib-clearer();
-            border-bottom: 1px solid --color-gray79;
+            border-bottom: 1px solid var(--color-gray79);
             margin: 0;
             padding: var(--indent__base) 0;
 
@@ -347,7 +348,7 @@
         }
 
         &-toolbar {
-            margin: 0 0 --reviews-indent-desktop;
+            margin: 0 0 var(--reviews-indent-desktop);
 
             .pages {
                 padding: var(--reviews-indent-desktop) 0;
@@ -363,7 +364,7 @@
         }
 
         &-title {
-            margin: 0 0 --reviews-indent-desktop;
+            margin: 0 0 var(--reviews-indent-desktop);
         }
     }
 }

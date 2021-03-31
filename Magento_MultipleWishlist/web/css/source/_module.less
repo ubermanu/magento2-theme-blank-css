@@ -1,8 +1,9 @@
-
---desktop-popup-width: 380px;
---desktop-popup-margin-left: -((@desktop-popup-width + (@popup__padding * 2)) / 2);
---desktop-popup-position-left: 50%;
---desktop-popup-position-top: 20%;
+:root {
+    --desktop-popup-width: 380px;
+    --desktop-popup-margin-left: -((@desktop-popup-width + (@popup__padding * 2)) / 2);
+    --desktop-popup-position-left: 50%;
+    --desktop-popup-position-top: 20%;
+}
 
 //
 //  Common
@@ -13,34 +14,37 @@
         //  Wish list split button
         &.split.button {
             .lib-dropdown-split(
-            --_options-selector: ~'.items',
-            --_dropdown-split-button-border-radius-fix: true,
-            --_dropdown-split-list-item-padding: 5px 5px 5px 23px,
-            --_dropdown-split-toggle-icon-content: var(--icon-down),
-            --_dropdown-split-toggle-active-icon-content: var(--icon-up),
-            --_dropdown-split-toggle-actions-padding: false,
-            --_icon-font-size: 22px,
-            --_icon-font-color: var(--addto-color),
-            --_icon-font-color-hover: var(--addto-hover-color),
-            --_dropdown-split-list-pointer-position: left,
-            --_dropdown-split-list-min-width: 200px
+                @_options-selector: ~'.items',
+                @_dropdown-split-button-border-radius-fix: true,
+                @_dropdown-split-list-item-padding: 5 px 5 px 5 px 23 px,
+                @_dropdown-split-toggle-icon-content: var(--icon-down),
+                @_dropdown-split-toggle-active-icon-content: var(--icon-up),
+                @_dropdown-split-toggle-actions-padding: false,
+                @_icon-font-size: 22 px,
+                @_icon-font-color: var(--addto-color),
+                @_icon-font-color-hover: var(--addto-hover-color),
+                @_dropdown-split-list-pointer-position: left,
+                @_dropdown-split-list-min-width: 200 px
             );
             vertical-align: middle;
             &:extend(.abs-dropdown-items-new all);
 
             .items {
                 text-align: left;
+
                 .item {
                     > span {
                         display: block;
                         padding: 5px 5px 5px 23px;
                     }
+
                     &:last-child {
                         &:hover {
                             background: var(--dropdown-list-item__hover);
                         }
                     }
                 }
+
                 li {
                     padding: 0;
                 }
@@ -50,10 +54,11 @@
             .product-items & {
                 > .action {
                     &:extend(.abs-action-button-as-link all);
+
                     &.split {
                         &:extend(.abs-actions-addto-gridlist all);
                         .lib-icon-font-symbol(
-                        --_icon-font-content: var(--icon-wishlist-empty)
+                            @_icon-font-content: var(--icon-wishlist-empty)
                         );
                     }
 
@@ -112,6 +117,7 @@
 
         &.overlay {
             .lib-window-overlay();
+
             &.active {
                 display: block;
             }
@@ -168,6 +174,7 @@
                     margin-right: var(--indent__base);
                 }
             }
+
             //  Wish list toolbar actions
             &-dropdown.move {
                 margin-right: var(--indent__base);
@@ -275,7 +282,7 @@
         .wishlist {
             //  Select wish list
             &-select {
-                margin: 0 -@layout__width-xs-indent 20px;
+                margin: 0 calc(-1 * var(--layout__width-xs-indent)) 20px;
 
                 .wishlist-name {
                     &:extend(.abs-toggling-title-mobile all);
@@ -386,7 +393,7 @@
     .wishlist {
         &.window.popup {
             .field {
-                .lib-form-field-type-revert(--_type: block);
+                .lib-form-field-type-revert(@_type: block);
             }
 
             bottom: auto;
@@ -405,7 +412,7 @@
         .wishlist {
             //  Select wish list
             &-select {
-                border-bottom: 1px solid --secondary__color;
+                border-bottom: 1px solid var(--secondary__color);
                 display: table;
                 margin-bottom: 15px;
                 width: 100%;
@@ -435,7 +442,7 @@
                     }
 
                     .current {
-                        border-bottom: 3px solid --active__color;
+                        border-bottom: 3px solid var(--active__color);
                         font-weight: var(--font-weight__semibold);
                     }
                 }

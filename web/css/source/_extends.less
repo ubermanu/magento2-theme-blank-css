@@ -1,4 +1,3 @@
-
 //
 //  Styles Extends
 //  _____________________________________________
@@ -10,6 +9,7 @@
 & when (@media-common = true) {
     .abs-reset-list {
         .lib-list-reset-styles();
+
         > li {
             margin: 0;
         }
@@ -32,7 +32,7 @@
 //  Product options list
 //  ---------------------------------------------
 
---abs-product-options-list: {
+@abs-product-options-list: {
     dt {
         clear: left;
         float: left;
@@ -66,7 +66,7 @@
 //  Button reset width, floats, margins
 //  ---------------------------------------------
 
---abs-button-responsive: {
+@abs-button-responsive: {
     .lib-button-responsive();
 };
 
@@ -92,7 +92,7 @@
 //  Blocks in 2 columns
 //  ---------------------------------------------
 
---abs-blocks-2columns: {
+@abs-blocks-2columns: {
     width: 48.8%;
 
     &:nth-child(odd) {
@@ -162,7 +162,7 @@
         }
 
         .lib-font-size(18);
-        border-bottom: 1px solid --secondary__color;
+        border-bottom: 1px solid var(--secondary__color);
         margin-bottom: 15px;
         padding-bottom: 12px;
     }
@@ -229,10 +229,10 @@
 & when (@media-common = true) {
     .abs-dropdown-simple {
         .lib-dropdown(
-            --_dropdown-list-item-padding: 5px 5px 5px 23px,
-            --_dropdown-list-min-width: 200px,
-            --_icon-font-margin: 0 0 0 5px,
-            --_icon-font-vertical-align: middle
+            @_dropdown-list-item-padding: 5px 5px 5px 23px,
+            @_dropdown-list-min-width: 200px,
+            @_icon-font-margin: 0 0 0 5px,
+            @_icon-font-vertical-align: middle
         );
     }
 }
@@ -266,12 +266,12 @@
     .abs-remove-button-for-blocks {
         .lib-icon-font(
             @icon-remove,
-            --_icon-font-size: 26px,
-            --_icon-font-line-height: 15px,
-            --_icon-font-text-hide: true,
-            --_icon-font-color: var(--color-gray19),
-            --_icon-font-color-hover: var(--color-gray19),
-            --_icon-font-color-active: var(--color-gray19)
+            @_icon-font-size: 26px,
+            @_icon-font-line-height: 15px,
+            @_icon-font-text-hide: true,
+            @_icon-font-color: var(--color-gray19),
+            @_icon-font-color-hover: var(--color-gray19),
+            @_icon-font-color-active: var(--color-gray19)
         );
     }
 }
@@ -286,14 +286,14 @@
 
         > a {
             .lib-link(
-                --_link-color: var(--product-name-link__color),
-                --_link-text-decoration: var(--product-name-link__text-decoration),
-                --_link-color-visited: var(--product-name-link__color__visited),
-                --_link-text-decoration-visited: var(--product-name-link__text-decoration__visited),
-                --_link-color-hover: var(--product-name-link__color__hover),
-                --_link-text-decoration-hover: var(--product-name-link__text-decoration__hover),
-                --_link-color-active: var(--product-name-link__color__active),
-                --_link-text-decoration-active: var(--product-name-link__text-decoration__active)
+                @_link-color: var(--product-name-link__color),
+                @_link-text-decoration: var(--product-name-link__text-decoration),
+                @_link-color-visited: var(--product-name-link__color__visited),
+                @_link-text-decoration-visited: var(--product-name-link__text-decoration__visited),
+                @_link-color-hover: var(--product-name-link__color__hover),
+                @_link-text-decoration-hover: var(--product-name-link__text-decoration__hover),
+                @_link-color-active: var(--product-name-link__color__active),
+                @_link-text-decoration-active: var(--product-name-link__text-decoration__active)
             );
         }
     }
@@ -303,7 +303,7 @@
 //  Reset left margin
 //  ---------------------------------------------
 
---abs-reset-left-margin: {
+@abs-reset-left-margin: {
     margin-left: 0;
 };
 
@@ -440,7 +440,7 @@
 //  Margin for forms
 //  ---------------------------------------------
 
---abs-margin-for-forms-desktop: {
+@abs-margin-for-forms-desktop: {
     margin-left: var(--form-field-type-label-inline__width);
 };
 
@@ -470,7 +470,7 @@
 //  Visually hidden / show visually hidden
 //  ---------------------------------------------
 
---abs-visually-hidden: {
+@abs-visually-hidden: {
     .lib-visually-hidden();
 };
 
@@ -518,7 +518,7 @@
 //  Clearfix
 //  ---------------------------------------------
 
---abs-add-clearfix: {
+@abs-add-clearfix: {
     .lib-clearfix();
 };
 
@@ -556,7 +556,7 @@
 //  Box-sizing
 //  ---------------------------------------------
 
---abs-add-box-sizing: {
+@abs-add-box-sizing: {
     box-sizing: border-box;
 };
 
@@ -593,7 +593,7 @@
         .fieldset {
             > .field,
             .fields > .field {
-                .lib-form-field-type-revert(--_type: block);
+                .lib-form-field-type-revert(@_type: block);
 
                 &:not(:first-child):last-of-type {
                     margin-bottom: 0;
@@ -610,11 +610,11 @@
 & when (@media-common = true) {
     .abs-navigation-icon {
         .lib-icon-font(
-            --_icon-font-content: var(--icon-down),
-            --_icon-font-size: 34px,
-            --_icon-font-line-height: 1.2,
-            --_icon-font-position: after,
-            --_icon-font-display: block
+            @_icon-font-content: var(--icon-down),
+            @_icon-font-size: 34px,
+            @_icon-font-line-height: 1.2,
+            @_icon-font-position: after,
+            @_icon-font-display: block
         );
 
         &:after {
@@ -633,7 +633,7 @@
     .abs-split-button {
         .lib-dropdown-split(
             @_options-selector : ~'.items',
-            --_dropdown-split-button-border-radius-fix: true
+            @_dropdown-split-button-border-radius-fix: true
         );
         vertical-align: middle;
     }
@@ -651,13 +651,13 @@
 
     .abs-actions-addto-gridlist {
         .lib-icon-font(
-            --_icon-font-content: '',
-            --_icon-font-size: 29px,
-            --_icon-font-color: var(--addto-color),
-            --_icon-font-color-hover: var(--addto-hover-color),
-            --_icon-font-text-hide: true,
-            --_icon-font-vertical-align: middle,
-            --_icon-font-line-height: 24px
+            @_icon-font-content: '',
+            @_icon-font-size: 29px,
+            @_icon-font-color: var(--addto-color),
+            @_icon-font-color-hover: var(--addto-hover-color),
+            @_icon-font-text-hide: true,
+            @_icon-font-vertical-align: middle,
+            @_icon-font-line-height: 24px
         );
     }
 }
@@ -678,7 +678,7 @@
 
 & when (@media-common = true) {
     .abs-action-button-as-link {
-        .lib-button-as-link(--_margin: false);
+        .lib-button-as-link(@_margin: false);
         border-radius: 0;
         font-size: inherit;
         font-weight: var(--font-weight__regular);
@@ -739,7 +739,7 @@
             .lib-font-size(11);
 
             &:before {
-                content: '('attr(data-label)': ';
+                content: '(' attr(data-label) ': ';
             }
 
             &:after {
@@ -760,10 +760,10 @@
         position: relative;
         .lib-icon-font(
             @icon-down,
-            --_icon-font-size: 26px,
-            --_icon-font-line-height: 10px,
-            --_icon-font-margin: 3px 0 0 0,
-            --_icon-font-position: after
+            @_icon-font-size: 26px,
+            @_icon-font-line-height: 10px,
+            @_icon-font-margin: 3px 0 0 0,
+            @_icon-font-position: after
         );
 
         &:after {
@@ -774,16 +774,16 @@
 
         &-expanded {
             .lib-icon-font-symbol(
-                --_icon-font-content: var(--icon-up),
-                --_icon-font-position: after
+                @_icon-font-content: var(--icon-up),
+                @_icon-font-position: after
             );
         }
     }
 
     .abs-tax-total-expanded {
         .lib-icon-font-symbol(
-            --_icon-font-content: var(--icon-up),
-            --_icon-font-position: after
+            @_icon-font-content: var(--icon-up),
+            @_icon-font-position: after
         );
     }
 }
@@ -808,7 +808,7 @@
     .abs-checkout-order-review {
         tbody tr {
             &:not(:last-child) {
-                border-bottom: var(--border-width__base) solid --border-color__base;
+                border-bottom: var(--border-width__base) solid var(--border-color__base);
             }
 
             &:extend(.abs-add-clearfix-mobile all);
@@ -909,10 +909,10 @@
 & when (@media-common = true) {
     .abs-icon-add {
         .lib-icon-font(
-            --_icon-font-content: var(--icon-expand),
-            --_icon-font-size: 10px,
-            --_icon-font-line-height: 10px,
-            --_icon-font-vertical-align: middle
+            @_icon-font-content: var(--icon-expand),
+            @_icon-font-size: 10px,
+            @_icon-font-line-height: 10px,
+            @_icon-font-vertical-align: middle
         );
     }
 }
@@ -920,12 +920,12 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .abs-icon-add-mobile {
         .lib-icon-font(
-            --_icon-font-content: var(--icon-expand),
-            --_icon-font-size: 10px,
-            --_icon-font-line-height: 10px,
-            --_icon-font-vertical-align: middle,
-            --_icon-font-margin: 0 5px 0 0,
-            --_icon-font-display: block
+            @_icon-font-content: var(--icon-expand),
+            @_icon-font-size: 10px,
+            @_icon-font-line-height: 10px,
+            @_icon-font-vertical-align: middle,
+            @_icon-font-margin: 0 5px 0 0,
+            @_icon-font-display: block
         );
     }
 }
@@ -944,6 +944,7 @@
 
         .action.new {
             &:extend(.abs-icon-add all);
+
             &:before {
                 margin-left: -17px;
                 margin-right: var(--indent__xs);
@@ -966,11 +967,11 @@
         position: relative;
 
         .lib-icon-font(
-            --_icon-font-content: var(--icon-down),
-            --_icon-font-size: 28px,
-            --_icon-font-text-hide: false,
-            --_icon-font-position: after,
-            --_icon-font-display: block
+            @_icon-font-content: var(--icon-down),
+            @_icon-font-size: 28px,
+            @_icon-font-text-hide: false,
+            @_icon-font-position: after,
+            @_icon-font-display: block
         );
 
         &:after {
@@ -981,8 +982,8 @@
 
         &.active {
             .lib-icon-font-symbol(
-                --_icon-font-content: var(--icon-up),
-                --_icon-font-position: after
+                @_icon-font-content: var(--icon-up),
+                @_icon-font-position: after
             );
         }
     }
@@ -992,7 +993,7 @@
 //  Abstract no display
 //  ---------------------------------------------
 
---abs-no-display: {
+@abs-no-display: {
     display: none;
 };
 
@@ -1110,12 +1111,12 @@
                 font-weight: var(--font-weight__bold);
                 .lib-link-as-button();
                 .lib-button(
-                    --_button-padding: 7px 15px 7px 0,
-                    --_button-icon-use: true,
-                    --_button-font-content: var(--icon-prev),
-                    --_button-icon-font-size: 32px,
-                    --_button-icon-font-line-height: 16px,
-                    --_button-icon-font-position: before
+                    @_button-padding: 7px 15px 7px 0,
+                    @_button-icon-use: true,
+                    @_button-font-content: var(--icon-prev),
+                    @_button-icon-font-size: 32px,
+                    @_button-icon-font-line-height: 16px,
+                    @_button-icon-font-position: before
                 );
 
                 &:active {
@@ -1126,8 +1127,8 @@
             &.update {
                 .lib-button-icon(
                     @icon-update,
-                    --_icon-font-size: 32px,
-                    --_icon-font-line-height: 16px
+                    @_icon-font-size: 32px,
+                    @_icon-font-line-height: 16px
                 );
                 padding-left: var(--indent__xs);
             }
@@ -1227,7 +1228,7 @@
 //  Checkout Tooltip Content (position: top)
 //  ---------------------------------------------
 
---abs-checkout-tooltip-content-position-top: {
+@abs-checkout-tooltip-content-position-top: {
     right: var(--checkout-tooltip-content-mobile__right);
     top: var(--checkout-tooltip-content-mobile__top);
     left: auto;
@@ -1235,9 +1236,9 @@
     &:before,
     &:after {
         .lib-arrow(
-            --_position: top,
-            --_size: var(--checkout-tooltip-icon-arrow__font-size),
-            --_color: var(--checkout-tooltip-content__background-color)
+            @_position: top,
+            @_size: var(--checkout-tooltip-icon-arrow__font-size),
+            @_color: var(--checkout-tooltip-content__background-color)
         );
         margin-top: var(--checkout-tooltip-icon-arrow__left);
         right: var(--indent__s);
@@ -1276,11 +1277,11 @@
         border-bottom: var(--checkout-step-title__border);
         padding-bottom: var(--checkout-step-title__padding);
         .lib-typography(
-            --_font-size: var(--checkout-step-title__font-size),
-            --_font-weight: var(--checkout-step-title__font-weight),
-            --_font-family: false,
-            --_font-style: false,
-            --_line-height: false
+            @_font-size: var(--checkout-step-title__font-size),
+            @_font-weight: var(--checkout-step-title__font-weight),
+            @_font-family: false,
+            @_font-style: false,
+            @_line-height: false
         );
     }
 }
@@ -1342,10 +1343,10 @@
                 .amount .price {
                     .lib-icon-font(
                         @icon-down,
-                        --_icon-font-size: 30px,
-                        --_icon-font-text-hide: true,
-                        --_icon-font-position: after,
-                        --_icon-font-display: block
+                        @_icon-font-size: 30px,
+                        @_icon-font-text-hide: true,
+                        @_icon-font-position: after,
+                        @_icon-font-display: block
                     );
                     padding-right: var(--indent__m);
                     position: relative;
@@ -1365,15 +1366,15 @@
 
                     .amount .price {
                         .lib-icon-font-symbol(
-                            --_icon-font-content: var(--icon-up),
-                            --_icon-font-position: after
+                            @_icon-font-content: var(--icon-up),
+                            @_icon-font-position: after
                         );
                     }
                 }
             }
 
             &-details {
-                border-bottom: var(--border-width__base solid @border-color__base);
+                border-bottom: var(--border-width__base) solid var(--border-color__base);
                 display: none;
 
                 &.shown {
@@ -1395,14 +1396,14 @@
 & when (@media-common = true) {
     .abs-discount-block {
         > .title {
-            border-top: var(--border-width__base) solid --border-color__base;
+            border-top: var(--border-width__base) solid var(--border-color__base);
             cursor: pointer;
             font-weight: var(--font-weight__semibold);
             .lib-icon-font(
-                --_icon-font-content: var(--icon-down),
-                --_icon-font-size: 30px,
-                --_icon-font-position: after,
-                --_icon-font-display: block
+                @_icon-font-content: var(--icon-down),
+                @_icon-font-size: 30px,
+                @_icon-font-position: after,
+                @_icon-font-display: block
             );
             margin-bottom: 0;
             overflow: hidden;
@@ -1430,8 +1431,8 @@
         &.active {
             > .title {
                 .lib-icon-font-symbol(
-                    --_icon-font-content: var(--icon-up),
-                    --_icon-font-position: after
+                    @_icon-font-content: var(--icon-up),
+                    @_icon-font-position: after
                 );
             }
 

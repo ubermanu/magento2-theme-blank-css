@@ -1,4 +1,3 @@
-
 //
 //  Components -> Modals
 //  _____________________________________________
@@ -7,21 +6,23 @@
 //  Variables
 //  ---------------------------------------------
 
---modal-title__color: var(--text__color);
---modal-title__border: 1px solid --color-gray-light5;
+:root {
+    --modal-title__color: var(--text__color);
+    --modal-title__border: 1px solid --color-gray-light5;
 
---modal-popup-title__font-size: 26px;
---modal-popup-title-mobile__font-size: var(--font-size__base);
+    --modal-popup-title__font-size: 26px;
+    --modal-popup-title-mobile__font-size: var(--font-size__base);
 
---modal-slide__first__indent-left: 44px;
---modal-slide-mobile__background-color: var(--color-gray-light01);
---modal-overlay__background-color: fade(@color-gray20, 55%);
+    --modal-slide__first__indent-left: 44px;
+    --modal-slide-mobile__background-color: var(--color-gray-light01);
+    --modal-overlay__background-color: fade(@color-gray20, 55%);
 
---modal-action-close__color: var(--primary__color);
---modal-action-close__font-size: 32px;
---modal-action-close__hover__color: darken(@primary__color, 10%);
+    --modal-action-close__color: var(--primary__color);
+    --modal-action-close__font-size: 32px;
+    --modal-action-close__hover__color: darken(@primary__color, 10%);
 
---modal-slide-action-close__padding: var(--modal-slide-header__padding-vertical) - 1rem @modal-popup__padding - 1rem;
+    --modal-slide-action-close__padding: var(--modal-slide-header__padding-vertical) - 1rem @modal-popup__padding - 1rem;
+}
 
 //
 //  Common
@@ -35,10 +36,10 @@
             .lib-button-reset();
             .lib-button-icon(
                 @icon-remove,
-                --_icon-font-color: var(--minicart-icons-color),
-                --_icon-font-size: var(--modal-action-close__font-size),
-                --_icon-font-line-height: var(--modal-action-close__font-size),
-                --_icon-font-text-hide: true
+                @_icon-font-color: var(--minicart-icons-color),
+                @_icon-font-size: var(--modal-action-close__font-size),
+                @_icon-font-line-height: var(--modal-action-close__font-size),
+                @_icon-font-text-hide: true
             );
             position: absolute;
             right: 0;
@@ -147,6 +148,7 @@
 
     .modal-popup {
         pointer-events: auto;
+
         &.modal-slide {
             .modal-inner-wrap[class] {
                 background-color: var(--modal-slide-mobile__background-color);

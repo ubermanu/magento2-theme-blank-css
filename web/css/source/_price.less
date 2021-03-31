@@ -1,4 +1,3 @@
-
 //
 //  Common
 //  _____________________________________________
@@ -27,7 +26,7 @@
             }
 
             &-including-tax:after {
-                content: '('attr(data-label)')';
+                content: '(' attr(data-label) ')';
             }
         }
     }
@@ -45,6 +44,7 @@
 
             .cart-tax-total {
                 &:extend(.abs-tax-total all);
+
                 &-expanded {
                     &:extend(.abs-tax-total-expanded all);
                 }

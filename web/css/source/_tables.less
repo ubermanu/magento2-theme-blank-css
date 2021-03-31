@@ -1,4 +1,3 @@
-
 //
 //  Common
 //  _____________________________________________
@@ -16,8 +15,8 @@
         &:not(.cart) {
             &:not(.totals) {
                 .lib-table-bordered(
-                --_table_type: light,
-                --_table_border-width: var(--table__border-width)
+                    @_table_type: light,
+                    @_table_border-width: var(--table__border-width)
                 );
 
                 tfoot {
@@ -25,7 +24,7 @@
                         &:first-child {
                             th,
                             td {
-                                border-top: var(--table__border-width) @table__border-style --table__border-color;
+                                border-top: var(--table__border-width) var(--table__border-style) var(--table__border-color);
                                 padding-top: var(--indent__base);
                             }
                         }

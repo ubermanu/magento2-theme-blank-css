@@ -1,4 +1,3 @@
-
 //  The contents of this file will get split into two output files: email.less and email-inline.less.
 //
 //  email.less
@@ -34,7 +33,9 @@
 //  Variables
 //  _____________________________________________
 
---font-size-unit-convert: false; // Prevents font-related measurements from being converted to the incompatible rem unit
+:root {
+    --font-size-unit-convert: false; // Prevents font-related measurements from being converted to the incompatible rem unit
+}
 
 //
 //  Resets
@@ -161,7 +162,7 @@ body {
 }
 
 .header {
-    padding: var(--email-body__padding) @email-body__padding 0;
+    padding: var(--email-body__padding) var(--email-body__padding) 0;
 }
 
 .main-content {
@@ -170,7 +171,7 @@ body {
 }
 
 .footer {
-    padding: 0 @email-body__padding --email-body__padding; // Reduce space between body of email and closing text
+    padding: 0 var(--email-body__padding) var(--email-body__padding); // Reduce space between body of email and closing text
 }
 
 //  Layout (Mobile)
@@ -205,7 +206,7 @@ body {
 
             a {
                 border-radius: var(--button__border-radius, 1);
-                border: 1px solid --button-primary__background;
+                border: 1px solid var(--button-primary__background);
                 color: var(--button-primary__color);
                 display: inline-block;
                 font-size: var(--button__font-size);
@@ -233,7 +234,7 @@ body {
         a:hover,
         a:visited {
             //  Undo general link hover state
-            border: 1px solid --button-primary__hover__background;
+            border: 1px solid var(--button-primary__hover__background);
             color: var(--button-primary__hover__color) !important;
             text-decoration: none !important;
         }
@@ -264,7 +265,7 @@ body {
 
     td {
         background-color: var(--message-email__background);
-        border: 1px solid --message-email__border-color;
+        border: 1px solid var(--message-email__border-color);
         color: var(--message-email__color);
         margin: 0;
         padding: var(--email-content__padding__base);
