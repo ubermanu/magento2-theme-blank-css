@@ -10,10 +10,10 @@
 & when (@media-common = true) {
 
     .block.filter {
-        margin-bottom: @indent__xl;
+        margin-bottom: var(--indent__xl);
 
         .filter-title {
-            margin-bottom: @indent__base;
+            margin-bottom: var(--indent__base);
 
             strong {
                 font-size: 18px;
@@ -23,17 +23,17 @@
 
     .block-subtitle {
         display: inline-block;
-        margin-bottom: @indent__s;
+        margin-bottom: var(--indent__s);
     }
 
     .filter-current {
         .item {
-            margin-bottom: @indent__s;
+            margin-bottom: var(--indent__s);
         }
 
         .filter-label {
             display: block;
-            font-weight: @font-weight__bold;
+            font-weight: var(--font-weight__bold);
 
             &:after {
                 content: ':';
@@ -41,7 +41,7 @@
         }
 
         + .filter-actions {
-            margin-bottom: @indent__l;
+            margin-bottom: var(--indent__l);
         }
     }
 
@@ -56,12 +56,12 @@
 
         .filter-options-title {
             .lib-heading(h4);
-            margin: 0 0 @indent__s;
+            margin: 0 0 --indent__s;
             word-break: break-all;
         }
 
         .filter-options-content {
-            margin: 0 0 @indent__m;
+            margin: 0 0 --indent__m;
 
             .item {
                 margin-bottom: 3px;
@@ -96,7 +96,7 @@
             position: relative;
 
             .label {
-                font-weight: @font-weight__bold;
+                font-weight: var(--font-weight__bold);
             }
 
             .action.remove {

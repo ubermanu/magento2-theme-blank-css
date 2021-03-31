@@ -3,8 +3,8 @@
 //  * See COPYING.txt for license details.
 //  */
 
-@layout-column-main__sidebar-offset: 2%;
-@layout-column__additional-sidebar-offset: @layout-column-main__sidebar-offset;
+--layout-column-main__sidebar-offset: 2%;
+--layout-column__additional-sidebar-offset: var(--layout-column-main__sidebar-offset);
 
 //
 //  Common
@@ -55,8 +55,8 @@
     .page-wrapper > .page-bottom,
     .block.category.event,
     .top-container {
-        padding-left: @layout__width-xs-indent;
-        padding-right: @layout__width-xs-indent;
+        padding-left: var(--layout__width-xs-indent);
+        padding-right: var(--layout__width-xs-indent);
     }
 
     .page-main {
@@ -86,9 +86,9 @@
         box-sizing: border-box;
         margin-left: auto;
         margin-right: auto;
-        max-width: @layout__max-width;
-        padding-left: @layout-indent__width;
-        padding-right: @layout-indent__width;
+        max-width: var(--layout__max-width);
+        padding-left: var(--layout-indent__width);
+        padding-right: var(--layout-indent__width);
         width: auto;
     }
 
@@ -108,19 +108,19 @@
 
     .sidebar-main {
         #lib-layout-columns > .left();
-        padding-right: @layout-column-main__sidebar-offset;
+        padding-right: var(--layout-column-main__sidebar-offset);
         &:extend(.abs-add-box-sizing-desktop all);
     }
 
     .page-layout-2columns-right .sidebar-main {
-        padding-left: @layout-column-main__sidebar-offset;
+        padding-left: var(--layout-column-main__sidebar-offset);
         padding-right: 0;
     }
 
     .sidebar-additional {
         #lib-layout-columns > .right();
         clear: right;
-        padding-left: @layout-column__additional-sidebar-offset;
+        padding-left: var(--layout-column__additional-sidebar-offset);
         &:extend(.abs-add-box-sizing-desktop all);
     }
 

@@ -7,7 +7,7 @@
 //  Variables
 //  _____________________________________________
 
-@popup-marker__size: 7px;
+--popup-marker__size: 7px;
 
 //
 //  Common
@@ -52,11 +52,11 @@
 
     .popup-pointer {
         .lib-pointer(
-        @_size: @popup-marker__size,
-        @_background-color: @popup__background,
-        @_border-color: @popup__border-color,
-        @_position__vertical__value: 2px,
-        @_position__horizontal__value: 2px
+        --_size: @popup-marker__size,
+        --_background-color: @popup__background,
+        --_border-color: @popup__border-color,
+        --_position__vertical__value: 2px,
+        --_position__horizontal__value: 2px
         );
         margin-left: -@popup-marker__size * 2;
         position: absolute;

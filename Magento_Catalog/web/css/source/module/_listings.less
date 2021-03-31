@@ -7,15 +7,15 @@
 //  Variables
 //  ---------------------------------------------
 
-@product-name-link__color: @text__color;
-@product-name-link__color__active: @text__color;
-@product-name-link__color__hover: @text__color;
-@product-name-link__color__visited: @text__color;
+--product-name-link__color: var(--text__color);
+--product-name-link__color__active: var(--text__color);
+--product-name-link__color__hover: var(--text__color);
+--product-name-link__color__visited: var(--text__color);
 
-@product-name-link__text-decoration: none;
-@product-name-link__text-decoration__active: @link__hover__text-decoration;
-@product-name-link__text-decoration__hover: @link__hover__text-decoration;
-@product-name-link__text-decoration__visited: @link__hover__text-decoration;
+--product-name-link__text-decoration: none;
+--product-name-link__text-decoration__active: var(--link__hover__text-decoration);
+--product-name-link__text-decoration__hover: var(--link__hover__text-decoration);
+--product-name-link__text-decoration__visited: var(--link__hover__text-decoration);
 
 //
 //  Common
@@ -118,22 +118,22 @@
                 }
 
                 .reviews-actions {
-                    font-size: @font-size__s;
+                    font-size: var(--font-size__s);
                     margin-top: 5px;
                 }
             }
 
             .price-box {
-                margin: @indent__s 0 @indent__m;
+                margin: @indent__s 0 --indent__m;
 
                 .price {
                     .lib-font-size(14);
-                    font-weight: @font-weight__bold;
+                    font-weight: var(--font-weight__bold);
                     white-space: nowrap;
                 }
 
                 .price-label {
-                    font-size: @font-size__s;
+                    font-size: var(--font-size__s);
 
                     &:after {
                         content: ':';
@@ -145,7 +145,7 @@
             .minimal-price {
                 .price {
                     .lib-font-size(14);
-                    font-weight: @font-weight__bold;
+                    font-weight: var(--font-weight__bold);
                 }
 
                 .price-wrapper {
@@ -163,7 +163,7 @@
 
             .old-price {
                 .price {
-                    font-weight: @font-weight__regular;
+                    font-weight: var(--font-weight__regular);
                 }
             }
 
@@ -188,7 +188,7 @@
                 }
 
                 .price {
-                    font-weight: @font-weight__regular;
+                    font-weight: var(--font-weight__regular);
                 }
             }
 
@@ -223,7 +223,7 @@
 
         .price-including-tax + .price-excluding-tax,
         .weee {
-            margin-top: @indent__xs;
+            margin-top: var(--indent__xs);
         }
 
         .price-including-tax + .price-excluding-tax,
@@ -303,7 +303,7 @@
     .product {
         &-item {
             .products-grid & {
-                margin-bottom: @indent__l;
+                margin-bottom: var(--indent__l);
             }
 
             &-actions {

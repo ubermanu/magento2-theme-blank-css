@@ -15,7 +15,7 @@
             &:before {
                 content: '- ' attr(data-label) ' -';
                 display: block;
-                margin: @indent__xs @indent__xs @indent__s;
+                margin: @indent__xs @indent__xs --indent__s;
                 text-transform: uppercase;
             }
         }
@@ -24,7 +24,7 @@
             &:before {
                 content: '- ' attr(data-label) ' -';
                 display: block;
-                margin: @indent__s @indent__xs;
+                margin: @indent__s --indent__xs;
                 text-align: center;
                 text-transform: uppercase;
             }
@@ -32,7 +32,7 @@
 
         &.acceptance {
             display: block;
-            margin: 0 0 @indent__base;
+            margin: 0 0 --indent__base;
 
             img {
                 max-width: 100%;

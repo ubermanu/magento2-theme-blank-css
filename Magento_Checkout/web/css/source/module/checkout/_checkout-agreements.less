@@ -10,7 +10,7 @@
 & when (@media-common = true) {
     .checkout-agreements-block {
         .checkout-agreements {
-            margin-bottom: @indent__base;
+            margin-bottom: var(--indent__base);
         }
 
         .checkout-agreement.field {
@@ -25,12 +25,12 @@
                     &:after {
                         content: '*';
                         .lib-typography(
-                            @_font-size: @form-field-label-asterisk__font-size,
-                            @_color: @form-field-label-asterisk__color,
-                            @_font-family: @form-field-label-asterisk__font-family,
-                            @_font-weight: @form-field-label-asterisk__font-weight,
-                            @_line-height: @form-field-label-asterisk__line-height,
-                            @_font-style: @form-field-label-asterisk__font-style
+                            --_font-size: @form-field-label-asterisk__font-size,
+                            --_color: @form-field-label-asterisk__color,
+                            --_font-family: @form-field-label-asterisk__font-family,
+                            --_font-weight: @form-field-label-asterisk__font-weight,
+                            --_line-height: @form-field-label-asterisk__line-height,
+                            --_font-style: @form-field-label-asterisk__font-style
                         );
                     }
                 }
@@ -46,10 +46,10 @@
     //  Checkout Agreements in popup
     .checkout-agreements-items {
         &:extend(.abs-reset-list all);
-        padding-bottom: @indent__l;
+        padding-bottom: var(--indent__l);
 
         .checkout-agreements-item {
-            margin-bottom: @indent__base;
+            margin-bottom: var(--indent__base);
         }
 
         .checkout-agreements-item-title {

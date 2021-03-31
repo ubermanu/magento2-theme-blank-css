@@ -7,30 +7,30 @@
 //  Variables
 //  _____________________________________________
 
-@checkout-progress-bar__font-size: 18px;
-@checkout-progress-bar__font-weight: @font-weight__light;
-@checkout-progress-bar__margin: @indent__base;
+--checkout-progress-bar__font-size: 18px;
+--checkout-progress-bar__font-weight: var(--font-weight__light);
+--checkout-progress-bar__margin: var(--indent__base);
 
-@checkout-progress-bar-item__background-color: @color-gray-middle1;
-@checkout-progress-bar-item__border-radius: 6px;
-@checkout-progress-bar-item__color: @primary__color;
-@checkout-progress-bar-item__margin: @indent__s;
-@checkout-progress-bar-item__width: 185px;
-@checkout-progress-bar-item__active__background-color: @active__color;
-@checkout-progress-bar-item__complete__color: @link__color;
+--checkout-progress-bar-item__background-color: var(--color-gray-middle1);
+--checkout-progress-bar-item__border-radius: 6px;
+--checkout-progress-bar-item__color: var(--primary__color);
+--checkout-progress-bar-item__margin: var(--indent__s);
+--checkout-progress-bar-item__width: 185px;
+--checkout-progress-bar-item__active__background-color: var(--active__color);
+--checkout-progress-bar-item__complete__color: var(--link__color);
 
-@checkout-progress-bar-item-element__height: @checkout-progress-bar-item-element__width;
-@checkout-progress-bar-item-element__width: 38px;
+--checkout-progress-bar-item-element__height: var(--checkout-progress-bar-item-element__width);
+--checkout-progress-bar-item-element__width: 38px;
 
-@checkout-progress-bar-item-element-inner__background-color: @page__background-color;
-@checkout-progress-bar-item-element-inner__color: @checkout-progress-bar-item__color;
-@checkout-progress-bar-item-element-inner__height: @checkout-progress-bar-item-element-inner__width;
-@checkout-progress-bar-item-element-inner__width: @checkout-progress-bar-item-element__width - (@checkout-progress-bar-item-element-outer-radius__width * 2);
-@checkout-progress-bar-item-element-inner__active__content: @icon-checkmark;
-@checkout-progress-bar-item-element-inner__active__font-size: 28px;
-@checkout-progress-bar-item-element-inner__active__line-height: 1;
+--checkout-progress-bar-item-element-inner__background-color: var(--page__background-color);
+--checkout-progress-bar-item-element-inner__color: var(--checkout-progress-bar-item__color);
+--checkout-progress-bar-item-element-inner__height: var(--checkout-progress-bar-item-element-inner__width);
+--checkout-progress-bar-item-element-inner__width: @checkout-progress-bar-item-element__width - (@checkout-progress-bar-item-element-outer-radius__width * 2);
+--checkout-progress-bar-item-element-inner__active__content: var(--icon-checkmark);
+--checkout-progress-bar-item-element-inner__active__font-size: 28px;
+--checkout-progress-bar-item-element-inner__active__line-height: 1;
 
-@checkout-progress-bar-item-element-outer-radius__width: 6px;
+--checkout-progress-bar-item-element-outer-radius__width: 6px;
 
 //
 //  Common
@@ -86,12 +86,12 @@
             word-wrap: break-word;
 
             .lib-typography(
-            @_color: @checkout-progress-bar-item__background-color,
-            @_font-family: false,
-            @_font-size: @checkout-progress-bar__font-size,
-            @_font-style: false,
-            @_font-weight: @checkout-progress-bar__font-weight,
-            @_line-height: false
+            --_color: @checkout-progress-bar-item__background-color,
+            --_font-family: false,
+            --_font-size: @checkout-progress-bar__font-size,
+            --_font-style: false,
+            --_font-weight: @checkout-progress-bar__font-weight,
+            --_line-height: false
             );
 
             &:before, // Item element
@@ -116,19 +116,19 @@
                 content: counter(i);
                 counter-increment: i;
                 .lib-typography(
-                @_color: @checkout-progress-bar-item-element-inner__color,
-                @_font-family: false,
-                @_font-size: @checkout-progress-bar__font-size,
-                @_font-style: false,
-                @_font-weight: @font-weight__semibold,
-                @_line-height: false
+                --_color: @checkout-progress-bar-item-element-inner__color,
+                --_font-family: false,
+                --_font-size: @checkout-progress-bar__font-size,
+                --_font-style: false,
+                --_font-weight: @font-weight__semibold,
+                --_line-height: false
                 );
             }
         }
 
         &._active {
             &:before {
-                background: @checkout-progress-bar-item__active__background-color;
+                background: var(--checkout-progress-bar-item__active__background-color);
             }
 
             > span {

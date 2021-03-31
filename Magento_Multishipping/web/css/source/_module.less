@@ -13,10 +13,10 @@
         &.success {
             h3 {
                 font-size: 1.6rem;
-                margin-bottom: @indent__base;
-                margin-top: @indent__l;
+                margin-bottom: var(--indent__base);
+                margin-top: var(--indent__l);
                 a {
-                    color: @text__color;
+                    color: var(--text__color);
                     &:hover {
                         text-decoration: none;
                     }
@@ -29,7 +29,7 @@
             }
 
             .orders-list {
-                margin-top: @indent__m;
+                margin-top: var(--indent__m);
                 padding-left: @indent__base - 4px;
 
                 .shipping-list {
@@ -38,24 +38,24 @@
                     }
 
                     .shipping-label {
-                        font-weight: @font-weight__bold;
-                        margin-right: @indent__s;
+                        font-weight: var(--font-weight__bold);
+                        margin-right: var(--indent__s);
                     }
 
                     .shipping-address {
-                        font-weight: @font-weight__regular;
+                        font-weight: var(--font-weight__regular);
                     }
 
                     .error-block {
-                        color: @error__color;
+                        color: var(--error__color);
 
                         .error-label {
-                            font-weight: @font-weight__bold;
-                            margin-right: @indent__s;
+                            font-weight: var(--font-weight__bold);
+                            margin-right: var(--indent__s);
                         }
 
                         .error-description {
-                            font-weight: @font-weight__regular;
+                            font-weight: var(--font-weight__regular);
                         }
                     }
                 }
@@ -79,10 +79,10 @@
         }
 
         .title {
-            margin-bottom: @indent__l;
+            margin-bottom: var(--indent__l);
 
             strong {
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
             }
         }
 
@@ -108,8 +108,8 @@
 
                 &.item {
                     .action.edit {
-                        font-weight: @font-weight__regular;
-                        margin-left: @indent__s;
+                        font-weight: var(--font-weight__regular);
+                        margin-left: var(--indent__s);
                     }
                 }
             }
@@ -124,7 +124,7 @@
         }
 
         > .actions-toolbar {
-            margin-top: @indent__xl;
+            margin-top: var(--indent__xl);
         }
 
         .actions-toolbar {
@@ -132,7 +132,7 @@
                 display: block;
 
                 .action {
-                    margin-bottom: @indent__m;
+                    margin-bottom: var(--indent__m);
 
                     &.back {
                         display: block;
@@ -142,7 +142,7 @@
             }
 
             > .primary {
-                margin-right: @indent__s;
+                margin-right: var(--indent__s);
             }
         }
 
@@ -190,11 +190,11 @@
         .block-title,
         .block-content .title {
             &:extend(.abs-account-title all);
-            border-bottom: @border-width__base solid @border-color__base;
-            padding-bottom: @indent__s;
+            border-bottom: @border-width__base solid --border-color__base;
+            padding-bottom: var(--indent__s);
 
             strong {
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
 
                 span {
                     color: var(--primary__color__light);
@@ -217,21 +217,21 @@
 
             .block-shipping {
                 .block-content:not(:last-child) {
-                    margin-bottom: @indent__xl;
+                    margin-bottom: var(--indent__xl);
                 }
             }
 
             .error-description {
-                color: @error__color;
-                font-weight: @font-weight__regular;
-                margin-bottom: @indent__s;
-                margin-top: -@indent__s;
+                color: var(--error__color);
+                font-weight: var(--font-weight__regular);
+                margin-bottom: var(--indent__s);
+                margin-top: var(---indent__s);
             }
         }
 
         .box-title {
             span {
-                margin-right: @indent__s;
+                margin-right: var(--indent__s);
             }
 
             > .action {
@@ -241,7 +241,7 @@
 
         .box-shipping-method {
             .price {
-                font-weight: @font-weight__bold;
+                font-weight: var(--font-weight__bold);
             }
         }
 
@@ -250,7 +250,7 @@
                 margin: 0;
 
                 .legend.box-title {
-                    margin: 0 0 @indent__xs;
+                    margin: 0 0 --indent__xs;
                 }
             }
         }
@@ -261,10 +261,10 @@
 
         .checkout-review .grand.totals {
             .lib-font-size(@font-size__xl);
-            margin-bottom: @indent__xl;
+            margin-bottom: var(--indent__xl);
 
             .mark {
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
             }
         }
     }
@@ -296,7 +296,7 @@
         .data.table {
             .address {
                 &:before {
-                    margin-bottom: @indent__xs;
+                    margin-bottom: var(--indent__xs);
                 }
             }
         }
@@ -309,7 +309,7 @@
 
         .block-content .box {
             &:not(:last-child) {
-                margin-bottom: @indent__xl;
+                margin-bottom: var(--indent__xl);
             }
 
             &:last-child {
@@ -342,11 +342,11 @@
 
         .actions-toolbar {
             .action {
-                margin-bottom: @indent__m;
+                margin-bottom: var(--indent__m);
             }
 
             > .primary {
-                margin-bottom: @indent__m;
+                margin-bottom: var(--indent__m);
                 margin-right: 0;
             }
         }
@@ -366,7 +366,7 @@
                 text-align: right;
 
                 .action {
-                    margin-left: @indent__s;
+                    margin-left: var(--indent__s);
 
                     &.back {
                         display: block;
@@ -392,8 +392,8 @@
             }
 
             .box-shipping-method {
-                padding-left: @indent__m;
-                padding-right: @indent__m;
+                padding-left: var(--indent__m);
+                padding-right: var(--indent__m);
                 width: 50%;
 
                 .fieldset {
@@ -421,7 +421,7 @@
             .box-billing-method {
                 &:extend(.abs-add-box-sizing-desktop-s all);
                 float: left;
-                padding-left: @indent__m;
+                padding-left: var(--indent__m);
                 width: 50%;
             }
         }
@@ -438,7 +438,7 @@
             .box-items {
                 clear: left;
                 float: none;
-                padding-top: @indent__xl;
+                padding-top: var(--indent__xl);
                 width: auto;
             }
 
@@ -485,7 +485,7 @@
         }
 
         .logo {
-            margin-left: @indent__xl;
+            margin-left: var(--indent__xl);
         }
     }
 }

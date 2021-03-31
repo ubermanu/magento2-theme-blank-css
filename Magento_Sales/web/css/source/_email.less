@@ -9,7 +9,7 @@
 
 .email-summary {
     h1 {
-        margin-bottom: @indent__xs;
+        margin-bottom: var(--indent__xs);
     }
 }
 
@@ -43,16 +43,16 @@
         //  Prevent extra spacing on Payment & Shipping Method row
         & + .method-info {
             > td {
-                padding: 0 0 @email-content__padding__base;
+                padding: 0 0 --email-content__padding__base;
             }
         }
     }
 
     .payment-method {
-        margin-bottom: @indent__s;
+        margin-bottom: var(--indent__s);
 
         .title {
-            font-weight: @font-weight__regular;
+            font-weight: var(--font-weight__regular);
         }
 
         .data.table {
@@ -61,7 +61,7 @@
             }
 
             th {
-                padding-right: @email-content__padding__base;
+                padding-right: var(--email-content__padding__base);
             }
         }
     }
@@ -103,8 +103,8 @@
         > tr {
             > th,
             > td {
-                background-color: @color-gray95;
-                padding: @email-content__padding__base;
+                background-color: var(--color-gray95);
+                padding: var(--email-content__padding__base);
                 width: 50%;
             }
 
@@ -124,7 +124,7 @@
 
 .email-items {
     .lib-table(@table__width, 0);
-    border: @table__border-width @table__border-style @table__border-color;
+    border: @table__border-width @table__border-style --table__border-color;
 
     thead,
     tfoot {
@@ -140,11 +140,11 @@
     > tbody {
         > tr {
             > th {
-                padding: @email-content__padding__base;
+                padding: var(--email-content__padding__base);
             }
 
             > td {
-                padding: @email-content__padding__base;
+                padding: var(--email-content__padding__base);
 
                 &.message-gift {
                     border-top: none;
@@ -159,7 +159,7 @@
         > tr {
             > th,
             > td {
-                border-top: @table__border-width @table__border-style @table__border-color;
+                border-top: @table__border-width @table__border-style --table__border-color;
             }
 
             & + tr {
@@ -176,18 +176,18 @@
     }
 
     .product-name {
-        font-weight: @font-weight__bold;
-        margin-bottom: @email-content__padding__s;
+        font-weight: var(--font-weight__bold);
+        margin-bottom: var(--email-content__padding__s);
     }
 
     .has-extra .sku {
-        margin-bottom: @email-content__padding__base;
+        margin-bottom: var(--email-content__padding__base);
     }
 
     .item-info {
         dl {
             margin-bottom: 0;
-            padding-left: @email-content__padding__m;
+            padding-left: var(--email-content__padding__m);
 
             dt,
             dd {
@@ -196,7 +196,7 @@
             }
 
             dd {
-                padding-left: @email-content__padding__base;
+                padding-left: var(--email-content__padding__base);
             }
         }
     }
@@ -217,12 +217,12 @@
     .order-totals {
         > tr {
             > th {
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
             }
 
             > th,
             > td {
-                padding: @email-content__padding__base;
+                padding: var(--email-content__padding__base);
                 text-align: right;
             }
 

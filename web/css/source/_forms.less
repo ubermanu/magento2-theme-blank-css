@@ -7,8 +7,8 @@
 //  Variables
 //  _____________________________________________
 
-@form-field__vertical-indent__desktop: 29px;
-@form-calendar-icon__color: @primary__color;
+--form-field__vertical-indent__desktop: 29px;
+--form-calendar-icon__color: var(--primary__color);
 
 //
 //  Common
@@ -18,7 +18,7 @@
     .fieldset {
         .lib-form-fieldset();
         &:last-child {
-            margin-bottom: @indent__base;
+            margin-bottom: var(--indent__base);
         }
 
         > .field,
@@ -45,7 +45,7 @@
             }
 
             .field.choice {
-                margin-bottom: @indent__s;
+                margin-bottom: var(--indent__s);
 
                 &:last-child {
                     margin-bottom: 0;
@@ -65,7 +65,7 @@
 
     .legend {
         strong {
-            margin-left: @indent__xs;
+            margin-left: var(--indent__xs);
         }
     }
 
@@ -80,14 +80,14 @@
 
             .time-picker {
                 display: inline-block;
-                margin-top: @indent__s;
+                margin-top: var(--indent__s);
                 white-space: nowrap;
             }
         }
 
         .message {
             &.warning {
-                margin-top: @indent__s;
+                margin-top: var(--indent__s);
             }
         }
     }
@@ -130,12 +130,12 @@
         ~ .ui-datepicker-trigger {
             .lib-button-reset();
             .lib-icon-font(
-            @_icon-font-content: @icon-calendar,
-            @_icon-font-color: @primary__color__lighter,
-            @_icon-font-size: @icon-calendar__font-size,
-            @_icon-font-line-height: @icon-calendar__font-size,
-            @_icon-font-display: block,
-            @_icon-font-text-hide: true
+            --_icon-font-content: @icon-calendar,
+            --_icon-font-color: @primary__color__lighter,
+            --_icon-font-size: @icon-calendar__font-size,
+            --_icon-font-line-height: @icon-calendar__font-size,
+            --_icon-font-display: block,
+            --_icon-font-text-hide: true
             );
             display: inline-block;
             vertical-align: middle;
@@ -158,12 +158,12 @@
             > .field:not(.choice) >,
             .fields > .field {
                 &:not(:last-child) {
-                    margin: 0 0 @form-field__vertical-indent;
+                    margin: 0 0 --form-field__vertical-indent;
                 }
 
                 .label {
                     margin: 0 0 4px;
-                    padding: 0 0 @indent__xs;
+                    padding: 0 0 --indent__xs;
                     text-align: left;
                     width: 100%;
                 }
@@ -188,7 +188,7 @@
 
         > .field {
             .lib-form-field-type-revert();
-            margin: 0 0 @form-field__vertical-indent__desktop;
+            margin: 0 0 --form-field__vertical-indent__desktop;
         }
     }
 }

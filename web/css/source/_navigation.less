@@ -7,7 +7,7 @@
 //  Variables
 //  _____________________________________________
 
-@active-nav-indent: 54px;
+--active-nav-indent: 54px;
 
 //
 //  Common
@@ -29,9 +29,9 @@
     .nav-toggle {
         .lib-icon-font(
             @icon-menu,
-            @_icon-font-size: 28px,
-            @_icon-font-color: @header-icons-color,
-            @_icon-font-color-hover: @header-icons-color-hover
+            --_icon-font-size: 28px,
+            --_icon-font-color: @header-icons-color,
+            --_icon-font-color-hover: @header-icons-color-hover
         );
         .lib-icon-text-hide();
         cursor: pointer;
@@ -55,10 +55,10 @@
         .parent {
             .level-top {
                 .lib-icon-font(
-                    @_icon-font-content: @icon-down,
-                    @_icon-font-size: 42px,
-                    @_icon-font-position: after,
-                    @_icon-font-display: block
+                    --_icon-font-content: @icon-down,
+                    --_icon-font-size: 42px,
+                    --_icon-font-position: after,
+                    --_icon-font-display: block
                 );
                 position: relative;
 
@@ -70,8 +70,8 @@
 
                 &.ui-state-active {
                     .lib-icon-font-symbol(
-                        @_icon-font-content: @icon-up,
-                        @_icon-font-position: after
+                        --_icon-font-content: @icon-up,
+                        --_icon-font-position: after
                     );
                 }
             }
@@ -89,29 +89,29 @@
         width: calc(~'100% - @{active-nav-indent}');
 
         .switcher {
-            border-top: 1px solid @color-gray82;
+            border-top: 1px solid --color-gray82;
             font-size: 1.6rem;
-            font-weight: @font-weight__bold;
+            font-weight: var(--font-weight__bold);
             margin: 0;
             padding: .8rem 3.5rem .8rem 2rem;
 
             .label {
                 display: block;
-                margin-bottom: @indent__xs;
+                margin-bottom: var(--indent__xs);
             }
 
             &:last-child {
-                border-bottom: 1px solid @color-gray82;
+                border-bottom: 1px solid --color-gray82;
             }
         }
 
         .switcher-trigger {
             strong {
                 .lib-icon-font(
-                    @_icon-font-content: @icon-down,
-                    @_icon-font-size: 42px,
-                    @_icon-font-position: after,
-                    @_icon-font-display: block
+                    --_icon-font-content: @icon-down,
+                    --_icon-font-size: 42px,
+                    --_icon-font-position: after,
+                    --_icon-font-display: block
                 );
                 position: relative;
 
@@ -124,8 +124,8 @@
 
             &.active strong {
                 .lib-icon-font-symbol(
-                    @_icon-font-content: @icon-up,
-                    @_icon-font-position: after
+                    --_icon-font-content: @icon-up,
+                    --_icon-font-position: after
                 );
             }
         }
@@ -146,20 +146,20 @@
 
         .header.links {
             .lib-list-reset-styles();
-            border-bottom: 1px solid @color-gray82;
+            border-bottom: 1px solid --color-gray82;
 
             li {
                 font-size: 1.6rem;
                 margin: 0;
 
                 &.greet.welcome {
-                    border-top: 1px solid @color-gray82;
-                    font-weight: @font-weight__bold;
-                    padding: .8rem @submenu__padding-left;
+                    border-top: 1px solid --color-gray82;
+                    font-weight: var(--font-weight__bold);
+                    padding: .8rem --submenu__padding-left;
                 }
 
                 > a {
-                    border-top: 1px solid @color-gray82;
+                    border-top: 1px solid --color-gray82;
                 }
             }
 
@@ -168,8 +168,8 @@
                 color: var(--navigation-level0-item__color);
                 text-decoration: var(--navigation-level0-item__text-decoration);
                 display: block;
-                font-weight: @font-weight__bold;
-                padding: .8rem @submenu__padding-left;
+                font-weight: var(--font-weight__bold);
+                padding: .8rem --submenu__padding-left;
             }
 
             .header.links {
@@ -205,7 +205,7 @@
         }
 
         .nav-sections {
-            @_shadow: 0 0 5px 0 rgba(50, 50, 50, .75);
+            --_shadow: 0 0 5px 0 rgba(50, 50, 50, .75);
             box-shadow: var(--_shadow, 1);
             left: 0;
             z-index: 99;
@@ -285,7 +285,7 @@
     .nav-sections {
         .lib-vendor-prefix-flex-shrink(0);
         .lib-vendor-prefix-flex-basis(auto);
-        margin-bottom: @indent__m;
+        margin-bottom: var(--indent__m);
     }
 
     .nav-sections-item-title {

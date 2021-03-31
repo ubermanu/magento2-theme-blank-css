@@ -15,7 +15,7 @@
             .control > span,
             address {
                 display: inline-block;
-                padding-top: @form-field-type-label-inline__padding-top;
+                padding-top: var(--form-field-type-label-inline__padding-top);
             }
         }
 
@@ -30,7 +30,7 @@
 
             .field {
                 &:last-child {
-                    margin-top: @form-field__vertical-indent;
+                    margin-top: var(--form-field__vertical-indent);
                 }
             }
         }
@@ -48,7 +48,7 @@
             }
 
             dt {
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
             }
 
             dd {
@@ -131,7 +131,7 @@
         &:extend(.abs-add-fields-desktop all);
         .additional {
             .field:last-child {
-                margin-top: @form-field__vertical-indent__desktop;
+                margin-top: var(--form-field__vertical-indent__desktop);
             }
         }
     }
@@ -148,7 +148,7 @@
 
                     .box {
                         &:extend(.abs-blocks-2columns all);
-                        margin-bottom: @indent__base;
+                        margin-bottom: var(--indent__base);
                     }
                 }
             }

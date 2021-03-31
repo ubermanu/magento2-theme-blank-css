@@ -7,14 +7,14 @@
 //  Variables
 //  _____________________________________________
 
-@collapsible-nav-background: @sidebar__background-color;
-@collapsible-nav-color: @color-gray34;
-@collapsible-nav-current-border: 3px solid transparent;
-@collapsible-nav-current-border-color: @active__color;
-@collapsible-nav-current-color: @color-black;
-@collapsible-nav-current-font-weight: @font-weight__semibold;
-@collapsible-nav-delimiter__border-color: @color-gray82;
-@collapsible-nav-item-hover: @color-gray91;
+--collapsible-nav-background: var(--sidebar__background-color);
+--collapsible-nav-color: var(--color-gray34);
+--collapsible-nav-current-border: 3px solid transparent;
+--collapsible-nav-current-border-color: var(--active__color);
+--collapsible-nav-current-color: var(--color-black);
+--collapsible-nav-current-font-weight: var(--font-weight__semibold);
+--collapsible-nav-delimiter__border-color: var(--color-gray82);
+--collapsible-nav-item-hover: var(--color-gray91);
 
 //
 //  Common
@@ -67,7 +67,7 @@
             }
 
             .delimiter {
-                border-top: 1px solid @collapsible-nav-delimiter__border-color;
+                border-top: 1px solid --collapsible-nav-delimiter__border-color;
                 display: block;
                 margin: @indent__s 1.8rem;
             }
@@ -104,7 +104,7 @@
         }
 
         .content {
-            border-bottom: @border-width__base solid @border-color__base;
+            border-bottom: @border-width__base solid --border-color__base;
             display: none;
 
             &.active {

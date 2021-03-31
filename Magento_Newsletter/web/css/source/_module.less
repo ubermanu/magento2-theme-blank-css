@@ -11,7 +11,7 @@
 
     //  Newsletter subscription
     .block.newsletter {
-        margin-bottom: @indent__xl;
+        margin-bottom: var(--indent__xl);
 
         .form.subscribe {
             display: table;
@@ -31,9 +31,9 @@
             .control {
                 .lib-icon-font(
                 @icon-envelope,
-                @_icon-font-size: 35px,
-                @_icon-font-line-height: 33px,
-                @_icon-font-color: @form-element-input-placeholder__color
+                --_icon-font-size: 35px,
+                --_icon-font-line-height: 33px,
+                --_icon-font-color: @form-element-input-placeholder__color
                 );
                 display: block;
 

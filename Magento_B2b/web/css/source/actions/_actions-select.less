@@ -11,37 +11,39 @@
 //  Variables
 //  _____________________________________________
 
-@color-blue-pure: #007bdb;
+:root {
+    --color-blue-pure: #007bdb;
 
-@action__height: 3.2rem;
-@action__width: 3.2rem;
+    --action__height: 3.2rem;
+    --action__width: 3.2rem;
 
-//  Triangle marker
-@button-marker-triangle__height: .5rem;
-@button-marker-triangle__width: .8rem;
+    //  Triangle marker
+    --button-marker-triangle__height: .5rem;
+    --button-marker-triangle__width: .8rem;
 
-@button__border-color: @color-gray68;
+    --button__border-color: var(--color-gray68);
 
-@action__border-color: @color-gray68;
-@action__active__border-color: @action__border-color;
-@action__hover__border-color: @action__border-color;
+    --action__border-color: var(--color-gray68);
+    --action__active__border-color: var(--action__border-color);
+    --action__hover__border-color: var(--action__border-color);
 
-@action-select__disabled__color: @text__color;
-@action-select__z-index: @z-index-5;
+    --action-select__disabled__color: var(--text__color);
+    --action-select__z-index: var(--z-index-5);
 
-@field-control__box-shadow: 0 0 3px 1px @color-blue3;
-@field-control__active__border-color: @color-blue-pure;
-@field-control__hover__border-color: @action__hover__border-color;
+    --field-control__box-shadow: 0 0 3px 1px --color-blue3;
+    --field-control__active__border-color: var(--color-blue-pure);
+    --field-control__hover__border-color: var(--action__hover__border-color);
 
-@_dropdown__padding-right: @action__height;
-@_triangle__height: @button-marker-triangle__height;
-@_triangle__width: @button-marker-triangle__width;
+    --_dropdown__padding-right: var(--action__height);
+    --_triangle__height: var(--button-marker-triangle__height);
+    --_triangle__width: var(--button-marker-triangle__width);
+}
 
 //  Action select have the same visual styles and functionality as native <select>
 .admin__action-group-wrap {
-    @_action-select__border-color: @button__border-color;
-    @_action-select__active__border-color: @action__active__border-color;
-    @_action-select-toggle__size: @action__height;
+    --_action-select__border-color: var(--button__border-color);
+    --_action-select__active__border-color: var(--action__active__border-color);
+    --_action-select-toggle__size: var(--action__height);
 
     display: inline-block;
     position: relative;
@@ -49,15 +51,15 @@
     .action-select {
         .lib-text-overflow();
 
-        background-color: @color-white;
-        font-weight: @font-weight__regular;
+        background-color: var(--color-white);
+        font-weight: var(--font-weight__regular);
         text-align: left;
 
         &:hover {
-            border-color: @color-gray68;
+            border-color: var(--color-gray68);
 
             &:before {
-                border-color: @field-control__hover__border-color;
+                border-color: var(--field-control__hover__border-color);
             }
         }
 
@@ -66,45 +68,45 @@
 
         &:before {
             align-items: center;
-            content: @icon-down;
+            content: var(--icon-down);
             display: flex;
             font-size: 24px;
             justify-content: space-around;
             line-height: 1;
             position: absolute;
             right: 0;
-            width: @action__width;
+            width: var(--action__width);
         }
 
         &._active {
             &:before {
-                content: @icon-up;
+                content: var(--icon-up);
             }
         }
 
         &[disabled] {
-            color: @action-select__disabled__color;
+            color: var(--action-select__disabled__color);
         }
 
         &._mage-error {
-            border: 1px solid @form-element-validation__border-error;
+            border: 1px solid var(--form-element-validation__border-error);
         }
     }
 
     &._focus {
         .action-select {
             &._mage-error {
-                border: 1px solid @form-element-validation__border-error;
+                border: 1px solid var(--form-element-validation__border-error);
             }
         }
     }
 
     &._active {
-        z-index: @action-select__z-index;
+        z-index: var(--action-select__z-index);
 
         .action-select {
             &:before {
-                content: @icon-up;
+                content: var(--icon-up);
             }
         }
 
@@ -114,7 +116,7 @@
     }
 
     .action-menu {
-        border: 1px solid @action__border-color;
+        border: 1px solid var(--action__border-color);
         display: none;
         max-height: 45rem;
         overflow-y: auto;
@@ -125,7 +127,7 @@
 
         ._disabled {
             &:hover {
-                background: @color-white;
+                background: var(--color-white);
             }
 
             .action-menu-item {

@@ -7,14 +7,14 @@
 //  Variables
 //  _____________________________________________
 
-@checkout-summary__background-color: @color-white-smoke;
-@checkout-summary__padding: 22px @indent__l;
+--checkout-summary__background-color: var(--color-white-smoke);
+--checkout-summary__padding: 22px --indent__l;
 
-@checkout-summary-title__margin: @indent__s;
-@checkout-summary-mark-value__color: @color-gray60;
+--checkout-summary-title__margin: var(--indent__s);
+--checkout-summary-mark-value__color: var(--color-gray60);
 
-@checkout-summary-items__max-height: 370px;
-@checkout-summary-items__padding: 15px;
+--checkout-summary-items__max-height: 370px;
+--checkout-summary-items__padding: 15px;
 
 //
 //  Common
@@ -30,7 +30,7 @@
         &:extend(.abs-add-box-sizing all);
         background: var(--checkout-summary__background-color);
         padding: var(--checkout-summary__padding);
-        margin: 0 0 @indent__base;
+        margin: 0 0 --indent__base;
 
         > .title {
             &:extend(.abs-checkout-title all);
@@ -62,7 +62,7 @@
                     padding-top: 0;
 
                     strong {
-                        font-weight: @font-weight__regular;
+                        font-weight: var(--font-weight__regular);
                     }
                 }
             }
@@ -79,17 +79,17 @@
         //  Block title
         .items-in-cart {
             > .title {
-                border-bottom: @border-width__base solid @border-color__base;
+                border-bottom: @border-width__base solid --border-color__base;
                 padding: var(--indent__s @indent__xl @indent__s 0);
                 cursor: pointer;
                 .lib-icon-font(
                 @icon-down,
-                @_icon-font-size: 30px,
-                @_icon-font-line-height: 12px,
-                @_icon-font-text-hide: true,
-                @_icon-font-margin: 3px 0 0,
-                @_icon-font-position: after,
-                @_icon-font-display: block
+                --_icon-font-size: 30px,
+                --_icon-font-line-height: 12px,
+                --_icon-font-text-hide: true,
+                --_icon-font-margin: 3px 0 0,
+                --_icon-font-position: after,
+                --_icon-font-display: block
                 );
                 margin-bottom: 0;
                 position: relative;
@@ -97,12 +97,12 @@
                 &:after {
                     position: absolute;
                     right: 0;
-                    top: @indent__s;
+                    top: var(--indent__s);
                 }
 
                 strong {
                     .lib-font-size(18);
-                    font-weight: @font-weight__light;
+                    font-weight: var(--font-weight__light);
                     margin: 0;
                 }
             }
@@ -110,8 +110,8 @@
             &.active {
                 > .title {
                     .lib-icon-font-symbol(
-                    @_icon-font-content: @icon-up,
-                    @_icon-font-position: after
+                    --_icon-font-content: @icon-up,
+                    --_icon-font-position: after
                     );
                 }
             }
@@ -143,13 +143,13 @@
         .product-item {
             .product-item-inner {
                 display: table;
-                margin: 0 0 @indent__s;
+                margin: 0 0 --indent__s;
                 width: 100%;
             }
 
             .product-item-name-block {
                 display: table-cell;
-                padding-right: @indent__xs;
+                padding-right: var(--indent__xs);
                 text-align: left;
             }
 
@@ -160,7 +160,7 @@
 
             .price {
                 .lib-font-size(16);
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
             }
 
             .price-including-tax {
@@ -179,7 +179,7 @@
             z-index: 1;
 
             .secondary {
-                border-top: @border-width__base solid @border-color__base;
+                border-top: @border-width__base solid --border-color__base;
                 display: block;
                 float: none;
                 margin: -1px 0 0;

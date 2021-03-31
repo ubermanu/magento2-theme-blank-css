@@ -7,15 +7,15 @@
 //  Variables
 //  _____________________________________________
 
-@checkout-payment-method-title__border: @checkout-shipping-method__border;
-@checkout-payment-method-title__padding: @checkout-shipping-method__padding;
-@checkout-payment-method-title-mobile__padding: 15px;
+--checkout-payment-method-title__border: var(--checkout-shipping-method__border);
+--checkout-payment-method-title__padding: var(--checkout-shipping-method__padding);
+--checkout-payment-method-title-mobile__padding: 15px;
 
-@checkout-payment-method-content__padding__xl: 22px;
+--checkout-payment-method-content__padding__xl: 22px;
 
-@checkout-billing-address-details__line-height: 27px;
-@checkout-billing-address-details__padding: 0 0 0 23px;
-@checkout-billing-address-form__max-width: @checkout-shipping-address__max-width;
+--checkout-billing-address-details__line-height: 27px;
+--checkout-billing-address-details__padding: 0 0 0 23px;
+--checkout-billing-address-form__max-width: var(--checkout-shipping-address__max-width);
 
 //
 //  Common
@@ -66,13 +66,13 @@
 
             .payment-icon {
                 display: inline-block;
-                margin-right: @indent__xs;
+                margin-right: var(--indent__xs);
                 vertical-align: middle;
             }
 
             .action-help {
                 display: inline-block;
-                margin-left: @indent__xs;
+                margin-left: var(--indent__xs);
             }
         }
 
@@ -81,7 +81,7 @@
             .lib-css(padding, 0 0 @indent__base @checkout-payment-method-content__padding__xl);
             .fieldset {
                 &:not(:last-child) {
-                    margin: 0 0 @indent__base;
+                    margin: 0 0 --indent__base;
                 }
             }
         }
@@ -100,11 +100,11 @@
         }
 
         .billing-address-same-as-shipping-block {
-            margin: 0 0 @indent__s;
+            margin: 0 0 --indent__s;
         }
 
         .checkout-billing-address {
-            margin: 0 0 @indent__base;
+            margin: 0 0 --indent__base;
 
             .primary {
                 .action-update {
@@ -124,7 +124,7 @@
 
         .payment-method-note {
             & + .checkout-billing-address {
-                margin-top: @indent__base;
+                margin-top: var(--indent__base);
             }
         }
 
@@ -177,7 +177,7 @@
 
         .checkout-billing-address {
             .action-cancel {
-                margin-top: @indent__s;
+                margin-top: var(--indent__s);
             }
         }
     }
@@ -208,7 +208,7 @@
         .payment-method-content {
             .fieldset {
                 > .field {
-                    margin: 0 0 @indent__base;
+                    margin: 0 0 --indent__base;
 
                     &.choice {
                         &:before {

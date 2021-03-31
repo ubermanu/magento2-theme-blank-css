@@ -18,7 +18,7 @@
 
     .bundle-options-container {
         clear: both;
-        margin-bottom: @indent__xl;
+        margin-bottom: var(--indent__xl);
 
         .legend.title {
             .lib-heading(h2);
@@ -33,17 +33,17 @@
         }
 
         .product-options-wrapper {
-            margin-bottom: @indent__l;
+            margin-bottom: var(--indent__l);
         }
 
         .action.back {
-            margin-bottom: @indent__l;
+            margin-bottom: var(--indent__l);
         }
 
         .price-box {
             .price {
-                font-size: @font-size__l;
-                font-weight: @font-weight__bold;
+                font-size: var(--font-size__l);
+                font-weight: var(--font-weight__bold);
             }
         }
 
@@ -54,14 +54,14 @@
         .block-bundle-summary {
             &:extend(.abs-add-box-sizing all);
             background: var(--secondary__color);
-            padding: @indent__s @indent__base;
+            padding: @indent__s --indent__base;
 
             > .title > strong {
                 .lib-heading(h2);
             }
 
             .bundle-summary {
-                margin-top: @indent__l;
+                margin-top: var(--indent__l);
 
                 &.empty {
                     display: none;
@@ -77,14 +77,14 @@
                 &:extend(.abs-reset-list all);
 
                 > li {
-                    margin-bottom: @indent__s;
+                    margin-bottom: var(--indent__s);
                 }
             }
 
             .box-tocart {
                 .actions {
                     display: inline-block;
-                    margin-bottom: @indent__s;
+                    margin-bottom: var(--indent__s);
                 }
 
                 .action.primary {

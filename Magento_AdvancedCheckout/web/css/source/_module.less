@@ -18,7 +18,7 @@
 
                     .field {
                         display: inline-block;
-                        margin-bottom: @indent__s;
+                        margin-bottom: var(--indent__s);
                         vertical-align: top;
                     }
 
@@ -39,13 +39,14 @@
 
             .skus {
                 > .label {
-                    margin-top: @indent__s;
+                    margin-top: var(--indent__s);
                 }
             }
 
             .qty {
                 .qty {
                     &:extend(.abs-input-qty all);
+
                     + .mage-error {
                         width: 80px;
                     }
@@ -56,8 +57,8 @@
                 .actions-toolbar {
                     clear: both;
                     .lib-actions-toolbar(
-                    @_actions-toolbar-actions-position: left,
-                    @_actions-toolbar-margin: 0 0 @indent__base
+                        @_actions-toolbar-actions-position: left,
+                        @_actions-toolbar-margin: 0 0 @indent__base
                     );
                     .lib-actions-toolbar-clear-floats();
 
@@ -73,20 +74,20 @@
 
             .note {
                 display: block;
-                margin: 0 0 @indent__base;
+                margin: 0 0 var(--indent__base);
             }
         }
     }
 
     .block-cart-failed {
-        margin-top: @indent__xl;
+        margin-top: var(--indent__xl);
         &:extend(.abs-shopping-cart-items all);
 
         .block-title {
             .lib-font-size(@h2__font-size);
 
             strong {
-                font-weight: @h2__font-weight;
+                font-weight: var(--h2__font-weight);
             }
         }
 
@@ -94,7 +95,7 @@
             text-align: center;
 
             .action {
-                margin-bottom: @indent__s;
+                margin-bottom: var(--indent__s);
             }
         }
     }
@@ -115,10 +116,10 @@
             .action {
                 &.remove {
                     .lib-button-icon(
-                    @_icon-font-content: @icon-remove,
-                    @_icon-font-text-hide: true,
-                    @_icon-font-size: 28px,
-                    @_icon-font-margin: 1px 0 0
+                        @_icon-font-content: @icon-remove,
+                        @_icon-font-text-hide: true,
+                        @_icon-font-size: 28px,
+                        @_icon-font-margin: 1px 0 0
                     );
                     .lib-button-reset();
                 }

@@ -7,8 +7,8 @@
 //  Variables
 //  ---------------------------------------------
 
-@toolbar-mode-icon-font-size: 24px;
-@toolbar-element-background: @panel__background-color;
+--toolbar-mode-icon-font-size: 24px;
+--toolbar-element-background: var(--panel__background-color);
 
 //
 //  Common
@@ -39,8 +39,8 @@
     }
 
     .toolbar-products {
-        margin-bottom: @indent__xl;
-        padding: 0 @indent__s;
+        margin-bottom: var(--indent__xl);
+        padding: 0 --indent__s;
         text-align: center;
         &:extend(.abs-add-clearfix all);
 
@@ -81,18 +81,18 @@
         vertical-align: top;
         .lib-icon-font(
             @icon-arrow-up,
-            @_icon-font-size: 28px,
-            @_icon-font-line-height: 32px,
-            @_icon-font-color: @header-icons-color,
-            @_icon-font-color-hover: @header-icons-color-hover,
-            @_icon-font-text-hide: true
+            --_icon-font-size: 28px,
+            --_icon-font-line-height: 32px,
+            --_icon-font-color: @header-icons-color,
+            --_icon-font-color-hover: @header-icons-color-hover,
+            --_icon-font-text-hide: true
         );
     }
 
     .sorter {
         .sort-desc {
             &:before {
-                content: @icon-arrow-down;
+                content: var(--icon-arrow-down);
             }
         }
     }
@@ -107,7 +107,7 @@
     }
 
     .limiter-label {
-        font-weight: @font-weight__regular;
+        font-weight: var(--font-weight__regular);
     }
 
     .limiter {
@@ -147,7 +147,7 @@
     .modes {
         display: inline-block;
         float: left;
-        margin-right: @indent__base;
+        margin-right: var(--indent__base);
 
         .products.wrapper ~ .toolbar & {
             display: none;
@@ -160,10 +160,10 @@
 
     .modes-mode {
         color: var(--text__color__muted);
-        border: 1px solid @border-color__base;
+        border: 1px solid --border-color__base;
         border-right: 0;
         float: left;
-        font-weight: @font-weight__regular;
+        font-weight: var(--font-weight__regular);
         line-height: 1;
         padding: 7px 10px;
         text-align: center;
@@ -176,7 +176,7 @@
         }
 
         &:last-child {
-            border-right: 1px solid @border-color__base;
+            border-right: 1px solid --border-color__base;
         }
 
         &.active {
@@ -185,10 +185,10 @@
 
         .lib-icon-font(
             @icon-grid,
-            @_icon-font-size: @toolbar-mode-icon-font-size,
-            @_icon-font-text-hide: true,
-            @_icon-font-color: @text__color__muted,
-            @_icon-font-color-hover: @text__color__muted
+            --_icon-font-size: @toolbar-mode-icon-font-size,
+            --_icon-font-text-hide: true,
+            --_icon-font-color: @text__color__muted,
+            --_icon-font-color-hover: @text__color__muted
         );
     }
 

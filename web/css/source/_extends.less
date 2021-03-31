@@ -36,7 +36,7 @@
 //  Product options list
 //  ---------------------------------------------
 
-@abs-product-options-list: {
+--abs-product-options-list: {
     dt {
         clear: left;
         float: left;
@@ -50,7 +50,7 @@
     dd {
         display: inline-block;
         float: left;
-        margin: 0 0 @indent__xs;
+        margin: 0 0 --indent__xs;
     }
 };
 
@@ -70,7 +70,7 @@
 //  Button reset width, floats, margins
 //  ---------------------------------------------
 
-@abs-button-responsive: {
+--abs-button-responsive: {
     .lib-button-responsive();
 };
 
@@ -96,7 +96,7 @@
 //  Blocks in 2 columns
 //  ---------------------------------------------
 
-@abs-blocks-2columns: {
+--abs-blocks-2columns: {
     width: 48.8%;
 
     &:nth-child(odd) {
@@ -162,11 +162,11 @@
 & when (@media-common = true) {
     .abs-login-block-title {
         strong {
-            font-weight: @font-weight__heavier;
+            font-weight: var(--font-weight__heavier);
         }
 
         .lib-font-size(18);
-        border-bottom: 1px solid @secondary__color;
+        border-bottom: 1px solid --secondary__color;
         margin-bottom: 15px;
         padding-bottom: 12px;
     }
@@ -202,15 +202,15 @@
 
         .box-title {
             display: inline-block;
-            margin: 0 0 @indent__xs;
+            margin: 0 0 --indent__xs;
 
             > span {
                 .lib-heading(h4);
             }
 
             > .action {
-                font-weight: @font-weight__regular;
-                margin-left: @indent__s;
+                font-weight: var(--font-weight__regular);
+                margin-left: var(--indent__s);
             }
         }
 
@@ -220,7 +220,7 @@
             }
 
             .box {
-                margin-bottom: @indent__base;
+                margin-bottom: var(--indent__base);
             }
         }
     }
@@ -233,10 +233,10 @@
 & when (@media-common = true) {
     .abs-dropdown-simple {
         .lib-dropdown(
-            @_dropdown-list-item-padding: 5px 5px 5px 23px,
-            @_dropdown-list-min-width: 200px,
-            @_icon-font-margin: 0 0 0 5px,
-            @_icon-font-vertical-align: middle
+            --_dropdown-list-item-padding: 5px 5px 5px 23px,
+            --_dropdown-list-min-width: 200px,
+            --_icon-font-margin: 0 0 0 5px,
+            --_icon-font-vertical-align: middle
         );
     }
 }
@@ -258,7 +258,7 @@
 
 & when (@media-common = true) {
     .abs-margin-for-blocks-and-widgets {
-        margin-bottom: @indent__xl;
+        margin-bottom: var(--indent__xl);
     }
 }
 
@@ -270,12 +270,12 @@
     .abs-remove-button-for-blocks {
         .lib-icon-font(
             @icon-remove,
-            @_icon-font-size: 26px,
-            @_icon-font-line-height: 15px,
-            @_icon-font-text-hide: true,
-            @_icon-font-color: @color-gray19,
-            @_icon-font-color-hover: @color-gray19,
-            @_icon-font-color-active: @color-gray19
+            --_icon-font-size: 26px,
+            --_icon-font-line-height: 15px,
+            --_icon-font-text-hide: true,
+            --_icon-font-color: @color-gray19,
+            --_icon-font-color-hover: @color-gray19,
+            --_icon-font-color-active: @color-gray19
         );
     }
 }
@@ -286,18 +286,18 @@
 
 & when (@media-common = true) {
     .abs-product-link {
-        font-weight: @font-weight__regular;
+        font-weight: var(--font-weight__regular);
 
         > a {
             .lib-link(
-                @_link-color: @product-name-link__color,
-                @_link-text-decoration: @product-name-link__text-decoration,
-                @_link-color-visited: @product-name-link__color__visited,
-                @_link-text-decoration-visited: @product-name-link__text-decoration__visited,
-                @_link-color-hover: @product-name-link__color__hover,
-                @_link-text-decoration-hover: @product-name-link__text-decoration__hover,
-                @_link-color-active: @product-name-link__color__active,
-                @_link-text-decoration-active: @product-name-link__text-decoration__active
+                --_link-color: @product-name-link__color,
+                --_link-text-decoration: @product-name-link__text-decoration,
+                --_link-color-visited: @product-name-link__color__visited,
+                --_link-text-decoration-visited: @product-name-link__text-decoration__visited,
+                --_link-color-hover: @product-name-link__color__hover,
+                --_link-text-decoration-hover: @product-name-link__text-decoration__hover,
+                --_link-color-active: @product-name-link__color__active,
+                --_link-text-decoration-active: @product-name-link__text-decoration__active
             );
         }
     }
@@ -307,7 +307,7 @@
 //  Reset left margin
 //  ---------------------------------------------
 
-@abs-reset-left-margin: {
+--abs-reset-left-margin: {
     margin-left: 0;
 };
 
@@ -336,7 +336,7 @@
 & when (@media-common = true) {
     .abs-action-remove {
         &:extend(.abs-action-button-as-link all);
-        left: @indent__s;
+        left: var(--indent__s);
         margin-left: 70%;
         position: absolute;
         top: 31px;
@@ -379,7 +379,7 @@
                     > .secondary {
                         .action {
                             &.add {
-                                margin-top: @indent__l;
+                                margin-top: var(--indent__l);
                             }
                         }
 
@@ -444,7 +444,7 @@
 //  Margin for forms
 //  ---------------------------------------------
 
-@abs-margin-for-forms-desktop: {
+--abs-margin-for-forms-desktop: {
     margin-left: var(--form-field-type-label-inline__width);
 };
 
@@ -474,7 +474,7 @@
 //  Visually hidden / show visually hidden
 //  ---------------------------------------------
 
-@abs-visually-hidden: {
+--abs-visually-hidden: {
     .lib-visually-hidden();
 };
 
@@ -522,7 +522,7 @@
 //  Clearfix
 //  ---------------------------------------------
 
-@abs-add-clearfix: {
+--abs-add-clearfix: {
     .lib-clearfix();
 };
 
@@ -560,7 +560,7 @@
 //  Box-sizing
 //  ---------------------------------------------
 
-@abs-add-box-sizing: {
+--abs-add-box-sizing: {
     box-sizing: border-box;
 };
 
@@ -597,7 +597,7 @@
         .fieldset {
             > .field,
             .fields > .field {
-                .lib-form-field-type-revert(@_type: block);
+                .lib-form-field-type-revert(--_type: block);
 
                 &:not(:first-child):last-of-type {
                     margin-bottom: 0;
@@ -614,16 +614,16 @@
 & when (@media-common = true) {
     .abs-navigation-icon {
         .lib-icon-font(
-            @_icon-font-content: @icon-down,
-            @_icon-font-size: 34px,
-            @_icon-font-line-height: 1.2,
-            @_icon-font-position: after,
-            @_icon-font-display: block
+            --_icon-font-content: @icon-down,
+            --_icon-font-size: 34px,
+            --_icon-font-line-height: 1.2,
+            --_icon-font-position: after,
+            --_icon-font-display: block
         );
 
         &:after {
             position: absolute;
-            right: @indent__xs;
+            right: var(--indent__xs);
             top: 0;
         }
     }
@@ -637,7 +637,7 @@
     .abs-split-button {
         .lib-dropdown-split(
             @_options-selector : ~'.items',
-            @_dropdown-split-button-border-radius-fix: true
+            --_dropdown-split-button-border-radius-fix: true
         );
         vertical-align: middle;
     }
@@ -655,13 +655,13 @@
 
     .abs-actions-addto-gridlist {
         .lib-icon-font(
-            @_icon-font-content: '',
-            @_icon-font-size: 29px,
-            @_icon-font-color: @addto-color,
-            @_icon-font-color-hover: @addto-hover-color,
-            @_icon-font-text-hide: true,
-            @_icon-font-vertical-align: middle,
-            @_icon-font-line-height: 24px
+            --_icon-font-content: '',
+            --_icon-font-size: 29px,
+            --_icon-font-color: @addto-color,
+            --_icon-font-color-hover: @addto-hover-color,
+            --_icon-font-text-hide: true,
+            --_icon-font-vertical-align: middle,
+            --_icon-font-line-height: 24px
         );
     }
 }
@@ -682,10 +682,10 @@
 
 & when (@media-common = true) {
     .abs-action-button-as-link {
-        .lib-button-as-link(@_margin: false);
+        .lib-button-as-link(--_margin: false);
         border-radius: 0;
         font-size: inherit;
-        font-weight: @font-weight__regular;
+        font-weight: var(--font-weight__regular);
 
         &:active,
         &:not(:focus) {
@@ -764,30 +764,30 @@
         position: relative;
         .lib-icon-font(
             @icon-down,
-            @_icon-font-size: 26px,
-            @_icon-font-line-height: 10px,
-            @_icon-font-margin: 3px 0 0 0,
-            @_icon-font-position: after
+            --_icon-font-size: 26px,
+            --_icon-font-line-height: 10px,
+            --_icon-font-margin: 3px 0 0 0,
+            --_icon-font-position: after
         );
 
         &:after {
             position: absolute;
-            right: -@indent__s;
+            right: var(---indent__s);
             top: 3px;
         }
 
         &-expanded {
             .lib-icon-font-symbol(
-                @_icon-font-content: @icon-up,
-                @_icon-font-position: after
+                --_icon-font-content: @icon-up,
+                --_icon-font-position: after
             );
         }
     }
 
     .abs-tax-total-expanded {
         .lib-icon-font-symbol(
-            @_icon-font-content: @icon-up,
-            @_icon-font-position: after
+            --_icon-font-content: @icon-up,
+            --_icon-font-position: after
         );
     }
 }
@@ -799,7 +799,7 @@
 & when (@media-common = true) {
     .abs-methods-shipping-title {
         .lib-font-size(14);
-        font-weight: @font-weight__bold;
+        font-weight: var(--font-weight__bold);
         margin: 0 0 15px;
     }
 }
@@ -812,7 +812,7 @@
     .abs-checkout-order-review {
         tbody tr {
             &:not(:last-child) {
-                border-bottom: @border-width__base solid @border-color__base;
+                border-bottom: @border-width__base solid --border-color__base;
             }
 
             &:extend(.abs-add-clearfix-mobile all);
@@ -836,8 +836,8 @@
                     &[data-th]:before {
                         content: attr(data-th) ':';
                         display: block;
-                        font-weight: @font-weight__bold;
-                        padding-bottom: @indent__s;
+                        font-weight: var(--font-weight__bold);
+                        padding-bottom: var(--indent__s);
                     }
                 }
             }
@@ -880,8 +880,8 @@
 
             &-label {
                 display: table-cell;
-                padding-bottom: @indent__xs;
-                padding-right: @indent__m;
+                padding-bottom: var(--indent__xs);
+                padding-right: var(--indent__m);
                 padding-top: 1px;
                 vertical-align: top;
             }
@@ -913,10 +913,10 @@
 & when (@media-common = true) {
     .abs-icon-add {
         .lib-icon-font(
-            @_icon-font-content: @icon-expand,
-            @_icon-font-size: 10px,
-            @_icon-font-line-height: 10px,
-            @_icon-font-vertical-align: middle
+            --_icon-font-content: @icon-expand,
+            --_icon-font-size: 10px,
+            --_icon-font-line-height: 10px,
+            --_icon-font-vertical-align: middle
         );
     }
 }
@@ -924,12 +924,12 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .abs-icon-add-mobile {
         .lib-icon-font(
-            @_icon-font-content: @icon-expand,
-            @_icon-font-size: 10px,
-            @_icon-font-line-height: 10px,
-            @_icon-font-vertical-align: middle,
-            @_icon-font-margin: 0 5px 0 0,
-            @_icon-font-display: block
+            --_icon-font-content: @icon-expand,
+            --_icon-font-size: 10px,
+            --_icon-font-line-height: 10px,
+            --_icon-font-vertical-align: middle,
+            --_icon-font-margin: 0 5px 0 0,
+            --_icon-font-display: block
         );
     }
 }
@@ -950,7 +950,7 @@
             &:extend(.abs-icon-add all);
             &:before {
                 margin-left: -17px;
-                margin-right: @indent__xs;
+                margin-right: var(--indent__xs);
             }
         }
     }
@@ -962,31 +962,31 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .abs-toggling-title-mobile {
-        border-bottom: @border-width__base solid @border-color__base;
-        border-top: @border-width__base solid @border-color__base;
+        border-bottom: @border-width__base solid --border-color__base;
+        border-top: @border-width__base solid --border-color__base;
         cursor: pointer;
         margin-bottom: 0;
-        padding: @indent__s @indent__xl @indent__s @layout__width-xs-indent;
+        padding: @indent__s @indent__xl @indent__s --layout__width-xs-indent;
         position: relative;
 
         .lib-icon-font(
-            @_icon-font-content: @icon-down,
-            @_icon-font-size: 28px,
-            @_icon-font-text-hide: false,
-            @_icon-font-position: after,
-            @_icon-font-display: block
+            --_icon-font-content: @icon-down,
+            --_icon-font-size: 28px,
+            --_icon-font-text-hide: false,
+            --_icon-font-position: after,
+            --_icon-font-display: block
         );
 
         &:after {
             position: absolute;
-            right: @indent__s;
+            right: var(--indent__s);
             top: 0;
         }
 
         &.active {
             .lib-icon-font-symbol(
-                @_icon-font-content: @icon-up,
-                @_icon-font-position: after
+                --_icon-font-content: @icon-up,
+                --_icon-font-position: after
             );
         }
     }
@@ -996,7 +996,7 @@
 //  Abstract no display
 //  ---------------------------------------------
 
-@abs-no-display: {
+--abs-no-display: {
     display: none;
 };
 
@@ -1025,7 +1025,7 @@
 & when (@media-common = true) {
     .abs-status {
         display: inline-block;
-        margin-bottom: @indent__base;
+        margin-bottom: var(--indent__base);
     }
 }
 
@@ -1039,7 +1039,7 @@
         .limiter,
         .pages {
             float: none;
-            margin-bottom: @indent__m;
+            margin-bottom: var(--indent__m);
         }
     }
 }
@@ -1053,7 +1053,7 @@
         .toolbar-amount,
         .limiter,
         .pages {
-            margin-bottom: @indent__m;
+            margin-bottom: var(--indent__m);
         }
     }
 }
@@ -1064,7 +1064,7 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .abs-pager-toolbar {
-        margin-bottom: @indent__base;
+        margin-bottom: var(--indent__base);
         position: relative;
         &:extend(.abs-add-clearfix-desktop all);
 
@@ -1110,16 +1110,16 @@
     .abs-shopping-cart-items {
         .action {
             &.continue {
-                border-radius: @button__border-radius;
-                font-weight: @font-weight__bold;
+                border-radius: var(--button__border-radius);
+                font-weight: var(--font-weight__bold);
                 .lib-link-as-button();
                 .lib-button(
-                    @_button-padding: 7px 15px 7px 0,
-                    @_button-icon-use: true,
-                    @_button-font-content: @icon-prev,
-                    @_button-icon-font-size: 32px,
-                    @_button-icon-font-line-height: 16px,
-                    @_button-icon-font-position: before
+                    --_button-padding: 7px 15px 7px 0,
+                    --_button-icon-use: true,
+                    --_button-font-content: @icon-prev,
+                    --_button-icon-font-size: 32px,
+                    --_button-icon-font-line-height: 16px,
+                    --_button-icon-font-position: before
                 );
 
                 &:active {
@@ -1130,10 +1130,10 @@
             &.update {
                 .lib-button-icon(
                     @icon-update,
-                    @_icon-font-size: 32px,
-                    @_icon-font-line-height: 16px
+                    --_icon-font-size: 32px,
+                    --_icon-font-line-height: 16px
                 );
-                padding-left: @indent__xs;
+                padding-left: var(--indent__xs);
             }
         }
     }
@@ -1149,7 +1149,7 @@
             &.update,
             &.continue,
             &.clear {
-                margin: 0 auto @indent__s;
+                margin: 0 auto --indent__s;
             }
 
             &.update,
@@ -1173,7 +1173,7 @@
         .action {
             &.clear,
             &.update {
-                margin-left: @indent__s;
+                margin-left: var(--indent__s);
             }
 
             &.continue {
@@ -1206,7 +1206,7 @@
 
 & when (@media-common = true) {
     .abs-field-date-input {
-        margin-right: @indent__s;
+        margin-right: var(--indent__s);
         width: calc(~'100% -' @icon-calendar__font-size + @indent__s);
     }
 }
@@ -1221,7 +1221,7 @@
         position: relative;
 
         input {
-            margin-right: @indent__s;
+            margin-right: var(--indent__s);
             width: calc(~'100% -' @checkout-tooltip-icon__font-size + @indent__s + @indent__xs);
         }
     }
@@ -1231,7 +1231,7 @@
 //  Checkout Tooltip Content (position: top)
 //  ---------------------------------------------
 
-@abs-checkout-tooltip-content-position-top: {
+--abs-checkout-tooltip-content-position-top: {
     right: var(--checkout-tooltip-content-mobile__right);
     top: var(--checkout-tooltip-content-mobile__top);
     left: auto;
@@ -1239,12 +1239,12 @@
     &:before,
     &:after {
         .lib-arrow(
-            @_position: top,
-            @_size: @checkout-tooltip-icon-arrow__font-size,
-            @_color: @checkout-tooltip-content__background-color
+            --_position: top,
+            --_size: @checkout-tooltip-icon-arrow__font-size,
+            --_color: @checkout-tooltip-content__background-color
         );
         margin-top: var(--checkout-tooltip-icon-arrow__left);
-        right: @indent__s;
+        right: var(--indent__s);
         left: auto;
         top: 0;
     }
@@ -1280,11 +1280,11 @@
         border-bottom: var(--checkout-step-title__border);
         padding-bottom: var(--checkout-step-title__padding);
         .lib-typography(
-            @_font-size: @checkout-step-title__font-size,
-            @_font-weight: @checkout-step-title__font-weight,
-            @_font-family: false,
-            @_font-style: false,
-            @_line-height: false
+            --_font-size: @checkout-step-title__font-size,
+            --_font-weight: @checkout-step-title__font-weight,
+            --_font-family: false,
+            --_font-style: false,
+            --_line-height: false
         );
     }
 }
@@ -1296,11 +1296,11 @@
 & when (@media-common = true) {
     .abs-sidebar-totals {
         .mark {
-            font-weight: @font-weight__regular;
+            font-weight: var(--font-weight__regular);
             padding-left: 4px;
 
             strong {
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
             }
         }
 
@@ -1310,14 +1310,14 @@
             white-space: nowrap;
 
             strong {
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
             }
         }
 
         .grand {
             .mark,
             .amount {
-                padding-top: @indent__base;
+                padding-top: var(--indent__base);
             }
 
             .amount {
@@ -1325,13 +1325,13 @@
                 text-align: right;
 
                 strong {
-                    font-weight: @font-weight__bold;
+                    font-weight: var(--font-weight__bold);
                 }
             }
         }
 
         .msrp {
-            margin-bottom: @indent__s;
+            margin-bottom: var(--indent__s);
         }
 
         .totals-tax {
@@ -1346,12 +1346,12 @@
                 .amount .price {
                     .lib-icon-font(
                         @icon-down,
-                        @_icon-font-size: 30px,
-                        @_icon-font-text-hide: true,
-                        @_icon-font-position: after,
-                        @_icon-font-display: block
+                        --_icon-font-size: 30px,
+                        --_icon-font-text-hide: true,
+                        --_icon-font-position: after,
+                        --_icon-font-display: block
                     );
-                    padding-right: @indent__m;
+                    padding-right: var(--indent__m);
                     position: relative;
 
                     &:after {
@@ -1369,8 +1369,8 @@
 
                     .amount .price {
                         .lib-icon-font-symbol(
-                            @_icon-font-content: @icon-up,
-                            @_icon-font-position: after
+                            --_icon-font-content: @icon-up,
+                            --_icon-font-position: after
                         );
                     }
                 }
@@ -1399,18 +1399,18 @@
 & when (@media-common = true) {
     .abs-discount-block {
         > .title {
-            border-top: @border-width__base solid @border-color__base;
+            border-top: @border-width__base solid --border-color__base;
             cursor: pointer;
-            font-weight: @font-weight__semibold;
+            font-weight: var(--font-weight__semibold);
             .lib-icon-font(
-                @_icon-font-content: @icon-down,
-                @_icon-font-size: 30px,
-                @_icon-font-position: after,
-                @_icon-font-display: block
+                --_icon-font-content: @icon-down,
+                --_icon-font-size: 30px,
+                --_icon-font-position: after,
+                --_icon-font-display: block
             );
             margin-bottom: 0;
             overflow: hidden;
-            padding: 7px @indent__l 7px @indent__xs;
+            padding: 7px @indent__l 7px --indent__xs;
             position: relative;
 
             &:after {
@@ -1422,7 +1422,7 @@
             strong {
                 .column.main & {
                     .lib-font-size(18);
-                    font-weight: @font-weight__regular;
+                    font-weight: var(--font-weight__regular);
                 }
             }
         }
@@ -1434,8 +1434,8 @@
         &.active {
             > .title {
                 .lib-icon-font-symbol(
-                    @_icon-font-content: @icon-up,
-                    @_icon-font-position: after
+                    --_icon-font-content: @icon-up,
+                    --_icon-font-position: after
                 );
             }
 

@@ -9,7 +9,7 @@
 
 & when (@media-common = true) {
     .table-wrapper {
-        margin-bottom: @indent__base;
+        margin-bottom: var(--indent__base);
     }
 
     table {
@@ -20,8 +20,8 @@
         &:not(.cart) {
             &:not(.totals) {
                 .lib-table-bordered(
-                @_table_type: light,
-                @_table_border-width: @table__border-width
+                --_table_type: light,
+                --_table_border-width: @table__border-width
                 );
 
                 tfoot {
@@ -29,14 +29,14 @@
                         &:first-child {
                             th,
                             td {
-                                border-top: @table__border-width @table__border-style @table__border-color;
-                                padding-top: @indent__base;
+                                border-top: @table__border-width @table__border-style --table__border-color;
+                                padding-top: var(--indent__base);
                             }
                         }
                     }
 
                     .mark {
-                        font-weight: @font-weight__regular;
+                        font-weight: var(--font-weight__regular);
                         text-align: right;
                     }
                 }
@@ -62,11 +62,11 @@
 
                         tbody > tr {
                             > td:first-child {
-                                padding-top: @indent__base;
+                                padding-top: var(--indent__base);
                             }
 
                             > td:last-child {
-                                padding-bottom: @indent__base;
+                                padding-bottom: var(--indent__base);
                             }
                         }
 
@@ -79,7 +79,7 @@
                                 td {
                                     &:last-child {
                                         border: none;
-                                        padding: 0 0 @indent__xs;
+                                        padding: 0 0 --indent__xs;
                                     }
                                 }
                             }
@@ -102,7 +102,7 @@
                             &:first-child {
                                 th,
                                 td {
-                                    padding-top: @indent__base;
+                                    padding-top: var(--indent__base);
                                 }
                             }
                         }

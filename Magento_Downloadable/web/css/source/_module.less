@@ -9,10 +9,10 @@
 
 & when (@media-common = true) {
     .downloadable.samples {
-        margin-bottom: @indent__base;
+        margin-bottom: var(--indent__base);
 
         dd {
-            margin: 0 0 @indent__s;
+            margin: 0 0 --indent__s;
         }
     }
 
@@ -48,7 +48,7 @@
         .price-including-tax {
             .lib-font-size(14);
             display: inline;
-            font-weight: @font-weight__semibold;
+            font-weight: var(--font-weight__semibold);
         }
 
         .sample.link {
@@ -60,7 +60,7 @@
         .product-add-form {
             &:extend(.abs-add-clearfix all);
             clear: both;
-            margin-bottom: @indent__m;
+            margin-bottom: var(--indent__m);
         }
 
         .product-options-bottom {

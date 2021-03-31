@@ -7,9 +7,9 @@
 //  Variables
 //  _____________________________________________
 
-@checkout-shipping-policy-action__color: @link__color;
-@checkout-shipping-policy-tooltip__width: 420px;
-@checkout-shipping-policy-tooltip-mobile__width: 300px;
+--checkout-shipping-policy-action__color: var(--link__color);
+--checkout-shipping-policy-tooltip__width: 420px;
+--checkout-shipping-policy-tooltip-mobile__width: 300px;
 
 //
 //  Common
@@ -41,7 +41,7 @@
                 &:extend(.abs-add-box-sizing all);
                 &:extend(.abs-checkout-tooltip-content-position-top all);
                 width: var(--checkout-shipping-policy-tooltip__width);
-                top: @indent__l;
+                top: var(--indent__l);
             }
         }
     }
@@ -54,7 +54,7 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
     .shipping-policy-block {
         &.field-tooltip {
-            margin-bottom: @indent__base;
+            margin-bottom: var(--indent__base);
             position: relative;
             right: auto;
             top: auto;

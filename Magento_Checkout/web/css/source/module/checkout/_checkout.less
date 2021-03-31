@@ -7,15 +7,15 @@
 //  Variables
 //  _____________________________________________
 
-@checkout-wrapper__margin: @indent__base;
-@checkout-wrapper__columns: 8;
+--checkout-wrapper__margin: var(--indent__base);
+--checkout-wrapper__columns: 8;
 
-@checkout-step-title__border: @border-width__base solid @color-gray80;
-@checkout-step-title__font-size: 26px;
-@checkout-step-title__font-weight: @font-weight__light;
-@checkout-step-title__padding: @indent__s;
+--checkout-step-title__border: @border-width__base solid --color-gray80;
+--checkout-step-title__font-size: 26px;
+--checkout-step-title__font-weight: var(--font-weight__light);
+--checkout-step-title__padding: var(--indent__s);
 
-@checkout-step-title-mobile__font-size: 18px;
+--checkout-step-title-mobile__font-size: 18px;
 
 //
 //  Common
@@ -46,7 +46,7 @@
         }
 
         .step-content {
-            margin: 0 0 @indent__xl;
+            margin: 0 0 --indent__xl;
         }
     }
 
@@ -92,7 +92,7 @@
     .opc-wrapper {
         &:extend(.abs-add-box-sizing-desktop-m all);
         .lib-layout-column(2, 1, @checkout-wrapper__columns);
-        padding-right: @indent__l;
+        padding-right: var(--indent__l);
     }
 
     .checkout-onepage-success {

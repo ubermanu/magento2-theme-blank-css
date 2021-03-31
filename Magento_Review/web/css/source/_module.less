@@ -7,8 +7,8 @@
 //  Variables
 //  _____________________________________________
 
-@review-ratings-left: 280px;
-@reviews-indent-desktop: 30px;
+--review-ratings-left: 280px;
+--reviews-indent-desktop: 30px;
 
 //
 //  Common
@@ -52,7 +52,7 @@
 
     .block {
         &.add.review {
-            margin-bottom: @indent__xl;
+            margin-bottom: var(--indent__xl);
 
             > .title {
                 .lib-heading(h2);
@@ -60,7 +60,7 @@
 
             .legend {
                 .lib-heading(h3);
-                margin: 0 0 @indent__base;
+                margin: 0 0 --indent__base;
             }
 
             .field.rating {
@@ -86,7 +86,7 @@
 
             .review {
                 &.item {
-                    margin-bottom: @indent__xl;
+                    margin-bottom: var(--indent__xl);
                 }
 
                 &.title {
@@ -103,12 +103,12 @@
     }
 
     .customer-review.view {
-        margin-bottom: @indent__base;
+        margin-bottom: var(--indent__base);
 
         .review.title,
         .ratings-summary,
         .product-details {
-            margin-bottom: @indent__base;
+            margin-bottom: var(--indent__base);
         }
     }
 
@@ -126,7 +126,7 @@
 
         .rating-summary {
             display: table-cell;
-            left: -@indent__xs;
+            left: var(---indent__xs);
             position: relative;
             text-align: left;
             vertical-align: middle;
@@ -134,11 +134,11 @@
 
         .reviews-actions {
             display: table-cell;
-            line-height: @rating-icon__font-size;
+            line-height: var(--rating-icon__font-size);
             vertical-align: middle;
 
             a {
-                margin-right: @indent__xs;
+                margin-right: var(--indent__xs);
             }
         }
     }
@@ -165,7 +165,7 @@
     .customer-review {
         .product-details {
             &:extend(.abs-add-clearfix all);
-            margin-bottom: @indent__xl;
+            margin-bottom: var(--indent__xl);
         }
 
         .product-media {
@@ -177,10 +177,10 @@
 
         .review-details {
             .customer-review-rating {
-                margin-bottom: @indent__base;
+                margin-bottom: var(--indent__base);
 
                 .item {
-                    margin-bottom: @indent__s;
+                    margin-bottom: var(--indent__s);
 
                     &:last-child {
                         margin-bottom: 0;
@@ -190,12 +190,12 @@
 
             .review-title {
                 .lib-heading(h3);
-                font-weight: @font-weight__semibold;
-                margin-bottom: @indent__base;
+                font-weight: var(--font-weight__semibold);
+                margin-bottom: var(--indent__base);
             }
 
             .review-content {
-                margin-bottom: @indent__base;
+                margin-bottom: var(--indent__base);
             }
         }
 
@@ -218,12 +218,12 @@
             .label,
             .control {
                 display: table-cell;
-                padding-bottom: @indent__s;
+                padding-bottom: var(--indent__s);
                 vertical-align: top;
             }
 
             .label {
-                padding-right: @indent__s;
+                padding-right: var(--indent__s);
                 padding-top: 6px;
             }
 
@@ -239,8 +239,8 @@
 
     .review {
         &-toolbar {
-            border-top: 1px solid @color-gray79;
-            margin: 0 0 @indent__base;
+            border-top: 1px solid --color-gray79;
+            margin: 0 0 --indent__base;
             text-align: center;
 
             &:first-child {
@@ -248,7 +248,7 @@
             }
 
             .pages {
-                border-bottom: 1px solid @color-gray79;
+                border-bottom: 1px solid --color-gray79;
                 display: block;
                 padding: @indent__base 0;
                 text-align: center;
@@ -273,7 +273,7 @@
 
         .fieldset &-legend.legend {
             &:extend(.abs-reset-left-margin all);
-            margin-bottom: @indent__base;
+            margin-bottom: var(--indent__base);
 
             strong {
                 display: block;
@@ -283,13 +283,13 @@
 
         &-field-rating {
             .control {
-                margin-bottom: 1.2 * @indent__xl;
-                margin-top: @indent__s;
+                margin-bottom: 1.2 * --indent__xl;
+                margin-top: var(--indent__s);
             }
         }
 
         &-list {
-            margin-bottom: @indent__l;
+            margin-bottom: var(--indent__l);
 
             .block-title strong {
                 .lib-heading(h2);
@@ -298,7 +298,7 @@
 
         &-item {
             .lib-clearer();
-            border-bottom: 1px solid @color-gray79;
+            border-bottom: 1px solid --color-gray79;
             margin: 0;
             padding: @indent__base 0;
 
@@ -309,7 +309,7 @@
 
         &-ratings {
             display: table;
-            margin-bottom: @indent__s;
+            margin-bottom: var(--indent__s);
             max-width: 100%;
             &:extend(.abs-rating-summary all);
         }
@@ -320,11 +320,11 @@
 
         &-title {
             .lib-heading(h3);
-            margin: 0 0 @indent__base;
+            margin: 0 0 --indent__base;
         }
 
         &-content {
-            margin-bottom: @indent__base;
+            margin-bottom: var(--indent__base);
         }
     }
 }
@@ -342,16 +342,16 @@
         &-ratings {
             float: left;
             margin-bottom: 0;
-            max-width: @review-ratings-left - @indent__xl;
+            max-width: @review-ratings-left - --indent__xl;
         }
 
         &-ratings ~ &-content,
         &-ratings ~ &-details {
-            margin-left: @review-ratings-left;
+            margin-left: var(--review-ratings-left);
         }
 
         &-toolbar {
-            margin: 0 0 @reviews-indent-desktop;
+            margin: 0 0 --reviews-indent-desktop;
 
             .pages {
                 padding: @reviews-indent-desktop 0;
@@ -359,7 +359,7 @@
         }
 
         .fieldset &-legend.legend {
-            margin-bottom: @reviews-indent-desktop;
+            margin-bottom: var(--reviews-indent-desktop);
         }
 
         &-item {
@@ -367,7 +367,7 @@
         }
 
         &-title {
-            margin: 0 0 @reviews-indent-desktop;
+            margin: 0 0 --reviews-indent-desktop;
         }
     }
 }

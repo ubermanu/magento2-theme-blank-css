@@ -13,7 +13,7 @@
     .form-giftregistry-edit {
         &:extend(.abs-add-fields all);
         .actions-toolbar:not(:last-child) {
-            margin-bottom: @indent__xl;
+            margin-bottom: var(--indent__xl);
         }
 
         .fieldset {
@@ -50,10 +50,10 @@
 
     .form.giftregistry .fieldset {
         .cart-summary & {
-            margin: 25px 0 @indent__xs;
+            margin: 25px 0 --indent__xs;
 
             .field {
-                margin: 0 0 @indent__s;
+                margin: 0 0 --indent__s;
 
                 .control {
                     float: none;
@@ -108,7 +108,7 @@
     .block-giftregistry-shared {
         .item-options {
             .item-value {
-                margin: 0 0 @indent__m;
+                margin: 0 0 --indent__m;
             }
         }
     }
@@ -123,7 +123,7 @@
         }
 
         .item {
-            border-bottom: @border-width__base solid @border-color__base;
+            border-bottom: @border-width__base solid --border-color__base;
         }
 
         .qty {
@@ -133,7 +133,7 @@
         }
 
         .col {
-            padding: @indent__base 8px @indent__s;
+            padding: @indent__base 8px --indent__s;
 
             .price-box {
                 display: inline-block;
@@ -142,7 +142,7 @@
             .price-wrapper {
                 .lib-font-size(18);
                 display: block;
-                font-weight: @font-weight__bold;
+                font-weight: var(--font-weight__bold);
                 white-space: nowrap;
             }
         }
@@ -162,7 +162,7 @@
 
             &-item-name {
                 display: block;
-                margin: 0 0 @indent__xs;
+                margin: 0 0 --indent__xs;
             }
         }
     }
@@ -210,7 +210,7 @@
 
     .form-giftregistry-search {
         .fieldset {
-            margin-bottom: @form-field__vertical-indent__desktop;
+            margin-bottom: var(--form-field__vertical-indent__desktop);
             > .fields-specific-options {
                 > .field {
                     .lib-form-field-type-revert();

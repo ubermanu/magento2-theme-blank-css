@@ -17,8 +17,8 @@
     .cart-summary {
         &:extend(.abs-add-box-sizing all);
         background: var(--sidebar__background-color);
-        margin-bottom: @indent__m;
-        padding: 1px 15px @indent__m;
+        margin-bottom: var(--indent__m);
+        padding: 1px 15px --indent__m;
 
         > .title {
             display: block;
@@ -34,13 +34,13 @@
             }
 
             .fieldset {
-                margin: 15px 0 @indent__m @indent__xs;
+                margin: 15px 0 @indent__m --indent__xs;
 
                 .field {
-                    margin: 0 0 @indent__s;
+                    margin: 0 0 --indent__s;
 
                     &.note {
-                        font-size: @font-size__s;
+                        font-size: var(--font-size__s);
                     }
                 }
 
@@ -72,8 +72,8 @@
 
     //  Totals block
     .cart-totals {
-        border-top: 1px solid @border-color__base;
-        padding-top: @indent__s;
+        border-top: 1px solid --border-color__base;
+        padding-top: var(--indent__s);
         &:extend(.abs-sidebar-totals all);
 
         .table-wrapper {
@@ -90,17 +90,17 @@
     .cart.table-wrapper {
         .items {
             thead + .item {
-                border-top: @border-width__base solid @border-color__base;
+                border-top: @border-width__base solid --border-color__base;
             }
 
             > .item {
-                border-bottom: @border-width__base solid @border-color__base;
+                border-bottom: @border-width__base solid --border-color__base;
                 position: relative;
             }
         }
 
         .col {
-            padding-top: @indent__base;
+            padding-top: var(--indent__base);
 
             &.qty {
                 .input-text {
@@ -116,7 +116,7 @@
 
         .item {
             &-actions td {
-                padding-bottom: @indent__s;
+                padding-bottom: var(--indent__s);
                 text-align: center;
                 white-space: normal;
             }
@@ -137,8 +137,8 @@
             > .action {
                 &:extend(button all);
                 .lib-link-as-button();
-                margin-bottom: @indent__s;
-                margin-right: @indent__s;
+                margin-bottom: var(--indent__s);
+                margin-right: var(--indent__s);
 
                 &:last-child {
                     margin-right: 0;
@@ -149,7 +149,7 @@
         .action {
             &.help.map {
                 &:extend(.abs-action-button-as-link all);
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
             }
         }
 
@@ -170,7 +170,7 @@
 
             &-item-name {
                 display: inline-block;
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
                 margin-top: -6px;
             }
         }
@@ -183,14 +183,14 @@
 
         //  Product options
         .item-options {
-            font-size: @font-size__s;
-            margin-bottom: @indent__s;
+            font-size: var(--font-size__s);
+            margin-bottom: var(--indent__s);
             &:extend(.abs-product-options-list all);
             &:extend(.abs-add-clearfix all);
         }
 
         .product-item-name + .item-options {
-            margin-top: @indent__s;
+            margin-top: var(--indent__s);
         }
 
         .product-image-wrapper {
@@ -199,7 +199,7 @@
 
         .action.configure {
             display: inline-block;
-            margin: 0 0 @indent__base;
+            margin: 0 0 --indent__base;
         }
     }
 
@@ -210,7 +210,7 @@
 
         .checkout-methods-items {
             &:extend(.abs-reset-list all);
-            margin-top: @indent__base;
+            margin-top: var(--indent__base);
             text-align: center;
 
             .action.primary {
@@ -220,7 +220,7 @@
 
             .item {
                 & + .item {
-                    margin-top: @indent__base;
+                    margin-top: var(--indent__base);
                 }
             }
         }
@@ -235,7 +235,7 @@
         }
 
         .pages {
-            margin: 0 0 @indent__m;
+            margin: 0 0 --indent__m;
             text-align: center;
 
             .items {
@@ -247,7 +247,7 @@
     }
 
     .cart-products-toolbar-top {
-        border-bottom: @border-width__base solid @border-color__base;
+        border-bottom: @border-width__base solid --border-color__base;
     }
 
     //
@@ -308,8 +308,8 @@
                     &[data-th]:before {
                         content: attr(data-th) ':';
                         display: block;
-                        font-weight: @font-weight__bold;
-                        padding-bottom: @indent__s;
+                        font-weight: var(--font-weight__bold);
+                        padding-bottom: var(--indent__s);
                     }
                 }
 
@@ -348,7 +348,7 @@
             float: left;
 
             &.block {
-                margin-bottom: @indent__base;
+                margin-bottom: var(--indent__base);
             }
         }
     }
@@ -370,8 +370,8 @@
         .block {
             .fieldset {
                 .field {
-                    .lib-form-field-type-revert(@_type: block);
-                    margin: 0 0 @indent__s;
+                    .lib-form-field-type-revert(--_type: block);
+                    margin: 0 0 --indent__s;
                 }
             }
         }
@@ -387,7 +387,7 @@
             .item {
                 .col {
                     &.item {
-                        padding: 27px 8px @indent__s;
+                        padding: 27px 8px --indent__s;
                     }
                 }
 
@@ -402,7 +402,7 @@
                 &-item-photo {
                     display: table-cell;
                     max-width: 100%;
-                    padding-right: @indent__base;
+                    padding-right: var(--indent__base);
                     position: static;
                     vertical-align: top;
                     width: 1%;
@@ -425,7 +425,7 @@
         }
 
         .action {
-            margin-bottom: @indent__s;
+            margin-bottom: var(--indent__s);
         }
     }
 
@@ -464,7 +464,7 @@
 
         .cart {
             + .cart-products-toolbar {
-                margin-top: @indent__m;
+                margin-top: var(--indent__m);
             }
         }
     }

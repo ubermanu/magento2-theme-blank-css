@@ -7,11 +7,11 @@
 //  Variables
 //  _____________________________________________
 
-@block-auth__dropdown__padding: @indent__m;
-@block-auth__dropdown__background-color: @color-white;
-@block-auth__or-label__size: 36px;
-@block-auth__width: 0;
-@block-auth__border: 1px solid @color-gray-light3;
+--block-auth__dropdown__padding: var(--indent__m);
+--block-auth__dropdown__background-color: var(--color-white);
+--block-auth__or-label__size: 36px;
+--block-auth__width: 0;
+--block-auth__border: 1px solid --color-gray-light3;
 
 //
 //  Common
@@ -22,19 +22,19 @@
         box-sizing: border-box;
 
         .modal-inner-wrap {
-            padding: @block-auth__dropdown__padding;
+            padding: var(--block-auth__dropdown__padding);
         }
     }
 
     .authentication-wrapper {
         float: right;
-        margin-top: -1.5*@indent__xl;
+        margin-top: -1.5*--indent__xl;
         max-width: 50%;
         position: relative;
         z-index: 1;
 
         ._has-auth-shown & {
-            z-index: @modal__z-index;
+            z-index: var(--modal__z-index);
         }
     }
 
@@ -46,24 +46,24 @@
         .block-title {
             .lib-font-size(@h3__font-size);
             border-bottom: 0;
-            margin-bottom: @indent__m;
+            margin-bottom: var(--indent__m);
 
             strong {
-                font-weight: @font-weight__light;
+                font-weight: var(--font-weight__light);
             }
         }
 
         .field {
             .label {
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
             }
         }
 
         .actions-toolbar {
-            margin-bottom: @indent__xs;
+            margin-bottom: var(--indent__xs);
 
             > .secondary {
-                padding-top: @indent__m;
+                padding-top: var(--indent__m);
                 text-align: left;
             }
         }
@@ -78,7 +78,7 @@
 
             ul {
                 list-style: none;
-                padding-left: @indent__s;
+                padding-left: var(--indent__s);
             }
 
             .field {
@@ -90,9 +90,9 @@
             }
 
             & + .block {
-                border-top: 1px solid @color-gray-light5;
-                margin-top: @indent__xl;
-                padding-top: @indent__xl;
+                border-top: 1px solid --color-gray-light5;
+                margin-top: var(--indent__xl);
+                padding-top: var(--indent__xl);
                 position: relative;
 
                 &:before {
@@ -100,11 +100,11 @@
                     line-height: var(--block-auth__or-label__size - 2px);
                     .lib-css(margin, -(@block-auth__or-label__size/2 + 1px) 0 0 -(@block-auth__or-label__size / 2));
                     min-width: var(--block-auth__or-label__size);
-                    background: @color-white;
-                    border: 1px solid @color-gray-light5;
+                    background: var(--color-white);
+                    border: 1px solid --color-gray-light5;
                     border-radius: 50%;
                     box-sizing: border-box;
-                    color: @color-gray-light5;
+                    color: var(--color-gray-light5);
                     content: attr(data-label);
                     display: inline-block;
                     left: 50%;
@@ -159,7 +159,7 @@
         .block-title {
             .lib-font-size(@h2__font-size);
             border-bottom: 0;
-            margin-bottom: @indent__m;
+            margin-bottom: var(--indent__m);
         }
 
         .actions-toolbar {
@@ -182,14 +182,14 @@
 
     .popup-authentication {
         .modal-inner-wrap {
-            min-width: @screen__m;
+            min-width: var(--screen__m);
             width: 60%;
         }
 
         .block-authentication {
             .lib-vendor-prefix-display(flex);
             .lib-vendor-prefix-flex-direction(row);
-            border-top: 1px solid @color-gray-light5;
+            border-top: 1px solid --color-gray-light5;
         }
 
         .block[class],
@@ -208,10 +208,10 @@
             width: 50%;
 
             & + .block {
-                border-left: 1px solid @color-gray-light5;
+                border-left: 1px solid --color-gray-light5;
                 border-top: 0;
                 margin: 0;
-                padding: @indent__s 0 0 @indent__xl;
+                padding: @indent__s 0 0 --indent__xl;
 
                 &:before {
                     left: 0;

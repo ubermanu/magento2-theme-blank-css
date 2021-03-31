@@ -9,7 +9,7 @@
 
 & when (@media-common = true) {
     .order-links {
-        border-bottom: @border-width__base solid @border-color__base;
+        border-bottom: @border-width__base solid --border-color__base;
         margin-bottom: 10px;
 
         .item {
@@ -25,7 +25,7 @@
     }
 
     .order-details-items {
-        border-bottom: @border-width__base solid @border-color__base;
+        border-bottom: @border-width__base solid --border-color__base;
         margin-bottom: 20px;
         padding-bottom: 10px;
 
@@ -56,7 +56,7 @@
             }
 
             tbody + tbody {
-                border-top: @border-width__base solid @border-color__base;
+                border-top: @border-width__base solid --border-color__base;
             }
         }
 
@@ -118,7 +118,7 @@
 
     .page-title-wrapper {
         .order-date {
-            margin: 0 0 @indent__base;
+            margin: 0 0 --indent__base;
         }
     }
 
@@ -127,7 +127,7 @@
     .sales-guest-view {
         .page-title-wrapper {
             .page-title {
-                margin-right: @indent__m;
+                margin-right: var(--indent__m);
             }
         }
     }
@@ -182,7 +182,7 @@
             margin: 0 0 40px;
 
             .comment-date {
-                font-weight: @font-weight__semibold;
+                font-weight: var(--font-weight__semibold);
             }
 
             .comment-content {
@@ -195,14 +195,14 @@
             .box-content {
                 .payment-method {
                     .title {
-                        font-weight: @font-weight__regular;
+                        font-weight: var(--font-weight__regular);
                     }
 
                     .content {
                         margin: 0;
 
                         > strong {
-                            font-weight: @font-weight__regular;
+                            font-weight: var(--font-weight__regular);
 
                             &:after {
                                 content: ': ';
@@ -215,7 +215,7 @@
     }
 
     .order-tracking {
-        border-bottom: @border-width__base solid @border-color__base;
+        border-bottom: @border-width__base solid --border-color__base;
         margin: 0;
         padding: 20px 0;
 
@@ -370,7 +370,7 @@
 
     .page-title-wrapper {
         .order-date {
-            @order-status-indent: ceil(@h1__margin-bottom__desktop/2);
+            --order-status-indent: ceil(@h1__margin-bottom__desktop/2);
             .lib-css(margin-top, -@order-status-indent);
         }
     }
@@ -388,7 +388,7 @@
 
                     .box {
                         &:extend(.abs-blocks-2columns all);
-                        margin-bottom: @indent__base;
+                        margin-bottom: var(--indent__base);
                     }
                 }
             }

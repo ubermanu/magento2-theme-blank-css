@@ -38,7 +38,7 @@
 //  Variables
 //  _____________________________________________
 
-@font-size-unit-convert: false; // Prevents font-related measurements from being converted to the incompatible rem unit
+--font-size-unit-convert: false; // Prevents font-related measurements from being converted to the incompatible rem unit
 
 //
 //  Resets
@@ -101,19 +101,19 @@ table {
 .lib-typography-all();
 
 body {
-    font-family: @font-family__base;
+    font-family: var(--font-family__base);
     font-weight: normal;
     text-align: left;
 }
 
 th,
 td {
-    font-family: @font-family__base;
+    font-family: var(--font-family__base);
 }
 
 a {
-    color: @link__color;
-    text-decoration: @link__text-decoration;
+    color: var(--link__color);
+    text-decoration: var(--link__text-decoration);
 }
 
 .email-non-inline() {
@@ -146,7 +146,7 @@ a {
 
 html,
 body {
-    background-color: @email__background-color;
+    background-color: var(--email__background-color);
 }
 
 .wrapper {
@@ -154,14 +154,14 @@ body {
 }
 
 .wrapper-inner {
-    padding-bottom: @email-content__padding__l;
+    padding-bottom: var(--email-content__padding__l);
     width: 100%;
 }
 
 .main {
     margin: 0 auto;
     text-align: left; // Necessary to prevent all text from centering in Outlook 2003
-    width: @email-body__width;
+    width: var(--email-body__width);
 }
 
 .header {
@@ -169,12 +169,12 @@ body {
 }
 
 .main-content {
-    background-color: @email-content__background-color;
-    padding: @email-body__padding;
+    background-color: var(--email-content__background-color);
+    padding: var(--email-body__padding);
 }
 
 .footer {
-    padding: 0 @email-body__padding @email-body__padding; // Reduce space between body of email and closing text
+    padding: 0 @email-body__padding --email-body__padding; // Reduce space between body of email and closing text
 }
 
 //  Layout (Mobile)
@@ -182,7 +182,7 @@ body {
     html,
     body {
         //  Change background/foreground to same color
-        background-color: @email-content__background-color;
+        background-color: var(--email-content__background-color);
         width: 100% !important;
     }
 
@@ -199,21 +199,21 @@ body {
 
 .button {
     & > tr > td {
-        padding-bottom: @indent__s;
+        padding-bottom: var(--indent__s);
     }
 
     .inner-wrapper {
         td {
             border-radius: var(--button__border-radius, 1);
-            background-color: @button-primary__background;
+            background-color: var(--button-primary__background);
 
             a {
                 border-radius: var(--button__border-radius, 1);
-                border: 1px solid @button-primary__background;
-                color: @button-primary__color;
+                border: 1px solid --button-primary__background;
+                color: var(--button-primary__color);
                 display: inline-block;
-                font-size: @button__font-size;
-                padding: @button__padding;
+                font-size: var(--button__font-size);
+                padding: var(--button__padding);
                 text-decoration: none;
             }
         }
@@ -237,7 +237,7 @@ body {
         a:hover,
         a:visited {
             //  Undo general link hover state
-            border: 1px solid @button-primary__hover__background;
+            border: 1px solid --button-primary__hover__background;
             color: @button-primary__hover__color !important;
             text-decoration: none !important;
         }
@@ -264,17 +264,17 @@ body {
 
 .message-info,
 .message-gift {
-    width: @table__width;
+    width: var(--table__width);
 
     td {
-        background-color: @message-email__background;
-        border: 1px solid @message-email__border-color;
-        color: @message-email__color;
+        background-color: var(--message-email__background);
+        border: 1px solid --message-email__border-color;
+        color: var(--message-email__color);
         margin: 0;
-        padding: @email-content__padding__base;
+        padding: var(--email-content__padding__base);
 
         a {
-            color: @message-email-link__color;
+            color: var(--message-email-link__color);
         }
 
         h1,
@@ -289,17 +289,17 @@ body {
 }
 
 .message-details {
-    margin-bottom: @indent__s;
+    margin-bottom: var(--indent__s);
 
     b {
         font-weight: bold;
     }
 
     td {
-        padding-bottom: @indent__xs;
+        padding-bottom: var(--indent__xs);
 
         b {
-            margin-right: @indent__s;
+            margin-right: var(--indent__s);
         }
     }
 }

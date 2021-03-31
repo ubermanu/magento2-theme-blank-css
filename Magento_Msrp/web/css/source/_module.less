@@ -17,12 +17,12 @@
 
     .map-popup {
         .lib-popup(
-            @_popup-margin-top: @indent__s,
-            @_popup-margin-left: false,
-            @_popup-content-margin: @indent__s 0 0,
-            @_popup-position-bottom: false,
-            @_popup-position-right: false,
-            @_popup-position: absolute
+            --_popup-margin-top: @indent__s,
+            --_popup-margin-left: false,
+            --_popup-content-margin: @indent__s 0 0,
+            --_popup-position-bottom: false,
+            --_popup-position-right: false,
+            --_popup-position: absolute
         );
         box-sizing: border-box;
 
@@ -31,7 +31,7 @@
             margin-bottom: 15px;
 
             .price-box {
-                margin: 0 0 @indent__base;
+                margin: 0 0 --indent__base;
 
                 .label {
                     &:after {
@@ -51,7 +51,7 @@
     .map-old-price,
     .product-info-price .map-show-info {
         &:not(:last-child) {
-            margin-right: @indent__s;
+            margin-right: var(--indent__s);
         }
     }
 
@@ -97,7 +97,7 @@
         display: inline-block;
 
         &:not(:last-child) {
-            margin-bottom: @indent__s;
+            margin-bottom: var(--indent__s);
         }
     }
 }

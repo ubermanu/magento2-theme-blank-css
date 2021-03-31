@@ -51,7 +51,7 @@
         }
 
         .actions-toolbar {
-            margin-top: @indent__s;
+            margin-top: var(--indent__s);
         }
 
         .item-options {
@@ -70,7 +70,7 @@
 
     //  Discounts
     .paypal-review-discount {
-        border-bottom: @border-width__base solid @border-color__base;
+        border-bottom: @border-width__base solid --border-color__base;
         margin: @indent__base 0;
 
         .block {
@@ -78,7 +78,7 @@
             margin-bottom: 0;
 
             .fieldset {
-                padding: @indent__s 0 @indent__base;
+                padding: @indent__s 0 --indent__base;
             }
         }
     }
@@ -91,7 +91,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .paypal-review {
         .paypal-review-title {
-            border-bottom: @border-width__base solid @border-color__base;
+            border-bottom: @border-width__base solid --border-color__base;
         }
 
         .block-content {
