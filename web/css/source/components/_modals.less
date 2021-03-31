@@ -1,8 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Lib -> Components -> Modals
 //  _____________________________________________
@@ -13,28 +8,30 @@
 
 @import '../../source/_variables.less';
 
-@modal__background-color: @color-white;
-@modal__box-shadow: 0 0 12px 2px rgba(0, 0, 0, .35);
+:root {
+    --modal__background-color: var(--color-white);
+    --modal__box-shadow: 0 0 12px 2px rgba(0, 0, 0, .35);
 
-@modal-popup__indent-vertical: 5rem;
-@modal-popup__padding: 3rem;
-@modal-popup__width: 75%;
-@modal-popup__z-index: @modal__z-index;
+    --modal-popup__indent-vertical: 5rem;
+    --modal-popup__padding: 3rem;
+    --modal-popup__width: 75%;
+    --modal-popup__z-index: var(--modal__z-index);
 
-@modal-slide__first__indent-left: 14.8rem;
-@modal-slide__indent-left: 4.5rem;
-@modal-slide__padding: 2.6rem;
-@modal-slide__z-index: @modal__z-index;
+    --modal-slide__first__indent-left: 14.8rem;
+    --modal-slide__indent-left: 4.5rem;
+    --modal-slide__padding: 2.6rem;
+    --modal-slide__z-index: var(--modal__z-index);
 
-@modal-slide-header__padding-vertical: 2.1rem;
+    --modal-slide-header__padding-vertical: 2.1rem;
 
-@modal-popup-confirm__width: 50rem;
+    --modal-popup-confirm__width: 50rem;
 
-@modal-popup-image-box__border-color: @color-gray80;
-@modal-popup-image-box__max-width: 78rem;
+    --modal-popup-image-box__border-color: var(--color-gray80);
+    --modal-popup-image-box__max-width: 78rem;
 
-@modal-popup-image-box-preview__max-width: @modal-popup-image-box-preview-image__max-height + (2 * @indent__base);
-@modal-popup-image-box-preview-image__max-height: 54rem;
+    --modal-popup-image-box-preview__max-width: calc(var(--modal-popup-image-box-preview-image__max-height) + (2 * var(--indent__base)));
+    --modal-popup-image-box-preview-image__max-height: 54rem;
+}
 
 //
 //  Utilities
@@ -49,37 +46,33 @@
     top: 0;
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: visibility 0s .3s, opacity .3s ease;
-            transition: visibility 0s .3s, opacity .3s ease;
+    transition: visibility 0s .3s, opacity .3s ease;
 
     &._show {
         visibility: visible;
         opacity: 1;
-        -webkit-transition: opacity .3s ease;
-                transition: opacity .3s ease;
+        transition: opacity .3s ease;
 
         .modal-inner-wrap {
-            -webkit-transform: translate(0, 0);
-                    transform: translate(0, 0);
+            transform: translate(0, 0);
         }
     }
 
     .modal-inner-wrap {
-        .lib-css(background-color, @modal__background-color);
-        .lib-css(box-shadow, @modal__box-shadow);
+        background-color: var(--modal__background-color);
+        box-shadow: var(--modal__box-shadow);
         opacity: 1;
         pointer-events: auto;
     }
 }
 
 .lib-modal-slide() {
-    .lib-css(left, @modal-slide__first__indent-left);
-    .lib-css(z-index, @modal-slide__z-index);
+    left: var(--modal-slide__first__indent-left);
+    z-index: var(--modal-slide__z-index);
 
     &._show {
         .modal-inner-wrap {
-            -webkit-transform: translateX(0);
-                    transform: translateX(0);
+            transform: translateX(0);
         }
     }
 
@@ -87,47 +80,41 @@
         height: 100%;
         overflow-y: auto;
         position: static;
-        -webkit-transform: translateX(100%);
-                transform: translateX(100%);
-        -webkit-transition: -webkit-transform .3s ease-in-out;
-                transition:         transform .3s ease-in-out;
+        transform: translateX(100%);
+        transition: transform .3s ease-in-out;
         width: auto;
     }
 }
 
 .lib-modal-popup() {
-    .lib-css(z-index, @modal-popup__z-index);
+    z-index: var(--modal-popup__z-index);
     left: 0;
     overflow-y: auto;
 
     &.confirm {
         .modal-inner-wrap {
-            .lib-css(max-width, @modal-popup-confirm__width);
+            max-width: var(--modal-popup-confirm__width);
         }
     }
 
     &._show {
         .modal-inner-wrap {
-            -webkit-transform: translateY(0);
-                    transform: translateY(0);
+            transform: translateY(0);
         }
     }
 
     .modal-inner-wrap {
-        .lib-css(margin, @modal-popup__indent-vertical auto);
-        .lib-css(width, @modal-popup__width);
-        .lib-vendor-prefix-display(flex);
-        .lib-vendor-prefix-flex-direction(column);
+        margin: var(--modal-popup__indent-vertical) auto;
+        width: var(--modal-popup__width);
+        display: flex;
+        flex-direction: column;
         box-sizing: border-box;
         height: auto;
         left: 0;
         position: absolute;
         right: 0;
-        -webkit-transform: translateY(-200%);
-                transform: translateY(-200%);
-        -webkit-transition: -webkit-transform .2s ease;
-                transition:         transform .2s ease;
-
+        transform: translateY(-200%);
+        transition: transform .2s ease;
     }
 }
 
@@ -135,7 +122,7 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
+& when (--media-common = true) {
     body {
         &._has-modal {
             height: 100%;
@@ -146,7 +133,7 @@
 
     //  Modals overlay
     .modals-overlay {
-        .lib-css(z-index, @overlay__z-index);
+        z-index: var(--overlay__z-index);
     }
 
     .modal-slide,
@@ -156,17 +143,18 @@
 
     .modal-slide {
         .lib-modal-slide();
+
         &._inner-scroll {
             .modal-inner-wrap {
                 overflow-y: visible;
-                .lib-vendor-prefix-display(flex);
-                .lib-vendor-prefix-flex-direction(column);
+                display: flex;
+                flex-direction: column;
             }
 
             .modal-header,
             .modal-footer {
-                .lib-vendor-prefix-flex-grow(0);
-                .lib-vendor-prefix-flex-shrink(0);
+                flex-grow: 0;
+                flex-shrink: 0;
             }
 
             .modal-content {
@@ -181,12 +169,12 @@
         .modal-header,
         .modal-content,
         .modal-footer {
-            .lib-css(padding, 0 @modal-slide__padding @modal-slide__padding);
+            padding: 0 var(--modal-slide__padding) var(--modal-slide__padding);
         }
 
         .modal-header {
-            .lib-css(padding-bottom, @modal-slide-header__padding-vertical);
-            .lib-css(padding-top, @modal-slide-header__padding-vertical);
+            padding-bottom: var(--modal-slide-header__padding-vertical);
+            padding-top: var(--modal-slide-header__padding-vertical);
         }
     }
 
@@ -217,25 +205,25 @@
         .modal-header,
         .modal-content,
         .modal-footer {
-            .lib-css(padding-left, @modal-popup__padding);
-            .lib-css(padding-right, @modal-popup__padding);
+            padding-left: var(--modal-popup__padding);
+            padding-right: var(--modal-popup__padding);
         }
 
         .modal-header,
         .modal-footer {
-            .lib-vendor-prefix-flex-grow(0);
-            .lib-vendor-prefix-flex-shrink(0);
+            flex-grow: 0;
+            flex-shrink: 0;
         }
 
         .modal-header {
-            .lib-css(padding-bottom, @modal-popup__padding / 2.5);
-            .lib-css(padding-top, @modal-popup__padding);
+            padding-bottom: calc(var(--modal-popup__padding) / 2.5);
+            padding-top: var(--modal-popup__padding);
         }
 
         .modal-footer {
             margin-top: auto;
-            .lib-css(padding-bottom, @modal-popup__padding);
-            .lib-css(padding-top, @modal-popup__padding);
+            padding-bottom: var(--modal-popup__padding);
+            padding-top: var(--modal-popup__padding);
         }
 
         .modal-footer-actions {
