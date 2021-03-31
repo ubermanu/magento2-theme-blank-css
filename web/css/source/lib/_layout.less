@@ -36,12 +36,10 @@
 }
 
 #lib-layout-columns() {
-    & when (@use-flex = true) {
-        .lib-vendor-prefix-display(flex);
-        .lib-vendor-prefix-flex-wrap(wrap);
-        box-sizing: border-box;
-    }
-;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
     &:after {
         clear: both;
         content: ' ';
@@ -109,9 +107,7 @@
     @_units: "px", "%", "em", "rem", "pt";
     ._lib-set-column-width(length(@_units), @_width);
     .lib-flex-degradation(@_total-columns, @_order);
-    & when (@use-flex = true) {
-        .lib-vendor-prefix-order(@_order);
-    }
+    order: @_order;
 }
 
 .lib-flex-degradation(@_total-columns, @_order) when (@_order = 1) {

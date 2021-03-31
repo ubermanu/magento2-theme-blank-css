@@ -523,12 +523,12 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .catalog-product-view {
         .column.main {
-            .lib-vendor-prefix-display(flex);
-            .lib-vendor-prefix-flex-direction(column);
+            display: flex;
+            flex-direction: column;
         }
 
         .product.media {
-            .lib-vendor-prefix-order(-1);
+            order: -1;
         }
     }
 
