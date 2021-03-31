@@ -26,9 +26,9 @@
     .nav-toggle {
         .lib-icon-font(
             @icon-menu,
-        @_icon-font-size: 28px,
-        @_icon-font-color: var(--header-icons-color),
-        @_icon-font-color-hover: var(--header-icons-color-hover)
+            @_icon-font-size: 28px,
+            @_icon-font-color: var(--header-icons-color),
+            @_icon-font-color-hover: var(--header-icons-color-hover)
         );
         .lib-icon-text-hide();
         cursor: pointer;
@@ -52,10 +52,10 @@
         .parent {
             .level-top {
                 .lib-icon-font(
-                @_icon-font-content: var(--icon-down),
-                @_icon-font-size: 42 px,
-                @_icon-font-position: after,
-                @_icon-font-display: block
+                    @_icon-font-content: var(--icon-down),
+                    @_icon-font-size: 42 px,
+                    @_icon-font-position: after,
+                    @_icon-font-display: block
                 );
                 position: relative;
 
@@ -67,9 +67,9 @@
 
                 &.ui-state-active {
                     .lib-icon-font-symbol(
-                    @_icon-font-content: var(--icon-up),
-                    @_icon-font-position: after
-                );
+                        @_icon-font-content: var(--icon-up),
+                        @_icon-font-position: after
+                    );
                 }
             }
         }
@@ -77,7 +77,7 @@
 
     .nav-sections {
         -webkit-overflow-scrolling: touch;
-        .lib-css(transition, left .3s, 1);
+        transition: left .3s;
         height: 100%;
         left: calc(~'-1 * (100% - @{active-nav-indent})');
         overflow: auto;
@@ -105,10 +105,10 @@
         .switcher-trigger {
             strong {
                 .lib-icon-font(
-                @_icon-font-content: var(--icon-down),
-                @_icon-font-size: 42 px,
-                @_icon-font-position: after,
-                @_icon-font-display: block
+                    @_icon-font-content: var(--icon-down),
+                    @_icon-font-size: 42 px,
+                    @_icon-font-position: after,
+                    @_icon-font-display: block
                 );
                 position: relative;
 
@@ -121,8 +121,8 @@
 
             &.active strong {
                 .lib-icon-font-symbol(
-                @_icon-font-content: var(--icon-up),
-                @_icon-font-position: after
+                    @_icon-font-content: var(--icon-up),
+                    @_icon-font-position: after
                 );
             }
         }
@@ -181,7 +181,7 @@
         width: 100%;
 
         .page-wrapper {
-            .lib-css(transition, left .3s, 1);
+            transition: left .3s;
             height: 100%;
             left: 0;
             overflow: hidden;
