@@ -1,20 +1,21 @@
-
 //
 //  Variables
 //  _____________________________________________
 
---gift-wrapping__border-color: var(--color-gray-light5);
---gift-wrapping__border-width: var(--border-width__base);
+:root {
+    --gift-wrapping__border-color: var(--color-gray-light5);
+    --gift-wrapping__border-width: var(--border-width__base);
 
---gift-wrapping-preview__active__border-color: var(--color-gray20);
---gift-wrapping-preview__active__border-width: 3px;
+    --gift-wrapping-preview__active__border-color: var(--color-gray20);
+    --gift-wrapping-preview__active__border-width: 3px;
 
---gift-wrapping-thumbnail__height: 4rem;
---gift-wrapping-thumbnail__width: var(--gift-wrapping-thumbnail__height);
+    --gift-wrapping-thumbnail__height: 4rem;
+    --gift-wrapping-thumbnail__width: var(--gift-wrapping-thumbnail__height);
 
---gift-wrapping-no-image__background: var(--color-gray95);
---gift-wrapping-no-image-icon__color: var(--color-gray-darken4);
---gift-wrapping-no-image-icon__font-size: 38px;
+    --gift-wrapping-no-image__background: var(--color-gray95);
+    --gift-wrapping-no-image-icon__color: var(--color-gray-darken4);
+    --gift-wrapping-no-image-icon__font-size: 38px;
+}
 
 //
 //  Common
@@ -41,19 +42,19 @@
     .gift-wrapping-list {
         &:extend(.abs-add-clearfix all);
         list-style: none;
-        margin: var(--indent__base) 0 --indent__s;
+        margin: var(--indent__base) 0 var(--indent__s);
         padding: 0;
 
         .no-image {
             background: var(--gift-wrapping-no-image__background);
             .lib-icon-font(
-            @icon-present,
-            --_icon-font-size: var(--gift-wrapping-no-image-icon__font-size),
-            --_icon-font-line-height: var(--gift-wrapping-thumbnail__height),
-            --_icon-font-color: var(--gift-wrapping-no-image-icon__color),
-            --_icon-font-position: after,
-            --_icon-font-text-hide: true,
-            --_icon-font-vertical-align: middle
+                @icon-present,
+                @_icon-font-size: var(--gift-wrapping-no-image-icon__font-size),
+                @_icon-font-line-height: var(--gift-wrapping-thumbnail__height),
+                @_icon-font-color: var(--gift-wrapping-no-image-icon__color),
+                @_icon-font-position: after,
+                @_icon-font-text-hide: true,
+                @_icon-font-vertical-align: middle
             );
 
             &:after {
@@ -73,7 +74,7 @@
 
     .gift-wrapping-item {
         float: left;
-        margin: 0 @indent__s @indent__s 0;
+        margin: 0 var(--indent__s) var(--indent__s) 0;
 
         &:last-child {
             margin-right: 0;
@@ -111,7 +112,7 @@
     .gift-options-content {
         .fieldset {
             > .field {
-                margin: 0 0 --indent__xs;
+                margin: 0 0 var(--indent__xs);
 
                 &:before {
                     display: none;
@@ -144,7 +145,7 @@
 
                 > img {
                     float: left;
-                    margin: 0 @indent__s 0 0;
+                    margin: 0 var(--indent__s) 0 0;
                     max-height: 50px;
                     max-width: 50px;
                 }
@@ -162,7 +163,7 @@
 
         .regular-price {
             &:before {
-                content: attr(data-label)': ';
+                content: attr(data-label) ': ';
             }
 
             .price {

@@ -1,11 +1,12 @@
-
 //
 //  Variables
 //  _____________________________________________
 
---gift-message-field-label__color: var(--color-gray40);
---gift-item-block__border-color: var(--color-gray-light5);
---gift-item-block__border-width: var(--border-width__base);
+:root {
+    --gift-message-field-label__color: var(--color-gray40);
+    --gift-item-block__border-color: var(--color-gray-light5);
+    --gift-item-block__border-width: var(--border-width__base);
+}
 
 //
 //  Common
@@ -35,12 +36,12 @@
     }
 
     .gift-options-title {
-        margin: 0 0 --indent__base;
+        margin: 0 0 var(--indent__base);
     }
 
     .gift-options-content {
         .fieldset {
-            margin: 0 0 --indent__base;
+            margin: 0 0 var(--indent__base);
         }
     }
 
@@ -50,7 +51,7 @@
                 float: none;
 
                 .action {
-                    margin: var(--indent__s) @indent__base 0 0;
+                    margin: var(--indent__s) var(--indent__base) 0 0;
                 }
             }
         }
@@ -61,16 +62,16 @@
 
         .lib-button-icon(
             @icon-down,
-            --_icon-font-size: 32px,
-            --_icon-font-line-height: 16px,
-            --_icon-font-position: after
+            @_icon-font-size: 32px,
+            @_icon-font-line-height: 16px,
+            @_icon-font-position: after
         );
 
         &.active,
         &._active {
             .lib-icon-font-symbol(
                 @icon-up,
-                --_icon-font-position: after
+                @_icon-font-position: after
             );
         }
     }
@@ -86,7 +87,7 @@
                 clear: left;
                 display: none;
                 float: left;
-                margin: var(--indent__s) 0 --indent__base;
+                margin: var(--indent__s) 0 var(--indent__base);
                 text-align: left;
                 width: 100%;
 
@@ -107,8 +108,8 @@
         &._active {
             .title {
                 .lib-icon-font-symbol(
-                @icon-up,
-                --_icon-font-position: after
+                    @icon-up,
+                    @_icon-font-position: after
                 );
             }
         }
@@ -118,14 +119,14 @@
             border-radius: 3px;
 
             .lib-button(
-            --_button-margin: 20px 0 0,
-            --_button-padding: 7px 15px,
-            --_button-icon-use: true,
-            --_button-font-content: var(--icon-down),
-            --_button-icon-font: var(--button-icon__font),
-            --_button-icon-font-size: 32px,
-            --_button-icon-font-line-height: 16px,
-            --_button-icon-font-position: after
+                @_button-margin: 20px 0 0,
+                @_button-padding: 7 px 15 px,
+                @_button-icon-use: true,
+                @_button-font-content: var(--icon-down),
+                @_button-icon-font: var(--button-icon__font),
+                @_button-icon-font-size: 32 px,
+                @_button-icon-font-line-height: 16 px,
+                @_button-icon-font-position: after
             );
 
             &:active {
@@ -135,8 +136,8 @@
 
         .content {
             &:extend(.abs-add-clearfix all);
-            border-bottom: var(--gift-item-block__border-width solid @gift-item-block__border-color);
-            padding: var(--indent__s) @indent__s --indent__base;
+            border-bottom: var(--gift-item-block__border-width) solid var(--gift-item-block__border-color);
+            padding: var(--indent__s) var(--indent__s) var(--indent__base);
             position: relative;
         }
     }
@@ -185,11 +186,11 @@
 
             .action.show {
                 .lib-icon-font(
-                --_icon-font-content: var(--icon-down),
-                --_icon-font-size: 22px,
-                --_icon-font-text-hide: false,
-                --_icon-font-position: after,
-                --_icon-font-display: inline-block
+                    @_icon-font-content: var(--icon-down),
+                    @_icon-font-size: 22 px,
+                    @_icon-font-text-hide: false,
+                    @_icon-font-position: after,
+                    @_icon-font-display: inline-block
                 );
                 padding-right: var(--indent__base);
                 position: relative;
@@ -202,8 +203,8 @@
 
                 &.expanded {
                     .lib-icon-font-symbol(
-                    --_icon-font-content: var(--icon-up),
-                    --_icon-font-position: after
+                        @_icon-font-content: var(--icon-up),
+                        @_icon-font-position: after
                     );
                 }
             }
@@ -211,7 +212,7 @@
     }
 
     .block-order-details-gift-message {
-        border-top: var(--border-width__base) solid --border-color__base;
+        border-top: var(--border-width__base) solid var(--border-color__base);
         padding-top: var(--indent__s);
     }
 }
@@ -232,7 +233,7 @@
     }
 
     .gift-item-block {
-        border-top: var(--gift-item-block__border-width solid @gift-item-block__border-color);
+        border-top: var(--gift-item-block__border-width) solid var(--gift-item-block__border-color);
         border-bottom: 0;
     }
 
@@ -249,7 +250,7 @@
     .cart {
         &.table-wrapper {
             .gift-content {
-                border-bottom: var(--border-width__base) solid --border-color__base;
+                border-bottom: var(--border-width__base) solid var(--border-color__base);
                 margin-bottom: var(--indent__base);
             }
         }
@@ -293,7 +294,7 @@
 
             &:nth-child(3) {
                 &:before {
-                    .lib-css(border-left, 1px solid @gift-item-block__border-color);
+                    border-left: 1px solid var(--gift-item-block__border-color);
                     bottom: 5rem;
                     content: '';
                     display: block;

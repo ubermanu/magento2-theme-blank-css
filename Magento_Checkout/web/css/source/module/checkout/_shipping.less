@@ -12,8 +12,8 @@
 
     --checkout-shipping-item__border: 2px solid transparent;
     --checkout-shipping-item__line-height: 30px;
-    --checkout-shipping-item__margin: 0 0 --indent__base;
-    --checkout-shipping-item__padding: var(--indent__base) (@indent__l + 5px) @indent__base --indent__base;
+    --checkout-shipping-item__margin: 0 0 var(--indent__base);
+    --checkout-shipping-item__padding: var(--indent__base) calc(var(--indent__l + 5px)) var(--indent__base) var(--indent__base);
     --checkout-shipping-item__transition: .3s border-color;
     --checkout-shipping-item__width: 100%/3;
     --checkout-shipping-item-tablet__width: 100%/2;
@@ -25,7 +25,7 @@
 
     --checkout-shipping-item-mobile__padding: 0 0 15px;
     --checkout-shipping-item-mobile__margin: var(--checkout-shipping-item-mobile__padding);
-    --checkout-shipping-item-mobile__active__padding: 15px (@indent__l + 5px) 15px 18px;
+    --checkout-shipping-item-mobile__active__padding: 15px calc(var(--indent__l) + 5px) 15px 18px;
 
     --checkout-shipping-item-before__border-color: var(--color-gray80);
     --checkout-shipping-item-before__height: calc(~'100% - 20px');
@@ -215,7 +215,7 @@
                 border-bottom-width: 2px;
 
                 .edit-address-link {
-                    right: var(--checkout-shipping-item-icon__selected__width + @indent__s);
+                    right: var(--checkout-shipping-item-icon__selected__width + var(--indent__s));
                 }
             }
         }

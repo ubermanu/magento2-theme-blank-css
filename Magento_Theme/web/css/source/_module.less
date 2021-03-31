@@ -80,7 +80,7 @@
 
     .logo {
         float: left;
-        margin: 0 0 @indent__s --indent__xl;
+        margin: 0 0 var(--indent__s) var(--indent__xl);
         max-width: 50%;
         position: relative;
         z-index: 5;
@@ -329,7 +329,7 @@
 
         &.content {
             &:extend(.abs-add-clearfix-desktop all);
-            padding: var(--indent__l) @indent__base 0;
+            padding: var(--indent__l) var(--indent__base) 0;
         }
     }
 

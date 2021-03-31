@@ -56,7 +56,7 @@
 
             .legend {
                 .lib-heading(h3);
-                margin: 0 0 --indent__base;
+                margin: 0 0 var(--indent__base);
             }
 
             .field.rating {
@@ -236,7 +236,7 @@
     .review {
         &-toolbar {
             border-top: 1px solid --color-gray79;
-            margin: 0 0 --indent__base;
+            margin: 0 0 var(--indent__base);
             text-align: center;
 
             &:first-child {
@@ -279,7 +279,7 @@
 
         &-field-rating {
             .control {
-                margin-bottom: 1.2 * --indent__xl;
+                margin-bottom: 1.2 * var(--indent__xl);
                 margin-top: var(--indent__s);
             }
         }
@@ -316,7 +316,7 @@
 
         &-title {
             .lib-heading(h3);
-            margin: 0 0 --indent__base;
+            margin: 0 0 var(--indent__base);
         }
 
         &-content {
@@ -338,7 +338,7 @@
         &-ratings {
             float: left;
             margin-bottom: 0;
-            max-width: var(--review-ratings-left) - --indent__xl;
+            max-width: var(--review-ratings-left) - var(--indent__xl);
         }
 
         &-ratings ~ &-content,

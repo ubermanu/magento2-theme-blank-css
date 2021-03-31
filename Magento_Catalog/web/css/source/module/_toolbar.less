@@ -1,10 +1,11 @@
-
 //
 //  Variables
 //  ---------------------------------------------
 
---toolbar-mode-icon-font-size: 24px;
---toolbar-element-background: var(--panel__background-color);
+:root {
+    --toolbar-mode-icon-font-size: 24px;
+    --toolbar-element-background: var(--panel__background-color);
+}
 
 //
 //  Common
@@ -36,7 +37,7 @@
 
     .toolbar-products {
         margin-bottom: var(--indent__xl);
-        padding: 0 --indent__s;
+        padding: 0 var(--indent__s);
         text-align: center;
         &:extend(.abs-add-clearfix all);
 
@@ -77,11 +78,11 @@
         vertical-align: top;
         .lib-icon-font(
             @icon-arrow-up,
-            --_icon-font-size: 28px,
-            --_icon-font-line-height: 32px,
-            --_icon-font-color: var(--header-icons-color),
-            --_icon-font-color-hover: var(--header-icons-color-hover),
-            --_icon-font-text-hide: true
+            @_icon-font-size: 28px,
+            @_icon-font-line-height: 32px,
+            @_icon-font-color: var(--header-icons-color),
+            @_icon-font-color-hover: var(--header-icons-color-hover),
+            @_icon-font-text-hide: true
         );
     }
 
@@ -156,7 +157,7 @@
 
     .modes-mode {
         color: var(--text__color__muted);
-        border: 1px solid --border-color__base;
+        border: 1px solid var(--border-color__base);
         border-right: 0;
         float: left;
         font-weight: var(--font-weight__regular);
@@ -172,7 +173,7 @@
         }
 
         &:last-child {
-            border-right: 1px solid --border-color__base;
+            border-right: 1px solid var(--border-color__base);
         }
 
         &.active {
@@ -181,10 +182,10 @@
 
         .lib-icon-font(
             @icon-grid,
-            --_icon-font-size: var(--toolbar-mode-icon-font-size),
-            --_icon-font-text-hide: true,
-            --_icon-font-color: var(--text__color__muted),
-            --_icon-font-color-hover: var(--text__color__muted)
+            @_icon-font-size: var(--toolbar-mode-icon-font-size),
+            @_icon-font-text-hide: true,
+            @_icon-font-color: var(--text__color__muted),
+            @_icon-font-color-hover: var(--text__color__muted)
         );
     }
 

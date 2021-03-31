@@ -1,25 +1,26 @@
-
 //
 //  Variables
 //  _____________________________________________
 
---account-nav-background: var(--sidebar__background-color);
---account-nav-color: false;
+:root {
+    --account-nav-background: var(--sidebar__background-color);
+    --account-nav-color: false;
 
---account-nav-current-border: 3px solid transparent;
---account-nav-current-border-color: var(--active__color);
---account-nav-current-color: false;
---account-nav-current-font-weight: var(--font-weight__semibold);
+    --account-nav-current-border: 3px solid transparent;
+    --account-nav-current-border-color: var(--active__color);
+    --account-nav-current-color: false;
+    --account-nav-current-font-weight: var(--font-weight__semibold);
 
---account-nav-delimiter__border-color: var(--color-gray82);
+    --account-nav-delimiter__border-color: var(--color-gray82);
 
---account-nav-item-hover: var(--color-gray91);
+    --account-nav-item-hover: var(--color-gray91);
 
---_password-default: var(--color-gray-light01);
---_password-weak: #ffafae;
---_password-medium: #ffd6b3;
---_password-strong: #c5eeac;
---_password-very-strong: #81b562;
+    --_password-default: var(--color-gray-light01);
+    --_password-weak: #ffafae;
+    --_password-medium: #ffd6b3;
+    --_password-strong: #c5eeac;
+    --_password-very-strong: #81b562;
+}
 
 //
 //  Common
@@ -42,6 +43,7 @@
 
         .fieldset {
             .lib-form-hasrequired(bottom);
+
             &:after {
                 margin-top: 35px;
             }
@@ -117,13 +119,14 @@
 
             .toolbar {
                 text-align: center;
+
                 .limiter-options {
                     width: auto;
                 }
             }
 
             .limiter {
-                >.label {
+                > .label {
                     &:extend(.abs-visually-hidden all);
                 }
             }
@@ -195,7 +198,7 @@
                 color: var(--account-nav-color);
                 border-left: 3px solid transparent;
                 display: block;
-                padding: var(--indent__xs) 18px @indent__xs 15px;
+                padding: var(--indent__xs) 18px var(--indent__xs) 15px;
             }
 
             a {
@@ -220,7 +223,7 @@
             }
 
             .delimiter {
-                border-top: 1px solid --account-nav-delimiter__border-color;
+                border-top: 1px solid var(--account-nav-delimiter__border-color);
                 display: block;
                 margin: var(--indent__s) 1.8rem;
             }
@@ -233,6 +236,7 @@
 
     .block {
         &:extend(.abs-margin-for-blocks-and-widgets all);
+
         .column.main & {
             &:last-child {
                 margin-bottom: 0;
@@ -244,6 +248,7 @@
 
             strong {
                 .lib-heading(h4);
+
                 .column.main & {
                     font-size: var(--h3__font-size);
                 }
@@ -408,6 +413,7 @@
 
         .block {
             &:extend(.abs-blocks-2columns all);
+
             .login {
                 .actions-toolbar {
                     > .primary {
@@ -527,7 +533,7 @@
 
     .control.captcha-image {
         .captcha-img {
-            margin: 0 @indent__s @indent__s 0;
+            margin: 0 var(--indent__s) var(--indent__s) 0;
         }
     }
 }

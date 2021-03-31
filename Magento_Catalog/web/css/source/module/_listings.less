@@ -120,7 +120,7 @@
             }
 
             .price-box {
-                margin: var(--indent__s) 0 --indent__m;
+                margin: var(--indent__s) 0 var(--indent__m);
 
                 .price {
                     .lib-font-size(14);
@@ -260,7 +260,7 @@
 
                 &-photo {
                     display: table-cell;
-                    padding: 0 @indent__l @indent__l 0;
+                    padding: 0 var(--indent__l) var(--indent__l) 0;
                     vertical-align: top;
                     width: 1%;
                 }
@@ -288,7 +288,7 @@
             table-layout: fixed;
 
             &-photo {
-                padding: 0 @indent__s @indent__s 0;
+                padding: 0 var(--indent__s) var(--indent__s) 0;
                 width: 30%;
             }
         }

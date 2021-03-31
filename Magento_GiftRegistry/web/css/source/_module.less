@@ -1,4 +1,3 @@
-
 //
 //  Common
 //  _____________________________________________
@@ -8,6 +7,7 @@
     .form-giftregistry-share,
     .form-giftregistry-edit {
         &:extend(.abs-add-fields all);
+
         .actions-toolbar:not(:last-child) {
             margin-bottom: var(--indent__xl);
         }
@@ -46,10 +46,10 @@
 
     .form.giftregistry .fieldset {
         .cart-summary & {
-            margin: 25px 0 --indent__xs;
+            margin: 25px 0 var(--indent__xs);
 
             .field {
-                margin: 0 0 --indent__s;
+                margin: 0 0 var(--indent__s);
 
                 .control {
                     float: none;
@@ -66,7 +66,7 @@
     }
 
     .form-giftregistry-search {
-        margin-bottom: var(--indent__l)*2;
+        margin-bottom: calc(var(--indent__l) * 2);
 
         .legend {
             &:extend(.abs-account-title all);
@@ -104,7 +104,7 @@
     .block-giftregistry-shared {
         .item-options {
             .item-value {
-                margin: 0 0 --indent__m;
+                margin: 0 0 var(--indent__m);
             }
         }
     }
@@ -119,7 +119,7 @@
         }
 
         .item {
-            border-bottom: var(--border-width__base) solid --border-color__base;
+            border-bottom: var(--border-width__base) solid var(--border-color__base);
         }
 
         .qty {
@@ -129,7 +129,7 @@
         }
 
         .col {
-            padding: var(--indent__base) 8px --indent__s;
+            padding: var(--indent__base) 8px var(--indent__s);
 
             .price-box {
                 display: inline-block;
@@ -158,7 +158,7 @@
 
             &-item-name {
                 display: block;
-                margin: 0 0 --indent__xs;
+                margin: 0 0 var(--indent__xs);
             }
         }
     }
@@ -207,6 +207,7 @@
     .form-giftregistry-search {
         .fieldset {
             margin-bottom: var(--form-field__vertical-indent__desktop);
+
             > .fields-specific-options {
                 > .field {
                     .lib-form-field-type-revert();
@@ -237,7 +238,7 @@
             &-item-photo {
                 display: table-cell;
                 max-width: 100%;
-                padding: 0 @indent__base 0 0;
+                padding: 0 var(--indent__base) 0 0;
                 vertical-align: top;
                 width: 1%;
             }
