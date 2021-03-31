@@ -75,7 +75,7 @@
 
         .payment-method-content {
             display: none;
-            .lib-css(padding, 0 0 var(--indent__base) @checkout-payment-method-content__padding__xl);
+            padding: 0 0 var(--indent__base) var(--checkout-payment-method-content__padding__xl);
 
             .fieldset {
                 &:not(:last-child) {
@@ -157,7 +157,7 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .checkout-payment-method {
         .payment-methods {
-            .lib-css(margin, 0 -(@checkout-payment-method-title-mobile__padding));
+            margin: 0 calc(0 - var(--checkout-payment-method-title-mobile__padding));
         }
 
         .step-title {
@@ -170,7 +170,7 @@
         }
 
         .payment-method-content {
-            .lib-css(padding, 0 @checkout-payment-method-title-mobile__padding var(--indent__base));
+            padding: 0 var(--checkout-payment-method-title-mobile__padding) var(--indent__base);
         }
 
         .checkout-billing-address {

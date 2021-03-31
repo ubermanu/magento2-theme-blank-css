@@ -199,13 +199,13 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
     .opc-wrapper {
         .form-login {
-            .lib-css(border-bottom, 1px solid @checkout-shipping-item-before__border-color);
+            border-bottom: 1px solid var(--checkout-shipping-item-before__border-color);
             margin: var(--checkout-shipping-item-mobile__padding);
             padding: var(--checkout-shipping-item-mobile__padding);
         }
 
         .shipping-address-item {
-            .lib-css(border-bottom, 1px solid @checkout-shipping-item-before__border-color);
+            border-bottom: 1px solid var(--checkout-shipping-item-before__border-color);
             margin: var(--checkout-shipping-item-mobile__margin);
             padding: var(--checkout-shipping-item-mobile__padding);
             width: 100%;
@@ -215,7 +215,7 @@
                 border-bottom-width: 2px;
 
                 .edit-address-link {
-                    right: var(--checkout-shipping-item-icon__selected__width + var(--indent__s));
+                    right: calc(var(--checkout-shipping-item-icon__selected__width) + var(--indent__s));
                 }
             }
         }

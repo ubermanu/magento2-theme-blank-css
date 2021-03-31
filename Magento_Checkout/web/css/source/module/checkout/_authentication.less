@@ -95,7 +95,7 @@
                 &:before {
                     height: var(--block-auth__or-label__size);
                     line-height: var(--block-auth__or-label__size - 2px);
-                    .lib-css(margin, -(@block-auth__or-label__size/2 + 1px) 0 0 -(@block-auth__or-label__size / 2));
+                    margin: calc(0 - (var(--block-auth__or-label__size) / 2 + 1px)) 0 0 calc(0 - (var(--block-auth__or-label__size) / 2));
                     min-width: var(--block-auth__or-label__size);
                     background: var(--color-white);
                     border: 1px solid var(--color-gray-light5);
