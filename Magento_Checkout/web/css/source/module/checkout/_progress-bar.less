@@ -58,8 +58,8 @@
         width: 50%;
 
         &:before { // Horizontal line
-            .lib-css(background, @checkout-progress-bar-item__background-color);
-            .lib-css(top, @checkout-progress-bar-item-element__width/2);
+            background: var(--checkout-progress-bar-item__background-color);
+            top: var(--checkout-progress-bar-item-element__width/2);
             content: '';
             height: 7px;
             left: 0;
@@ -69,7 +69,7 @@
 
         &:first-child {
             &:before {
-                .lib-css(border-radius, @checkout-progress-bar-item__border-radius 0 0 @checkout-progress-bar-item__border-radius);
+                border-radius: var(--checkout-progress-bar-item__border-radius 0 0 @checkout-progress-bar-item__border-radius);
             }
         }
 
@@ -96,10 +96,10 @@
 
             &:before, // Item element
             &:after {
-                .lib-css(background, @checkout-progress-bar-item__background-color);
-                .lib-css(height, @checkout-progress-bar-item-element__height);
+                background: var(--checkout-progress-bar-item__background-color);
+                height: var(--checkout-progress-bar-item-element__height);
                 .lib-css(margin-left, -(@checkout-progress-bar-item-element__width/2));
-                .lib-css(width, @checkout-progress-bar-item-element__width);
+                width: var(--checkout-progress-bar-item-element__width);
                 border-radius: 50%;
                 content: '';
                 left: 50%;
@@ -108,11 +108,11 @@
             }
 
             &:after { // Item element inner
-                .lib-css(background, @checkout-progress-bar-item-element-inner__background-color);
-                .lib-css(height, @checkout-progress-bar-item-element-inner__height);
+                background: var(--checkout-progress-bar-item-element-inner__background-color);
+                height: var(--checkout-progress-bar-item-element-inner__height);
                 .lib-css(margin-left, -(@checkout-progress-bar-item-element-inner__width/2));
-                .lib-css(top, @checkout-progress-bar-item-element-outer-radius__width);
-                .lib-css(width, @checkout-progress-bar-item-element-inner__width);
+                top: var(--checkout-progress-bar-item-element-outer-radius__width);
+                width: var(--checkout-progress-bar-item-element-inner__width);
                 content: counter(i);
                 counter-increment: i;
                 .lib-typography(
@@ -132,16 +132,16 @@
             }
 
             > span {
-                .lib-css(color, @checkout-progress-bar-item__color);
+                color: var(--checkout-progress-bar-item__color);
 
                 &:before {
-                    .lib-css(background, @checkout-progress-bar-item__active__background-color);
+                    background: var(--checkout-progress-bar-item__active__background-color);
                 }
 
                 &:after {
-                    .lib-css(content, @checkout-progress-bar-item-element-inner__active__content);
-                    .lib-css(font-family, @icons__font-name);
-                    .lib-css(line-height, @checkout-progress-bar-item-element-inner__active__line-height);
+                    content: var(--checkout-progress-bar-item-element-inner__active__content);
+                    font-family: var(--icons__font-name);
+                    line-height: var(--checkout-progress-bar-item-element-inner__active__line-height);
                     .lib-font-size(@checkout-progress-bar-item-element-inner__active__font-size);
                 }
             }
@@ -151,12 +151,12 @@
             cursor: pointer;
 
             > span {
-                .lib-css(color, @checkout-progress-bar-item__color);
+                color: var(--checkout-progress-bar-item__color);
 
                 &:after {
-                    .lib-css(content, @checkout-progress-bar-item-element-inner__active__content);
-                    .lib-css(font-family, @icons__font-name);
-                    .lib-css(line-height, @checkout-progress-bar-item-element-inner__active__line-height);
+                    content: var(--checkout-progress-bar-item-element-inner__active__content);
+                    font-family: var(--icons__font-name);
+                    line-height: var(--checkout-progress-bar-item-element-inner__active__line-height);
                     .lib-font-size(@checkout-progress-bar-item-element-inner__active__font-size);
                 }
             }
@@ -170,6 +170,6 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .opc-progress-bar-item {
-        .lib-css(width, @checkout-progress-bar-item__width);
+        width: var(--checkout-progress-bar-item__width);
     }
 }

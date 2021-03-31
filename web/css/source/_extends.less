@@ -28,7 +28,7 @@
     .abs-action-link-button {
         .lib-button();
         .lib-link-as-button();
-        .lib-css(border-radius, @button__border-radius);
+        border-radius: var(--button__border-radius);
     }
 }
 
@@ -445,7 +445,7 @@
 //  ---------------------------------------------
 
 @abs-margin-for-forms-desktop: {
-    .lib-css(margin-left, @form-field-type-label-inline__width);
+    margin-left: var(--form-field-type-label-inline__width);
 };
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
@@ -858,12 +858,12 @@
         > strong,
         > span {
             .lib-font-size(22);
-            .lib-css(font-weight, @font-weight__light);
+            font-weight: var(--font-weight__light);
         }
 
         .lib-css(border-bottom, 1px solid @border-color__base);
-        .lib-css(margin-bottom, @indent__m);
-        .lib-css(padding-bottom, @indent__s);
+        margin-bottom: var(--indent__m);
+        padding-bottom: var(--indent__s);
     }
 }
 
@@ -942,7 +942,7 @@
     .abs-dropdown-items-new {
         .items .item:last-child {
             &:hover {
-                .lib-css(background, @dropdown-list-item__hover);
+                background: var(--dropdown-list-item__hover);
             }
         }
 
@@ -1096,7 +1096,7 @@
 
 & when (@media-common = true) {
     .abs-block-items-counter {
-        .lib-css(color, @primary__color__lighter);
+        color: var(--primary__color__lighter);
         .lib-font-size(12px);
         white-space: nowrap;
     }
@@ -1123,7 +1123,7 @@
                 );
 
                 &:active {
-                    .lib-css(box-shadow, @button__shadow);
+                    box-shadow: var(--button__shadow);
                 }
             }
 
@@ -1232,8 +1232,8 @@
 //  ---------------------------------------------
 
 @abs-checkout-tooltip-content-position-top: {
-    .lib-css(right, @checkout-tooltip-content-mobile__right);
-    .lib-css(top, @checkout-tooltip-content-mobile__top);
+    right: var(--checkout-tooltip-content-mobile__right);
+    top: var(--checkout-tooltip-content-mobile__top);
     left: auto;
 
     &:before,
@@ -1243,18 +1243,18 @@
             @_size: @checkout-tooltip-icon-arrow__font-size,
             @_color: @checkout-tooltip-content__background-color
         );
-        .lib-css(margin-top, @checkout-tooltip-icon-arrow__left);
+        margin-top: var(--checkout-tooltip-icon-arrow__left);
         right: @indent__s;
         left: auto;
         top: 0;
     }
 
     &:before {
-        .lib-css(border-bottom-color, @checkout-tooltip-content__border-color);
+        border-bottom-color: var(--checkout-tooltip-content__border-color);
     }
 
     &:after {
-        .lib-css(border-bottom-color, @checkout-tooltip-content__background-color);
+        border-bottom-color: var(--checkout-tooltip-content__background-color);
         top: 1px;
     }
 };
@@ -1277,8 +1277,8 @@
 
 & when (@media-common = true) {
     .abs-checkout-title {
-        .lib-css(border-bottom, @checkout-step-title__border);
-        .lib-css(padding-bottom, @checkout-step-title__padding);
+        border-bottom: var(--checkout-step-title__border);
+        padding-bottom: var(--checkout-step-title__padding);
         .lib-typography(
             @_font-size: @checkout-step-title__font-size,
             @_font-weight: @checkout-step-title__font-weight,
@@ -1338,8 +1338,8 @@
             &-summary {
                 .mark,
                 .amount {
-                    .lib-css(border-top, @border-width__base solid @border-color__base);
-                    .lib-css(border-bottom, @border-width__base solid @border-color__base);
+                    border-top: var(--border-width__base solid @border-color__base);
+                    border-bottom: var(--border-width__base solid @border-color__base);
                     cursor: pointer;
                 }
 
@@ -1377,7 +1377,7 @@
             }
 
             &-details {
-                .lib-css(border-bottom, @border-width__base solid @border-color__base);
+                border-bottom: var(--border-width__base solid @border-color__base);
                 display: none;
 
                 &.shown {

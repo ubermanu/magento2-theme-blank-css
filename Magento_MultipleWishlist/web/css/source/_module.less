@@ -41,7 +41,7 @@
                     }
                     &:last-child {
                         &:hover {
-                            .lib-css(background, @dropdown-list-item__hover);
+                            background: var(--dropdown-list-item__hover);
                         }
                     }
                 }
@@ -64,7 +64,7 @@
                     &:active,
                     &:focus,
                     &:hover {
-                        .lib-css(color, @addto-hover-color);
+                        color: var(--addto-hover-color);
                     }
                 }
 
@@ -156,7 +156,7 @@
             }
 
             &-notice {
-                .lib-css(color, @text__color__muted);
+                color: var(--text__color__muted);
                 display: inline-block;
                 margin-right: @indent__base;
             }
@@ -218,7 +218,7 @@
         .block-title {
             .lib-font-size(22);
             margin-bottom: @indent__base;
-            
+
             > strong {
                 font-weight: @font-weight__light;
             }
@@ -287,7 +287,7 @@
 
                 &-items {
                     border-bottom: @border-width__base solid @border-color__base;
-                    .lib-css(background, @account-nav-background);
+                    background: var(--account-nav-background);
                     display: none;
                     padding: 15px 0;
 
@@ -312,7 +312,7 @@
                             text-decoration: none;
 
                             &:hover {
-                                .lib-css(background, @account-nav-item-hover);
+                                background: var(--account-nav-item-hover);
                             }
                         }
                     }
@@ -394,10 +394,10 @@
             }
 
             bottom: auto;
-            .lib-css(top, @desktop-popup-position-top);
-            .lib-css(left, @desktop-popup-position-left);
-            .lib-css(margin-left, @desktop-popup-margin-left);
-            .lib-css(width, @desktop-popup-width);
+            top: var(--desktop-popup-position-top);
+            left: var(--desktop-popup-position-left);
+            margin-left: var(--desktop-popup-margin-left);
+            width: var(--desktop-popup-width);
             right: auto;
         }
     }

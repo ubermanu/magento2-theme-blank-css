@@ -96,10 +96,10 @@
                 position: relative;
 
                 &:before {
-                    .lib-css(height, @block-auth__or-label__size);
-                    .lib-css(line-height, @block-auth__or-label__size - 2px);
+                    height: var(--block-auth__or-label__size);
+                    line-height: var(--block-auth__or-label__size - 2px);
                     .lib-css(margin, -(@block-auth__or-label__size/2 + 1px) 0 0 -(@block-auth__or-label__size / 2));
-                    .lib-css(min-width, @block-auth__or-label__size);
+                    min-width: var(--block-auth__or-label__size);
                     background: @color-white;
                     border: 1px solid @color-gray-light5;
                     border-radius: 50%;
@@ -126,8 +126,8 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .authentication-dropdown {
-        .lib-css(background-color, @block-auth__dropdown__background-color);
-        .lib-css(border, @block-auth__border);
+        background-color: var(--block-auth__dropdown__background-color);
+        border: var(--block-auth__border);
         -webkit-transform: scale(1,0);
         -webkit-transform-origin: 0 0;
         -webkit-transition: -webkit-transform linear .1s, visibility 0s linear .1s;
@@ -141,7 +141,7 @@
         width: 100%;
 
         &._show {
-            .lib-css(z-index, @dropdown-list__z-index);
+            z-index: var(--dropdown-list__z-index);
             -webkit-transform: scale(1,1);
             -webkit-transition: -webkit-transform linear .1s, visibility 0s linear 0s;
             transform: scale(1,1);

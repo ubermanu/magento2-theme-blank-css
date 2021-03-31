@@ -43,7 +43,7 @@
 
             & + .payment-method {
                 .payment-method-title {
-                    .lib-css(border-top, @checkout-payment-method-title__border);
+                    border-top: var(--checkout-payment-method-title__border);
                 }
             }
         }
@@ -61,7 +61,7 @@
         }
 
         .payment-method-title {
-            .lib-css(padding, @checkout-payment-method-title__padding 0);
+            padding: var(--checkout-payment-method-title__padding 0);
             margin: 0;
 
             .payment-icon {
@@ -96,7 +96,7 @@
 
         .field-select-billing,
         .billing-address-form {
-            .lib-css(max-width, @checkout-billing-address-form__max-width);
+            max-width: var(--checkout-billing-address-form__max-width);
         }
 
         .billing-address-same-as-shipping-block {
@@ -117,8 +117,8 @@
             }
 
             .billing-address-details {
-                .lib-css(line-height, @checkout-billing-address-details__line-height);
-                .lib-css(padding, @checkout-billing-address-details__padding);
+                line-height: var(--checkout-billing-address-details__line-height);
+                padding: var(--checkout-billing-address-details__padding);
             }
         }
 
@@ -163,12 +163,12 @@
         }
 
         .step-title {
-            .lib-css(padding-left, @checkout-payment-method-title-mobile__padding);
-            .lib-css(padding-right, @checkout-payment-method-title-mobile__padding)
+            padding-left: var(--checkout-payment-method-title-mobile__padding);
+            padding-right: var(--checkout-payment-method-title-mobile__padding)
         }
 
         .payment-method-title {
-            .lib-css(padding, @checkout-payment-method-title-mobile__padding)
+            padding: var(--checkout-payment-method-title-mobile__padding)
         }
 
         .payment-method-content {
@@ -209,7 +209,7 @@
             .fieldset {
                 > .field {
                     margin: 0 0 @indent__base;
-                    
+
                     &.choice {
                         &:before {
                             padding: 0;

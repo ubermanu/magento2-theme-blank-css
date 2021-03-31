@@ -77,7 +77,7 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
     .opc-wrapper {
         .step-title {
-            .lib-css(font-size, @checkout-step-title-mobile__font-size);
+            font-size: var(--checkout-step-title-mobile__font-size);
             border-bottom: 0;
             padding-bottom: 0;
         }

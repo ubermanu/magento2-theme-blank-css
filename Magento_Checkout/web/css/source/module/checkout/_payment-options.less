@@ -49,11 +49,11 @@
         }
 
         .payment-option-title {
-            .lib-css(border-top, @checkout-payment-option-title__border);
-            .lib-css(padding, @checkout-payment-option-title__padding 0);
+            border-top: var(--checkout-payment-option-title__border);
+            padding: var(--checkout-payment-option-title__padding 0);
 
             .action-toggle {
-                .lib-css(color, @checkout-payment-option-title__color);
+                color: var(--checkout-payment-option-title__color);
                 .lib-icon-font(
                     @icon-down,
                     @_icon-font-size: @checkout-payment-option-title-icon__font-size,
@@ -180,7 +180,7 @@
             .lib-css(margin, 0 -(@checkout-payment-option-title-mobile__padding));
 
             .payment-option-title {
-                .lib-css(padding, @checkout-payment-option-title-mobile__padding)
+                padding: var(--checkout-payment-option-title-mobile__padding)
             }
 
             .payment-option-content {
@@ -197,7 +197,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .checkout-payment-method {
         .payment-option-title {
-            .lib-css(padding-left, @checkout-payment-option-content__padding__xl);
+            padding-left: var(--checkout-payment-option-content__padding__xl);
         }
 
         .payment-option-content {

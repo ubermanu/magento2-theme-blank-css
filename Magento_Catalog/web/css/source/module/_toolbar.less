@@ -159,7 +159,7 @@
     }
 
     .modes-mode {
-        .lib-css(color, @text__color__muted);
+        color: var(--text__color__muted);
         border: 1px solid @border-color__base;
         border-right: 0;
         float: left;
@@ -170,7 +170,7 @@
 
         &:not(.active) {
             &:hover {
-                .lib-css(color, @text__color__muted);
+                color: var(--text__color__muted);
                 background: darken(@toolbar-element-background, 7%);
             }
         }
@@ -180,7 +180,7 @@
         }
 
         &.active {
-            .lib-css(color, @primary__color__light);
+            color: var(--primary__color__light);
         }
 
         .lib-icon-font(

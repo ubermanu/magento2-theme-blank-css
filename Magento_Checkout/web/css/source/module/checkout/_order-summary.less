@@ -28,8 +28,8 @@
 
     .opc-block-summary {
         &:extend(.abs-add-box-sizing all);
-        .lib-css(background, @checkout-summary__background-color);
-        .lib-css(padding, @checkout-summary__padding);
+        background: var(--checkout-summary__background-color);
+        padding: var(--checkout-summary__padding);
         margin: 0 0 @indent__base;
 
         > .title {
@@ -44,7 +44,7 @@
 
         .mark {
             .value {
-                .lib-css(color, @checkout-summary-mark-value__color);
+                color: var(--checkout-summary-mark-value__color);
                 display: block;
             }
         }
@@ -80,7 +80,7 @@
         .items-in-cart {
             > .title {
                 border-bottom: @border-width__base solid @border-color__base;
-                .lib-css(padding, @indent__s @indent__xl @indent__s 0);
+                padding: var(--indent__s @indent__xl @indent__s 0);
                 cursor: pointer;
                 .lib-icon-font(
                 @icon-down,
@@ -128,8 +128,8 @@
         //  Cart items
         .minicart-items-wrapper {
             .lib-css(margin, 0 -(@checkout-summary-items__padding) 0 0);
-            .lib-css(max-height, @checkout-summary-items__max-height);
-            .lib-css(padding, @checkout-summary-items__padding @checkout-summary-items__padding 0 0);
+            max-height: var(--checkout-summary-items__max-height);
+            padding: var(--checkout-summary-items__padding @checkout-summary-items__padding 0 0);
             border: 0;
         }
 

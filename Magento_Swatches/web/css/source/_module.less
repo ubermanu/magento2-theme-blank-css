@@ -76,7 +76,7 @@
                 }
 
                 &[data-required='1']:after {
-                    .lib-css(color, @form-field-label-asterisk__color);
+                    color: var(--form-field-label-asterisk__color);
                     content: '*';
                     font-size: @font-size__base;
                     font-weight: @font-weight__bold;
@@ -87,7 +87,7 @@
             }
 
             &-selected-option {
-                .lib-css(color, @swatch-attribute-option__selected__color);
+                color: var(--swatch-attribute-option__selected__color);
                 padding-left: 17px;
             }
 
@@ -99,7 +99,7 @@
                 }
 
                 .swatch-option-tooltip-layered .title {
-                    .lib-css(color, @swatch-option-tooltip-layered-title__color);
+                    color: var(--swatch-option-tooltip-layered-title__color);
                     bottom: -5px;
                     height: 20px;
                     left: 0;
@@ -113,20 +113,20 @@
             &.size,
             &.manufacturer {
                 .swatch-option {
-                    .lib-css(background, @attr-swatch-option__background);
-                    .lib-css(color, @attr-swatch-option__color);
+                    background: var(--attr-swatch-option__background);
+                    color: var(--attr-swatch-option__color);
 
                     &.selected {
-                        .lib-css(background, @attr-swatch-option__selected__background);
-                        .lib-css(border, @attr-swatch-option__selected__border);
-                        .lib-css(color, @attr-swatch-option__selected__color);
+                        background: var(--attr-swatch-option__selected__background);
+                        border: var(--attr-swatch-option__selected__border);
+                        color: var(--attr-swatch-option__selected__color);
                     }
                 }
             }
         }
 
         &-option {
-            .lib-css(border, @swatch-option__border);
+            border: var(--swatch-option__border);
             cursor: pointer;
             float: left;
             height: 20px;
@@ -144,8 +144,8 @@
             }
 
             &.text {
-                .lib-css(background, @swatch-option-text__background);
-                .lib-css(color, @swatch-option-text__color);
+                background: var(--swatch-option-text__background);
+                color: var(--swatch-option-text__color);
                 font-size: @font-size__s;
                 font-weight: @font-weight__bold;
                 line-height: 20px;
@@ -154,27 +154,27 @@
                 padding: 4px 8px;
 
                 &.selected {
-                    .lib-css(background-color, @swatch-option-text__selected__background-color);
+                    background-color: var(--swatch-option-text__selected__background-color);
                 }
             }
 
             &.selected {
-                .lib-css(outline, @swatch-option__selected__outline);
-                .lib-css(border, @swatch-option__selected__border);
-                .lib-css(color, @swatch-option__selected__color);
+                outline: var(--swatch-option__selected__outline);
+                border: var(--swatch-option__selected__border);
+                color: var(--swatch-option__selected__color);
             }
 
             &:not(.disabled):hover {
-                .lib-css(border, @swatch-option__hover__border);
-                .lib-css(color, @swatch-option__hover__color);
-                .lib-css(outline, @swatch-option__hover__outline);
+                border: var(--swatch-option__hover__border);
+                color: var(--swatch-option__hover__color);
+                outline: var(--swatch-option__hover__outline);
             }
 
             &.image,
             &.color {
                 &:not(.disabled):hover {
-                    .lib-css(border, @img-color-swatch-option__hover__border);
-                    .lib-css(outline, @img-color-swatch-option__hover__outline);
+                    border: var(--img-color-swatch-option__hover__border);
+                    outline: var(--img-color-swatch-option__hover__outline);
                 }
             }
 
@@ -208,7 +208,7 @@
 
                 &:after {
                     .lib-rotate(-30deg);
-                    .lib-css(background, @swatch-option__disabled__background);
+                    background: var(--swatch-option__disabled__background);
                     content: '';
                     height: 2px;
                     left: -4px;
@@ -220,13 +220,13 @@
             }
 
             &-loading {
-                .lib-css(content, @loading__background-image);
+                content: var(--loading__background-image);
             }
 
             &-tooltip {
-                .lib-css(border, @swatch-option-tooltip__border);
-                .lib-css(color, @swatch-option-tooltip__color);
-                .lib-css(background, @swatch-option-tooltip__background);
+                border: var(--swatch-option-tooltip__border);
+                color: var(--swatch-option-tooltip__color);
+                background: var(--swatch-option-tooltip__background);
                 display: none;
                 max-height: 100%;
                 min-height: 20px;
@@ -278,9 +278,9 @@
                 }
 
                 &-layered {
-                    .lib-css(background, @swatch-option-tooltip-layered__background);
-                    .lib-css(border, @swatch-option-tooltip-layered__border);
-                    .lib-css(color, @swatch-option-tooltip-layered__color);
+                    background: var(--swatch-option-tooltip-layered__background);
+                    border: var(--swatch-option-tooltip-layered__border);
+                    color: var(--swatch-option-tooltip-layered__color);
                     display: none;
                     left: -47px;
                     position: absolute;
@@ -289,7 +289,7 @@
                 }
 
                 .title {
-                    .lib-css(color, @swatch-option-tooltip-title__color);
+                    color: var(--swatch-option-tooltip-title__color);
                     display: block;
                     max-height: 200px;
                     min-height: 20px;
@@ -304,7 +304,7 @@
                 position: relative;
 
                 &:focus > div {
-                    .lib-css(box-shadow, @swatch-option-link-layered__focus__box-shadow);
+                    box-shadow: var(--swatch-option-link-layered__focus__box-shadow);
                 }
 
                 &:hover > .swatch-option-tooltip-layered {

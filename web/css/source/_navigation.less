@@ -23,7 +23,7 @@
     }
 
     .nav-sections {
-        .lib-css(background, @navigation__background);
+        background: var(--navigation__background);
     }
 
     .nav-toggle {
@@ -165,8 +165,8 @@
 
             a,
             a:hover {
-                .lib-css(color, @navigation-level0-item__color);
-                .lib-css(text-decoration, @navigation-level0-item__text-decoration);
+                color: var(--navigation-level0-item__color);
+                text-decoration: var(--navigation-level0-item__text-decoration);
                 display: block;
                 font-weight: @font-weight__bold;
                 padding: .8rem @submenu__padding-left;
@@ -206,7 +206,7 @@
 
         .nav-sections {
             @_shadow: 0 0 5px 0 rgba(50, 50, 50, .75);
-            .lib-css(box-shadow, @_shadow, 1);
+            box-shadow: var(--_shadow, 1);
             left: 0;
             z-index: 99;
         }

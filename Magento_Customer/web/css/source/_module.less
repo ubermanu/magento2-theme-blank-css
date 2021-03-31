@@ -183,7 +183,7 @@
         }
 
         .content {
-            .lib-css(background, @account-nav-background);
+            background: var(--account-nav-background);
             padding: 15px 0;
         }
 
@@ -196,7 +196,7 @@
 
             a,
             > strong {
-                .lib-css(color, @account-nav-color);
+                color: var(--account-nav-color);
                 border-left: 3px solid transparent;
                 display: block;
                 padding: @indent__xs 18px @indent__xs 15px;
@@ -206,20 +206,20 @@
                 text-decoration: none;
 
                 &:hover {
-                    .lib-css(background, @account-nav-item-hover);
+                    background: var(--account-nav-item-hover);
                 }
             }
 
             &.current {
                 a,
                 strong {
-                    .lib-css(border-color, @account-nav-current-border-color);
-                    .lib-css(color, @account-nav-current-color);
-                    .lib-css(font-weight, @account-nav-current-font-weight);
+                    border-color: var(--account-nav-current-border-color);
+                    color: var(--account-nav-current-color);
+                    font-weight: var(--account-nav-current-font-weight);
                 }
 
                 a {
-                    .lib-css(border-color, @account-nav-current-border-color);
+                    border-color: var(--account-nav-current-border-color);
                 }
             }
 
@@ -337,7 +337,7 @@
     }
 
     .control.captcha-image {
-        .lib-css(margin-top, @indent__s);
+        margin-top: var(--indent__s);
 
         .captcha-img {
             vertical-align: middle;
@@ -379,7 +379,7 @@
 
     .control.captcha-image {
         .captcha-img {
-            .lib-css(margin-bottom, @indent__s);
+            margin-bottom: var(--indent__s);
             display: block;
         }
     }
@@ -438,16 +438,16 @@
         .fullname {
             .field {
                 .label {
-                    .lib-css(margin, @form-field-type-label-inline__margin);
-                    .lib-css(padding, @form-field-type-label-inline__padding);
-                    .lib-css(text-align, @form-field-type-label-inline__align);
-                    .lib-css(width, @form-field-type-label-inline__width);
+                    margin: var(--form-field-type-label-inline__margin);
+                    padding: var(--form-field-type-label-inline__padding);
+                    text-align: var(--form-field-type-label-inline__align);
+                    width: var(--form-field-type-label-inline__width);
                     box-sizing: border-box;
                     float: left;
                 }
 
                 .control {
-                    .lib-css(width, @form-field-type-control-inline__width);
+                    width: var(--form-field-type-control-inline__width);
                     float: left;
                 }
             }

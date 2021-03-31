@@ -51,7 +51,7 @@
 & when (@media-common = true) {
 
     body {
-        .lib-css(background-color, @page__background-color);
+        background-color: var(--page__background-color);
     }
 
     .page-wrapper {
@@ -69,7 +69,7 @@
     //  ---------------------------------------------
 
     .page-header {
-        .lib-css(background-color, @header__background-color);
+        background-color: var(--header__background-color);
         border-bottom: 1px solid @border-color__base;
         margin-bottom: @indent__base;
     }
@@ -113,8 +113,8 @@
         }
 
         &:focus {
-            .lib-css(background, @color-gray94);
-            .lib-css(padding, @indent__s);
+            background: var(--color-gray94);
+            padding: var(--indent__s);
             box-sizing: border-box;
             left: 0;
             position: absolute;
@@ -169,7 +169,7 @@
     //  ---------------------------------------------
 
     .page-footer {
-        .lib-css(background-color, @footer__background-color);
+        background-color: var(--footer__background-color);
         margin-top: auto;
     }
 
@@ -268,7 +268,7 @@
     .page-header,
     .page-footer {
         .widget.block {
-            .lib-css(margin, @indent__base 0);
+            margin: var(--indent__base 0);
         }
     }
 
@@ -324,7 +324,7 @@
 
                     &.welcome {
                         a {
-                            .lib-css(padding-left, @indent__xs);
+                            padding-left: var(--indent__xs);
                         }
                     }
                 }

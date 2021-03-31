@@ -21,8 +21,8 @@
             margin-bottom: @indent__base;
 
             .label {
-                .lib-css(color, @gift-message-field-label__color);
-                .lib-css(font-weight, @font-weight__regular);
+                color: var(--gift-message-field-label__color);
+                font-weight: var(--font-weight__regular);
             }
         }
     }
@@ -118,7 +118,7 @@
         }
 
         .title {
-            .lib-css(font-weight, @font-weight__bold);
+            font-weight: var(--font-weight__bold);
             border-radius: 3px;
 
             .lib-button(
@@ -133,13 +133,13 @@
             );
 
             &:active {
-                .lib-css(box-shadow, @button__shadow);
+                box-shadow: var(--button__shadow);
             }
         }
 
         .content {
             &:extend(.abs-add-clearfix all);
-            .lib-css(border-bottom, @gift-item-block__border-width solid @gift-item-block__border-color);
+            border-bottom: var(--gift-item-block__border-width solid @gift-item-block__border-color);
             padding: @indent__s @indent__s @indent__base;
             position: relative;
         }
@@ -154,7 +154,7 @@
         .block-order-details-gift-message {
             .item-options {
                 dt {
-                    .lib-css(font-weight, @font-weight__regular);
+                    font-weight: var(--font-weight__regular);
                     margin: @indent__s 0;
                 }
             }
@@ -236,7 +236,7 @@
     }
 
     .gift-item-block {
-        .lib-css(border-top, @gift-item-block__border-width solid @gift-item-block__border-color);
+        border-top: var(--gift-item-block__border-width solid @gift-item-block__border-color);
         border-bottom: 0;
     }
 
@@ -312,7 +312,7 @@
     }
 
     .gift-options-title {
-        .lib-css(font-weight, @font-weight__light);
+        font-weight: var(--font-weight__light);
         .lib-font-size(18);
     }
 

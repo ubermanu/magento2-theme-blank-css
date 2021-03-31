@@ -12,12 +12,12 @@
     //  Using buttons mixins
     button,
     a.action.primary {
-        .lib-css(border-radius, @button__border-radius);
+        border-radius: var(--button__border-radius);
     }
 
     button {
         &:active {
-            .lib-css(box-shadow, @button__shadow);
+            box-shadow: var(--button__shadow);
         }
     }
 

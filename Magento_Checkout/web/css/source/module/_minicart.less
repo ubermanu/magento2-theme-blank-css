@@ -169,10 +169,10 @@
                 }
 
                 .counter.qty {
-                    .lib-css(background, @active__color);
-                    .lib-css(color, @page__background-color);
-                    .lib-css(height, @minicart-qty__height);
-                    .lib-css(line-height, @minicart-qty__height);
+                    background: var(--active__color);
+                    color: var(--page__background-color);
+                    height: var(--minicart-qty__height);
+                    line-height: var(--minicart-qty__height);
                     border-radius: 2px;
                     display: inline-block;
                     margin: 3px 0 0;
@@ -188,7 +188,7 @@
 
                     .loader {
                         > img {
-                            .lib-css(max-width, @minicart-qty__height);
+                            max-width: var(--minicart-qty__height);
                         }
                     }
                 }
@@ -292,7 +292,7 @@
             margin: 0 0 @indent__s;
 
             a {
-                .lib-css(color, @link__color);
+                color: var(--link__color);
             }
         }
 

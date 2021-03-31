@@ -58,7 +58,7 @@
 
     .modal-custom {
         .action-close {
-            .lib-css(margin, @indent__m);
+            margin: var(--indent__m);
         }
     }
 
@@ -66,9 +66,9 @@
         pointer-events: none;
 
         .modal-title {
-            .lib-css(border-bottom, @modal-title__border);
-            .lib-css(font-weight, @font-weight__light);
-            .lib-css(padding-bottom, @indent__s);
+            border-bottom: var(--modal-title__border);
+            font-weight: var(--font-weight__light);
+            padding-bottom: var(--indent__s);
             font-size: @modal-popup-title__font-size;
             margin-bottom: 0;
             min-height: 1em;
@@ -92,7 +92,7 @@
     }
 
     .modals-overlay {
-        .lib-css(background-color, @modal-overlay__background-color);
+        background-color: var(--modal-overlay__background-color);
         bottom: 0;
         left: 0;
         position: fixed;
@@ -130,7 +130,7 @@
         }
 
         .modal-inner-wrap {
-            .lib-css(background-color, @modal-slide-mobile__background-color);
+            background-color: var(--modal-slide-mobile__background-color);
             box-sizing: border-box;
             height: auto;
             min-height: 100%;
@@ -144,7 +144,7 @@
             width: 100vw;
 
             .modal-custom-overlay {
-                .lib-css(background-color, @modal-overlay__background-color);
+                background-color: var(--modal-overlay__background-color);
             }
         }
     }
@@ -153,7 +153,7 @@
         pointer-events: auto;
         &.modal-slide {
             .modal-inner-wrap[class] {
-                .lib-css(background-color, @modal-slide-mobile__background-color);
+                background-color: var(--modal-slide-mobile__background-color);
             }
 
             &._inner-scroll {
@@ -170,8 +170,8 @@
         }
 
         .modal-title {
-            .lib-css(font-size, @modal-popup-title-mobile__font-size);
-            .lib-css(font-weight, @font-weight__bold);
+            font-size: var(--modal-popup-title-mobile__font-size);
+            font-weight: var(--font-weight__bold);
         }
     }
 }
@@ -184,7 +184,7 @@
     .modal-popup {
         &.modal-slide {
             .modal-footer {
-                .lib-css(border-top, @modal-title__border);
+                border-top: var(--modal-title__border);
                 text-align: right;
             }
         }

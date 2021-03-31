@@ -27,7 +27,7 @@
 & when (@media-common = true) {
     .gift-wrapping {
         .label {
-            .lib-css(margin, @form-field-type-label-block__margin);
+            margin: var(--form-field-type-label-block__margin);
             display: inline-block;
         }
 
@@ -37,7 +37,7 @@
     }
 
     .gift-wrapping-info {
-        .lib-css(font-weight, @font-weight__light);
+        font-weight: var(--font-weight__light);
         font-size: @font-size__l;
         margin: @indent__base 0;
     }
@@ -49,7 +49,7 @@
         padding: 0;
 
         .no-image {
-            .lib-css(background, @gift-wrapping-no-image__background);
+            background: var(--gift-wrapping-no-image__background);
             .lib-icon-font(
             @icon-present,
             @_icon-font-size: @gift-wrapping-no-image-icon__font-size,
@@ -86,7 +86,7 @@
         &._active {
             span {
                 &:before {
-                    .lib-css(border, @gift-wrapping-preview__active__border-width solid @gift-wrapping-preview__active__border-color);
+                    border: var(--gift-wrapping-preview__active__border-width solid @gift-wrapping-preview__active__border-color);
                     box-sizing: border-box;
                     content: '';
                     display: block;
@@ -206,7 +206,7 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .gift-wrapping {
-        .lib-css(border-bottom, @gift-wrapping__border-width solid @gift-wrapping__border-color);
+        border-bottom: var(--gift-wrapping__border-width solid @gift-wrapping__border-color);
         margin-bottom: @indent__base;
         padding-bottom: @indent__s;
     }
@@ -261,7 +261,7 @@
             width: 50%;
 
             & + .gift-message {
-                .lib-css(border-left, @gift-wrapping__border-width solid @gift-wrapping__border-color);
+                border-left: var(--gift-wrapping__border-width solid @gift-wrapping__border-color);
                 box-sizing: border-box;
                 float: left;
                 padding-left: 4.5rem;

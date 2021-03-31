@@ -139,7 +139,7 @@
         }
 
         .notice {
-            .lib-css(color, @text__color__muted);
+            color: var(--text__color__muted);
             .lib-font-size(@font-size__s);
             margin: @indent__s 0;
         }
@@ -197,7 +197,7 @@
                 &.sku {
                     display: inline-block;
                     vertical-align: top;
-                    .lib-css(color, @text__color__muted);
+                    color: var(--text__color__muted);
 
                     > .value {
                         display: inline-block;
@@ -232,7 +232,7 @@
     .product-options-wrapper {
         .fieldset-product-options-inner {
             .legend {
-                .lib-css(font-weight, @font-weight__bold);
+                font-weight: var(--font-weight__bold);
                 .lib-css(margin, 0 0 @indent__xs);
                 .lib-font-size(14px);
                 border: none;
@@ -261,7 +261,7 @@
                         @_line-height: @form-field-label-asterisk__line-height,
                         @_font-style: @form-field-label-asterisk__font-style
                         );
-                        .lib-css(margin, @form-field-label-asterisk__margin);
+                        margin: var(--form-field-label-asterisk__margin);
                     }
                 }
             }
@@ -361,7 +361,7 @@
 
     .prices-tier {
         &:extend(.abs-reset-list all);
-        .lib-css(background, @sidebar__background-color);
+        background: var(--sidebar__background-color);
         margin: @indent__s 0;
         padding: @indent__s (.75 * @indent__base);
 
@@ -436,7 +436,7 @@
             }
 
             .counter {
-                .lib-css(color, @primary__color__lighter);
+                color: var(--primary__color__lighter);
                 .lib-font-size(12);
                 white-space: nowrap;
             }
@@ -806,7 +806,7 @@
     }
 
     .comparison.headings {
-        .lib-css(background, @page__background-color);
+        background: var(--page__background-color);
         left: 0;
         position: absolute;
         top: 0;
