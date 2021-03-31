@@ -1,5 +1,5 @@
 {
-    "name": "magento/theme-frontend-blank",
+    "name": "ubermanu/theme-frontend-blank",
     "description": "N/A",
     "type": "magento2-theme",
     "license": [
@@ -20,4 +20,3 @@
         ]
     }
 }
-
