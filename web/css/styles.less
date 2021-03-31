@@ -1,20 +1,15 @@
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
 //
-//  Blank theme mobile styles
+//  Blank theme styles
 //  _____________________________________________
-
-//  These mobile styles are mandatory and will be used as basis according to the mobile first design
 
 //
 //  Global lib + theme styles + theme extends
 //  ---------------------------------------------
 
 @import 'source/_reset.less';
-@import '_styles.less';
+@import 'source/lib/_lib.less'; // Global lib
+@import 'source/_sources.less'; // Theme styles
+@import 'source/_components.less'; // Components styles (modal/sliding panel)
 @import (reference) 'source/_extends.less';
 
 //
@@ -23,14 +18,6 @@
 
 //@magento_import 'source/_module.less'; // Theme modules
 //@magento_import 'source/_widgets.less'; // Theme widgets
-
-//
-//  Media queries collector
-//  ---------------------------------------------
-
-@import 'source/lib/_responsive.less';
-
-@media-target: 'mobile'; // Sets target device for this file
 
 //
 //  Global variables override
