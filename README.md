@@ -12,9 +12,15 @@ Mixins should use them as much as possible to avoid duplicate code.
 ### Font-size
 
 The font sizes are meant to be responsive.<br>
-To avoid variables for each breakpoint, use the `clamp` function. 
+To avoid variables for each breakpoint, use the `clamp` function.
 
 > The **lib-font-size** mixin is not available.
+
+### Responsiveness
+
+The responsiveness of the theme should not matter on the number of breakpoint it contains.
+
+> The **.media-width** mixin could not be available.
 
 ### Email
 

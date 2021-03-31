@@ -2,28 +2,26 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .my-credit-cards {
-        .status {
-            font-style: italic;
-        }
-
-        .action.delete {
-            .lib-button-reset();
-            .lib-button-as-link();
-        }
+.my-credit-cards {
+    .status {
+        font-style: italic;
     }
 
-    .my-credit-cards-popup {
-        .modal-footer {
-            text-align: right;
-        }
+    .action.delete {
+        .lib-button-reset();
+        .lib-button-as-link();
+    }
+}
 
-        .action.secondary {
-            .lib-button-reset();
-            .lib-button-as-link();
-            margin-right: var(--indent__base);
-        }
+.my-credit-cards-popup {
+    .modal-footer {
+        text-align: right;
+    }
+
+    .action.secondary {
+        .lib-button-reset();
+        .lib-button-as-link();
+        margin-right: var(--indent__base);
     }
 }
 

@@ -105,8 +105,8 @@
 .lib-form-element-number-reset() {
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+        -webkit-appearance: none;
+        margin: 0;
     }
 
     -moz-appearance: textfield;
@@ -589,6 +589,7 @@
             @_line-height: @_label-line-height,
             @_font-style: @_label-font-style
         );
+
         & + br {
             display: none;
         }
@@ -602,6 +603,7 @@
 
     .fields.group {
         .lib-clearfix();
+
         .field {
             box-sizing: border-box;
             float: left;
@@ -679,7 +681,6 @@
         @_note-font-style,
         @_note-margin,
         @_note-padding,
-
         @_note-icon-font-content,
         @_note-icon-font,
         @_note-icon-font-size,
@@ -818,12 +819,12 @@
         &:after {
             content: '*';
             .lib-typography(
-            @_font-size: @_font-size,
-            @_color: @_color,
-            @_font-family: @_font-family,
-            @_font-weight: @_font-weight,
-            @_line-height: @_line-height,
-            @_font-style: @_font-style
+                @_font-size: @_font-size,
+                @_color: @_color,
+                @_font-family: @_font-family,
+                @_font-weight: @_font-weight,
+                @_line-height: @_line-height,
+                @_font-style: @_font-style
             );
             .lib-css(margin, @_margin);
         }

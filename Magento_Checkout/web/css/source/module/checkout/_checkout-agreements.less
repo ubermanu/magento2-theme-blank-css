@@ -2,59 +2,57 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .checkout-agreements-block {
-        .checkout-agreements {
-            margin-bottom: var(--indent__base);
-        }
+.checkout-agreements-block {
+    .checkout-agreements {
+        margin-bottom: var(--indent__base);
+    }
 
-        .checkout-agreement.field {
-            .lib-vendor-prefix-display();
+    .checkout-agreement.field {
+        .lib-vendor-prefix-display();
 
-            &.required {
-                label:after {
-                    content: none;
-                }
+        &.required {
+            label:after {
+                content: none;
+            }
 
-                .action-show {
-                    &:after {
-                        content: '*';
-                        .lib-typography(
-                            @_font-size: var(--form-field-label-asterisk__font-size),
-                            @_color: var(--form-field-label-asterisk__color),
-                            @_font-family: var(--form-field-label-asterisk__font-family),
-                            @_font-weight: var(--form-field-label-asterisk__font-weight),
-                            @_line-height: var(--form-field-label-asterisk__line-height),
-                            @_font-style: var(--form-field-label-asterisk__font-style)
-                        );
-                    }
+            .action-show {
+                &:after {
+                    content: '*';
+                    .lib-typography(
+                        @_font-size: var(--form-field-label-asterisk__font-size),
+                        @_color: var(--form-field-label-asterisk__color),
+                        @_font-family: var(--form-field-label-asterisk__font-family),
+                        @_font-weight: var(--form-field-label-asterisk__font-weight),
+                        @_line-height: var(--form-field-label-asterisk__line-height),
+                        @_font-style: var(--form-field-label-asterisk__font-style)
+                    );
                 }
             }
         }
-
-        .action-show {
-            &:extend(.abs-action-button-as-link all);
-            vertical-align: baseline;
-        }
     }
 
-    //  Checkout Agreements in popup
-    .checkout-agreements-items {
-        &:extend(.abs-reset-list all);
-        padding-bottom: var(--indent__l);
+    .action-show {
+        &:extend(.abs-action-button-as-link all);
+        vertical-align: baseline;
+    }
+}
 
-        .checkout-agreements-item {
-            margin-bottom: var(--indent__base);
-        }
+//  Checkout Agreements in popup
+.checkout-agreements-items {
+    &:extend(.abs-reset-list all);
+    padding-bottom: var(--indent__l);
 
-        .checkout-agreements-item-title {
-            &:extend(.abs-checkout-title all);
-            border-bottom: 0;
-        }
+    .checkout-agreements-item {
+        margin-bottom: var(--indent__base);
     }
 
-    //  Checkout Agreements
-    .checkout-agreement-item-content {
-        overflow: auto;
+    .checkout-agreements-item-title {
+        &:extend(.abs-checkout-title all);
+        border-bottom: 0;
     }
+}
+
+//  Checkout Agreements
+.checkout-agreement-item-content {
+    overflow: auto;
 }

@@ -167,14 +167,15 @@
             z-index: @_icon-count - (@_index - 2);
 
             &:before {
-               .lib-rating-icons-content(@_index, @_icon-content);
+                .lib-rating-icons-content(@_index, @_icon-content);
             }
         }
         //  Next iteration
         .loopingClass(@_index - 1);
     }
 
-    .loopingClass (0) {}
+    .loopingClass (0) {
+    }
     .loopingClass (@_icon-count);
 }
 
@@ -223,6 +224,6 @@
     @_icon-count: @rating-icon__count,
     @_icon-content: @rating-icon__content
 ) when (@_icon-count > 0) {
-    .lib-rating-icons-content((@_icon-count - 1),@_icon-content);
+    .lib-rating-icons-content((@_icon-count - 1), @_icon-content);
     content+_: @_icon-content;
 }

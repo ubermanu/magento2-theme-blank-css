@@ -116,7 +116,7 @@
     @_pager-icon-font-position: @pager-icon__position,
     @_pager-icon-font-text-hide: @pager-icon__text-hide
 ) {
-    ._lib-pager-label-display(  // To hide or to display label
+    ._lib-pager-label-display(// To hide or to display label
         @_pager-label-display: @_pager-label-display,
         @_pager-font-size: @_pager-font-size,
         @_pager-font-weight: @_pager-font-weight,
@@ -337,7 +337,7 @@
     @_pager-font-size,
     @_pager-font-weight,
     @_pager-line-height
-) when not (@_pager-label-display = none){
+) when not (@_pager-label-display = none) {
     > .label {
         .lib-css(display, @_pager-label-display);
         .lib-css(font-weight, @_pager-font-weight);

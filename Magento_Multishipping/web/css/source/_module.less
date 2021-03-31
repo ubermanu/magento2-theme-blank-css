@@ -2,286 +2,284 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .multicheckout {
-        &.results,
-        &.success {
-            h3 {
-                font-size: 1.6rem;
-                margin-bottom: var(--indent__base);
-                margin-top: var(--indent__l);
+.multicheckout {
+    &.results,
+    &.success {
+        h3 {
+            font-size: 1.6rem;
+            margin-bottom: var(--indent__base);
+            margin-top: var(--indent__l);
 
-                a {
-                    color: var(--text__color);
+            a {
+                color: var(--text__color);
 
-                    &:hover {
-                        text-decoration: none;
-                    }
+                &:hover {
+                    text-decoration: none;
                 }
             }
+        }
 
-            ul.orders-list {
-                list-style: none;
-                padding-left: 0;
-            }
+        ul.orders-list {
+            list-style: none;
+            padding-left: 0;
+        }
 
-            .orders-list {
-                margin-top: var(--indent__m);
-                padding-left: var(--indent__base) - 4px;
+        .orders-list {
+            margin-top: var(--indent__m);
+            padding-left: var(--indent__base) - 4px;
 
-                .shipping-list {
-                    .shipping-item {
-                        margin-left: 84px;
-                    }
+            .shipping-list {
+                .shipping-item {
+                    margin-left: 84px;
+                }
 
-                    .shipping-label {
+                .shipping-label {
+                    font-weight: var(--font-weight__bold);
+                    margin-right: var(--indent__s);
+                }
+
+                .shipping-address {
+                    font-weight: var(--font-weight__regular);
+                }
+
+                .error-block {
+                    color: var(--error__color);
+
+                    .error-label {
                         font-weight: var(--font-weight__bold);
                         margin-right: var(--indent__s);
                     }
 
-                    .shipping-address {
+                    .error-description {
                         font-weight: var(--font-weight__regular);
-                    }
-
-                    .error-block {
-                        color: var(--error__color);
-
-                        .error-label {
-                            font-weight: var(--font-weight__bold);
-                            margin-right: var(--indent__s);
-                        }
-
-                        .error-description {
-                            font-weight: var(--font-weight__regular);
-                        }
                     }
                 }
             }
+        }
 
-            .orders-succeed {
-                .orders-list {
-                    margin-top: 0;
+        .orders-succeed {
+            .orders-list {
+                margin-top: 0;
 
-                    .shipping-list {
-                        .order-id {
-                            float: left;
+                .shipping-list {
+                    .order-id {
+                        float: left;
+                    }
+
+                    .shipping-item {
+                        margin-left: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    .title {
+        margin-bottom: var(--indent__l);
+
+        strong {
+            font-weight: var(--font-weight__regular);
+        }
+    }
+
+    .table-wrapper {
+        margin-bottom: 0;
+
+        .action.delete {
+            display: inline-block;
+        }
+
+        .col {
+            .qty {
+                display: inline-block;
+
+                .input-text {
+                    &:extend(.abs-input-qty all);
+                }
+            }
+
+            .label {
+                &:extend(.abs-visually-hidden all);
+            }
+
+            &.item {
+                .action.edit {
+                    font-weight: var(--font-weight__regular);
+                    margin-left: var(--indent__s);
+                }
+            }
+        }
+    }
+
+    &:not(.address) {
+        .table-wrapper {
+            .product-item-name {
+                margin: 0;
+            }
+        }
+    }
+
+    > .actions-toolbar {
+        margin-top: var(--indent__xl);
+    }
+
+    .actions-toolbar {
+        > .secondary {
+            display: block;
+
+            .action {
+                margin-bottom: var(--indent__m);
+
+                &.back {
+                    display: block;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        > .primary {
+            margin-right: var(--indent__s);
+        }
+    }
+
+    .action.primary {
+        &:extend(.abs-button-l all);
+    }
+
+    .item-options {
+        margin: var(--indent__s) 0 0;
+
+        &:extend(.abs-product-options-list all);
+        &:extend(.abs-add-clearfix all);
+    }
+
+    &:extend(.abs-account-blocks all);
+
+    .block {
+        &:extend(.abs-add-clearfix all);
+
+        .methods-shipping {
+            .item-content {
+                .fieldset {
+                    > .legend {
+                        &:extend(.abs-visually-hidden all);
+                    }
+
+                    > .legend + br {
+                        &:extend(.abs-no-display all);
+                    }
+
+                    > .field {
+                        &:before {
+                            display: none;
                         }
 
-                        .shipping-item {
-                            margin-left: 100px;
+                        .control {
+                            display: inline-block;
                         }
                     }
                 }
             }
         }
+    }
+
+    .block-title,
+    .block-content .title {
+        &:extend(.abs-account-title all);
+        border-bottom: var(--border-width__base) solid --border-color__base;
+        padding-bottom: var(--indent__s);
+
+        strong {
+            font-weight: var(--font-weight__regular);
+
+            span {
+                color: var(--primary__color__light);
+            }
+        }
+    }
+
+    .block-content {
+        &:extend(.abs-add-clearfix all);
 
         .title {
-            margin-bottom: var(--indent__l);
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
 
-            strong {
-                font-weight: var(--font-weight__regular);
+    &.order-review {
+        .block-title > strong {
+            font-size: 24px;
+        }
+
+        .block-shipping {
+            .block-content:not(:last-child) {
+                margin-bottom: var(--indent__xl);
             }
         }
 
-        .table-wrapper {
-            margin-bottom: 0;
+        .error-description {
+            color: var(--error__color);
+            font-weight: var(--font-weight__regular);
+            margin-bottom: var(--indent__s);
+            margin-top: var(---indent__s);
+        }
+    }
 
-            .action.delete {
-                display: inline-block;
-            }
-
-            .col {
-                .qty {
-                    display: inline-block;
-
-                    .input-text {
-                        &:extend(.abs-input-qty all);
-                    }
-                }
-
-                .label {
-                    &:extend(.abs-visually-hidden all);
-                }
-
-                &.item {
-                    .action.edit {
-                        font-weight: var(--font-weight__regular);
-                        margin-left: var(--indent__s);
-                    }
-                }
-            }
+    .box-title {
+        span {
+            margin-right: var(--indent__s);
         }
 
-        &:not(.address) {
-            .table-wrapper {
-                .product-item-name {
-                    margin: 0;
-                }
-            }
+        > .action {
+            margin: 0;
         }
+    }
 
-        > .actions-toolbar {
-            margin-top: var(--indent__xl);
+    .box-shipping-method {
+        .price {
+            font-weight: var(--font-weight__bold);
         }
+    }
 
-        .actions-toolbar {
-            > .secondary {
-                display: block;
+    .box-billing-method {
+        .fieldset {
+            margin: 0;
 
-                .action {
-                    margin-bottom: var(--indent__m);
-
-                    &.back {
-                        display: block;
-                        margin-left: 0;
-                    }
-                }
-            }
-
-            > .primary {
-                margin-right: var(--indent__s);
-            }
-        }
-
-        .action.primary {
-            &:extend(.abs-button-l all);
-        }
-
-        .item-options {
-            margin: var(--indent__s) 0 0;
-
-            &:extend(.abs-product-options-list all);
-            &:extend(.abs-add-clearfix all);
-        }
-
-        &:extend(.abs-account-blocks all);
-
-        .block {
-            &:extend(.abs-add-clearfix all);
-
-            .methods-shipping {
-                .item-content {
-                    .fieldset {
-                        > .legend {
-                            &:extend(.abs-visually-hidden all);
-                        }
-
-                        > .legend + br {
-                            &:extend(.abs-no-display all);
-                        }
-
-                        > .field {
-                            &:before {
-                                display: none;
-                            }
-
-                            .control {
-                                display: inline-block;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .block-title,
-        .block-content .title {
-            &:extend(.abs-account-title all);
-            border-bottom: var(--border-width__base) solid --border-color__base;
-            padding-bottom: var(--indent__s);
-
-            strong {
-                font-weight: var(--font-weight__regular);
-
-                span {
-                    color: var(--primary__color__light);
-                }
-            }
-        }
-
-        .block-content {
-            &:extend(.abs-add-clearfix all);
-
-            .title {
-                border-bottom: none;
-                padding-bottom: 0;
-            }
-        }
-
-        &.order-review {
-            .block-title > strong {
-                font-size: 24px;
-            }
-
-            .block-shipping {
-                .block-content:not(:last-child) {
-                    margin-bottom: var(--indent__xl);
-                }
-            }
-
-            .error-description {
-                color: var(--error__color);
-                font-weight: var(--font-weight__regular);
-                margin-bottom: var(--indent__s);
-                margin-top: var(---indent__s);
-            }
-        }
-
-        .box-title {
-            span {
-                margin-right: var(--indent__s);
-            }
-
-            > .action {
-                margin: 0;
-            }
-        }
-
-        .box-shipping-method {
-            .price {
-                font-weight: var(--font-weight__bold);
-            }
-        }
-
-        .box-billing-method {
-            .fieldset {
-                margin: 0;
-
-                .legend.box-title {
-                    margin: 0 0 var(--indent__xs);
-                }
-            }
-        }
-
-        .hidden {
-            &:extend(.abs-no-display all);
-        }
-
-        .checkout-review .grand.totals {
-            font-size: var(--font-size__xl);
-            margin-bottom: var(--indent__xl);
-
-            .mark {
-                font-weight: var(--font-weight__regular);
+            .legend.box-title {
+                margin: 0 0 var(--indent__xs);
             }
         }
     }
 
-    [class^='multishipping-'] {
-        .nav-sections,
-        .nav-toggle {
-            &:extend(.abs-no-display all);
-        }
-
-        .logo {
-            margin-left: 0;
-        }
+    .hidden {
+        &:extend(.abs-no-display all);
     }
 
-    .multishipping-checkout-success {
-        .nav-sections {
-            display: block;
+    .checkout-review .grand.totals {
+        font-size: var(--font-size__xl);
+        margin-bottom: var(--indent__xl);
+
+        .mark {
+            font-weight: var(--font-weight__regular);
         }
+    }
+}
+
+[class^='multishipping-'] {
+    .nav-sections,
+    .nav-toggle {
+        &:extend(.abs-no-display all);
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+}
+
+.multishipping-checkout-success {
+    .nav-sections {
+        display: block;
     }
 }
 

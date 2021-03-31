@@ -2,19 +2,17 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .block-reward-info {
-        .reward-rates,
-        .reward-limit,
-        .reward-expiring {
-            &:not(:last-child) {
-                margin-bottom: var(--indent__m);
-            }
+.block-reward-info {
+    .reward-rates,
+    .reward-limit,
+    .reward-expiring {
+        &:not(:last-child) {
+            margin-bottom: var(--indent__m);
+        }
 
-            .title {
-                display: inline-block;
-                margin-bottom: var(--indent__s);
-            }
+        .title {
+            display: inline-block;
+            margin-bottom: var(--indent__s);
         }
     }
 }

@@ -84,6 +84,7 @@
     .lib-data-tabs__base();
     > .item.title {
         .lib-css(margin, 0 @_tab-control-margin-right 0 0);
+
         > .switch {
             .lib-typography(
                 @_color: @_tab-control-color,
@@ -146,14 +147,14 @@
 ._lib-tab-content-border(
     @_tab-content-border-top-status,
     @_tab-content-border
-) when (@_tab-content-border-top-status = false){
+) when (@_tab-content-border-top-status = false) {
     .lib-css(border, @_tab-content-border);
 }
 
 ._lib-tab-content-border(
     @_tab-content-border-top-status,
     @_tab-content-border
-) when (@_tab-content-border-top-status = true){
+) when (@_tab-content-border-top-status = true) {
     border: 0;
     .lib-css(border-top, @_tab-content-border);
 }
@@ -240,10 +241,10 @@
     > .item.title {
         > .switch {
             .lib-css(background, @_accordion-control-background-color);
-            .lib-css(border-bottom,@_accordion-control-border-bottom);
-            .lib-css(border-left,@_accordion-control-border-left);
-            .lib-css(border-right,@_accordion-control-border-right);
-            .lib-css(border-top,@_accordion-control-border-top);
+            .lib-css(border-bottom, @_accordion-control-border-bottom);
+            .lib-css(border-left, @_accordion-control-border-left);
+            .lib-css(border-right, @_accordion-control-border-right);
+            .lib-css(border-top, @_accordion-control-border-top);
             .lib-css(height, @_accordion-control-height);
             .lib-css(padding, @_accordion-control-padding-top @_accordion-control-padding-right @_accordion-control-padding-bottom @_accordion-control-padding-left);
             .lib-typography(

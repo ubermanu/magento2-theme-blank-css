@@ -5,7 +5,8 @@
  * See COPYING.txt for license details.
  */
 -->
-<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
+<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
     <media>
         <images module="Magento_Catalog">
             <image id="bundled_product_customization_page" type="thumbnail">
@@ -202,18 +203,22 @@
             <var name="navarrows">true</var> <!-- Turn on/off on the thumbs navigation sides arrows(true/false) -->
             <var name="navtype">slides</var> <!-- Sliding type of thumbnails (slides/thumbs) -->
             <var name="transition">
-                <var name="effect">slide</var> <!-- Sets transition effect for slides changing (slide/crossfade/dissolve) -->
+                <var name="effect">slide
+                </var> <!-- Sets transition effect for slides changing (slide/crossfade/dissolve) -->
                 <var name="duration">500</var> <!-- Sets transition duration in ms -->
             </var>
             <var name="fullscreen">
                 <var name="nav">thumbs</var> <!-- Fullscreen navigation style (false/thumbs/dots) -->
                 <var name="loop">true</var> <!-- Fullscreen navigation loop (true/false/null) -->
-                <var name="arrows">false</var> <!-- Turn on/off arrows on the sides preview in fullscreen (true/false/null) -->
+                <var name="arrows">false
+                </var> <!-- Turn on/off arrows on the sides preview in fullscreen (true/false/null) -->
                 <var name="caption">false</var> <!-- Display alt text as image title in fullscreen(true/false) -->
-                <var name="navdir">horizontal</var> <!--Sliding direction of thumbnails in fullscreen(horizontal/vertical)  -->
+                <var name="navdir">horizontal
+                </var> <!--Sliding direction of thumbnails in fullscreen(horizontal/vertical)  -->
                 <var name="navtype">slides</var> <!-- Sliding type of thumbnails (slides/thumbs) -->
                 <var name="transition">
-                    <var name="effect">dissolve</var> <!-- Sets transition effect for slides changing (slide/crossfade/dissolve) -->
+                    <var name="effect">dissolve
+                    </var> <!-- Sets transition effect for slides changing (slide/crossfade/dissolve) -->
                     <var name="duration">500</var> <!-- Sets transition duration in ms -->
                 </var>
             </var>

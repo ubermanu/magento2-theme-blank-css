@@ -6,21 +6,19 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .block-static-block,
-    .block-cms-link {
-        &.widget {
-            margin-bottom: var(--widgets-indent__bottom);
+.block-static-block,
+.block-cms-link {
+    &.widget {
+        margin-bottom: var(--widgets-indent__bottom);
 
-            .links & {
-                margin-bottom: 0;
-            }
+        .links & {
+            margin-bottom: 0;
         }
     }
+}
 
-    .block-cms-link-inline {
-        &.widget {
-            margin: 0;
-        }
+.block-cms-link-inline {
+    &.widget {
+        margin: 0;
     }
 }

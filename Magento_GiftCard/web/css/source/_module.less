@@ -2,43 +2,40 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-
-    .cart {
-        &-summary {
-            .block {
-                &.giftcard {
-                    .action.check {
-                        .lib-button-s();
-                        &:extend(.abs-action-button-as-link all);
-                        margin-top: var(--indent__base);
-                    }
+.cart {
+    &-summary {
+        .block {
+            &.giftcard {
+                .action.check {
+                    .lib-button-s();
+                    &:extend(.abs-action-button-as-link all);
+                    margin-top: var(--indent__base);
                 }
             }
         }
     }
+}
 
-    .page-product-giftcard {
-        .giftcard-amount {
-            margin-bottom: 0;
-            text-align: left;
+.page-product-giftcard {
+    .giftcard-amount {
+        margin-bottom: 0;
+        text-align: left;
 
-            .field:last-child {
-                padding-bottom: var(--form-field__vertical-indent);
-            }
+        .field:last-child {
+            padding-bottom: var(--form-field__vertical-indent);
         }
+    }
 
-        .product-options-wrapper .field:first-of-type {
-            margin-top: var(--form-field__vertical-indent);
-        }
+    .product-options-wrapper .field:first-of-type {
+        margin-top: var(--form-field__vertical-indent);
+    }
 
-        .fieldset.giftcard {
-            > .legend {
-                &:extend(.abs-visually-hidden all);
+    .fieldset.giftcard {
+        > .legend {
+            &:extend(.abs-visually-hidden all);
 
-                + br {
-                    &:extend(.abs-no-display all);
-                }
+            + br {
+                &:extend(.abs-no-display all);
             }
         }
     }

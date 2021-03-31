@@ -12,34 +12,32 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .checkout-shipping-method {
-        position: relative;
-    }
+.checkout-shipping-method {
+    position: relative;
+}
 
-    .shipping-policy-block {
-        &.field-tooltip {
-            top: 12px;
+.shipping-policy-block {
+    &.field-tooltip {
+        top: 12px;
 
-            .field-tooltip-action {
-                color: var(--checkout-shipping-policy-action__color);
-                cursor: pointer;
+        .field-tooltip-action {
+            color: var(--checkout-shipping-policy-action__color);
+            cursor: pointer;
 
-                &:before {
-                    display: none;
-                }
-
-                span {
-                    &:extend(.abs-visually-hidden-reset all);
-                }
+            &:before {
+                display: none;
             }
 
-            .field-tooltip-content {
-                &:extend(.abs-add-box-sizing all);
-                &:extend(.abs-checkout-tooltip-content-position-top all);
-                width: var(--checkout-shipping-policy-tooltip__width);
-                top: var(--indent__l);
+            span {
+                &:extend(.abs-visually-hidden-reset all);
             }
+        }
+
+        .field-tooltip-content {
+            &:extend(.abs-add-box-sizing all);
+            &:extend(.abs-checkout-tooltip-content-position-top all);
+            width: var(--checkout-shipping-policy-tooltip__width);
+            top: var(--indent__l);
         }
     }
 }

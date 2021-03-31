@@ -1,40 +1,33 @@
 //
-//  Common
-//  _____________________________________________
+//  Checkout Estimated Total
+//  ---------------------------------------------
 
-& when (@media-common = true) {
+.opc-estimated-wrapper {
+    &:extend(.abs-add-clearfix all);
+    border-bottom: var(--border-width__base) solid var(--color-gray80);
+    margin: 0 0 15px;
+    padding: 18px 15px;
 
-    //
-    //  Checkout Estimated Total
-    //  ---------------------------------------------
+    .estimated-block {
+        font-size: var(--checkout-step-title-mobile__font-size);
+        font-weight: var(--font-weight__bold);
+        float: left;
 
-    .opc-estimated-wrapper {
-        &:extend(.abs-add-clearfix all);
-        border-bottom: var(--border-width__base) solid var(--color-gray80);
-        margin: 0 0 15px;
-        padding: 18px 15px;
-
-        .estimated-block {
-            font-size: var(--checkout-step-title-mobile__font-size);
-            font-weight: var(--font-weight__bold);
-            float: left;
-
-            .estimated-label {
-                display: block;
-                margin: 0 0 var(--indent__xs);
-            }
+        .estimated-label {
+            display: block;
+            margin: 0 0 var(--indent__xs);
         }
+    }
 
-        .minicart-wrapper {
-            .action {
-                &.showcart {
-                    &:before {
-                        color: var(--button__color);
-                    }
+    .minicart-wrapper {
+        .action {
+            &.showcart {
+                &:before {
+                    color: var(--button__color);
+                }
 
-                    &:hover:before {
-                        color: var(--button__hover__color);
-                    }
+                &:hover:before {
+                    color: var(--button__hover__color);
                 }
             }
         }

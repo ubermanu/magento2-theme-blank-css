@@ -2,26 +2,24 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .block-banners,
-    .block-banners-inline {
-        &:extend(.abs-margin-for-blocks-and-widgets);
+.block-banners,
+.block-banners-inline {
+    &:extend(.abs-margin-for-blocks-and-widgets);
 
-        .banner-items {
-            &:extend(.abs-reset-list all);
-        }
+    .banner-items {
+        &:extend(.abs-reset-list all);
+    }
 
-        .banner-item {
+    .banner-item {
+        display: block;
+    }
+
+    .banner-item-content {
+        margin-bottom: var(--indent__base);
+
+        img {
             display: block;
-        }
-
-        .banner-item-content {
-            margin-bottom: var(--indent__base);
-
-            img {
-                display: block;
-                margin: 0 auto;
-            }
+            margin: 0 auto;
         }
     }
 }

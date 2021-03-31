@@ -20,16 +20,16 @@
 }
 
 ._lib-layout-width(
-        @_layout__min-width: @layout__min-width,
-        @_layout__max-width: @layout__max-width
-    ) when (@_layout__min-width = @_layout__max-width) {
+    @_layout__min-width: @layout__min-width,
+    @_layout__max-width: @layout__max-width
+) when (@_layout__min-width = @_layout__max-width) {
     .lib-css(width, @_layout__min-width);
 }
 
 ._lib-layout-width(
-        @_layout__min-width: @layout__min-width,
-        @_layout__max-width: @layout__max-width
-    ) when not (@_layout__min-width = @_layout__max-width) {
+    @_layout__min-width: @layout__min-width,
+    @_layout__max-width: @layout__max-width
+) when not (@_layout__min-width = @_layout__max-width) {
     .lib-css(max-width, @_layout__max-width);
     .lib-css(min-width, @_layout__min-width);
     width: auto;
@@ -40,7 +40,8 @@
         .lib-vendor-prefix-display(flex);
         .lib-vendor-prefix-flex-wrap(wrap);
         box-sizing: border-box;
-    };
+    }
+;
     &:after {
         clear: both;
         content: ' ';
@@ -105,7 +106,7 @@
 }
 
 .lib-layout-column(@_total-columns, @_order, @_width) {
-    @_units: "px","%","em","rem","pt";
+    @_units: "px", "%", "em", "rem", "pt";
     ._lib-set-column-width(length(@_units), @_width);
     .lib-flex-degradation(@_total-columns, @_order);
     & when (@use-flex = true) {

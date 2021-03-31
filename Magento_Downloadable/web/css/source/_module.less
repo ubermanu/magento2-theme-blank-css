@@ -2,73 +2,71 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .downloadable.samples {
-        margin-bottom: var(--indent__base);
+.downloadable.samples {
+    margin-bottom: var(--indent__base);
 
-        dd {
-            margin: 0 0 var(--indent__s);
+    dd {
+        margin: 0 0 var(--indent__s);
+    }
+}
+
+.table-downloadable-products {
+    .product-name {
+        margin-right: 15px;
+    }
+}
+
+.field.downloads {
+    .price-container {
+        display: inline;
+        white-space: nowrap;
+
+        &:before {
+            content: ' + ';
+            display: inline;
         }
     }
 
-    .table-downloadable-products {
-        .product-name {
-            margin-right: 15px;
+    .price-excluding-tax {
+        display: inline;
+
+        &:before {
+            content: ' (' attr(data-label) ': ';
+        }
+
+        &:after {
+            content: ')';
         }
     }
 
-    .field.downloads {
-        .price-container {
-            display: inline;
-            white-space: nowrap;
+    .price-including-tax {
+        font-size: 14px;
+        display: inline;
+        font-weight: var(--font-weight__semibold);
+    }
 
-            &:before {
-                content: ' + ';
-                display: inline;
-            }
-        }
+    .sample.link {
+        float: right;
+    }
+}
 
-        .price-excluding-tax {
-            display: inline;
+.page-product-downloadable {
+    .product-add-form {
+        &:extend(.abs-add-clearfix all);
+        clear: both;
+        margin-bottom: var(--indent__m);
+    }
 
-            &:before {
-                content: ' (' attr(data-label) ': ';
-            }
-
-            &:after {
-                content: ')';
-            }
-        }
-
-        .price-including-tax {
-            font-size: 14px;
-            display: inline;
-            font-weight: var(--font-weight__semibold);
-        }
-
-        .sample.link {
-            float: right;
+    .product-options-bottom {
+        .field.qty {
+            display: none !important;
         }
     }
 
-    .page-product-downloadable {
-        .product-add-form {
-            &:extend(.abs-add-clearfix all);
-            clear: both;
-            margin-bottom: var(--indent__m);
-        }
-
-        .product-options-bottom {
-            .field.qty {
-                display: none !important;
-            }
-        }
-
-        .product-options-wrapper {
-            .fieldset {
-                .legend.links-title {
-                    &:extend(.abs-visually-hidden all);
-                }
+    .product-options-wrapper {
+        .fieldset {
+            .legend.links-title {
+                &:extend(.abs-visually-hidden all);
             }
         }
     }

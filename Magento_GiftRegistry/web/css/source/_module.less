@@ -2,164 +2,161 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
+.form-giftregistry-share,
+.form-giftregistry-edit {
+    &:extend(.abs-add-fields all);
 
-    .form-giftregistry-share,
-    .form-giftregistry-edit {
-        &:extend(.abs-add-fields all);
+    .actions-toolbar:not(:last-child) {
+        margin-bottom: var(--indent__xl);
+    }
 
-        .actions-toolbar:not(:last-child) {
-            margin-bottom: var(--indent__xl);
-        }
-
-        .fieldset {
-            .nested {
-                .field:not(.choice) {
-                    .control {
-                        width: 100%;
-                    }
+    .fieldset {
+        .nested {
+            .field:not(.choice) {
+                .control {
+                    width: 100%;
                 }
             }
         }
     }
+}
 
-    .form.giftregistry.items {
-        .actions-toolbar {
-            &:extend(.abs-reset-left-margin all);
+.form.giftregistry.items {
+    .actions-toolbar {
+        &:extend(.abs-reset-left-margin all);
+    }
+}
+
+.giftregisty-dropdown {
+    &:extend(.abs-dropdown-simple all);
+}
+
+.table-giftregistry-items {
+    .field.qty .qty {
+        &:extend(.abs-input-qty all);
+    }
+
+    .product-image {
+        float: left;
+        margin-right: var(--indent__s);
+    }
+}
+
+.form.giftregistry .fieldset {
+    .cart-summary & {
+        margin: 25px 0 var(--indent__xs);
+
+        .field {
+            margin: 0 0 var(--indent__s);
+
+            .control {
+                float: none;
+                width: auto;
+            }
+        }
+
+        .action.primary {
+            margin-bottom: 0;
+            &:extend(.abs-revert-secondary-color all);
+            &:extend(.abs-revert-secondary-size all);
         }
     }
+}
 
-    .giftregisty-dropdown {
-        &:extend(.abs-dropdown-simple all);
+.form-giftregistry-search {
+    margin-bottom: calc(var(--indent__l) * 2);
+
+    .legend {
+        &:extend(.abs-account-title all);
     }
 
-    .table-giftregistry-items {
-        .field.qty .qty {
+    .fields-specific-options {
+        .field {
+            &:nth-last-of-type(1) {
+                margin-bottom: 0;
+            }
+        }
+
+        .datetime-picker {
+            &:extend(.abs-field-date-input all);
+        }
+    }
+}
+
+.block-giftregistry-results {
+    .block-title {
+        &:extend(.abs-block-title all);
+    }
+
+    .toolbar-giftregistry-results {
+        text-align: center;
+    }
+}
+
+.block-giftregistry {
+    .actions-toolbar {
+        margin: 17px 0 0;
+    }
+}
+
+.block-giftregistry-shared {
+    .item-options {
+        .item-value {
+            margin: 0 0 var(--indent__m);
+        }
+    }
+}
+
+.block-giftregistry-shared-items {
+    .block-title {
+        &:extend(.abs-block-title all);
+    }
+
+    .product-image-wrapper {
+        &:extend(.abs-reset-image-wrapper all);
+    }
+
+    .item {
+        border-bottom: var(--border-width__base) solid var(--border-color__base);
+    }
+
+    .qty {
+        .qty {
             &:extend(.abs-input-qty all);
         }
+    }
 
-        .product-image {
-            float: left;
-            margin-right: var(--indent__s);
+    .col {
+        padding: var(--indent__base) 8px var(--indent__s);
+
+        .price-box {
+            display: inline-block;
+        }
+
+        .price-wrapper {
+            font-size: 18px;
+            display: block;
+            font-weight: var(--font-weight__bold);
+            white-space: nowrap;
         }
     }
 
-    .form.giftregistry .fieldset {
-        .cart-summary & {
-            margin: 25px 0 var(--indent__xs);
-
-            .field {
-                margin: 0 0 var(--indent__s);
-
-                .control {
-                    float: none;
-                    width: auto;
-                }
-            }
-
-            .action.primary {
-                margin-bottom: 0;
-                &:extend(.abs-revert-secondary-color all);
-                &:extend(.abs-revert-secondary-size all);
-            }
-        }
-    }
-
-    .form-giftregistry-search {
-        margin-bottom: calc(var(--indent__l) * 2);
-
-        .legend {
-            &:extend(.abs-account-title all);
-        }
-
-        .fields-specific-options {
-            .field {
-                &:nth-last-of-type(1) {
-                    margin-bottom: 0;
-                }
-            }
-
-            .datetime-picker {
-                &:extend(.abs-field-date-input all);
-            }
-        }
-    }
-
-    .block-giftregistry-results {
-        .block-title {
-            &:extend(.abs-block-title all);
-        }
-
-        .toolbar-giftregistry-results {
-            text-align: center;
-        }
-    }
-
-    .block-giftregistry {
-        .actions-toolbar {
-            margin: 17px 0 0;
-        }
-    }
-
-    .block-giftregistry-shared {
+    .product {
         .item-options {
-            .item-value {
-                margin: 0 0 var(--indent__m);
-            }
-        }
-    }
-
-    .block-giftregistry-shared-items {
-        .block-title {
-            &:extend(.abs-block-title all);
+            &:extend(.abs-product-options-list all);
+            &:extend(.abs-add-clearfix all);
+            margin-bottom: 0;
         }
 
-        .product-image-wrapper {
-            &:extend(.abs-reset-image-wrapper all);
+        &-item-photo {
+            display: block;
+            max-width: 65px;
+            padding: var(--indent__s) 0;
         }
 
-        .item {
-            border-bottom: var(--border-width__base) solid var(--border-color__base);
-        }
-
-        .qty {
-            .qty {
-                &:extend(.abs-input-qty all);
-            }
-        }
-
-        .col {
-            padding: var(--indent__base) 8px var(--indent__s);
-
-            .price-box {
-                display: inline-block;
-            }
-
-            .price-wrapper {
-                font-size: 18px;
-                display: block;
-                font-weight: var(--font-weight__bold);
-                white-space: nowrap;
-            }
-        }
-
-        .product {
-            .item-options {
-                &:extend(.abs-product-options-list all);
-                &:extend(.abs-add-clearfix all);
-                margin-bottom: 0;
-            }
-
-            &-item-photo {
-                display: block;
-                max-width: 65px;
-                padding: var(--indent__s) 0;
-            }
-
-            &-item-name {
-                display: block;
-                margin: 0 0 var(--indent__xs);
-            }
+        &-item-name {
+            display: block;
+            margin: 0 0 var(--indent__xs);
         }
     }
 }

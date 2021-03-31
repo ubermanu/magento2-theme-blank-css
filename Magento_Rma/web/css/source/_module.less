@@ -2,87 +2,85 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .form-create-return {
-        &:extend(.abs-add-fields all);
+.form-create-return {
+    &:extend(.abs-add-fields all);
+
+    .field {
+        .control > span,
+        address {
+            display: inline-block;
+            padding-top: var(--form-field-type-label-inline__padding-top);
+        }
+    }
+
+    .additional {
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .field:nth-last-child(2) {
+            margin-bottom: 0;
+        }
 
         .field {
-            .control > span,
-            address {
-                display: inline-block;
-                padding-top: var(--form-field-type-label-inline__padding-top);
+            &:last-child {
+                margin-top: var(--form-field__vertical-indent);
             }
         }
+    }
 
-        .additional {
-            &:first-child {
-                margin-top: 0;
-            }
+    .field.comment {
+        margin-top: 55px;
+    }
+}
 
-            .field:nth-last-child(2) {
+.block-returns-comments {
+    .returns-comments {
+        dt,
+        dd {
+            margin: 0;
+        }
+
+        dt {
+            font-weight: var(--font-weight__regular);
+        }
+
+        dd {
+            margin-bottom: 15px;
+
+            &:last-child {
                 margin-bottom: 0;
             }
-
-            .field {
-                &:last-child {
-                    margin-top: var(--form-field__vertical-indent);
-                }
-            }
-        }
-
-        .field.comment {
-            margin-top: 55px;
         }
     }
 
-    .block-returns-comments {
-        .returns-comments {
-            dt,
-            dd {
-                margin: 0;
-            }
+    .fieldset {
+        margin-bottom: 20px;
+    }
+}
 
-            dt {
-                font-weight: var(--font-weight__regular);
-            }
+.return-status {
+    &:extend(.abs-status all);
+}
 
-            dd {
-                margin-bottom: 15px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-
-        .fieldset {
-            margin-bottom: 20px;
+.magento-rma-returns-returns,
+.magento-rma-guest-returns,
+.magento-rma-returns-view {
+    .page-title-wrapper {
+        .page-title {
+            margin-right: 25px;
         }
     }
+}
 
-    .return-status {
-        &:extend(.abs-status all);
-    }
+//
+//  Guest return view page
+//  ---------------------------------------------
 
-    .magento-rma-returns-returns,
-    .magento-rma-guest-returns,
-    .magento-rma-returns-view {
-        .page-title-wrapper {
-            .page-title {
-                margin-right: 25px;
-            }
-        }
-    }
-
-    //
-    //  Guest return view page
-    //  ---------------------------------------------
-
-    .magento-rma-guest-returns {
-        .column.main {
-            .block:not(.widget) {
-                &:extend(.abs-account-blocks all);
-            }
+.magento-rma-guest-returns {
+    .column.main {
+        .block:not(.widget) {
+            &:extend(.abs-account-blocks all);
         }
     }
 }

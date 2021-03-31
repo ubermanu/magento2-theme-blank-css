@@ -92,6 +92,7 @@
                 .lib-css(padding, @_nav-level0-item-padding);
                 .lib-css(text-transform, @_nav-level0-text-transform);
                 word-wrap: break-word;
+
                 &:hover {
                     .lib-css(color, @navigation-level0-item__hover__color);
                 }
@@ -142,6 +143,7 @@
         .submenu {
             > li {
                 word-wrap: break-word;
+
                 > a {
                     &:hover {
                         .lib-css(color, @navigation-level0-item__hover__color);
@@ -186,6 +188,7 @@
                             .lib-css(text-decoration, @_submenu-item-text-decoration);
                             display: block;
                             line-height: normal;
+
                             &:hover {
                                 .lib-css(color, @navigation-level0-item__hover__color);
                             }
@@ -463,7 +466,7 @@
                     left: 100% !important;
                 }
 
-                .submenu-reverse{
+                .submenu-reverse {
                     left: auto !important;
                     right: 100%;
                 }
@@ -471,7 +474,7 @@
                 li {
                     margin: 0;
                     position: relative;
-                    
+
                     &.parent {
                         > a {
                             > .ui-menu-icon {

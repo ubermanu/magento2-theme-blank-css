@@ -10,44 +10,42 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .field {
-        .control {
-            &._with-tooltip {
-                &:extend(.abs-field-tooltip all);
-            }
-        }
-
-        &.choice {
-            .field-tooltip {
-                display: inline-block;
-                margin-left: var(--indent__s);
-                position: relative;
-                top: -3px;
-            }
-
-            .field-tooltip-action {
-                line-height: var(--checkout-tooltip-icon__font-size);
-            }
-        }
-
-        &._error {
-            .control {
-                input,
-                select,
-                textarea {
-                    border-color: var(--checkout-field-validation__border-color);
-                }
-            }
+.field {
+    .control {
+        &._with-tooltip {
+            &:extend(.abs-field-tooltip all);
         }
     }
 
-    .opc-wrapper {
-        .fieldset {
-            > .field {
-                > .label {
-                    font-weight: var(--font-weight__regular);
-                }
+    &.choice {
+        .field-tooltip {
+            display: inline-block;
+            margin-left: var(--indent__s);
+            position: relative;
+            top: -3px;
+        }
+
+        .field-tooltip-action {
+            line-height: var(--checkout-tooltip-icon__font-size);
+        }
+    }
+
+    &._error {
+        .control {
+            input,
+            select,
+            textarea {
+                border-color: var(--checkout-field-validation__border-color);
+            }
+        }
+    }
+}
+
+.opc-wrapper {
+    .fieldset {
+        > .field {
+            > .label {
+                font-weight: var(--font-weight__regular);
             }
         }
     }

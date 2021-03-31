@@ -2,21 +2,19 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .form-add-invitations {
-        &:extend(.abs-add-fields all);
+.form-add-invitations {
+    &:extend(.abs-add-fields all);
 
-        .action {
-            &.add {
-                .lib-button-icon(
-                    @_icon-font-content: var(--icon-expand),
-                    @_icon-font-text-hide: true,
-                    @_icon-font-size: 31px
-                );
-                line-height: normal;
-                padding: 2px 0;
-                width: auto;
-            }
+    .action {
+        &.add {
+            .lib-button-icon(
+                @_icon-font-content: var(--icon-expand),
+                @_icon-font-text-hide: true,
+                @_icon-font-size: 31px
+            );
+            line-height: normal;
+            padding: 2px 0;
+            width: auto;
         }
     }
 }

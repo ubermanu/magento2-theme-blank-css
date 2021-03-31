@@ -15,54 +15,47 @@
 }
 
 //
-//  Common
-//  _____________________________________________
+//  Shipping Information
+//  ---------------------------------------------
 
-& when (@media-common = true) {
+.opc-block-shipping-information {
+    padding: 0 var(--checkout-sidebar-shipping-information__padding);
 
-    //
-    //  Shipping Information
-    //  ---------------------------------------------
+    .shipping-information-title {
+        &:extend(.abs-checkout-title all);
+        border-bottom: var(--checkout-step-title__border);
+        margin: 0 0 var(--indent__base);
+        position: relative;
 
-    .opc-block-shipping-information {
-        padding: 0 var(--checkout-sidebar-shipping-information__padding);
-
-        .shipping-information-title {
-            &:extend(.abs-checkout-title all);
-            border-bottom: var(--checkout-step-title__border);
-            margin: 0 0 var(--indent__base);
-            position: relative;
-
-            .action-edit {
-                &:extend(.abs-action-button-as-link all);
-                top: var(--checkout-sidebar-shipping-information-edit-icon__top);
-                .lib-icon-font(
-                    @checkout-sidebar-shipping-information-edit-icon__content,
-                    @_icon-font-size: var(--checkout-sidebar-shipping-information-edit-icon__font-size),
-                    @_icon-font-line-height: var(--checkout-sidebar-shipping-information-edit-icon__line-height),
-                    @_icon-font-text-hide: true,
-                    @_icon-font-color: var(--checkout-sidebar-shipping-information-edit-icon__color),
-                    @_icon-font-color-hover: var(--checkout-sidebar-shipping-information-edit-icon__hover__color),
-                    @_icon-font-color-active: var(--checkout-sidebar-shipping-information-edit-icon__color)
-                );
-                margin: 0;
-                position: absolute;
-                right: 0;
-            }
+        .action-edit {
+            &:extend(.abs-action-button-as-link all);
+            top: var(--checkout-sidebar-shipping-information-edit-icon__top);
+            .lib-icon-font(
+                @checkout-sidebar-shipping-information-edit-icon__content,
+                @_icon-font-size: var(--checkout-sidebar-shipping-information-edit-icon__font-size),
+                @_icon-font-line-height: var(--checkout-sidebar-shipping-information-edit-icon__line-height),
+                @_icon-font-text-hide: true,
+                @_icon-font-color: var(--checkout-sidebar-shipping-information-edit-icon__color),
+                @_icon-font-color-hover: var(--checkout-sidebar-shipping-information-edit-icon__hover__color),
+                @_icon-font-color-active: var(--checkout-sidebar-shipping-information-edit-icon__color)
+            );
+            margin: 0;
+            position: absolute;
+            right: 0;
         }
+    }
 
-        .shipping-information-content {
-            line-height: var(--checkout-sidebar-shipping-information__line-height);
+    .shipping-information-content {
+        line-height: var(--checkout-sidebar-shipping-information__line-height);
 
-            .actions-toolbar {
-                margin-left: 0;
-            }
+        .actions-toolbar {
+            margin-left: 0;
         }
+    }
 
-        .ship-to,
-        .ship-via {
-            margin: 0 0 var(--indent__base);
-        }
+    .ship-to,
+    .ship-via {
+        margin: 0 0 var(--indent__base);
     }
 }
 

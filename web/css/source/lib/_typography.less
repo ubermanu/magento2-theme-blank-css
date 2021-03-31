@@ -102,9 +102,9 @@
 //  Optional hyphenation
 .lib-hyphens(@mode: auto) {
     -webkit-hyphens: @mode;
-       -moz-hyphens: @mode;
-        -ms-hyphens: @mode; // IE10+
-            hyphens: @mode;
+    -moz-hyphens: @mode;
+    -ms-hyphens: @mode; // IE10+
+    hyphens: @mode;
 }
 
 .lib-typography(
@@ -162,7 +162,7 @@
     }
 
     &:active {
-        .lib-css(color,@_link-color-active);
+        .lib-css(color, @_link-color-active);
         .lib-css(text-decoration, @_link-text-decoration-active);
     }
 }
@@ -332,9 +332,9 @@
         small,
         .small {
             .lib-typography(
-            @_heading-small-size,
-            @_heading-small-color,
-            @_line-height: @_heading-small-line-height
+                @_heading-small-size,
+                @_heading-small-color,
+                @_line-height: @_heading-small-line-height
             );
         }
     }

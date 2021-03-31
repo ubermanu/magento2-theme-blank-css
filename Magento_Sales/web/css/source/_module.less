@@ -2,238 +2,236 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .order-links {
-        border-bottom: var(--border-width__base) solid --border-color__base;
-        margin-bottom: 10px;
+.order-links {
+    border-bottom: var(--border-width__base) solid --border-color__base;
+    margin-bottom: 10px;
+
+    .item {
+        display: inline-block;
+        margin-right: 20px;
+    }
+}
+
+.order-actions-toolbar {
+    .action {
+        margin: 0 20px 0 0;
+    }
+}
+
+.order-details-items {
+    border-bottom: var(--border-width__base) solid --border-color__base;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
+    .order-title {
+        > strong {
+            .lib-heading(h3);
+            display: inline-block;
+        }
+    }
+
+    .items-qty {
+        &:extend(.abs-reset-list all);
 
         .item {
-            display: inline-block;
-            margin-right: 20px;
+            white-space: nowrap;
+        }
+
+        .title {
+            &:after {
+                content: ': ';
+            }
         }
     }
 
-    .order-actions-toolbar {
-        .action {
-            margin: 0 20px 0 0;
+    .table-order-items {
+        .product-item-name {
+            margin-top: 0;
+        }
+
+        tbody + tbody {
+            border-top: var(--border-width__base) solid --border-color__base;
         }
     }
 
-    .order-details-items {
-        border-bottom: var(--border-width__base) solid --border-color__base;
-        margin-bottom: 20px;
-        padding-bottom: 10px;
+    .item-options {
+        dt {
+            margin: 0;
+        }
 
-        .order-title {
-            > strong {
-                .lib-heading(h3);
+        dd {
+            margin: 0 0 15px;
+        }
+
+        &.links {
+            dt {
                 display: inline-block;
-            }
-        }
 
-        .items-qty {
-            &:extend(.abs-reset-list all);
-
-            .item {
-                white-space: nowrap;
-            }
-
-            .title {
                 &:after {
                     content: ': ';
                 }
             }
-        }
-
-        .table-order-items {
-            .product-item-name {
-                margin-top: 0;
-            }
-
-            tbody + tbody {
-                border-top: var(--border-width__base) solid --border-color__base;
-            }
-        }
-
-        .item-options {
-            dt {
-                margin: 0;
-            }
 
             dd {
-                margin: 0 0 15px;
-            }
-
-            &.links {
-                dt {
-                    display: inline-block;
-
-                    &:after {
-                        content: ': ';
-                    }
-                }
-
-                dd {
-                    margin: 0;
-                }
-            }
-        }
-    }
-
-    .order-pager-wrapper {
-        .toolbar-amount {
-            padding-top: 3px;
-        }
-
-        .pages-items {
-            .item {
-                &:first-child,
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
-
-    .order-actions-toolbar {
-        margin-bottom: 25px;
-
-        .action {
-            margin-right: 30px;
-
-            &.print {
                 margin: 0;
             }
         }
     }
+}
 
-    .order-status {
-        &:extend(.abs-status all);
+.order-pager-wrapper {
+    .toolbar-amount {
+        padding-top: 3px;
     }
 
+    .pages-items {
+        .item {
+            &:first-child,
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.order-actions-toolbar {
+    margin-bottom: 25px;
+
+    .action {
+        margin-right: 30px;
+
+        &.print {
+            margin: 0;
+        }
+    }
+}
+
+.order-status {
+    &:extend(.abs-status all);
+}
+
+.page-title-wrapper {
+    .order-date {
+        margin: 0 0 var(--indent__base);
+    }
+}
+
+.account,
+[class^='sales-guest-'],
+.sales-guest-view {
     .page-title-wrapper {
-        .order-date {
-            margin: 0 0 var(--indent__base);
+        .page-title {
+            margin-right: var(--indent__m);
         }
     }
+}
 
-    .account,
-    [class^='sales-guest-'],
-    .sales-guest-view {
-        .page-title-wrapper {
-            .page-title {
-                margin-right: var(--indent__m);
-            }
+.form-orders-search {
+    .field {
+        &.email,
+        &.zip {
+            margin-bottom: 0;
         }
     }
+}
 
-    .form-orders-search {
-        .field {
-            &.email,
-            &.zip {
-                margin-bottom: 0;
-            }
-        }
+.block-reorder {
+    .block-title {
+        &:extend(.abs-block-title all);
     }
 
-    .block-reorder {
-        .block-title {
-            &:extend(.abs-block-title all);
+    .product-item {
+        .checkbox {
+            position: relative;
+            top: 2px;
+            vertical-align: baseline;
         }
 
-        .product-item {
-            .checkbox {
-                position: relative;
-                top: 2px;
-                vertical-align: baseline;
-            }
-
-            .label {
-                &:extend(.abs-visually-hidden all);
-            }
-
-            .field.item {
-                display: inline-block;
-            }
+        .label {
+            &:extend(.abs-visually-hidden all);
         }
 
-        .product-item-name {
+        .field.item {
             display: inline-block;
         }
+    }
 
-        .actions-toolbar {
-            margin: 17px 0;
-            max-width: 178px;
+    .product-item-name {
+        display: inline-block;
+    }
+
+    .actions-toolbar {
+        margin: 17px 0;
+        max-width: 178px;
+    }
+
+    .sidebar-main & .subtitle,
+    .sidebar-additional & .subtitle {
+        &:extend(.abs-no-display all);
+    }
+}
+
+.block-order-details {
+    &-comments {
+        margin: 0 0 40px;
+
+        .comment-date {
+            font-weight: var(--font-weight__semibold);
         }
 
-        .sidebar-main & .subtitle,
-        .sidebar-additional & .subtitle {
-            &:extend(.abs-no-display all);
+        .comment-content {
+            line-height: 1.6;
+            margin: 0 0 20px;
         }
     }
 
-    .block-order-details {
-        &-comments {
-            margin: 0 0 40px;
+    &-view {
+        .box-content {
+            .payment-method {
+                .title {
+                    font-weight: var(--font-weight__regular);
+                }
 
-            .comment-date {
-                font-weight: var(--font-weight__semibold);
-            }
+                .content {
+                    margin: 0;
 
-            .comment-content {
-                line-height: 1.6;
-                margin: 0 0 20px;
-            }
-        }
-
-        &-view {
-            .box-content {
-                .payment-method {
-                    .title {
+                    > strong {
                         font-weight: var(--font-weight__regular);
-                    }
 
-                    .content {
-                        margin: 0;
-
-                        > strong {
-                            font-weight: var(--font-weight__regular);
-
-                            &:after {
-                                content: ': ';
-                            }
+                        &:after {
+                            content: ': ';
                         }
                     }
                 }
             }
         }
     }
+}
 
-    .order-tracking {
-        border-bottom: var(--border-width__base) solid --border-color__base;
-        margin: 0;
-        padding: 20px 0;
+.order-tracking {
+    border-bottom: var(--border-width__base) solid --border-color__base;
+    margin: 0;
+    padding: 20px 0;
 
-        .tracking-title {
-            display: inline-block;
-        }
-
-        .tracking-content {
-            display: inline-block;
-            margin: 0 0 0 5px;
-        }
+    .tracking-title {
+        display: inline-block;
     }
 
-    //
-    //  Guest order view page
-    //  ---------------------------------------------
+    .tracking-content {
+        display: inline-block;
+        margin: 0 0 0 5px;
+    }
+}
 
-    [class^='sales-guest-'],
-    .sales-guest-view {
-        .column.main {
-            .block:not(.widget) {
-                &:extend(.abs-account-blocks all);
-            }
+//
+//  Guest order view page
+//  ---------------------------------------------
+
+[class^='sales-guest-'],
+.sales-guest-view {
+    .column.main {
+        .block:not(.widget) {
+            &:extend(.abs-account-blocks all);
         }
     }
 }

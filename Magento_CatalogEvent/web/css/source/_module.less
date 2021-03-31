@@ -4,84 +4,77 @@
 }
 
 //
-//  Common
-//  _____________________________________________
+//  Catalog Events
+//  ---------------------------------------------
 
-& when (@media-common = true) {
+.block-category-event {
+    background: var(--catalog-event-background-color);
+    color: var(--catalog-event-color);
+    padding: var(--indent__s) 0 15px;
+    text-align: center;
 
-    //
-    //  Catalog Events
-    //  ---------------------------------------------
+    &.block:last-child {
+        margin-bottom: var(--indent__s);
+    }
 
-    .block-category-event {
-        background: var(--catalog-event-background-color);
-        color: var(--catalog-event-color);
-        padding: var(--indent__s) 0 15px;
-        text-align: center;
+    .block-title {
+        margin: 0 0 var(--indent__s);
 
-        &.block:last-child {
-            margin-bottom: var(--indent__s);
+        strong {
+            font-size: 15px;
+            font-weight: var(--font-weight__light);
+        }
+    }
+
+    .ticker {
+        .lib-list-reset-styles();
+
+        li {
+            display: none;
+            margin: 0 15px;
         }
 
-        .block-title {
-            margin: 0 0 var(--indent__s);
-
-            strong {
-                font-size: 15px;
-                font-weight: var(--font-weight__light);
-            }
+        .value {
+            font-size: 18px;
+            font-weight: var(--font-weight__light);
         }
 
-        .ticker {
-            .lib-list-reset-styles();
+        .label {
+            font-size: 10px;
+            display: block;
+            text-transform: lowercase;
+        }
+    }
 
-            li {
-                display: none;
-                margin: 0 15px;
-            }
+    .dates {
+        display: table;
+        margin: 0 auto;
 
-            .value {
+        .start,
+        .end {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .date {
+            font-size: 18px;
+        }
+
+        .time {
+            display: block;
+        }
+
+        .start {
+            padding-right: var(--indent__xl);
+            position: relative;
+
+            &:after {
                 font-size: 18px;
-                font-weight: var(--font-weight__light);
-            }
-
-            .label {
-                font-size: 10px;
+                content: '\2013';
                 display: block;
-                text-transform: lowercase;
-            }
-        }
-
-        .dates {
-            display: table;
-            margin: 0 auto;
-
-            .start,
-            .end {
-                display: table-cell;
-                vertical-align: top;
-            }
-
-            .date {
-                font-size: 18px;
-            }
-
-            .time {
-                display: block;
-            }
-
-            .start {
-                padding-right: var(--indent__xl);
-                position: relative;
-
-                &:after {
-                    font-size: 18px;
-                    content: '\2013';
-                    display: block;
-                    position: absolute;
-                    right: 15px;
-                    top: 0;
-                }
+                position: absolute;
+                right: 15px;
+                top: 0;
             }
         }
     }
