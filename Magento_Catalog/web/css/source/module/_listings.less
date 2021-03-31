@@ -1,17 +1,18 @@
-
 //
 //  Variables
 //  ---------------------------------------------
 
---product-name-link__color: var(--text__color);
---product-name-link__color__active: var(--text__color);
---product-name-link__color__hover: var(--text__color);
---product-name-link__color__visited: var(--text__color);
+:root {
+    --product-name-link__color: var(--text__color);
+    --product-name-link__color__active: var(--text__color);
+    --product-name-link__color__hover: var(--text__color);
+    --product-name-link__color__visited: var(--text__color);
 
---product-name-link__text-decoration: none;
---product-name-link__text-decoration__active: var(--link__hover__text-decoration);
---product-name-link__text-decoration__hover: var(--link__hover__text-decoration);
---product-name-link__text-decoration__visited: var(--link__hover__text-decoration);
+    --product-name-link__text-decoration: none;
+    --product-name-link__text-decoration__active: var(--link__hover__text-decoration);
+    --product-name-link__text-decoration__hover: var(--link__hover__text-decoration);
+    --product-name-link__text-decoration__visited: var(--link__hover__text-decoration);
+}
 
 //
 //  Common
@@ -78,6 +79,7 @@
                     font-size: 1.4rem;
                     vertical-align: middle;
                     white-space: nowrap;
+
                     > button.action {
                         .lib-button-reset();
                     }
@@ -88,6 +90,7 @@
                         width: 35px;
 
                         &:extend(.abs-actions-addto-gridlist all);
+
                         &:before {
                             margin: 0;
                         }
@@ -123,7 +126,7 @@
                 margin: var(--indent__s) 0 var(--indent__m);
 
                 .price {
-                    .lib-font-size(14);
+                    font-size: 14px;
                     font-weight: var(--font-weight__bold);
                     white-space: nowrap;
                 }
@@ -140,7 +143,7 @@
             .special-price,
             .minimal-price {
                 .price {
-                    .lib-font-size(14);
+                    font-size: 14px;
                     font-weight: var(--font-weight__bold);
                 }
 
@@ -180,7 +183,7 @@
 
                 .price-label {
                     color: var(--link__color);
-                    .lib-font-size(14);
+                    font-size: 14px;
                 }
 
                 .price {
@@ -202,7 +205,7 @@
 
             .tocompare {
                 .lib-icon-font-symbol(
-                @icon-compare-empty
+                    @icon-compare-empty
                 );
             }
 
@@ -214,7 +217,7 @@
 
     .price-container {
         .price {
-            .lib-font-size(14);
+            font-size: 14px;
         }
 
         .price-including-tax + .price-excluding-tax,
@@ -228,12 +231,12 @@
         .weee .price,
         .weee + .price-excluding-tax:before,
         .weee + .price-excluding-tax .price {
-            .lib-font-size(11);
+            font-size: 11px;
         }
 
         .weee {
             &:before {
-                content: '('attr(data-label) ': ';
+                content: '(' attr(data-label) ': ';
             }
 
             &:after {
@@ -376,6 +379,7 @@
         }
     }
 }
+
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
     .products-grid {
         .product-item {

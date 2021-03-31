@@ -161,7 +161,7 @@
             font-weight: var(--font-weight__heavier);
         }
 
-        .lib-font-size(18);
+        font-size: 18px;
         border-bottom: 1px solid var(--secondary__color);
         margin-bottom: 15px;
         padding-bottom: 12px;
@@ -729,14 +729,14 @@
         .price-including-tax,
         .price-excluding-tax,
         .weee {
-            .lib-font-size(14);
+            font-size: 14px;
             display: inline-block;
             white-space: nowrap;
         }
 
         .price-including-tax + .price-excluding-tax {
             display: inline-block;
-            .lib-font-size(11);
+            font-size: 11px;
 
             &:before {
                 content: '(' attr(data-label) ': ';
@@ -794,7 +794,7 @@
 
 & when (@media-common = true) {
     .abs-methods-shipping-title {
-        .lib-font-size(14);
+        font-size: 14px;
         font-weight: var(--font-weight__bold);
         margin: 0 0 15px;
     }
@@ -853,7 +853,7 @@
     .abs-account-title {
         > strong,
         > span {
-            .lib-font-size(22);
+            font-size: 22px;
             font-weight: var(--font-weight__light);
         }
 
@@ -1418,7 +1418,7 @@
 
             strong {
                 .column.main & {
-                    .lib-font-size(18);
+                    font-size: 18px;
                     font-weight: var(--font-weight__regular);
                 }
             }

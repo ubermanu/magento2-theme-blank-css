@@ -1,6 +1,6 @@
 :root {
     --desktop-popup-width: 380px;
-    --desktop-popup-margin-left: -((@desktop-popup-width + (@popup__padding * 2)) / 2);
+    --desktop-popup-margin-left: calc(-1 * (var(--desktop-popup-width) + (var(--popup__padding) * 2)) / 2);
     --desktop-popup-position-left: 50%;
     --desktop-popup-position-top: 20%;
 }
@@ -16,15 +16,15 @@
             .lib-dropdown-split(
                 @_options-selector: ~'.items',
                 @_dropdown-split-button-border-radius-fix: true,
-                @_dropdown-split-list-item-padding: 5 px 5 px 5 px 23 px,
+                @_dropdown-split-list-item-padding: 5px 5px 5px 23px,
                 @_dropdown-split-toggle-icon-content: var(--icon-down),
                 @_dropdown-split-toggle-active-icon-content: var(--icon-up),
                 @_dropdown-split-toggle-actions-padding: false,
-                @_icon-font-size: 22 px,
+                @_icon-font-size: 22px,
                 @_icon-font-color: var(--addto-color),
                 @_icon-font-color-hover: var(--addto-hover-color),
                 @_dropdown-split-list-pointer-position: left,
-                @_dropdown-split-list-min-width: 200 px
+                @_dropdown-split-list-min-width: 200px
             );
             vertical-align: middle;
             &:extend(.abs-dropdown-items-new all);
@@ -219,7 +219,7 @@
 
     .block-wishlist-info-items {
         .block-title {
-            .lib-font-size(22);
+            font-size: 22px;
             margin-bottom: var(--indent__base);
 
             > strong {
@@ -331,7 +331,7 @@
             //  Wish list name
             &-title {
                 strong {
-                    .lib-font-size(26);
+                    font-size: 26px;
                 }
             }
 
@@ -461,7 +461,7 @@
             //  Wish list name
             &-title {
                 strong {
-                    .lib-font-size(40);
+                    font-size: 40px;
                 }
             }
 

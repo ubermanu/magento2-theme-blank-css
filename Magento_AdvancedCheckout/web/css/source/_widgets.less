@@ -1,4 +1,3 @@
-
 //
 //  Common
 //  _____________________________________________
@@ -27,6 +26,7 @@
                         &.qty {
                             .qty {
                                 &:extend(.abs-input-qty all);
+
                                 + .mage-error {
                                     width: 80px;
                                 }
@@ -64,9 +64,9 @@
             .action {
                 &.add {
                     .lib-button-icon(
-                    --_icon-font-content: var(--icon-expand),
-                    --_icon-font-text-hide: true,
-                    --_icon-font-size: 31px
+                        @_icon-font-content: var(--icon-expand),
+                        @_icon-font-text-hide: true,
+                        @_icon-font-size: 31px
                     );
                     line-height: normal;
                     padding: 2px 0;
@@ -85,9 +85,9 @@
 
                 &.remove {
                     .lib-button-icon(
-                    --_icon-font-content: var(--icon-remove),
-                    --_icon-font-text-hide: true,
-                    --_icon-font-size: 28px
+                        @_icon-font-content: var(--icon-remove),
+                        @_icon-font-text-hide: true,
+                        @_icon-font-size: 28px
                     );
                     .lib-button-reset();
                 }
