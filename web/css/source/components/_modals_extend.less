@@ -8,7 +8,7 @@
 
 :root {
     --modal-title__color: var(--text__color);
-    --modal-title__border: 1px solid --color-gray-light5;
+    --modal-title__border: 1px solid var(--color-gray-light5);
 
     --modal-popup-title__font-size: 26px;
     --modal-popup-title-mobile__font-size: var(--font-size__base);
@@ -21,7 +21,7 @@
     --modal-action-close__font-size: 32px;
     --modal-action-close__hover__color: darken(@primary__color, 10%);
 
-    --modal-slide-action-close__padding: var(--modal-slide-header__padding-vertical) - 1rem @modal-popup__padding - 1rem;
+    --modal-slide-action-close__padding: calc(var(--modal-slide-header__padding-vertical) - 1rem) calc(var(--modal-popup__padding) - 1rem);
 }
 
 //
@@ -83,7 +83,7 @@
         }
 
         .page-main-actions {
-            margin-bottom: var(--modal-slide-header__padding-vertical) - (@indent__l/2);
+            margin-bottom: calc(var(--modal-slide-header__padding-vertical) - (var(--indent__l) / 2));
             margin-top: var(--modal-slide-header__padding-vertical);
         }
     }
