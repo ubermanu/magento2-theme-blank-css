@@ -1,21 +1,18 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Variables
 //  _____________________________________________
 
---checkout-wrapper__margin: var(--indent__base);
---checkout-wrapper__columns: 8;
+:root {
+    --checkout-wrapper__margin: var(--indent__base);
+    --checkout-wrapper__columns: 8;
 
---checkout-step-title__border: @border-width__base solid --color-gray80;
---checkout-step-title__font-size: 26px;
---checkout-step-title__font-weight: var(--font-weight__light);
---checkout-step-title__padding: var(--indent__s);
+    --checkout-step-title__border: var(--border-width__base) solid var(--color-gray80);
+    --checkout-step-title__font-size: 26px;
+    --checkout-step-title__font-weight: var(--font-weight__light);
+    --checkout-step-title__padding: var(--indent__s);
 
---checkout-step-title-mobile__font-size: 18px;
+    --checkout-step-title-mobile__font-size: 18px;
+}
 
 //
 //  Common
@@ -31,11 +28,11 @@
 
     .checkout-container {
         &:extend(.abs-add-clearfix all);
-        .lib-css(margin, 0 0 @checkout-wrapper__margin);
+        margin: 0 0 var(--checkout-wrapper__margin);
     }
 
     .opc-wrapper {
-        .lib-css(margin, 0 0 @checkout-wrapper__margin);
+        margin: 0 0 var(--checkout-wrapper__margin);
 
         .opc {
             &:extend(.abs-reset-list all);
@@ -46,7 +43,7 @@
         }
 
         .step-content {
-            margin: 0 0 --indent__xl;
+            margin: 0 0 var(--indent__xl);
         }
     }
 

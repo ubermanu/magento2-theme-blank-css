@@ -1,7 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
 
 //  The contents of this file will get split into two output files: email.less and email-inline.less.
 //
@@ -118,23 +114,23 @@ a {
 
 .email-non-inline() {
     a:visited {
-        color: @link__visited__color !important;
-        text-decoration: @link__visited__text-decoration !important;
+        color: var(--link__visited__color) !important;
+        text-decoration: var(--link__visited__text-decoration) !important;
     }
 
     a:hover {
-        color: @link__hover__color !important;
-        text-decoration: @link__hover__text-decoration !important;
+        color: var(--link__hover__color) !important;
+        text-decoration: var(--link__hover__text-decoration) !important;
     }
 
     a:active {
-        color: @link__active__color !important;
-        text-decoration: @link__active__text-decoration !important;
+        color: var(--link__active__color) !important;
+        text-decoration: var(--link__active__text-decoration) !important;
     }
 
     //  Remove link color on iOS
     .no-link a {
-        color: @text__color !important;
+        color: var(--text__color) !important;
         cursor: default !important;
         text-decoration: none !important;
     }
@@ -165,7 +161,7 @@ body {
 }
 
 .header {
-    padding: @email-body__padding @email-body__padding 0;
+    padding: var(--email-body__padding) @email-body__padding 0;
 }
 
 .main-content {
@@ -224,12 +220,12 @@ body {
     .button {
         .inner-wrapper {
             td:hover {
-                background-color: @button-primary__hover__background !important;
+                background-color: var(--button-primary__hover__background) !important;
             }
 
             a:active,
             td:active {
-                background-color: @button-primary__active__background !important;
+                background-color: var(--button-primary__active__background) !important;
             }
         }
 
@@ -238,7 +234,7 @@ body {
         a:visited {
             //  Undo general link hover state
             border: 1px solid --button-primary__hover__background;
-            color: @button-primary__hover__color !important;
+            color: var(--button-primary__hover__color) !important;
             text-decoration: none !important;
         }
     }
@@ -250,7 +246,7 @@ body {
 
                 td {
                     a {
-                        font-size: @button__font-size + 2;
+                        font-size: var(--button__font-size) + 2;
                     }
                 }
             }

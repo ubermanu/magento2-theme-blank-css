@@ -1,17 +1,14 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Variables
 //  _____________________________________________
 
---block-auth__dropdown__padding: var(--indent__m);
---block-auth__dropdown__background-color: var(--color-white);
---block-auth__or-label__size: 36px;
---block-auth__width: 0;
---block-auth__border: 1px solid --color-gray-light3;
+:root {
+    --block-auth__dropdown__padding: var(--indent__m);
+    --block-auth__dropdown__background-color: var(--color-white);
+    --block-auth__or-label__size: 36px;
+    --block-auth__width: 0;
+    --block-auth__border: 1px solid var(--color-gray-light3);
+}
 
 //
 //  Common
@@ -28,7 +25,7 @@
 
     .authentication-wrapper {
         float: right;
-        margin-top: -1.5*--indent__xl;
+        margin-top: calc(-1.5 * var(--indent__xl));
         max-width: 50%;
         position: relative;
         z-index: 1;
@@ -90,7 +87,7 @@
             }
 
             & + .block {
-                border-top: 1px solid --color-gray-light5;
+                border-top: 1px solid var(--color-gray-light5);
                 margin-top: var(--indent__xl);
                 padding-top: var(--indent__xl);
                 position: relative;
@@ -101,7 +98,7 @@
                     .lib-css(margin, -(@block-auth__or-label__size/2 + 1px) 0 0 -(@block-auth__or-label__size / 2));
                     min-width: var(--block-auth__or-label__size);
                     background: var(--color-white);
-                    border: 1px solid --color-gray-light5;
+                    border: 1px solid var(--color-gray-light5);
                     border-radius: 50%;
                     box-sizing: border-box;
                     color: var(--color-gray-light5);
@@ -128,13 +125,13 @@
     .authentication-dropdown {
         background-color: var(--block-auth__dropdown__background-color);
         border: var(--block-auth__border);
-        -webkit-transform: scale(1,0);
+        -webkit-transform: scale(1, 0);
         -webkit-transform-origin: 0 0;
         -webkit-transition: -webkit-transform linear .1s, visibility 0s linear .1s;
         position: absolute;
         text-align: left;
         top: 100%;
-        transform: scale(1,0);
+        transform: scale(1, 0);
         transform-origin: 0 0;
         transition: transform linear .1s, visibility 0s linear .1s;
         visibility: hidden;
@@ -142,9 +139,9 @@
 
         &._show {
             z-index: var(--dropdown-list__z-index);
-            -webkit-transform: scale(1,1);
+            -webkit-transform: scale(1, 1);
             -webkit-transition: -webkit-transform linear .1s, visibility 0s linear 0s;
-            transform: scale(1,1);
+            transform: scale(1, 1);
             transition: transform linear .1s, visibility 0s linear 0s;
             visibility: visible;
         }
@@ -167,6 +164,7 @@
                 display: inline;
                 float: right;
                 margin-right: 0;
+
                 .action {
                     margin-right: 0;
                 }
@@ -189,7 +187,7 @@
         .block-authentication {
             .lib-vendor-prefix-display(flex);
             .lib-vendor-prefix-flex-direction(row);
-            border-top: 1px solid --color-gray-light5;
+            border-top: 1px solid var(--color-gray-light5);
         }
 
         .block[class],
@@ -204,14 +202,14 @@
         .block[class] {
             box-sizing: border-box;
             float: left;
-            padding: @indent__s @indent__l 0 0;
+            padding: var(--indent__s) var(--indent__l) 0 0;
             width: 50%;
 
             & + .block {
-                border-left: 1px solid --color-gray-light5;
+                border-left: 1px solid var(--color-gray-light5);
                 border-top: 0;
                 margin: 0;
-                padding: @indent__s 0 0 --indent__xl;
+                padding: var(--indent__s) 0 0 var(--indent__xl);
 
                 &:before {
                     left: 0;

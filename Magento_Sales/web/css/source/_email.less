@@ -1,7 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
 
 //
 //  Sales Module Styles
@@ -32,7 +28,7 @@
     tr {
         > .address-details,
         > .method-info {
-            padding: @email-content__padding__base @email-content__padding__base @email-content__padding__base 0;
+            padding: var(--email-content__padding__base) @email-content__padding__base @email-content__padding__base 0;
             width: 50%;
 
             h3 {
@@ -80,11 +76,11 @@
         .address-details,
         .method-info {
             display: block;
-            padding: @email-content__padding__base 0 !important;
+            padding: var(--email-content__padding__base) 0 !important;
             width: auto !important;
 
             h3 {
-                margin-bottom: @indent__xs !important;
+                margin-bottom: var(--indent__xs) !important;
                 margin-top: 0 !important;
             }
         }
@@ -124,14 +120,14 @@
 
 .email-items {
     .lib-table(@table__width, 0);
-    border: @table__border-width @table__border-style --table__border-color;
+    border: var(--table__border-width) @table__border-style --table__border-color;
 
     thead,
     tfoot {
         > tr {
             > th,
             > td {
-                background-color: @color-gray95
+                background-color: var(--color-gray95)
             }
         }
     }
@@ -159,7 +155,7 @@
         > tr {
             > th,
             > td {
-                border-top: @table__border-width @table__border-style --table__border-color;
+                border-top: var(--table__border-width) @table__border-style --table__border-color;
             }
 
             & + tr {

@@ -1,13 +1,10 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Variables
 //  _____________________________________________
 
---checkout-modal-popup__width: 800px;
+:root {
+    --checkout-modal-popup__width: 800px;
+}
 
 //
 //  Common
@@ -39,7 +36,7 @@
             .modal-footer {
                 .action-save-address {
                     float: right;
-                    margin: 0 0 0 --indent__s;
+                    margin: 0 0 0 var(--indent__s);
                 }
 
                 .action-hide-popup {
@@ -54,7 +51,7 @@
     .checkout-index-index {
         .modal-popup {
             .modal-inner-wrap {
-                .lib-css(margin-left, -(@checkout-modal-popup__width/2));
+                margin-left: calc(-1 * var(--checkout-modal-popup__width) / 2);
                 width: var(--checkout-modal-popup__width);
                 left: 50%;
             }

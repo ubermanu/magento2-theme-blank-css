@@ -1,24 +1,21 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Variables
 //  _____________________________________________
 
---checkout-payment-option-title__border: var(--checkout-payment-method-title__border);
---checkout-payment-option-title__color: var(--link__color);
---checkout-payment-option-title__padding: var(--checkout-payment-method-title__padding);
---checkout-payment-option-title-mobile__padding: var(--checkout-payment-method-title-mobile__padding);
+:root {
+    --checkout-payment-option-title__border: var(--checkout-payment-method-title__border);
+    --checkout-payment-option-title__color: var(--link__color);
+    --checkout-payment-option-title__padding: var(--checkout-payment-method-title__padding);
+    --checkout-payment-option-title-mobile__padding: var(--checkout-payment-method-title-mobile__padding);
 
---checkout-payment-option-title-icon__font-size: 32px;
---checkout-payment-option-title-icon__line-height: 16px;
---checkout-payment-option-title-icon__margin: 0;
---checkout-payment-option-title-icon__color: var(--minicart-icons-color);
---checkout-payment-option-title-icon__hover__color: var(--primary__color);
+    --checkout-payment-option-title-icon__font-size: 32px;
+    --checkout-payment-option-title-icon__line-height: 16px;
+    --checkout-payment-option-title-icon__margin: 0;
+    --checkout-payment-option-title-icon__color: var(--minicart-icons-color);
+    --checkout-payment-option-title-icon__hover__color: var(--primary__color);
 
---checkout-payment-option-content__padding__xl: var(--checkout-payment-method-content__padding__xl);
+    --checkout-payment-option-content__padding__xl: var(--checkout-payment-method-content__padding__xl);
+}
 
 //
 //  Common
@@ -56,23 +53,23 @@
                 color: var(--checkout-payment-option-title__color);
                 .lib-icon-font(
                     @icon-down,
-                    --_icon-font-size: @checkout-payment-option-title-icon__font-size,
-                    --_icon-font-line-height: @checkout-payment-option-title-icon__line-height,
-                    --_icon-font-color: @checkout-payment-option-title-icon__color,
-                    --_icon-font-color-hover: @checkout-payment-option-title-icon__hover__color,
-                    --_icon-font-color-active: @checkout-payment-option-title-icon__color,
-                    --_icon-font-margin: @checkout-payment-option-title-icon__margin,
-                    --_icon-font-position: after
+                    @_icon-font-size: var(--checkout-payment-option-title-icon__font-size),
+                    @_icon-font-line-height: var(--checkout-payment-option-title-icon__line-height),
+                    @_icon-font-color: var(--checkout-payment-option-title-icon__color),
+                    @_icon-font-color-hover: var(--checkout-payment-option-title-icon__hover__color),
+                    @_icon-font-color-active: var(--checkout-payment-option-title-icon__color),
+                    @_icon-font-margin: var(--checkout-payment-option-title-icon__margin),
+                    @_icon-font-position: after
                 );
             }
         }
 
         .payment-option-content {
-            .lib-css(padding, 0 0 @indent__base @checkout-payment-option-content__padding__xl);
+            padding: 0 0 var(--indent__base) var(--checkout-payment-option-content__padding__xl);
         }
 
         .payment-option-inner {
-            margin: 0 0 --indent__base;
+            margin: 0 0 var(--indent__base);
         }
 
         .credit-card-types {
@@ -81,7 +78,7 @@
             .item {
                 display: inline-block;
                 list-style: none;
-                margin: 0 @indent__xs 0 0;
+                margin: 0 var(--indent__xs) 0 0;
                 vertical-align: top;
 
                 &._active {

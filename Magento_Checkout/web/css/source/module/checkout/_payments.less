@@ -1,21 +1,18 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Variables
 //  _____________________________________________
 
---checkout-payment-method-title__border: var(--checkout-shipping-method__border);
---checkout-payment-method-title__padding: var(--checkout-shipping-method__padding);
---checkout-payment-method-title-mobile__padding: 15px;
+:root {
+    --checkout-payment-method-title__border: var(--checkout-shipping-method__border);
+    --checkout-payment-method-title__padding: var(--checkout-shipping-method__padding);
+    --checkout-payment-method-title-mobile__padding: 15px;
 
---checkout-payment-method-content__padding__xl: 22px;
+    --checkout-payment-method-content__padding__xl: 22px;
 
---checkout-billing-address-details__line-height: 27px;
---checkout-billing-address-details__padding: 0 0 0 23px;
---checkout-billing-address-form__max-width: var(--checkout-shipping-address__max-width);
+    --checkout-billing-address-details__line-height: 27px;
+    --checkout-billing-address-details__padding: 0 0 0 23px;
+    --checkout-billing-address-form__max-width: var(--checkout-shipping-address__max-width);
+}
 
 //
 //  Common
@@ -79,9 +76,10 @@
         .payment-method-content {
             display: none;
             .lib-css(padding, 0 0 @indent__base @checkout-payment-method-content__padding__xl);
+
             .fieldset {
                 &:not(:last-child) {
-                    margin: 0 0 --indent__base;
+                    margin: 0 0 var(--indent__base);
                 }
             }
         }
@@ -89,7 +87,7 @@
         .payment-group {
             & + .payment-group {
                 .step-title {
-                    margin: @indent__base 0 0;
+                    margin: var(--indent__base) 0 0;
                 }
             }
         }
@@ -100,11 +98,11 @@
         }
 
         .billing-address-same-as-shipping-block {
-            margin: 0 0 --indent__s;
+            margin: 0 0 var(--indent__s);
         }
 
         .checkout-billing-address {
-            margin: 0 0 --indent__base;
+            margin: 0 0 var(--indent__base);
 
             .primary {
                 .action-update {
@@ -141,7 +139,7 @@
         }
 
         .no-payments-block {
-            margin: @indent__base 0;
+            margin: var(--indent__base) 0;
         }
 
         .payments {
@@ -208,7 +206,7 @@
         .payment-method-content {
             .fieldset {
                 > .field {
-                    margin: 0 0 --indent__base;
+                    margin: 0 0 var(--indent__base);
 
                     &.choice {
                         &:before {

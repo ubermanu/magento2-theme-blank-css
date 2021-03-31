@@ -1,7 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
 
 @import 'module/_collapsible_navigation.less';
 
@@ -211,8 +207,8 @@
                 .lib-dropdown(
                 --_dropdown-actions-padding: 0,
                 --_dropdown-list-item-padding: 0,
-                --_dropdown-toggle-icon-content: @icon-down,
-                --_dropdown-toggle-active-icon-content: @icon-up,
+                --_dropdown-toggle-icon-content: var(--icon-down),
+                --_dropdown-toggle-active-icon-content: var(--icon-up),
                 --_icon-font-text-hide: true,
                 --_icon-font-size: 22px,
                 --_icon-font-line-height: 22px,
@@ -333,7 +329,7 @@
 
         &.content {
             &:extend(.abs-add-clearfix-desktop all);
-            padding: @indent__l @indent__base 0;
+            padding: var(--indent__l) @indent__base 0;
         }
     }
 

@@ -1,8 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Bundle Module Styles
 //  ---------------------------------------------
@@ -14,16 +9,16 @@
 .email-items {
     .bundle-option-label {
         > td {
-            padding: 0 @email-content__padding__base 0 --email-content__padding__l;
+            padding: 0 var(--email-content__padding__base) 0 var(--email-content__padding__l);
         }
     }
 
     .bundle-option-value {
         > td {
-            padding: 0 @email-content__padding__base --email-content__padding__base;
+            padding: 0 var(--email-content__padding__base) var(--email-content__padding__base);
 
             &.item-info {
-                padding: 0 @email-content__padding__base @email-content__padding__base --email-content__padding__xl;
+                padding: 0 var(--email-content__padding__base) var(--email-content__padding__base) var(--email-content__padding__xl);
             }
         }
     }

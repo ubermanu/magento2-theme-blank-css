@@ -1,7 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
 
 //
 //  Variables
@@ -52,9 +48,9 @@
 
     .popup-pointer {
         .lib-pointer(
-        --_size: @popup-marker__size,
-        --_background-color: @popup__background,
-        --_border-color: @popup__border-color,
+        --_size: var(--popup-marker__size),
+        --_background-color: var(--popup__background),
+        --_border-color: var(--popup__border-color),
         --_position__vertical__value: 2px,
         --_position__horizontal__value: 2px
         );

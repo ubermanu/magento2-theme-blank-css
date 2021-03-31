@@ -1,7 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
 
 //
 //  Variables
@@ -30,8 +26,8 @@
         .lib-icon-font(
             @icon-menu,
             --_icon-font-size: 28px,
-            --_icon-font-color: @header-icons-color,
-            --_icon-font-color-hover: @header-icons-color-hover
+            --_icon-font-color: var(--header-icons-color),
+            --_icon-font-color-hover: var(--header-icons-color-hover)
         );
         .lib-icon-text-hide();
         cursor: pointer;
@@ -55,7 +51,7 @@
         .parent {
             .level-top {
                 .lib-icon-font(
-                    --_icon-font-content: @icon-down,
+                    --_icon-font-content: var(--icon-down),
                     --_icon-font-size: 42px,
                     --_icon-font-position: after,
                     --_icon-font-display: block
@@ -70,7 +66,7 @@
 
                 &.ui-state-active {
                     .lib-icon-font-symbol(
-                        --_icon-font-content: @icon-up,
+                        --_icon-font-content: var(--icon-up),
                         --_icon-font-position: after
                     );
                 }
@@ -108,7 +104,7 @@
         .switcher-trigger {
             strong {
                 .lib-icon-font(
-                    --_icon-font-content: @icon-down,
+                    --_icon-font-content: var(--icon-down),
                     --_icon-font-size: 42px,
                     --_icon-font-position: after,
                     --_icon-font-display: block
@@ -124,7 +120,7 @@
 
             &.active strong {
                 .lib-icon-font-symbol(
-                    --_icon-font-content: @icon-up,
+                    --_icon-font-content: var(--icon-up),
                     --_icon-font-position: after
                 );
             }
@@ -133,7 +129,7 @@
         .switcher-dropdown {
             .lib-list-reset-styles();
             display: none;
-            padding: @indent__s 0;
+            padding: var(--indent__s) 0;
         }
 
         .switcher-options {
@@ -267,7 +263,7 @@
             display: block;
         }
 
-        padding: @indent__m 0;
+        padding: var(--indent__m) 0;
     }
 
     .lib-main-navigation();

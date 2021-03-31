@@ -1,16 +1,13 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Variables
 //  _____________________________________________
 
---minicart__border-color: var(--color-gray80);
---minicart__padding-horizontal: var(--indent__base);
+:root {
+    --minicart__border-color: var(--color-gray80);
+    --minicart__padding-horizontal: var(--indent__base);
 
---minicart-qty__height: 24px;
+    --minicart-qty__height: 24px;
+}
 
 //
 //  Common
@@ -25,7 +22,7 @@
     .block-minicart {
         .items-total {
             float: left;
-            margin: 0 --indent__s;
+            margin: 0 var(--indent__s);
 
             .count {
                 font-weight: var(--font-weight__bold);
@@ -33,7 +30,7 @@
         }
 
         .subtotal {
-            margin: 0 @indent__s --indent__s;
+            margin: 0 var(--indent__s) var(--indent__s);
             text-align: right;
 
             .label {
@@ -58,7 +55,7 @@
             &.empty {
                 display: block;
                 font-size: 14px;
-                padding: @indent__l 0 --indent__base;
+                padding: var(--indent__l) 0 --indent__base;
                 text-align: center;
             }
         }
@@ -104,28 +101,28 @@
 
     .minicart-wrapper {
         .lib-dropdown(
-        --_toggle-selector: ~'.action.showcart',
-        --_options-selector: ~'.block-minicart',
-        --_dropdown-list-width: 320px,
-        --_dropdown-list-position-right: 0,
-        --_dropdown-list-pointer-position: right,
-        --_dropdown-list-pointer-position-left-right: 26px,
-        --_dropdown-list-z-index: 101,
-        --_dropdown-toggle-icon-content: @icon-cart,
-        --_dropdown-toggle-active-icon-content: @icon-cart,
-        --_dropdown-list-item-padding: false,
-        --_dropdown-list-item-hover: false,
-        --_icon-font-position: before,
-        --_icon-font-size: 35px,
-        --_icon-font-line-height: 33px,
-        --_icon-font-color: @minicart-icons-color,
-        --_icon-font-color-hover: @minicart-icons-color-hover,
-        --_icon-font-color-active: @minicart-icons-color
+            @_toggle-selector: ~'.action.showcart',
+            @_options-selector: ~ '.block-minicart',
+            @_dropdown-list-width: 320 px,
+            @_dropdown-list-position-right: 0,
+            @_dropdown-list-pointer-position: right,
+            @_dropdown-list-pointer-position-left-right: 26 px,
+            @_dropdown-list-z-index: 101,
+            @_dropdown-toggle-icon-content: var(--icon-cart),
+            @_dropdown-toggle-active-icon-content: var(--icon-cart),
+            @_dropdown-list-item-padding: false,
+            @_dropdown-list-item-hover: false,
+            @_icon-font-position: before,
+            @_icon-font-size: 35 px,
+            @_icon-font-line-height: 33 px,
+            @_icon-font-color: var(--minicart-icons-color),
+            @_icon-font-color-hover: var(--minicart-icons-color-hover),
+            @_icon-font-color-active: var(--minicart-icons-color)
         );
         float: right;
 
         .block-minicart {
-            .lib-css(padding, 25px @minicart__padding-horizontal);
+            padding: 25px var(--minicart__padding-horizontal);
 
             .block-title {
                 display: none;
@@ -149,9 +146,9 @@
             &.close {
                 .lib-button-icon(
                     @icon-remove,
-                    --_icon-font-size: 32px,
-                    --_icon-font-line-height: 32px,
-                    --_icon-font-text-hide: true
+                    @_icon-font-size: 32px,
+                    @_icon-font-line-height: 32px,
+                    @_icon-font-text-hide: true
                 );
                 .lib-button-reset();
                 height: 40px;
@@ -205,8 +202,8 @@
     }
 
     .minicart-items-wrapper {
-        .lib-css(border, 1px solid @minicart__border-color);
-        .lib-css(margin, 0 -@minicart__padding-horizontal);
+        border: 1px solid var(--minicart__border-color);
+        margin: 0 calc(-1 * var(--minicart__padding-horizontal));
         border-left: 0;
         border-right: 0;
         overflow-x: auto;
@@ -217,10 +214,10 @@
         .lib-list-reset-styles();
 
         .product-item {
-            padding: @indent__base 0;
+            padding: var(--indent__base) 0;
 
             &:not(:first-child) {
-                .lib-css(border-top, 1px solid @minicart__border-color);
+                border-top: 1px solid var(--minicart__border-color);
             }
 
             &:first-child {
@@ -259,12 +256,12 @@
 
             .toggle {
                 .lib-icon-font(
-                    --_icon-font-content: @icon-down,
-                    --_icon-font-size: 28px,
-                    --_icon-font-line-height: 16px,
-                    --_icon-font-text-hide: false,
-                    --_icon-font-position: after,
-                    --_icon-font-display: block
+                    @_icon-font-content: var(--icon-down),
+                    @_icon-font-size: 28 px,
+                    @_icon-font-line-height: 16 px,
+                    @_icon-font-text-hide: false,
+                    @_icon-font-position: after,
+                    @_icon-font-display: block
                 );
                 cursor: pointer;
                 position: relative;
@@ -280,8 +277,8 @@
             &.active {
                 > .toggle {
                     .lib-icon-font-symbol(
-                        --_icon-font-content: @icon-up,
-                        --_icon-font-position: after
+                        @_icon-font-content: var(--icon-up),
+                        @_icon-font-position: after
                     );
                 }
             }
@@ -289,7 +286,7 @@
 
         .product-item-name {
             font-weight: var(--font-weight__regular);
-            margin: 0 0 --indent__s;
+            margin: 0 0 var(--indent__s);
 
             a {
                 color: var(--link__color);
@@ -305,7 +302,7 @@
 
             .price-including-tax,
             .price-excluding-tax {
-                margin: @indent__xs 0 0;
+                margin: var(--indent__xs) 0 0;
             }
 
             .weee[data-label] {
@@ -325,11 +322,11 @@
             .tooltip.toggle {
                 .lib-icon-font(
                     @icon-down,
-                    --_icon-font-size: 28px,
-                    --_icon-font-line-height: 28px,
-                    --_icon-font-text-hide: true,
-                    --_icon-font-margin: -3px 0 0 7px,
-                    --_icon-font-position: after
+                    @_icon-font-size: 28px,
+                    @_icon-font-line-height: 28px,
+                    @_icon-font-text-hide: true,
+                    @_icon-font-margin: -3px 0 0 7px,
+                    @_icon-font-position: after
                 );
 
                 .details {
@@ -365,18 +362,18 @@
             &.delete {
                 .lib-icon-font(
                     @icon-settings,
-                    --_icon-font-size: 28px,
-                    --_icon-font-line-height: 28px,
-                    --_icon-font-text-hide: true,
-                    --_icon-font-color: @color-gray19,
-                    --_icon-font-color-hover: @color-gray19,
-                    --_icon-font-color-active: @color-gray19
+                    @_icon-font-size: 28px,
+                    @_icon-font-line-height: 28px,
+                    @_icon-font-text-hide: true,
+                    @_icon-font-color: var(--color-gray19),
+                    @_icon-font-color-hover: var(--color-gray19),
+                    @_icon-font-color-active: var(--color-gray19)
                 );
             }
 
             &.delete {
                 .lib-icon-font-symbol(
-                    --_icon-font-content: @icon-trash
+                    @_icon-font-content: var(--icon-trash)
                 );
             }
         }
@@ -397,12 +394,14 @@
     .minicart-wrapper {
         margin-top: var(--indent__s);
         .lib-clearfix();
+
         .product {
             .actions {
                 float: left;
                 margin: 10px 0 0 0;
             }
         }
+
         .update-cart-item {
             float: right;
             margin-left: 0;

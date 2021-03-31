@@ -1,17 +1,14 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Variables
 //  _____________________________________________
 
---autocomplete__background-color: var(--color-white);
---autocomplete__border: 1px solid --form-element-input__border-color;
---autocomplete-item__border: 1px solid --color-gray90;
---autocomplete-item__hover__color: var(--color-gray91);
---autocomplete-item-amount__color: var(--color-gray60);
+:root {
+    --autocomplete__background-color: var(--color-white);
+    --autocomplete__border: 1px solid --form-element-input__border-color;
+    --autocomplete-item__border: 1px solid --color-gray90;
+    --autocomplete-item__hover__color: var(--color-gray91);
+    --autocomplete-item-amount__color: var(--color-gray60);
+}
 
 //
 //  Common
@@ -33,13 +30,13 @@
 
         .label {
             .lib-icon-font(
-            --_icon-font-content: @icon-search,
-            --_icon-font-size: 35px,
-            --_icon-font-line-height: 33px,
-            --_icon-font-color: @header-icons-color,
-            --_icon-font-color-hover: @header-icons-color-hover,
-            --_icon-font-color-active: @header-icons-color-hover,
-            --_icon-font-text-hide: true
+                @_icon-font-content: var(--icon-search),
+                @_icon-font-size: 35 px,
+                @_icon-font-line-height: 33 px,
+                @_icon-font-color: var(--header-icons-color),
+                @_icon-font-color-hover: var(--header-icons-color-hover),
+                @_icon-font-color-active: var(--header-icons-color-hover),
+                @_icon-font-text-hide: true
             );
             display: inline-block;
             float: right;
@@ -58,10 +55,10 @@
         }
 
         .control {
-            border-top: 1px solid --border-color__base;
+            border-top: 1px solid var(--border-color__base);
             clear: both;
-            margin: 0 -@layout__width-xs-indent -1px;
-            padding: 0 --layout__width-xs-indent;
+            margin: 0 calc(-1 * var(--layout__width-xs-indent)) -1px;
+            padding: 0 var(--layout__width-xs-indent);
         }
 
         input {
@@ -91,7 +88,7 @@
                 border-top: var(--autocomplete-item__border);
                 cursor: pointer;
                 margin: 0;
-                padding: @indent__xs @indent__xl @indent__xs --indent__s;
+                padding: var(--indent__xs) var(--indent__xl) var(--indent__xs) var(--indent__s);
                 position: relative;
                 text-align: left;
                 white-space: normal;
@@ -235,12 +232,12 @@
         .action.search {
             display: inline-block;
             .lib-button-icon(
-            --_icon-font-content: @icon-search,
-            --_icon-font-text-hide: true,
-            --_icon-font-color: @header-icons-color
+                @_icon-font-content: var(--icon-search),
+                @_icon-font-text-hide: true,
+                @_icon-font-color: var(--header-icons-color)
             );
             .lib-button-reset();
-            padding: @indent__xs 0;
+            padding: var(--indent__xs) 0;
             position: absolute;
             right: 10px;
             top: 0;

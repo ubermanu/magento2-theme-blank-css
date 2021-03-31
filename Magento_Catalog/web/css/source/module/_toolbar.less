@@ -1,7 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
 
 //
 //  Variables
@@ -28,7 +24,7 @@
 
     .toolbar-amount {
         display: block;
-        line-height: @toolbar-mode-icon-font-size + 2;
+        line-height: var(--toolbar-mode-icon-font-size) + 2;
         margin: 0;
         padding: 8px 0 0;
         vertical-align: middle;
@@ -83,8 +79,8 @@
             @icon-arrow-up,
             --_icon-font-size: 28px,
             --_icon-font-line-height: 32px,
-            --_icon-font-color: @header-icons-color,
-            --_icon-font-color-hover: @header-icons-color-hover,
+            --_icon-font-color: var(--header-icons-color),
+            --_icon-font-color-hover: var(--header-icons-color-hover),
             --_icon-font-text-hide: true
         );
     }
@@ -185,10 +181,10 @@
 
         .lib-icon-font(
             @icon-grid,
-            --_icon-font-size: @toolbar-mode-icon-font-size,
+            --_icon-font-size: var(--toolbar-mode-icon-font-size),
             --_icon-font-text-hide: true,
-            --_icon-font-color: @text__color__muted,
-            --_icon-font-color-hover: @text__color__muted
+            --_icon-font-color: var(--text__color__muted),
+            --_icon-font-color-hover: var(--text__color__muted)
         );
     }
 

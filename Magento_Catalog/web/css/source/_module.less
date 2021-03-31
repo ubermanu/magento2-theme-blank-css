@@ -1,34 +1,32 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
 
---product-grid-items-per-row-layout-default: 2;
+:root {
+    --product-grid-items-per-row-layout-default: 2;
 
---product-grid-items-per-row-layout-1-screen-s: 3;
---product-grid-items-per-row-layout-1-screen-m: 4;
---product-grid-items-per-row-layout-1-screen-l: 5;
+    --product-grid-items-per-row-layout-1-screen-s: 3;
+    --product-grid-items-per-row-layout-1-screen-m: 4;
+    --product-grid-items-per-row-layout-1-screen-l: 5;
 
---product-grid-items-per-row-layout-2-left-screen-s: 3;
---product-grid-items-per-row-layout-2-left-screen-m: 4;
---product-grid-items-per-row-layout-2-left-screen-l: '';
+    --product-grid-items-per-row-layout-2-left-screen-s: 3;
+    --product-grid-items-per-row-layout-2-left-screen-m: 4;
+    --product-grid-items-per-row-layout-2-left-screen-l: '';
 
---product-grid-items-per-row-layout-2-right-screen-s: 3;
---product-grid-items-per-row-layout-2-right-screen-m: 4;
---product-grid-items-per-row-layout-2-right-screen-l: '';
+    --product-grid-items-per-row-layout-2-right-screen-s: 3;
+    --product-grid-items-per-row-layout-2-right-screen-m: 4;
+    --product-grid-items-per-row-layout-2-right-screen-l: '';
 
---product-grid-items-per-row-layout-3-screen-s: 3;
---product-grid-items-per-row-layout-3-screen-m: '';
---product-grid-items-per-row-layout-3-screen-l: '';
+    --product-grid-items-per-row-layout-3-screen-s: 3;
+    --product-grid-items-per-row-layout-3-screen-m: '';
+    --product-grid-items-per-row-layout-3-screen-l: '';
 
---product-grid-items-padding: 0 @indent__base --indent__base;
---product-grid-items-margin: 0 0 --indent__s;
+    --product-grid-items-padding: 0 var(--indent__base) var(--indent__base);
+    --product-grid-items-margin: 0 0 var(--indent__s);
 
---product-name-text-decoration: none;
---product-name-text-decoration-hover: var(--link__hover__text-decoration);
+    --product-name-text-decoration: none;
+    --product-name-text-decoration-hover: var(--link__hover__text-decoration);
 
---toolbar-mode-icon-font-size: 26px;
---product-h1-margin-bottom-desktop: var(--indent__base);
+    --toolbar-mode-icon-font-size: 26px;
+    --product-h1-margin-bottom-desktop: var(--indent__base);
+}
 
 @import 'module/_listings.less';
 @import 'module/_toolbar.less';
@@ -141,11 +139,11 @@
         .notice {
             color: var(--text__color__muted);
             .lib-font-size(@font-size__s);
-            margin: @indent__s 0;
+            margin: var(--indent__s) 0;
         }
 
         .product.thumbs {
-            margin: @indent__base 0 --indent__l;
+            margin: var(--indent__base) 0 var(--indent__l);
         }
 
         .items.thumbs {
@@ -165,10 +163,10 @@
         .additional-attributes {
             width: auto;
             .lib-table-resize(
-            --_th-padding-left: 0,
-            --_th-padding-right: @indent__l,
-            --_th-padding-bottom: @indent__s,
-            --_td-padding-bottom: @indent__s
+                @_th-padding-left: 0,
+                @_th-padding-right: var(--indent__l),
+                @_th-padding-bottom: var(--indent__s),
+                @_td-padding-bottom: var(--indent__s)
             );
         }
     }
@@ -211,12 +209,12 @@
                 }
 
                 &.overview {
-                    margin: @indent__base 0;
+                    margin: var(--indent__base) 0;
                 }
             }
 
             &.alert {
-                margin: @indent__s 0;
+                margin: var(--indent__s) 0;
             }
         }
 
@@ -233,7 +231,7 @@
         .fieldset-product-options-inner {
             .legend {
                 font-weight: var(--font-weight__bold);
-                .lib-css(margin, 0 0 @indent__xs);
+                margin: 0 0 var(--indent__xs);
                 .lib-font-size(14px);
                 border: none;
                 display: inline-block;
@@ -254,12 +252,12 @@
                     &:after {
                         content: '*';
                         .lib-typography(
-                        --_font-size: @form-field-label-asterisk__font-size,
-                        --_color: @form-field-label-asterisk__color,
-                        --_font-family: @form-field-label-asterisk__font-family,
-                        --_font-weight: @form-field-label-asterisk__font-weight,
-                        --_line-height: @form-field-label-asterisk__line-height,
-                        --_font-style: @form-field-label-asterisk__font-style
+                            @_font-size: var(--form-field-label-asterisk__font-size),
+                            @_color: var(--form-field-label-asterisk__color),
+                            @_font-family: var(--form-field-label-asterisk__font-family),
+                            @_font-weight: var(--form-field-label-asterisk__font-weight),
+                            @_line-height: var(--form-field-label-asterisk__line-height),
+                            @_font-style: var(--form-field-label-asterisk__font-style)
                         );
                         margin: var(--form-field-label-asterisk__margin);
                     }
@@ -306,7 +304,7 @@
 
         .special-price {
             display: block;
-            margin: @indent__s 0;
+            margin: var(--indent__s) 0;
 
             .price-container {
                 .lib-font-size(14);
@@ -327,17 +325,17 @@
         }
 
         .box-tocart {
-            margin: @indent__base 0;
+            margin: var(--indent__base) 0;
 
             .field.qty {
-                padding-right: .75 * --indent__base;
+                padding-right: calc(.75 * var(--indent__base));
             }
 
             .input-text.qty {
-                --tocart-input-size: @button__line-height__l + 28px;
-                height: @tocart-input-size + 2px;
+                --tocart-input-size: var(--button__line-height__l) + 28px;
+                height: var(--tocart-input-size) + 2px;
                 text-align: center;
-                width: @tocart-input-size + 2px;
+                width: var(--tocart-input-size) + 2px;
             }
 
             .actions {
@@ -350,7 +348,7 @@
         }
 
         .product-addto-links {
-            margin: @indent__base 0;
+            margin: var(--indent__base) 0;
         }
 
         .action.tocompare {
@@ -362,8 +360,8 @@
     .prices-tier {
         &:extend(.abs-reset-list all);
         background: var(--sidebar__background-color);
-        margin: @indent__s 0;
-        padding: @indent__s (.75 * @indent__base);
+        margin: var(--indent__s) 0;
+        padding: var(--indent__s) calc(.75 * var(--indent__base));
 
         .price-container {
             display: inline-block;
@@ -552,7 +550,7 @@
     .block.related {
         .action.select {
             display: block;
-            margin: @indent__xs 0;
+            margin: var(--indent__xs) 0;
         }
     }
 
@@ -663,6 +661,7 @@
         .product-info-main {
             width: 40%;
         }
+
         .product.media {
             width: 57%;
         }
@@ -716,7 +715,7 @@
 
         .cell.label,
         td:last-child {
-            border-right: @table__border-width @table__border-style --table__border-color;
+            border-right: var(--table__border-width) @table__border-style --table__border-color;
         }
 
         .cell {
@@ -730,7 +729,7 @@
 
             &.product.info,
             &.product.label {
-                border-bottom: @table__border-width @table__border-style --table__border-color;
+                border-bottom: var(--table__border-width) @table__border-style --table__border-color;
             }
 
             &.label {
@@ -743,6 +742,7 @@
 
             &.attribute {
                 .lib-font-size(13);
+
                 img {
                     height: auto;
                     max-width: 100%;

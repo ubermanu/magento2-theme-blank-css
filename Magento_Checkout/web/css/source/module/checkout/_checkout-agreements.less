@@ -1,8 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Common
 //  _____________________________________________
@@ -25,12 +20,12 @@
                     &:after {
                         content: '*';
                         .lib-typography(
-                            --_font-size: @form-field-label-asterisk__font-size,
-                            --_color: @form-field-label-asterisk__color,
-                            --_font-family: @form-field-label-asterisk__font-family,
-                            --_font-weight: @form-field-label-asterisk__font-weight,
-                            --_line-height: @form-field-label-asterisk__line-height,
-                            --_font-style: @form-field-label-asterisk__font-style
+                            @_font-size: var(--form-field-label-asterisk__font-size),
+                            @_color: var(--form-field-label-asterisk__color),
+                            @_font-family: var(--form-field-label-asterisk__font-family),
+                            @_font-weight: var(--form-field-label-asterisk__font-weight),
+                            @_line-height: var(--form-field-label-asterisk__line-height),
+                            @_font-style: var(--form-field-label-asterisk__font-style)
                         );
                     }
                 }

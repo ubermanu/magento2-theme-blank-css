@@ -1,7 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
 
 //
 //  Styles Extends
@@ -273,9 +269,9 @@
             --_icon-font-size: 26px,
             --_icon-font-line-height: 15px,
             --_icon-font-text-hide: true,
-            --_icon-font-color: @color-gray19,
-            --_icon-font-color-hover: @color-gray19,
-            --_icon-font-color-active: @color-gray19
+            --_icon-font-color: var(--color-gray19),
+            --_icon-font-color-hover: var(--color-gray19),
+            --_icon-font-color-active: var(--color-gray19)
         );
     }
 }
@@ -290,14 +286,14 @@
 
         > a {
             .lib-link(
-                --_link-color: @product-name-link__color,
-                --_link-text-decoration: @product-name-link__text-decoration,
-                --_link-color-visited: @product-name-link__color__visited,
-                --_link-text-decoration-visited: @product-name-link__text-decoration__visited,
-                --_link-color-hover: @product-name-link__color__hover,
-                --_link-text-decoration-hover: @product-name-link__text-decoration__hover,
-                --_link-color-active: @product-name-link__color__active,
-                --_link-text-decoration-active: @product-name-link__text-decoration__active
+                --_link-color: var(--product-name-link__color),
+                --_link-text-decoration: var(--product-name-link__text-decoration),
+                --_link-color-visited: var(--product-name-link__color__visited),
+                --_link-text-decoration-visited: var(--product-name-link__text-decoration__visited),
+                --_link-color-hover: var(--product-name-link__color__hover),
+                --_link-text-decoration-hover: var(--product-name-link__text-decoration__hover),
+                --_link-color-active: var(--product-name-link__color__active),
+                --_link-text-decoration-active: var(--product-name-link__text-decoration__active)
             );
         }
     }
@@ -350,7 +346,7 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .abs-action-remove-desktop when not (@form-field-type-label-inline__width = false) and not (@form-field-type-label-inline__width = '') {
-        margin-left: @form-field-type-label-inline__width + 50%;
+        margin-left: var(--form-field-type-label-inline__width) + 50%;
         top: 6px;
     }
 }
@@ -397,7 +393,7 @@
 
         .message {
             &.notice {
-                margin: @indent__l 0 0;
+                margin: var(--indent__l) 0 0;
             }
         }
 
@@ -614,7 +610,7 @@
 & when (@media-common = true) {
     .abs-navigation-icon {
         .lib-icon-font(
-            --_icon-font-content: @icon-down,
+            --_icon-font-content: var(--icon-down),
             --_icon-font-size: 34px,
             --_icon-font-line-height: 1.2,
             --_icon-font-position: after,
@@ -657,8 +653,8 @@
         .lib-icon-font(
             --_icon-font-content: '',
             --_icon-font-size: 29px,
-            --_icon-font-color: @addto-color,
-            --_icon-font-color-hover: @addto-hover-color,
+            --_icon-font-color: var(--addto-color),
+            --_icon-font-color-hover: var(--addto-hover-color),
             --_icon-font-text-hide: true,
             --_icon-font-vertical-align: middle,
             --_icon-font-line-height: 24px
@@ -720,7 +716,7 @@
 
 & when (@media-common = true) {
     .abs-box-tocart {
-        margin: @indent__s 0;
+        margin: var(--indent__s) 0;
     }
 }
 
@@ -778,7 +774,7 @@
 
         &-expanded {
             .lib-icon-font-symbol(
-                --_icon-font-content: @icon-up,
+                --_icon-font-content: var(--icon-up),
                 --_icon-font-position: after
             );
         }
@@ -786,7 +782,7 @@
 
     .abs-tax-total-expanded {
         .lib-icon-font-symbol(
-            --_icon-font-content: @icon-up,
+            --_icon-font-content: var(--icon-up),
             --_icon-font-position: after
         );
     }
@@ -812,7 +808,7 @@
     .abs-checkout-order-review {
         tbody tr {
             &:not(:last-child) {
-                border-bottom: @border-width__base solid --border-color__base;
+                border-bottom: var(--border-width__base) solid --border-color__base;
             }
 
             &:extend(.abs-add-clearfix-mobile all);
@@ -913,7 +909,7 @@
 & when (@media-common = true) {
     .abs-icon-add {
         .lib-icon-font(
-            --_icon-font-content: @icon-expand,
+            --_icon-font-content: var(--icon-expand),
             --_icon-font-size: 10px,
             --_icon-font-line-height: 10px,
             --_icon-font-vertical-align: middle
@@ -924,7 +920,7 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .abs-icon-add-mobile {
         .lib-icon-font(
-            --_icon-font-content: @icon-expand,
+            --_icon-font-content: var(--icon-expand),
             --_icon-font-size: 10px,
             --_icon-font-line-height: 10px,
             --_icon-font-vertical-align: middle,
@@ -962,15 +958,15 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .abs-toggling-title-mobile {
-        border-bottom: @border-width__base solid --border-color__base;
-        border-top: @border-width__base solid --border-color__base;
+        border-bottom: var(--border-width__base) solid --border-color__base;
+        border-top: var(--border-width__base) solid --border-color__base;
         cursor: pointer;
         margin-bottom: 0;
-        padding: @indent__s @indent__xl @indent__s --layout__width-xs-indent;
+        padding: var(--indent__s) @indent__xl @indent__s --layout__width-xs-indent;
         position: relative;
 
         .lib-icon-font(
-            --_icon-font-content: @icon-down,
+            --_icon-font-content: var(--icon-down),
             --_icon-font-size: 28px,
             --_icon-font-text-hide: false,
             --_icon-font-position: after,
@@ -985,7 +981,7 @@
 
         &.active {
             .lib-icon-font-symbol(
-                --_icon-font-content: @icon-up,
+                --_icon-font-content: var(--icon-up),
                 --_icon-font-position: after
             );
         }
@@ -1116,7 +1112,7 @@
                 .lib-button(
                     --_button-padding: 7px 15px 7px 0,
                     --_button-icon-use: true,
-                    --_button-font-content: @icon-prev,
+                    --_button-font-content: var(--icon-prev),
                     --_button-icon-font-size: 32px,
                     --_button-icon-font-line-height: 16px,
                     --_button-icon-font-position: before
@@ -1240,8 +1236,8 @@
     &:after {
         .lib-arrow(
             --_position: top,
-            --_size: @checkout-tooltip-icon-arrow__font-size,
-            --_color: @checkout-tooltip-content__background-color
+            --_size: var(--checkout-tooltip-icon-arrow__font-size),
+            --_color: var(--checkout-tooltip-content__background-color)
         );
         margin-top: var(--checkout-tooltip-icon-arrow__left);
         right: var(--indent__s);
@@ -1280,8 +1276,8 @@
         border-bottom: var(--checkout-step-title__border);
         padding-bottom: var(--checkout-step-title__padding);
         .lib-typography(
-            --_font-size: @checkout-step-title__font-size,
-            --_font-weight: @checkout-step-title__font-weight,
+            --_font-size: var(--checkout-step-title__font-size),
+            --_font-weight: var(--checkout-step-title__font-weight),
             --_font-family: false,
             --_font-style: false,
             --_line-height: false
@@ -1369,7 +1365,7 @@
 
                     .amount .price {
                         .lib-icon-font-symbol(
-                            --_icon-font-content: @icon-up,
+                            --_icon-font-content: var(--icon-up),
                             --_icon-font-position: after
                         );
                     }
@@ -1399,11 +1395,11 @@
 & when (@media-common = true) {
     .abs-discount-block {
         > .title {
-            border-top: @border-width__base solid --border-color__base;
+            border-top: var(--border-width__base) solid --border-color__base;
             cursor: pointer;
             font-weight: var(--font-weight__semibold);
             .lib-icon-font(
-                --_icon-font-content: @icon-down,
+                --_icon-font-content: var(--icon-down),
                 --_icon-font-size: 30px,
                 --_icon-font-position: after,
                 --_icon-font-display: block
@@ -1434,7 +1430,7 @@
         &.active {
             > .title {
                 .lib-icon-font-symbol(
-                    --_icon-font-content: @icon-up,
+                    --_icon-font-content: var(--icon-up),
                     --_icon-font-position: after
                 );
             }

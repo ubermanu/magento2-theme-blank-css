@@ -1,20 +1,17 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Variables
 //  _____________________________________________
 
---checkout-summary__background-color: var(--color-white-smoke);
---checkout-summary__padding: 22px --indent__l;
+:root {
+    --checkout-summary__background-color: var(--color-white-smoke);
+    --checkout-summary__padding: 22px --indent__l;
 
---checkout-summary-title__margin: var(--indent__s);
---checkout-summary-mark-value__color: var(--color-gray60);
+    --checkout-summary-title__margin: var(--indent__s);
+    --checkout-summary-mark-value__color: var(--color-gray60);
 
---checkout-summary-items__max-height: 370px;
---checkout-summary-items__padding: 15px;
+    --checkout-summary-items__max-height: 370px;
+    --checkout-summary-items__padding: 15px;
+}
 
 //
 //  Common
@@ -30,7 +27,7 @@
         &:extend(.abs-add-box-sizing all);
         background: var(--checkout-summary__background-color);
         padding: var(--checkout-summary__padding);
-        margin: 0 0 --indent__base;
+        margin: 0 0 var(--indent__base);
 
         > .title {
             &:extend(.abs-checkout-title all);
@@ -79,17 +76,17 @@
         //  Block title
         .items-in-cart {
             > .title {
-                border-bottom: @border-width__base solid --border-color__base;
-                padding: var(--indent__s @indent__xl @indent__s 0);
+                border-bottom: var(--border-width__base) solid var(--border-color__base);
+                padding: var(--indent__s) var(--indent__xl) var(--indent__s) 0;
                 cursor: pointer;
                 .lib-icon-font(
-                @icon-down,
-                --_icon-font-size: 30px,
-                --_icon-font-line-height: 12px,
-                --_icon-font-text-hide: true,
-                --_icon-font-margin: 3px 0 0,
-                --_icon-font-position: after,
-                --_icon-font-display: block
+                    @icon-down,
+                    @_icon-font-size: 30px,
+                    @_icon-font-line-height: 12px,
+                    @_icon-font-text-hide: true,
+                    @_icon-font-margin: 3px 0 0,
+                    @_icon-font-position: after,
+                    @_icon-font-display: block
                 );
                 margin-bottom: 0;
                 position: relative;
@@ -110,14 +107,15 @@
             &.active {
                 > .title {
                     .lib-icon-font-symbol(
-                    --_icon-font-content: @icon-up,
-                    --_icon-font-position: after
+                        @_icon-font-content: var(--icon-up),
+                        @_icon-font-position: after
                     );
                 }
             }
 
             .product {
                 position: relative;
+
                 .item-options {
                     &:extend(.abs-product-options-list all);
                     &:extend(.abs-add-clearfix all);
@@ -143,7 +141,7 @@
         .product-item {
             .product-item-inner {
                 display: table;
-                margin: 0 0 --indent__s;
+                margin: 0 0 var(--indent__s);
                 width: 100%;
             }
 
@@ -179,7 +177,7 @@
             z-index: 1;
 
             .secondary {
-                border-top: @border-width__base solid --border-color__base;
+                border-top: var(--border-width__base) solid var(--border-color__base);
                 display: block;
                 float: none;
                 margin: -1px 0 0;

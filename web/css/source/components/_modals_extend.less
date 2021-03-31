@@ -1,7 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
 
 //
 //  Components -> Modals
@@ -25,7 +21,7 @@
 --modal-action-close__font-size: 32px;
 --modal-action-close__hover__color: darken(@primary__color, 10%);
 
---modal-slide-action-close__padding: @modal-slide-header__padding-vertical - 1rem @modal-popup__padding - 1rem;
+--modal-slide-action-close__padding: var(--modal-slide-header__padding-vertical) - 1rem @modal-popup__padding - 1rem;
 
 //
 //  Common
@@ -39,9 +35,9 @@
             .lib-button-reset();
             .lib-button-icon(
                 @icon-remove,
-                --_icon-font-color: @minicart-icons-color,
-                --_icon-font-size: @modal-action-close__font-size,
-                --_icon-font-line-height: @modal-action-close__font-size,
+                --_icon-font-color: var(--minicart-icons-color),
+                --_icon-font-size: var(--modal-action-close__font-size),
+                --_icon-font-line-height: var(--modal-action-close__font-size),
                 --_icon-font-text-hide: true
             );
             position: absolute;
@@ -86,7 +82,7 @@
         }
 
         .page-main-actions {
-            margin-bottom: @modal-slide-header__padding-vertical - (@indent__l/2);
+            margin-bottom: var(--modal-slide-header__padding-vertical) - (@indent__l/2);
             margin-top: var(--modal-slide-header__padding-vertical);
         }
     }

@@ -1,33 +1,30 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Variables
 //  _____________________________________________
 
---checkout-tooltip__hover__z-index: var(--tooltip__z-index);
+:root {
+    --checkout-tooltip__hover__z-index: var(--tooltip__z-index);
 
---checkout-tooltip-icon-arrow__font-size: 10px;
---checkout-tooltip-icon-arrow__left: -( @checkout-tooltip-content__padding + @checkout-tooltip-icon-arrow__font-size - @checkout-tooltip-content__border-width);
+    --checkout-tooltip-icon-arrow__font-size: 10px;
+    --checkout-tooltip-icon-arrow__left: -( @checkout-tooltip-content__padding + @checkout-tooltip-icon-arrow__font-size - @checkout-tooltip-content__border-width);
 
---checkout-tooltip-icon__color: var(--color-gray-light2);
---checkout-tooltip-icon__content: var(--icon-help);
---checkout-tooltip-icon__font-size: 24px;
---checkout-tooltip-icon__hover__color: var(--primary__color);
+    --checkout-tooltip-icon__color: var(--color-gray-light2);
+    --checkout-tooltip-icon__content: var(--icon-help);
+    --checkout-tooltip-icon__font-size: 24px;
+    --checkout-tooltip-icon__hover__color: var(--primary__color);
 
---checkout-tooltip-content__background-color: var(--color-gray-light01);
---checkout-tooltip-content__border-color: var(--color-gray60);
---checkout-tooltip-content__border-width: 1px;
---checkout-tooltip-content__font-size: var(--font-size__base);
---checkout-tooltip-content__padding: 12px;
---checkout-tooltip-content__width: 270px;
---checkout-tooltip-content__active__border-color: darken(@checkout-tooltip-content__border-color, 20%);
+    --checkout-tooltip-content__background-color: var(--color-gray-light01);
+    --checkout-tooltip-content__border-color: var(--color-gray60);
+    --checkout-tooltip-content__border-width: 1px;
+    --checkout-tooltip-content__font-size: var(--font-size__base);
+    --checkout-tooltip-content__padding: 12px;
+    --checkout-tooltip-content__width: 270px;
+    --checkout-tooltip-content__active__border-color: darken(@checkout-tooltip-content__border-color, 20%);
 
---checkout-tooltip-content-mobile-popup__width: 200px;
---checkout-tooltip-content-mobile__right: -(@indent__s);
---checkout-tooltip-content-mobile__top: 30px + --checkout-tooltip-icon-arrow__font-size;
+    --checkout-tooltip-content-mobile-popup__width: 200px;
+    --checkout-tooltip-content-mobile__right: -(@indent__s);
+    --checkout-tooltip-content-mobile__top: 30px + --checkout-tooltip-icon-arrow__font-size;
+}
 
 //
 //  Common
@@ -62,15 +59,15 @@
         .field-tooltip-action {
             .lib-icon-font(
                 @checkout-tooltip-icon__content,
-                --_icon-font-size: @checkout-tooltip-icon__font-size,
-                --_icon-font-text-hide: true,
-                --_icon-font-color: @checkout-tooltip-icon__color,
-                --_icon-font-color-hover: @checkout-tooltip-icon__hover__color,
-                --_icon-font-color-active: false
+                @_icon-font-size: var(--checkout-tooltip-icon__font-size),
+                @_icon-font-text-hide: true,
+                @_icon-font-color: var(--checkout-tooltip-icon__color),
+                @_icon-font-color-hover: var(--checkout-tooltip-icon__hover__color),
+                @_icon-font-color-active: false
             );
 
             &:before {
-                padding-left : 1px;
+                padding-left: 1px;
             }
 
             &:focus {
@@ -106,9 +103,9 @@
             &:before,
             &:after {
                 .lib-arrow(
-                --_position: left,
-                --_size: @checkout-tooltip-icon-arrow__font-size,
-                --_color: @checkout-tooltip-content__background-color
+                    @_position: left,
+                    @_size: var(--checkout-tooltip-icon-arrow__font-size),
+                    @_color: var(--checkout-tooltip-content__background-color)
                 );
                 left: var(--checkout-tooltip-icon-arrow__left);
                 top: var(--checkout-tooltip-content__padding);
@@ -160,12 +157,13 @@
 //  Tablet
 //  _____________________________________________
 
-@media only screen and (max-width: @screen__m) {
+@media only screen and (max-width: var(--screen__m)) {
     .field-tooltip .field-tooltip-content {
         left: auto;
         right: -10px;
         top: 40px;
     }
+
     .field-tooltip .field-tooltip-content::before,
     .field-tooltip .field-tooltip-content::after {
         border: 10px solid transparent;
@@ -176,9 +174,11 @@
         top: 0;
         width: 0;
     }
+
     .field-tooltip .field-tooltip-content::before {
         border-bottom-color: var(--checkout-tooltip-content__border-color);
     }
+
     .field-tooltip .field-tooltip-content::after {
         border-bottom-color: var(--checkout-tooltip-content__background-color);
         top: 1px;

@@ -1,7 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
 
 //
 //  Variables
@@ -39,22 +35,22 @@
     .gift-wrapping-info {
         font-weight: var(--font-weight__light);
         font-size: var(--font-size__l);
-        margin: @indent__base 0;
+        margin: var(--indent__base) 0;
     }
 
     .gift-wrapping-list {
         &:extend(.abs-add-clearfix all);
         list-style: none;
-        margin: @indent__base 0 --indent__s;
+        margin: var(--indent__base) 0 --indent__s;
         padding: 0;
 
         .no-image {
             background: var(--gift-wrapping-no-image__background);
             .lib-icon-font(
             @icon-present,
-            --_icon-font-size: @gift-wrapping-no-image-icon__font-size,
-            --_icon-font-line-height: @gift-wrapping-thumbnail__height,
-            --_icon-font-color: @gift-wrapping-no-image-icon__color,
+            --_icon-font-size: var(--gift-wrapping-no-image-icon__font-size),
+            --_icon-font-line-height: var(--gift-wrapping-thumbnail__height),
+            --_icon-font-color: var(--gift-wrapping-no-image-icon__color),
             --_icon-font-position: after,
             --_icon-font-text-hide: true,
             --_icon-font-vertical-align: middle
@@ -105,7 +101,7 @@
     }
 
     .gift-wrapping-title {
-        margin: @indent__s 0;
+        margin: var(--indent__s) 0;
 
         .action-remove {
             margin-left: var(--indent__xs);
@@ -137,7 +133,7 @@
     .table-order-review {
         .gift-wrapping {
             &:extend(.abs-add-clearfix all);
-            margin: @indent__base 0;
+            margin: var(--indent__base) 0;
 
             .title {
                 float: none;

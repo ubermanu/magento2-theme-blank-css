@@ -1,7 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
 
 //
 //  Variables
@@ -24,7 +20,7 @@
 & when (@media-common = true) {
     //  Product Lists
     .products {
-        margin: @indent__l 0;
+        margin: var(--indent__l) 0;
     }
 
     .product {
@@ -57,7 +53,7 @@
                 -webkit-hyphens: auto;
                 display: block;
                 hyphens: auto;
-                margin: @indent__xs 0;
+                margin: var(--indent__xs) 0;
                 word-wrap: break-word;
             }
 
@@ -109,7 +105,7 @@
             }
 
             &-description {
-                margin: @indent__m 0;
+                margin: var(--indent__m) 0;
             }
 
             .product-reviews-summary {
@@ -124,7 +120,7 @@
             }
 
             .price-box {
-                margin: @indent__s 0 --indent__m;
+                margin: var(--indent__s) 0 --indent__m;
 
                 .price {
                     .lib-font-size(14);
@@ -310,7 +306,7 @@
                 display: block;
 
                 .products-grid & {
-                    margin: @indent__s 0;
+                    margin: var(--indent__s) 0;
                 }
 
                 .actions-primary + .actions-secondary {
