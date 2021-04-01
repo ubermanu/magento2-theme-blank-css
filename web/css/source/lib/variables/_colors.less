@@ -100,22 +100,22 @@
 //  ---------------------------------------------
 
 :root {
-    --theme__color__primary: --color-blue1;
-    --theme__color__primary-alt: --color-blue2;
-    --theme__color__secondary: --color-orange-red1;
+    --theme__color__primary: var(--color-blue1);
+    --theme__color__primary-alt: var(--color-blue2);
+    --theme__color__secondary: var(--color-orange-red1);
 
-    --primary__color: --color-gray20;
-    --primary__color__dark: darken(--primary__color, 35%); // #000
+    --primary__color: var(--color-gray20);
+    --primary__color__dark: rgba(--primary__color, 35%); // #000
     --primary__color__darker: darken(--primary__color, 13.5%); // #111
     --primary__color__lighter: lighten(--primary__color, 29%); // #7d7d7d
     --primary__color__light: lighten(--primary__color, 45%); // #a6a6a6
 
-    --secondary__color: --color-gray91;
+    --secondary__color: var(--color-gray91);
     --secondary__color__light: lighten(--secondary__color, 5%);
 
-    --page__background-color: --color-white;
+    --page__background-color: var(--color-white);
     --panel__background-color: darken(--page__background-color, 6%);
 
-    --active__color: --theme__color__secondary;
-    --error__color: --color-red10;
+    --active__color: var(--theme__color__secondary);
+    --error__color: var(--color-red10);
 }
