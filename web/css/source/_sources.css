@@ -1,7 +1,7 @@
 /*@import '_variables.less';*/
 /*@import (reference) '_extends.less';*/
 /*@import '_typography.less';*/
-/*@import '_layout.less';*/
+@import '_layout.css';
 /*@import '_tables.less';*/
 /*@import '_messages.less';*/
 /*@import '_navigation.less';*/
