@@ -24,20 +24,14 @@
     --button__color: var(--primary__color);
     --button__background: var(--color-gray95);
     --button__border: 1px solid var(--color-gray-darken2);
-    --button__gradient-color-start: false;
-    --button__gradient-color-end: false;
 
     --button__hover__color: var(--color-gray-darken3);
     --button__hover__background: var(--color-gray-darken1);
     --button__hover__border: var(--button__border);
-    --button__hover__gradient-color-start: false;
-    --button__hover__gradient-color-end: false;
 
     --button__active__color: var(--button__color);
     --button__active__background: var(--button__hover__background);
     --button__active__border: var(--button__border);
-    --button__active__gradient-color-start: false;
-    --button__active__gradient-color-end: false;
 
     /*  Primary button */
     --button-primary__font-family: var(--button__font-family);
@@ -47,30 +41,18 @@
     --button-primary__width: false;
     --button-primary__margin: false;
     --button-primary__padding: var(--button__padding);
-    --button-primary__gradient: false;
-    --button-primary__gradient-direction: false;
 
     --button-primary__background: var(--theme__color__primary);
     --button-primary__border: 1px solid var(--theme__color__primary);
     --button-primary__color: var(--color-white);
-    --button-primary__gradient-color-start: false;
-    --button-primary__gradient-color-end: false;
 
     --button-primary__hover__background: var(--theme__color__primary-alt);
     --button-primary__hover__border: 1px solid var(--theme__color__primary-alt);
     --button-primary__hover__color: var(--button-primary__color);
-    --button-primary__hover__gradient-color-start: false;
-    --button-primary__hover__gradient-color-end: false;
 
     --button-primary__active__background: var(--button-primary__hover__background);
     --button-primary__active__border: var(--button-primary__hover__border);
     --button-primary__active__color: var(--button-primary__color);
-    --button-primary__active__gradient-color-start: false;
-    --button-primary__active__gradient-color-end: false;
-
-    /*  Gradient button */
-    --button__gradient: false;
-    --button__gradient-direction: false;
 
     /*  Button with icon */
     --button-icon__use: false;
