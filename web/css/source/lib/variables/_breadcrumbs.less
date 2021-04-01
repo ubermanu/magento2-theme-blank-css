@@ -3,17 +3,17 @@
 //  _____________________________________________
 
 :root {
-    --breadcrumbs__font-size: --font-size__s;
+    --breadcrumbs__font-size: var(--font-size__s);
     --breadcrumbs__display: false;
-    --breadcrumbs__container-margin: 0 0 --indent__base;
+    --breadcrumbs__container-margin: 0 0 var(--indent__base);
     --breadcrumbs__padding: false;
 
     --breadcrumbs-separator__symbol: false;
-    --breadcrumbs-separator__color: --breadcrumbs-current__color;
+    --breadcrumbs-separator__color: var(--breadcrumbs-current__color);
 
     --breadcrumbs-icon__use: true;
-    --breadcrumbs-icon__font-content: --icon-next;
-    --breadcrumbs-icon__font: --icon-font;
+    --breadcrumbs-icon__font-content: var(--icon-next);
+    --breadcrumbs-icon__font: var(--icon-font);
     --breadcrumbs-icon__font-size: 24px;
     --breadcrumbs-icon__font-line-height: 18px;
     --breadcrumbs-icon__font-color: false;
@@ -21,8 +21,8 @@
     --breadcrumbs-icon__font-vertical-align: top;
 
     //  Current page
-    --breadcrumbs-current__color: --color-gray64;
-    --breadcrumbs-current__font-weight: --font-weight__regular;
+    --breadcrumbs-current__color: var(--color-gray64);
+    --breadcrumbs-current__font-weight: var(--font-weight__regular);
     --breadcrumbs-current__background: false;
     --breadcrumbs-current__border: false;
 
@@ -40,7 +40,7 @@
     --breadcrumbs-link__gradient: false; // [true|false]
     --breadcrumbs-link__gradient-direction: false; // [true|false]
 
-    --breadcrumbs-link__color: --primary__color;
+    --breadcrumbs-link__color: var(--primary__color);
     --breadcrumbs-link__background: false;
     --breadcrumbs-link__border: false;
     --breadcrumbs-link__text-decoration: none;
@@ -48,25 +48,25 @@
     --breadcrumbs-link__gradient-color-end: false;
 
     //  Visited
-    --breadcrumbs-link__visited__color: --primary__color;
-    --breadcrumbs-link__visited__background: --breadcrumbs-link__background;
-    --breadcrumbs-link__visited__border: --breadcrumbs-link__border;
+    --breadcrumbs-link__visited__color: var(--primary__color);
+    --breadcrumbs-link__visited__background: -var(-breadcrumbs-link__background);
+    --breadcrumbs-link__visited__border: var(--breadcrumbs-link__border);
     --breadcrumbs-link__visited__text-decoration: none;
     --breadcrumbs-link__visited__gradient-color-start: false;
     --breadcrumbs-link__visited__gradient-color-end: false;
 
     //  Hover
-    --breadcrumbs-link__hover__color: --primary__color;
+    --breadcrumbs-link__hover__color: var(--primary__color);
     --breadcrumbs-link__hover__background: false;
-    --breadcrumbs-link__hover__border: --breadcrumbs-link__border;
+    --breadcrumbs-link__hover__border: var(--breadcrumbs-link__border);
     --breadcrumbs-link__hover__text-decoration: underline;
     --breadcrumbs-link__hover__gradient-color-start: false;
     --breadcrumbs-link__hover__gradient-color-end: false;
 
     //  Active
-    --breadcrumbs-link__active__color: --primary__color;
-    --breadcrumbs-link__active__background: --breadcrumbs-link__background;
-    --breadcrumbs-link__active__border: --breadcrumbs-link__border;
+    --breadcrumbs-link__active__color: var(--primary__color);
+    --breadcrumbs-link__active__background: var(--breadcrumbs-link__background);
+    --breadcrumbs-link__active__border: var(--breadcrumbs-link__border);
     --breadcrumbs-link__active__text-decoration: none;
     --breadcrumbs-link__active__gradient-color-start: false;
     --breadcrumbs-link__active__gradient-color-end: false;
