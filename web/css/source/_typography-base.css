@@ -15,7 +15,12 @@ html {
 }
 
 body {
-    /*. lib-typography();*/
+    color: var(--text__color);
+    font-family: var(--font-family__base);
+    font-style: var(--font-style__base);
+    font-weight: var(--font-weight__regular);
+    line-height: var(--line-height__base);
+    font-size: var(--font-size__base);
 }
 
 p {
