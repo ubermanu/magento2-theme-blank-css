@@ -1,7 +1,3 @@
-//
-//  Magento reset
-//  ---------------------------------------------
-
 body {
     margin: 0;
     padding: 0;
@@ -57,22 +53,22 @@ figure {
     margin: 0;
 }
 
-.lib-typography-all();
+/*.lib-typography-all();*/
 
 table {
-    .lib-table();
+    /*.lib-table();*/
 }
 
 button {
-    .lib-button();
-
-    &::-moz-focus-inner {
-        border: 0;
-        padding: 0;
-    }
+    /*.lib-button();*/
 }
 
-.lib-form-element-all();
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*.lib-form-element-all();*/
 form {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -81,18 +77,14 @@ address {
     font-style: normal;
 }
 
-* {
-    &:focus {
-        box-shadow: none;
-        outline: 0;
-    }
+*:focus {
+    box-shadow: none;
+    outline: 0;
 }
 
-._keyfocus *,
-input:not([disabled]),
-textarea:not([disabled]),
-select:not([disabled]) {
-    &:focus {
-        box-shadow: var(--focus__box-shadow);
-    }
+._keyfocus *:focus,
+input:not([disabled]):focus,
+textarea:not([disabled]):focus,
+select:not([disabled]):focus {
+    box-shadow: var(--focus__box-shadow);
 }

@@ -6,7 +6,7 @@
 //  Global lib + theme styles + theme extends
 //  --------------------------------------------- */
 
-/*@import 'source/_reset.less';*/
+@import 'source/_reset.css';
 /*@import 'source/lib/_lib.less';*/
 /*// Global lib*/
 @import 'source/_sources.css';
