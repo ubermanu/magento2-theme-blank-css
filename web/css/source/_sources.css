@@ -10,7 +10,7 @@
 @import '_forms.css';
 /*@import '_icons.less';*/
 @import '_buttons.css';
-/*@import '_sections.less';*/
+@import '_sections.css';
 /*@import '_pages.less';*/
 /*@import '_actions-toolbar.less';*/
 @import '_breadcrumbs.css';
