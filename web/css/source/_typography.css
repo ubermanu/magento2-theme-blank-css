@@ -33,6 +33,7 @@
 @import "variables/_typography.css";
 @import "_typography-base.css";
 @import "_typography-heading.css";
+@import "_typography-links.css";
 
 @media (min-width: env(--screen__m)) {
     h1 {
