@@ -105,16 +105,16 @@
     --theme__color__secondary: var(--color-orange-red1);
 
     --primary__color: var(--color-gray20);
-    --primary__color__dark: rgba(--primary__color, 35%); // #000
-    --primary__color__darker: darken(--primary__color, 13.5%); // #111
-    --primary__color__lighter: lighten(--primary__color, 29%); // #7d7d7d
-    --primary__color__light: lighten(--primary__color, 45%); // #a6a6a6
+    --primary__color__dark: rgba(var(--primary__color), 1.35);
+    --primary__color__darker: rgba(var(--primary__color), 1.135);
+    --primary__color__lighter: rgba(var(--primary__color), 0.71);
+    --primary__color__light: rgba(var(--primary__color), 0.55);
 
     --secondary__color: var(--color-gray91);
-    --secondary__color__light: lighten(--secondary__color, 5%);
+    --secondary__color__light: rgba(var(--secondary__color), 0.95);
 
     --page__background-color: var(--color-white);
-    --panel__background-color: darken(--page__background-color, 6%);
+    --panel__background-color: rgba(var(--page__background-color), 1.06);
 
     --active__color: var(--theme__color__secondary);
     --error__color: var(--color-red10);
