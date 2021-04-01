@@ -2,26 +2,23 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
+//  Using buttons mixins
+button,
+a.action.primary {
+    border-radius: var(--button__border-radius);
+}
 
-    //  Using buttons mixins
-    button,
-    a.action.primary {
-        border-radius: var(--button__border-radius);
+button {
+    &:active {
+        box-shadow: var(--button__shadow);
     }
+}
 
-    button {
-        &:active {
-            box-shadow: var(--button__shadow);
-        }
-    }
+a.action.primary {
+    .lib-link-as-button();
+}
 
-    a.action.primary {
-        .lib-link-as-button();
-    }
-
-    .action.primary,
-    .action-primary {
-        .lib-button-primary();
-    }
+.action.primary,
+.action-primary {
+    .lib-button-primary();
 }

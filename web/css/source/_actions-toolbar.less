@@ -2,26 +2,24 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .actions-toolbar {
-        > .primary,
-        > .secondary {
-            text-align: center;
+.actions-toolbar {
+    > .primary,
+    > .secondary {
+        text-align: center;
 
-            .action {
-                &:extend(.abs-button-responsive all);
-                margin-bottom: var(--indent__s);
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-
+        .action {
+            &:extend(.abs-button-responsive all);
             margin-bottom: var(--indent__s);
 
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+
+        margin-bottom: var(--indent__s);
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }
