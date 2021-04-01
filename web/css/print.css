@@ -1,23 +1,11 @@
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
+/*@import 'source/lib/_lib.less';*/
+@import 'source/_theme.css';
+@import 'source/_variables.css';
 
-@import 'source/lib/_lib.less';
-// Global lib
-@import 'source/_theme.less';
-// Theme overrides
-@import 'source/_variables.less'; // Local theme variables
-
-@baseDir: '../'; // Default
-
-//  Magento/blank
-.page-print {
-    .logo {
-        display: block;
-        float: none;
-        text-align: left;
-    }
+.page-print .logo {
+    display: block;
+    float: none;
+    text-align: left;
 }
 
 @media print {
@@ -28,13 +16,11 @@
         text-shadow: none !important;
     }
 
-    //  Black prints faster:h5bp.com/s
     a,
     a:visited {
         text-decoration: underline !important;
     }
 
-    //  Don't show links for images, or javascript/internal links
     pre,
     blockquote {
         border: 1px solid var(--color-gray60);
@@ -47,16 +33,15 @@
 
     .table-wrapper table {
         width: 100%;
-
-        td {
-            width: auto;
-        }
-
         table-layout: fixed;
+    }
 
-        & > tfoot > tr:first-child {
-            border-top: 1px solid var(--color-gray60);
-        }
+    .table-wrapper table td {
+        width: auto;
+    }
+
+    .table-wrapper table > tfoot > tr:first-child {
+        border-top: 1px solid var(--color-gray60);
     }
 
     .box,
@@ -104,20 +89,15 @@
     }
 
     .logo,
-    .footer .copyright {
+    .footer
+    .copyright {
         display: block !important;
         margin: 10px 0;
     }
 
-    .order-details-items {
-        .order-items {
-            .order-gift-message {
-                &:not(.expanded-content) {
-                    height: auto;
-                    visibility: visible;
-                }
-            }
-        }
+    .order-details-items .order-items .order-gift-message:not(.expanded-content) {
+        height: auto;
+        visibility: visible;
     }
 
     .column.main {
