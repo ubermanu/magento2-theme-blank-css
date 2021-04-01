@@ -7,7 +7,7 @@
 /*@import '_navigation.less';*/
 /*@import '_tooltips.less';*/
 /*@import '_loaders.less';*/
-/*@import '_forms.less';*/
+@import '_forms.css';
 /*@import '_icons.less';*/
 @import '_buttons.css';
 /*@import '_sections.less';*/

@@ -1,0 +1,141 @@
+:root {
+    --form-field__vertical-indent__desktop: 29px;
+    --form-calendar-icon__color: var(--primary__color);
+}
+
+.fieldset {
+    /*.lib-form-fieldset();*/
+}
+
+.fieldset:last-child {
+    margin-bottom: var(--indent__base);
+}
+
+.fieldset > .field.choice .label,
+.fieldset > .fields > .field.choice .label {
+    display: inline;
+    font-weight: normal;
+}
+
+.column:not(.main) .fieldset > .field .label,
+.column:not(.main) .fieldset > .fields > .field .label {
+    font-weight: normal;
+}
+
+.fieldset > .field .field.choice,
+.fieldset > .fields > .field .field.choice {
+    margin-bottom: var(--indent__s);
+}
+
+.fieldset > .field .field.choice:last-child,
+.fieldset > .fields > .field .field.choice:last-child {
+    margin-bottom: 0;
+}
+
+.fieldset > .field input[type=file],
+.fieldset > .fields > .field input[type=file] {
+    margin: var(--indent__xs) 0;
+}
+
+.legend + .fieldset,
+.legend + div {
+    clear: both;
+}
+
+.legend strong {
+    margin-left: var(--indent__xs);
+}
+
+fieldset.field {
+    border: 0;
+    padding: 0;
+}
+
+.field.date {
+    /*&:extend(.abs-field-date all);*/
+}
+
+.field.date .time-picker {
+    display: inline-block;
+    margin-top: var(--indent__s);
+    white-space: nowrap;
+}
+
+.field .message.warning {
+    margin-top: var(--indent__s);
+}
+
+.field-error,
+div.mage-error[generated] {
+    margin-top: 7px;
+}
+
+.product-options-wrapper .date.required div[for*='options'].mage-error {
+    display: none !important;
+}
+
+.field .tooltip {
+. lib-tooltip(right);
+}
+
+.field .tooltip .tooltip-content {
+    min-width: 200px;
+    white-space: normal;
+}
+
+input:focus ~ .tooltip .tooltip-content,
+select:focus ~ .tooltip .tooltip-content {
+    display: block;
+}
+
+._has-datepicker ~ .ui-datepicker-trigger {
+    /*.lib-button-reset();*/
+    /*.lib-icon-font(*/
+    /*    @_icon-font-content: var(--icon-calendar),*/
+    /*    @_icon-font-color: var(--primary__color__lighter),*/
+    /*    @_icon-font-size: var(--icon-calendar__font-size),*/
+    /*    @_icon-font-line-height: var(--icon-calendar__font-size),*/
+    /*    @_icon-font-display: block,*/
+    /*    @_icon-font-text-hide: true*/
+    /*);*/
+    display: inline-block;
+    vertical-align: middle;
+}
+
+._has-datepicker ~ .ui-datepicker-trigger:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+.sidebar .fieldset {
+    margin: 0;
+}
+
+.sidebar .fieldset > .field:not(.choice):not(:last-child),
+.sidebar .fieldset .fields > .field:not(:last-child) {
+    margin: 0 0 var(--form-field__vertical-indent);
+}
+
+.sidebar .fieldset > .field:not(.choice) .label,
+.sidebar .fieldset .fields > .field .label {
+    margin: 0 0 4px;
+    padding: 0 0 var(--indent__xs);
+    text-align: left;
+    width: 100%;
+}
+
+.sidebar .fieldset > .field:not(.choice) .control,
+.sidebar .fieldset .fields > .field .control {
+    width: 100%;
+}
+
+@media (min-width: env(--screen__m)) {
+    .fieldset .legend {
+        /*&:extend(.abs-margin-for-forms-desktop all);*/
+    }
+
+    .fieldset > .field {
+        /*.lib-form-field-type-revert();*/
+        margin: 0 0 var(--form-field__vertical-indent__desktop);
+    }
+}
