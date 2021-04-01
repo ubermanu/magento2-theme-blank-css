@@ -16,6 +16,11 @@ Might re-implement them later if necessary.
 
 > The **lib-gradient** mixin is not available.
 
+### Colors
+
+Color variations are handled using `rgba()`, this is a temporary fix tho.<br>
+The css property `filter` should make a better job at this. 
+
 ### Font-size
 
 The font sizes are meant to be responsive.<br>
