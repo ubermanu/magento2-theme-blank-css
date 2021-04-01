@@ -9,6 +9,13 @@ Mixins should use them as much as possible to avoid duplicate code.
 
 > The **lib-css** mixin is not available.
 
+### Gradients
+
+Removed to make code more readable.<br>
+Might re-implement them later if necessary.
+
+> The **lib-gradient** mixin is not available.
+
 ### Font-size
 
 The font sizes are meant to be responsive.<br>
