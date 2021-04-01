@@ -1,0 +1,24 @@
+/*
+//  Common
+//  _____________________________________________ */
+
+/*  Using buttons mixins */
+button,
+a.action.primary {
+    border-radius: var(--button__border-radius);
+}
+
+button:active {
+    box-shadow: var(--button__shadow);
+}
+
+a.action.primary {
+    /* TODO: Implement here */
+    /* .lib-link-as-button(); */
+}
+
+.action.primary,
+.action-primary {
+    /* TODO: Implement here */
+    /* .lib-button-primary(); */
+}
