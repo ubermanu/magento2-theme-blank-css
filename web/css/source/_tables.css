@@ -2,20 +2,20 @@
     margin-bottom: var(--indent__base);
 }
 
-.table:not(.cart):not(.totals) {
+.table {
     /*.lib-table-bordered(*/
     /*    @_table_type: light,*/
     /*    @_table_border-width: var(--table__border-width)*/
     /*);*/
 }
 
-.table:not(.cart):not(.totals) tfoot > tr:first-child th,
-.table:not(.cart):not(.totals) tfoot > tr:first-child td {
+.table tfoot > tr:first-child th,
+.table tfoot > tr:first-child td {
     border-top: var(--table__border-width) var(--table__border-style) var(--table__border-color);
     padding-top: var(--indent__base);
 }
 
-.table:not(.cart):not(.totals) tfoot .mark {
+.table tfoot .mark {
     font-weight: var(--font-weight__regular);
     text-align: right;
 }
@@ -27,42 +27,42 @@
         position: relative;
     }
 
-    .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison) {
+    .table-wrapper .table {
         /*.lib-table-responsive();*/
     }
 
-    .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison) tbody > tr > td:first-child {
+    .table-wrapper .table tbody > tr > td:first-child {
         padding-top: var(--indent__base);
     }
 
-    .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison) tbody > tr > td:last-child {
+    .table-wrapper .table tbody > tr > td:last-child {
         padding-bottom: var(--indent__base);
     }
 
-    .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison).additional-attributes tbody th {
+    .table-wrapper .table.additional-attributes tbody th {
         display: none;
     }
 
-    .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison).additional-attributes tbody td:last-child {
+    .table-wrapper .table.additional-attributes tbody td:last-child {
         border: none;
         padding: 0 0 var(--indent__xs);
     }
 
-    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot {
+    .table-wrapper .table tfoot {
         display: block;
     }
 
-    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot tr {
+    .table-wrapper .table tfoot tr {
         display: block;
         /*&:extend(.abs-add-clearfix-mobile all);*/
     }
 
-    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot tr:first-child th,
-    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot tr:first-child td {
+    .table-wrapper .table tfoot tr:first-child th,
+    .table-wrapper .table tfoot tr:first-child td {
         padding-top: var(--indent__base);
     }
 
-    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot th {
+    .table-wrapper .table tfoot th {
         box-sizing: border-box;
         float: left;
         padding-left: 0;
@@ -71,7 +71,7 @@
         width: 70%;
     }
 
-    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot td {
+    .table-wrapper .table tfoot td {
         box-sizing: border-box;
         float: left;
         padding-left: 0;
