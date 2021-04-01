@@ -1,4 +1,4 @@
-/*@import '_variables.less';*/
+@import '_variables.css';
 /*@import (reference) '_extends.less';*/
 /*@import '_typography.less';*/
 @import '_layout.css';

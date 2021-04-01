@@ -1,0 +1,9 @@
+:root {
+    --font-family-name__base: 'Open Sans';
+    --font-family__base: var(--font-family-name__base), var(--font-family__sans-serif);
+
+    --tab-content__border-top-status: true;
+
+    /* Used in cart sidebar, Checkout sidebar, Tier Prices, My account navigation, Rating block background */
+    --sidebar__background-color: var(--color-white-smoke);
+}
