@@ -2,8 +2,8 @@
 @import '_typography.css';
 @import '_layout.css';
 @import '_tables.css';
-/*@import '_messages.less';*/
-/*@import '_navigation.less';*/
+@import '_messages.css';
+@import '_navigation.css';
 @import '_tooltips.css';
 @import '_loaders.css';
 @import '_forms.css';
