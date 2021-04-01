@@ -1,0 +1,45 @@
+.tooltip.wrapper {
+    /*.lib-tooltip(*/
+    /*    @_tooltip-position: bottom,*/
+    /*    @_tooltip-selector-content: ~'.tooltip.content',*/
+    /*    @_tooltip-selector-toggle: ~'.tooltip.toggle'*/
+    /*);*/
+}
+
+.tooltip.wrapper .tooltip.content dl {
+    margin-bottom: 0;
+}
+
+.tooltip.wrapper .tooltip.content dd {
+    white-space: normal;
+}
+
+.tooltip.wrapper .tooltip.content .subtitle {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.tooltip.wrapper .tooltip.content .label {
+    margin-top: var(--indent__s);
+}
+
+.tooltip.wrapper .tooltip.content .label:first-child {
+    margin-top: 0;
+}
+
+.tooltip.wrapper .tooltip.content .values {
+    margin: 0;
+}
+
+.ui-tooltip {
+    position: absolute;
+    z-index: 9999;
+}
+
+@media (max-width: env(--screen__xs)) {
+    .tooltip.wrapper .tooltip.content {
+        min-width: 10rem;
+    }
+}

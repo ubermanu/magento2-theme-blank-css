@@ -11,7 +11,7 @@
 /*// Global lib*/
 @import 'source/_sources.css';
 /*// Theme styles*/
-/*@import 'source/_components.less';*/
+@import 'source/_components.css';
 /*// Components styles (modal/sliding panel)*/
 /*@import 'source/_extends.less';*/
 
