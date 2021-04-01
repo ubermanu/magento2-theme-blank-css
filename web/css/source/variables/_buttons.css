@@ -1,0 +1,99 @@
+/*
+//  Buttons variables
+//  _____________________________________________ */
+
+:root {
+
+    /*  Font style */
+    --button__font-family: var(--font-family__base);
+    --button__font-size: var(--font-size__base);
+    --button__font-weight: var(--font-weight__bold);
+    --button__line-height: calc(var(--font-size__base) + 2);
+    --button__margin: 0;
+    --button__padding: 7px 15px; /* is set up to false when buttons don't depend on side paddings or have fixed width */
+    --button__width: false; /* is set up to false when buttons depend on side paddings or to fixed value when needed */
+
+    /*  Display settings */
+    --button__display: inline-block;
+    --button__cursor: pointer;
+    --button__border-radius: 3px;
+
+    --button__disabled__opacity: .5;
+
+    /*  Default = secondary button */
+    --button__color: var(--primary__color);
+    --button__background: var(--color-gray95);
+    --button__border: 1px solid var(--color-gray-darken2);
+    --button__gradient-color-start: false;
+    --button__gradient-color-end: false;
+
+    --button__hover__color: var(--color-gray-darken3);
+    --button__hover__background: var(--color-gray-darken1);
+    --button__hover__border: var(--button__border);
+    --button__hover__gradient-color-start: false;
+    --button__hover__gradient-color-end: false;
+
+    --button__active__color: var(--button__color);
+    --button__active__background: var(--button__hover__background);
+    --button__active__border: var(--button__border);
+    --button__active__gradient-color-start: false;
+    --button__active__gradient-color-end: false;
+
+    /*  Primary button */
+    --button-primary__font-family: var(--button__font-family);
+    --button-primary__font-size: var(--button__font-size);
+    --button-primary__font-weight: var(--button__font-weight);
+    --button-primary__line-height: false;
+    --button-primary__width: false;
+    --button-primary__margin: false;
+    --button-primary__padding: var(--button__padding);
+    --button-primary__gradient: false;
+    --button-primary__gradient-direction: false;
+
+    --button-primary__background: var(--theme__color__primary);
+    --button-primary__border: 1px solid var(--theme__color__primary);
+    --button-primary__color: var(--color-white);
+    --button-primary__gradient-color-start: false;
+    --button-primary__gradient-color-end: false;
+
+    --button-primary__hover__background: var(--theme__color__primary-alt);
+    --button-primary__hover__border: 1px solid var(--theme__color__primary-alt);
+    --button-primary__hover__color: var(--button-primary__color);
+    --button-primary__hover__gradient-color-start: false;
+    --button-primary__hover__gradient-color-end: false;
+
+    --button-primary__active__background: var(--button-primary__hover__background);
+    --button-primary__active__border: var(--button-primary__hover__border);
+    --button-primary__active__color: var(--button-primary__color);
+    --button-primary__active__gradient-color-start: false;
+    --button-primary__active__gradient-color-end: false;
+
+    /*  Gradient button */
+    --button__gradient: false;
+    --button__gradient-direction: false;
+
+    /*  Button with icon */
+    --button-icon__use: false;
+    --button-icon__content: var(--icon-settings);
+    --button-icon__font: var(--icon-font);
+    --button-icon__font-size: 22px;
+    --button-icon__line-height: var(--button-icon__font-size);
+    --button-icon__color: inherit;
+    --button-icon__margin: 0;
+    --button-icon__vertical-align: top;
+    --button-icon__position: var(--icon__position);
+    --button-icon__text-hide: false;
+
+    --button-icon__hover__font-color: inherit;
+    --button-icon__active__font-color: inherit;
+
+    /*  Large button */
+    --button__font-size__l: var(--font-size__l);
+    --button__line-height__l: calc(var(--font-size__l) + 4);
+    --button__padding__l: 14px 17px;
+
+    /*  Small button */
+    --button__font-size__s: 11px;
+    --button__line-height__s: calc(var(--button__font-size__s) + 1);
+    --button__padding__s: var(--indent__xs) 8px;
+}

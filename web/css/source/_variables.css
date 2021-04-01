@@ -1,3 +1,7 @@
+@import "variables/_colors.css";
+@import "variables/_typography.css";
+@import "variables/_buttons.css";
+
 :root {
     --font-family-name__base: 'Open Sans';
     --font-family__base: var(--font-family-name__base), var(--font-family__sans-serif);

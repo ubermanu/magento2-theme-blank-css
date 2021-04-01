@@ -30,7 +30,6 @@
 /*    @font-display: swap*/
 /*);*/
 
-@import "variables/_typography.css";
 @import "_typography-base.css";
 @import "_typography-heading.css";
 @import "_typography-links.css";

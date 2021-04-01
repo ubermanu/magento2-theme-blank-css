@@ -1,3 +1,42 @@
+button {
+    background-image: none; /* Reset unusual Firefox-on-Android default style */
+    background: var(--button__background);
+    border: var(--button__border);
+    color: var(--button__color);
+    cursor: var(--button__cursor);
+    display: var(--button__display);
+    font-family: var(--button__font-family);
+    font-weight: var(--button__font-weight);
+    margin: var(--button__margin);
+    padding: var(--button__padding);
+    width: var(--button__width);
+    font-size: var(--button__font-size);
+    line-height: var(--button__line-height);
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+button:focus,
+button:active {
+    background: var(--button__active__background);
+    border: var(--button__active__border);
+    color: var(--button__active__color);
+}
+
+button:hover {
+    background: var(--button__hover__background);
+    border: var(--button__hover__border);
+    color: var(--button__hover__color);
+}
+
+button.disabled,
+button [disabled],
+fieldset[disabled] button {
+    opacity: var(--button__disabled__opacity);
+    cursor: default;
+    pointer-events: none;
+}
+
 button,
 a.action.primary {
     border-radius: var(--button__border-radius);
