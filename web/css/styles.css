@@ -7,13 +7,8 @@
 //  --------------------------------------------- */
 
 @import 'source/_reset.css';
-/*@import 'source/lib/_lib.less';*/
-/*// Global lib*/
 @import 'source/_sources.css';
-/*// Theme styles*/
 @import 'source/_components.css';
-/*// Components styles (modal/sliding panel)*/
-/*@import 'source/_extends.less';*/
 
 /*//*/
 /*//  Magento Import instructions*/

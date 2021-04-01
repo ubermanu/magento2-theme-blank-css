@@ -1,2 +1,2 @@
-/*@import 'components/_modals.less';*/
-/*@import 'components/_modals_extend.less';*/
+@import 'components/_modals.css';
+@import 'components/_modals_extend.css';
