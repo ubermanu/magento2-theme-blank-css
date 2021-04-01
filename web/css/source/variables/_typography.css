@@ -107,8 +107,8 @@
     //  Lists
     //  --------------------------------------------- */
 
-    --list__color__base: false;
-    --list__font-size__base: false;
+    --list__color__base: initial;
+    --list__font-size__base: initial;
     --list__margin-top: 0;
     --list__margin-bottom: var(--indent__m);
 
@@ -136,11 +136,11 @@
     //  Headings
     //  --------------------------------------------- */
 
-    --heading__font-family__base: false;
+    --heading__font-family__base: initial;
     --heading__font-weight__base: var(--font-weight__light);
     --heading__line-height__base: 1.1;
-    --heading__color__base: false;
-    --heading__font-style__base: false;
+    --heading__color__base: initial;
+    --heading__font-style__base: initial;
     --heading__margin-top__base: var(--indent__base);
     --heading__margin-bottom__base: var(--indent__base);
 
