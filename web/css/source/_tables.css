@@ -1,0 +1,97 @@
+.table-wrapper {
+    margin-bottom: var(--indent__base);
+}
+
+.table:not(.cart):not(.totals) {
+    /*.lib-table-bordered(*/
+    /*    @_table_type: light,*/
+    /*    @_table_border-width: var(--table__border-width)*/
+    /*);*/
+}
+
+.table:not(.cart):not(.totals) tfoot > tr:first-child th,
+.table:not(.cart):not(.totals) tfoot > tr:first-child td {
+    border-top: var(--table__border-width) var(--table__border-style) var(--table__border-color);
+    padding-top: var(--indent__base);
+}
+
+.table:not(.cart):not(.totals) tfoot .mark {
+    font-weight: var(--font-weight__regular);
+    text-align: right;
+}
+
+@media (max-width: env(--screen__s)) {
+    .table-wrapper {
+        /*.lib-table-overflow();*/
+        /* To hide unnecessary horizontal scrollbar in Safari */
+        position: relative;
+    }
+
+    .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison) {
+        /*.lib-table-responsive();*/
+    }
+
+    .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison) tbody > tr > td:first-child {
+        padding-top: var(--indent__base);
+    }
+
+    .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison) tbody > tr > td:last-child {
+        padding-bottom: var(--indent__base);
+    }
+
+    .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison).additional-attributes tbody th {
+        display: none;
+    }
+
+    .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison).additional-attributes tbody td:last-child {
+        border: none;
+        padding: 0 0 var(--indent__xs);
+    }
+
+    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot {
+        display: block;
+    }
+
+    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot tr {
+        display: block;
+        /*&:extend(.abs-add-clearfix-mobile all);*/
+    }
+
+    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot tr:first-child th,
+    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot tr:first-child td {
+        padding-top: var(--indent__base);
+    }
+
+    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot th {
+        box-sizing: border-box;
+        float: left;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+        width: 70%;
+    }
+
+    .table-wrapper .table:not(.totals):not(.table-comparison) tfoot td {
+        box-sizing: border-box;
+        float: left;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: right;
+        width: 30%;
+    }
+
+    .data-table-definition-list thead {
+        display: none;
+    }
+
+    .data-table-definition-list tbody th {
+        padding-bottom: 0;
+    }
+
+    .data-table-definition-list tbody th,
+    .data-table-definition-list tbody td {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
