@@ -240,7 +240,7 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+@media (max-width: env(--screen__s)) {
     .account {
         .order-details-items {
             .table-order-items {
@@ -297,7 +297,7 @@
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+@media (max-width: env(--screen__m)) {
     .order-pager-wrapper {
         .toolbar-amount {
             left: inherit;
@@ -321,7 +321,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .table-order-items {
         .subtotal,
         .amount {

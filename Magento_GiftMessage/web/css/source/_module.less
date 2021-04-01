@@ -219,7 +219,7 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+@media (max-width: env(--screen__m)) {
     .gift-options {
         .actions-toolbar {
             .action-update {
@@ -244,7 +244,7 @@
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+@media (max-width: env(--screen__s)) {
     .cart {
         &.table-wrapper {
             .gift-content {
@@ -259,7 +259,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .gift-message {
         .field {
             margin-bottom: var(--indent__base);

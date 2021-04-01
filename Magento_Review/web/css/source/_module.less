@@ -143,7 +143,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .product-reviews-summary {
         .products.wrapper.list & {
             margin: 0;
@@ -325,7 +325,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+@media (min-width: env(--screen__s)) {
     .review {
         &-form {
             max-width: 500px;

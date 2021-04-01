@@ -38,7 +38,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     h1 {
         font-size: var(--h1__font-size-desktop);
         margin-bottom: var(--h1__margin-bottom__desktop);

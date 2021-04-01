@@ -46,7 +46,7 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+@media (max-width: env(--screen__s)) {
     .shipping-policy-block {
         &.field-tooltip {
             margin-bottom: var(--indent__base);

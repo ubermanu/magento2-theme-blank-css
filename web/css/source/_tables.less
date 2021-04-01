@@ -42,7 +42,7 @@ table {
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+@media (max-width: env(--screen__s)) {
     .table-wrapper {
         .lib-table-overflow();
         position: relative; // To hide unnecessary horizontal scrollbar in Safari

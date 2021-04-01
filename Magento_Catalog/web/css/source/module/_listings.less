@@ -280,7 +280,7 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+@media (max-width: env(--screen__s)) {
     .products-list .product {
         &-item {
             table-layout: fixed;
@@ -293,7 +293,7 @@
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+@media (min-width: env(--screen__s)) {
     .product {
         &-item {
             .products-grid & {
@@ -343,7 +343,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .page-products {
         .products-grid {
             .product-item {
@@ -375,7 +375,7 @@
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+@media (min-width: env(--screen__l)) {
     .products-grid {
         .product-item {
             width: 100%/5;

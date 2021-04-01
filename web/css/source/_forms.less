@@ -177,7 +177,7 @@ select:focus ~ .tooltip .tooltip-content {
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .fieldset {
         .legend {
             &:extend(.abs-margin-for-forms-desktop all);

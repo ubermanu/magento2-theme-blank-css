@@ -79,7 +79,7 @@ button.map-show-info {
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+@media (max-width: env(--screen__m)) {
     .map-popup {
         max-width: 100%;
     }
