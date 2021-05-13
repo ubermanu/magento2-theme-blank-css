@@ -1,22 +1,18 @@
-.actions-toolbar > .primary,
-.actions-toolbar > .secondary {
+.actions-toolbar > :is(.primary, .secondary) {
     text-align: center;
     margin-bottom: var(--indent__s);
 }
 
-.actions-toolbar > .primary .action,
-.actions-toolbar > .secondary .action {
+.actions-toolbar > :is(.primary, .secondary) .action  {
     /*&:extend(.abs-button-responsive all);*/
     margin-bottom: var(--indent__s);
 }
 
-.actions-toolbar > .primary .action:last-child,
-.actions-toolbar > .secondary .action:last-child {
+.actions-toolbar > :is(.primary, .secondary) .action:last-child  {
     margin-bottom: 0;
 }
 
-.actions-toolbar > .primary:last-child,
-.actions-toolbar > .secondary:last-child {
+.actions-toolbar > :is(.primary, .secondary):last-child {
     margin-bottom: 0;
 }
 
@@ -25,13 +21,11 @@
         /*.lib-actions-toolbar();*/
     }
 
-    .actions-toolbar > .primary,
-    .actions-toolbar > .secondary {
+    .actions-toolbar > :is(.primary, .secondary) {
         margin-bottom: 0;
     }
 
-    .actions-toolbar > .primary .action,
-    .actions-toolbar > .secondary .action {
+    .actions-toolbar > :is(.primary, .secondary) .action {
         margin-bottom: 0;
         width: auto;
     }

@@ -12,17 +12,13 @@
     --modal-slide-action-close__padding: calc(var(--modal-slide-header__padding-vertical) - 1rem) calc(var(--modal-popup__padding) - 1rem);
 }
 
-.modal-custom .action-close,
-.modal-popup .action-close,
-.modal-slide .action-close {
+:is(.modal-custom, .modal-popup, .modal-slide) .action-close {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.modal-custom .action-close:hover:before,
-.modal-popup .action-close:hover:before,
-.modal-slide .action-close:hover:before {
+:is(.modal-custom, .modal-popup, .modal-slide) .action-close:hover:before {
     color: var(--modal-action-close__hover__color);
 }
 

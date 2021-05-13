@@ -1,5 +1,4 @@
-.price-tier_price .price-excluding-tax,
-.price-tier_price .price-including-tax {
+.price-tier_price :is(.price-excluding-tax, .price-including-tax) {
     display: inline;
 }
 
@@ -10,18 +9,15 @@
     line-height: 1;
 }
 
-.price-including-tax .price,
-.price-excluding-tax .price {
+:is(.price-excluding-tax, .price-including-tax) .price {
     font-weight: var(--font-weight__bold);
 }
 
-.price-including-tax .cart-tax-total,
-.price-excluding-tax .cart-tax-total {
+:is(.price-excluding-tax, .price-including-tax) .cart-tax-total {
     /*&:extend(.abs-tax-total all);*/
 }
 
-.price-including-tax .cart-tax-total-expanded,
-.price-excluding-tax .cart-tax-total-expanded {
+:is(.price-excluding-tax, .price-including-tax) .cart-tax-total-expanded {
     /*&:extend(.abs-tax-total-expanded all);*/
 }
 

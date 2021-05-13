@@ -2,8 +2,7 @@
     --active-nav-indent: 54px;
 }
 
-.panel.header .links,
-.panel.header .switcher {
+.panel.header :is(.links, .switcher) {
     display: none;
 }
 
@@ -137,8 +136,7 @@
         border-top: 1px solid var(--color-gray82);
     }
 
-    .nav-sections .header.links a,
-    .nav-sections .header.links a:hover {
+    .nav-sections .header.links :is(a, a:hover) {
         color: var(--navigation-level0-item__color);
         text-decoration: var(--navigation-level0-item__text-decoration);
         display: block;
@@ -261,8 +259,7 @@
     }
 
     /*.lib-main-navigation-desktop();*/
-    .panel.header .links,
-    .panel.header .switcher {
+    .panel.header :is(.links, .switcher) {
         display: inline-block;
     }
 }
