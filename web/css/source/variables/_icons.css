@@ -1,9 +1,6 @@
-//
-//  Icons variables
-//  _____________________________________________
+/* ICONS VARIABLES */
 
 :root {
-
     --icon__position: before;
     --icon__text-hide: false;
     --icon__height: 26px;
@@ -18,25 +15,23 @@
     --icon-sprite__position-y: 0;
     --icon-sprite__grid: 26px;
 
-    --icon-font: --icons__font-name;
-    --icon-font__position: --icon__position;
-    --icon-font__text-hide: --icon__text-hide;
-    --icon-font__margin: --icon__margin;
+    --icon-font: var(--icons__font-name);
+    --icon-font__position: var(--icon__position);
+    --icon-font__text-hide: var(--icon__text-hide);
+    --icon-font__margin: var(--icon__margin);
     --icon-font__size: inherit;
-    --icon-font__line-height: --icon-font__size;
+    --icon-font__line-height: var(--icon-font__size);
     --icon-font__color: inherit;
     --icon-font__color-hover: false;
     --icon-font__color-active: false;
-    --icon-font__vertical-align: --icon__vertical-align;
+    --icon-font__vertical-align: var(--icon__vertical-align);
     --icon-font__display: inline-block;
 
     --icon-calendar__font-size: 40px;
 
-    //
-    //  Variables for icons-blank-theme
-    //  ---------------------------------------------
+    /* Variables for icons-blank-theme */
+    /* ToDo UI: move it to blank theme variables */
 
-    // ToDo UI: move it to blank theme variables
     --icon-wishlist-full: '\e600';
     --icon-wishlist-empty: '\e601';
     --icon-warning: '\e602';

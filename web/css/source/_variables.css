@@ -1,6 +1,24 @@
 @import "variables/_colors.css";
 @import "variables/_typography.css";
+@import "variables/_icons.css";
 @import "variables/_buttons.css";
+@import "variables/_actions-toolbar.css";
+@import "variables/_breadcrumbs.css";
+@import "variables/_components.css";
+@import "variables/_dropdowns.css";
+@import "variables/_forms.css";
+@import "variables/_layout.css";
+@import "variables/_loaders.css";
+@import "variables/_messages.css";
+@import "variables/_navigation.css";
+@import "variables/_pages.css";
+@import "variables/_popups.css";
+@import "variables/_rating.css";
+@import "variables/_responsive.css";
+@import "variables/_sections.css";
+@import "variables/_structure.css";
+@import "variables/_tables.css";
+@import "variables/_tooltips.css";
 
 :root {
     --font-family-name__base: 'Open Sans';

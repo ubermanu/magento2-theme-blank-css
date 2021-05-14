@@ -1,13 +1,11 @@
-//
-//  Actions-toolbar variables
-//  _____________________________________________
+/* ACTIONS-TOOLBAR VARIABLES */
 
 :root {
     --actions-toolbar__margin: false;
     --actions-toolbar__padding: false;
 
-    --actions-toolbar-actions__position: justify; // [left|right|center|justify]
-    --actions-toolbar-actions__reverse: false; // [true|false]
+    --actions-toolbar-actions__position: justify;
+    --actions-toolbar-actions__reverse: false;
     --actions-toolbar-actions__margin: false;
 
     --actions-toolbar-actions-primary__margin: 0 var(--indent__xs) 0 0;
