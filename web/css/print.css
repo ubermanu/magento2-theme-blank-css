@@ -82,14 +82,12 @@
 
     .sidebar,
     .nav-sections,
-    .header.content > *[class],
-    .panel.wrapper > *[class],
-    .footer.content > *[class] {
+    :is(.header.content, .panel.wrapper, .footer.content) > *[class] {
         display: none;
     }
 
     .logo,
-    .footer
+    .footer,
     .copyright {
         display: block !important;
         margin: 10px 0;
