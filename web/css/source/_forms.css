@@ -37,8 +37,7 @@
     margin: var(--indent__xs) 0;
 }
 
-.legend + .fieldset,
-.legend + div {
+.legend + :is(.fieldset, div) {
     clear: both;
 }
 
@@ -75,7 +74,7 @@ div.mage-error[generated] {
 }
 
 .field .tooltip {
-. lib-tooltip(right);
+/*. lib-tooltip(right);*/
 }
 
 .field .tooltip .tooltip-content {
@@ -83,8 +82,7 @@ div.mage-error[generated] {
     white-space: normal;
 }
 
-input:focus ~ .tooltip .tooltip-content,
-select:focus ~ .tooltip .tooltip-content {
+:is(input, select):focus ~ .tooltip .tooltip-content {
     display: block;
 }
 
