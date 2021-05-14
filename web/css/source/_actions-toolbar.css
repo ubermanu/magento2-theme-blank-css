@@ -18,14 +18,35 @@
 
 @media (min-width: env(--screen__m)) {
     .actions-toolbar {
+        display: flex;
+        align-items: center;
         margin: var(--actions-toolbar__margin);
         padding: var(--actions-toolbar__padding);
-        /*._lib-actions-toolbar-align(@_actions-toolbar-actions-position);*/
-        /*._lib-actions-toolbar-floats(@_actions-toolbar-actions-position, @_actions-toolbar-actions-reverse);*/
+    }
+
+    /* Add new classes to handle the position of the buttons */
+    /* such as is-left, is-right or is-justify */
+
+    .actions-toolbar.is-left {
+        justify-content: flex-start;
+    }
+
+    .actions-toolbar.is-right {
+        justify-content: flex-end;
+    }
+
+    .actions-toolbar.is-justify {
+        justify-content: space-between;
+    }
+
+    /* Add a new class to reverse the order of the actions toolbar */
+
+    .actions-toolbar.is-reverse {
+        flex-direction: row-reverse;
     }
 
     .actions-toolbar :is(.primary, .secondary) {
-        display: inline-block;
+        flex-grow: 1;
     }
 
     .actions-toolbar :is(.primary, .secondary) .action {
@@ -61,13 +82,6 @@
     .actions-toolbar > :is(.primary, .secondary) .action {
         margin-bottom: 0;
         width: auto;
-    }
-
-    /* clearfix */
-    .actions-toolbar :is(:before, :after) {
-        content: '';
-        display: table;
-        clear: both;
     }
 
     .column:not(.sidebar-main) form .actions-toolbar,
