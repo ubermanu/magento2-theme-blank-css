@@ -1,9 +1,5 @@
 .tooltip.wrapper {
-    /*.lib-tooltip(*/
-    /*    @_tooltip-position: bottom,*/
-    /*    @_tooltip-selector-content: ~'.tooltip.content',*/
-    /*    @_tooltip-selector-toggle: ~'.tooltip.toggle'*/
-    /*);*/
+    /* https://atomiks.github.io/tippyjs/ */
 }
 
 .tooltip.wrapper .tooltip.content dl {
