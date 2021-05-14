@@ -1,0 +1,15 @@
+:root {
+    --widgets-indent__bottom: var(--indent__base);
+}
+
+:is(.block-static-block, .block-cms-link).widget {
+    margin-bottom: var(--widgets-indent__bottom);
+}
+
+.links :is(.block-static-block, .block-cms-link).widget {
+    margin-bottom: 0;
+}
+
+.block-cms-link-inline.widget {
+    margin: 0;
+}
