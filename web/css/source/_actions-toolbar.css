@@ -3,12 +3,12 @@
     margin-bottom: var(--indent__s);
 }
 
-.actions-toolbar > :is(.primary, .secondary) .action  {
-    /*&:extend(.abs-button-responsive all);*/
+.actions-toolbar > :is(.primary, .secondary) .action {
+    width: 100%;
     margin-bottom: var(--indent__s);
 }
 
-.actions-toolbar > :is(.primary, .secondary) .action:last-child  {
+.actions-toolbar > :is(.primary, .secondary) .action:last-child {
     margin-bottom: 0;
 }
 
@@ -18,16 +18,56 @@
 
 @media (min-width: env(--screen__m)) {
     .actions-toolbar {
-        /*.lib-actions-toolbar();*/
+        margin: var(--actions-toolbar__margin);
+        padding: var(--actions-toolbar__padding);
+        /*._lib-actions-toolbar-align(@_actions-toolbar-actions-position);*/
+        /*._lib-actions-toolbar-floats(@_actions-toolbar-actions-position, @_actions-toolbar-actions-reverse);*/
+    }
+
+    .actions-toolbar :is(.primary, .secondary) {
+        display: inline-block;
+    }
+
+    .actions-toolbar :is(.primary, .secondary) .action {
+        margin: var(--actions-toolbar-actions__margin);
+    }
+
+    .actions-toolbar :is(.primary, .secondary) a.action {
+        display: inline-block;
+        margin-top: var(--actions-toolbar-actions-links__margin-top);
+    }
+
+    .actions-toolbar .primary .action {
+        margin: var(--actions-toolbar-actions-primary__margin);
+    }
+
+    .actions-toolbar .primary a.action {
+        margin-top: var(--actions-toolbar-actions-links-primary__margin-top);
+    }
+
+    .actions-toolbar .secondary .action {
+        margin: var(--actions-toolbar-actions-secondary__margin);
+    }
+
+    .actions-toolbar .secondary a.action {
+        margin-top: var(--actions-toolbar-actions-links-secondary__margin-top);
     }
 
     .actions-toolbar > :is(.primary, .secondary) {
+        display: inline-block;
         margin-bottom: 0;
     }
 
     .actions-toolbar > :is(.primary, .secondary) .action {
         margin-bottom: 0;
         width: auto;
+    }
+
+    /* clearfix */
+    .actions-toolbar :is(:before, :after) {
+        content: '';
+        display: table;
+        clear: both;
     }
 
     .column:not(.sidebar-main) form .actions-toolbar,
