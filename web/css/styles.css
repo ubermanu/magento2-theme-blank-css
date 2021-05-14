@@ -17,6 +17,8 @@
 /*//@magento_import 'source/_module.less'; // Theme modules*/
 /*//@magento_import 'source/_widgets.less'; // Theme widgets*/
 
+@import '../Magento_Theme/css/module.css';
+
 /*
 //  Global variables override
 //  --------------------------------------------- */
