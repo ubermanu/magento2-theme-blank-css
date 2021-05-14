@@ -46,13 +46,40 @@ button:active {
     box-shadow: var(--button__shadow);
 }
 
-a.action.primary {
-    /* TODO: Implement here */
-    /* .lib-link-as-button(); */
+/* -- Link as button -- */
+
+a.action {
+    display: var(--button__display);
+    text-decoration: none;
 }
 
-.action.primary,
-.action-primary {
-    /* TODO: Implement here */
-    /* .lib-button-primary(); */
+a.action:is(:hover,:active,:focus) {
+    text-decoration: none;
+}
+
+/* -- Primary button -- */
+
+:is(.action.primary, .action-primary) {
+    --button__background: var(--button-primary__background);
+    --button__border: var(--button-primary__border);
+    --button__color: var(--button-primary__color);
+    --button__font-family: var(--button-primary__font-family);
+    --button__font-weight: var(--button-primary__font-weight);
+    --button__margin: var(--button-primary__margin);
+    --button__padding: var(--button-primary__padding);
+    --button__width: var(--button-primary__width);
+    --button__font-size: var(--button-primary__font-size);
+    --button__line-height: var(--button-primary__line-height);
+}
+
+:is(.action.primary, .action-primary):is(:focus, :active) {
+    --button__active__background: var(--button-primary__active__background);
+    --button__active__border: var(--button-primary__active__border);
+    --button__active__color: var(--button-primary__active__color);
+}
+
+:is(.action.primary, .action-primary):hover {
+    --button__hover__background: var(--button-primary__hover__background);
+    --button__hover__border: var(--button-primary__hover__border);
+    --button__hover__color: var(--button-primary__hover__color);
 }
