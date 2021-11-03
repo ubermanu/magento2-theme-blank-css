@@ -1,0 +1,82 @@
+.block.newsletter {
+    margin-bottom: var(--indent__xl);
+}
+
+.block.newsletter .form.subscribe {
+    display: table;
+    width: 100%;
+}
+
+.block.newsletter .fieldset {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+.block.newsletter .field {
+    margin: 0;
+}
+
+.block.newsletter .field .control {
+    /*.lib-icon-font(*/
+    /*    @icon-envelope,*/
+    /*    @_icon-font-size: 35px,*/
+    /*    @_icon-font-line-height: 33px,*/
+    /*    @_icon-font-color: var(--form-element-input-placeholder__color)*/
+    /*);*/
+    display: block;
+}
+
+.block.newsletter .field .control:before {
+    position: absolute;
+}
+
+.block.newsletter input {
+    margin-right: 35px;
+    padding: 0 0 0 35px; /* Reset some default Safari padding values. */
+}
+
+.block.newsletter .title {
+    display: none;
+}
+
+.block.newsletter .label {
+    /*&:extend(.abs-visually-hidden all);*/
+}
+
+.block.newsletter .actions {
+    display: table-cell;
+    vertical-align: top;
+    width: 1%;
+}
+
+.block.newsletter .action.subscribe {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: -1px;
+}
+
+
+@media (min-width: env(--screen__m)) {
+    .block.newsletter {
+        max-width: 44%;
+        width: max-content;
+    }
+
+    .block.newsletter .field {
+        margin-right: 5px;
+    }
+
+    .block.newsletter .field.newsletter {
+        max-width: 220px;
+    }
+
+    .block.newsletter .field .control {
+        width: 100%;
+    }
+
+    .block.newsletter .action.subscribe {
+        border-radius: 3px;
+    }
+}

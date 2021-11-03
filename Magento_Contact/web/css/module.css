@@ -1,0 +1,29 @@
+.contact-index-index .column:not(.sidebar-main) .form.contact {
+    float: none;
+    width: 50%;
+}
+
+.contact-index-index .column:not(.sidebar-additional) .form.contact {
+    float: none;
+    width: 50%;
+}
+
+
+@media (min-width: env(--screen__m)) {
+    .contact-index-index .column:not(.sidebar-additional) .form.contact {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: env(--screen__m)) {
+    .contact-index-index .column:not(.sidebar-main) .form.contact {
+        float: none;
+        width: 100%;
+    }
+
+    .contact-index-index .column:not(.sidebar-additional) .form.contact {
+        float: none;
+        width: 100%;
+    }
+}
+

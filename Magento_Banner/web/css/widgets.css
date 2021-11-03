@@ -1,0 +1,21 @@
+.block-banners,
+.block-banners-inline {
+    /*&:extend(.abs-margin-for-blocks-and-widgets);*/
+}
+
+:is(.block-banners, .block-banners-inline) .banner-items {
+    /*&:extend(.abs-reset-list all);*/
+}
+
+:is(.block-banners, .block-banners-inline) .banner-item {
+    display: block;
+}
+
+:is(.block-banners, .block-banners-inline) .banner-item-content {
+    margin-bottom: var(--indent__base);
+}
+
+:is(.block-banners, .block-banners-inline) .banner-item-content img {
+    display: block;
+    margin: 0 auto;
+}

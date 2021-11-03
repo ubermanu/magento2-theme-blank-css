@@ -1,0 +1,34 @@
+.form-add-invitations {
+    /*&:extend(.abs-add-fields all);*/
+}
+
+.form-add-invitations .action.add {
+    /*.lib-button-icon(*/
+    /*    @_icon-font-content: var(--icon-expand),*/
+    /*    @_icon-font-text-hide: true,*/
+    /*    @_icon-font-size: 31px*/
+    /*);*/
+    line-height: normal;
+    padding: 2px 0;
+    width: auto;
+}
+
+@media (max-width: env(--screen__m)) {
+    .form-add-invitations :is(.additional, .field.text) {
+        margin-top: var(--form-field__vertical-indent);
+    }
+}
+
+@media (min-width: env(--screen__m)) {
+    .form-add-invitations {
+        /*&:extend(.abs-add-fields-desktop all);*/
+    }
+
+    .form-add-invitations :is(.additional, .field.text) {
+        margin-top: var(--form-field__vertical-indent__desktop);
+    }
+
+    .table-invitations .col {
+        width: 50%;
+    }
+}

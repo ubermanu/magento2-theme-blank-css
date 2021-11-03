@@ -1,0 +1,8 @@
+.block-cms-hierarchy-link.widget {
+    display: block;
+    margin-bottom: var(--indent__base);
+}
+
+.block-cms-hierarchy-link-inline.widget {
+    margin: 0;
+}
