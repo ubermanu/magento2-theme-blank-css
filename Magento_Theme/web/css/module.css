@@ -320,3 +320,7 @@ body {
         /*&:extend(.abs-add-clearfix all);*/
     }
 }
+
+.cookie-status-message {
+    display: none;
+}
