@@ -178,15 +178,10 @@
     --form-fieldset__border: 0;
     --form-fieldset__margin: 0 0 var(--indent__xl);
     --form-fieldset__padding: 0;
-    --form-fieldset-legend__color: false;
     --form-fieldset-legend__font-size: 20px;
-    --form-fieldset-legend__font-family: false;
-    --form-fieldset-legend__font-weight: false;
-    --form-fieldset-legend__font-style: false;
     --form-fieldset-legend__line-height: 1.2;
     --form-fieldset-legend__margin: 0 0 var(--indent__m);
     --form-fieldset-legend__padding: 0;
-    --form-fieldset-legend__width: false;
 
     /* Field */
 

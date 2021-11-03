@@ -4,7 +4,29 @@
 }
 
 .fieldset {
-    /*.lib-form-fieldset();*/
+    border: var(--form-fieldset__border);
+    margin: var(--form-fieldset__margin);
+    padding: var(--form-fieldset__padding);
+    letter-spacing: -.31em;
+}
+
+.fieldset > * {
+    letter-spacing: normal;
+}
+
+.fieldset > .legend {
+    margin: var(--form-fieldset-legend__margin);
+    padding: var(--form-fieldset-legend__padding);
+    box-sizing: border-box;
+    float: left;
+}
+
+.fieldset > .legend + br {
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
 
 .fieldset:last-child {
