@@ -43,6 +43,7 @@
 
 .block.newsletter .label {
     /*&:extend(.abs-visually-hidden all);*/
+    display: none;
 }
 
 .block.newsletter .actions {

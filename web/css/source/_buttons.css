@@ -9,7 +9,6 @@ button {
     font-weight: var(--button__font-weight);
     margin: var(--button__margin);
     padding: var(--button__padding);
-    width: var(--button__width);
     font-size: var(--button__font-size);
     line-height: var(--button__line-height);
     box-sizing: border-box;
@@ -67,7 +66,6 @@ a.action:is(:hover,:active,:focus) {
     --button__font-weight: var(--button-primary__font-weight);
     --button__margin: var(--button-primary__margin);
     --button__padding: var(--button-primary__padding);
-    --button__width: var(--button-primary__width);
     --button__font-size: var(--button-primary__font-size);
     --button__line-height: var(--button-primary__line-height);
 }
