@@ -189,13 +189,6 @@
     --form-validation-note-icon__font-position: var(--icon-font__position);
     --form-validation-note-icon__font-text-hide: var(--icon-font__text-hide);
 
-    --form-element-validation__color-error: false;
-    --form-element-validation__color-valid: false;
-    --form-element-validation__border-error: rgba(var(--form-validation-note__color-error), 0.8);
-    --form-element-validation__border-valid: false;
-    --form-element-validation__background-error: false;
-    --form-element-validation__background-valid: false;
-
     /* Fieldset */
 
     --form-fieldset__border: 0;

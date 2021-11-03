@@ -155,10 +155,8 @@ input[type="radio"] {
     /*.lib-form-element-choice(@_type: input-radio);*/
 }
 
-input,
-select,
-textarea {
-    /*.lib-form-validation();*/
+:is(input, select, textarea).mage-error {
+    border-color: var(--error__color);
 }
 
 div.mage-error[generated] {
