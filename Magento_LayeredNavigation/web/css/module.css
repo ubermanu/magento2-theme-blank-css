@@ -65,20 +65,6 @@
     content: ')';
 }
 
-.items {
-    /*&:extend(.abs-reset-list all);*/
-}
-
-.items {
-    margin: 0;
-    padding: 0;
-    list-style: none none;
-}
-
-.items > li {
-    margin: 0;
-}
-
 .filtered .items {
     margin: 15px 0;
 }

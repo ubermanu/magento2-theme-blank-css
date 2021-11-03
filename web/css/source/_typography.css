@@ -44,3 +44,13 @@
 .items {
     /*.lib-list-reset-styles();*/
 }
+
+.items {
+    margin: 0;
+    padding: 0;
+    list-style: none none;
+}
+
+.items > li {
+    margin: 0;
+}
