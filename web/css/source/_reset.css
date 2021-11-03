@@ -58,10 +58,6 @@ table {
     /*.lib-table();*/
 }
 
-button {
-    /*.lib-button();*/
-}
-
 button::-moz-focus-inner {
     border: 0;
     padding: 0;
