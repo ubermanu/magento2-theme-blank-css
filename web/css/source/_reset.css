@@ -156,11 +156,13 @@ input[type="radio"] {
 }
 
 :is(input, select, textarea).mage-error {
-    border-color: var(--error__color);
+    border-color: var(--form-element-validation__border-error);
 }
 
 div.mage-error[generated] {
-    /*.lib-form-validation-note();*/
+    color: var(--form-validation-note__color-error);
+    font-size: var(--form-validation-note__font-size);
+    margin: var(--form-validation-note__margin);
 }
 
 input[type="button"],

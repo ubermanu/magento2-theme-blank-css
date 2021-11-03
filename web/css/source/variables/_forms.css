@@ -169,25 +169,9 @@
 
     --form-validation-note__color-error: var(--error__color);
     --form-validation-note__font-size: var(--font-size__s);
-    --form-validation-note__font-family: false;
-    --form-validation-note__font-style: false;
-    --form-validation-note__font-weight: false;
-    --form-validation-note__line-height: false;
     --form-validation-note__margin: 3px 0 0;
-    --form-validation-note__padding: false;
 
-    --form-validation-note-icon__use: false;
-    --form-validation-note-icon__font-content: var(--icon-pointer-up);
-    --form-validation-note-icon__font: var(--icon-font);
-    --form-validation-note-icon__font-size: calc(var(--form-validation-note__font-size) * 2);
-    --form-validation-note-icon__font-line-height: var(--form-validation-note__font-size);
-    --form-validation-note-icon__font-color: var(--form-validation-note__color-error);
-    --form-validation-note-icon__font-color-hover: false;
-    --form-validation-note-icon__font-color-active: false;
-    --form-validation-note-icon__font-margin: false;
-    --form-validation-note-icon__font-vertical-align: var(--icon-font__vertical-align);
-    --form-validation-note-icon__font-position: var(--icon-font__position);
-    --form-validation-note-icon__font-text-hide: var(--icon-font__text-hide);
+    --form-element-validation__border-error: var(--form-validation-note__color-error);
 
     /* Fieldset */
 
