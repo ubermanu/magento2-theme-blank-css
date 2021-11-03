@@ -20,6 +20,7 @@
 @import '../Magento_Theme/css/module.css';
 @import '../Magento_CatalogSearch/css/module.css';
 @import '../Magento_Cms/css/widgets.css';
+@import '../Magento_LayeredNavigation/css/module.css';
 
 /*
 //  Global variables override
