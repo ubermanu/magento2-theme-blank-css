@@ -18,7 +18,7 @@
     vertical-align: top;
 }
 
-@media (min-width: env(--screen__m)) {
+@media (min-width: 768px) {
     .form.send.friend {
         /*&:extend(.abs-add-fields-desktop all);*/
     }

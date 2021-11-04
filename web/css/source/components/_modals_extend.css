@@ -79,7 +79,7 @@ body._has-modal-custom .modal-custom-overlay {
     z-index: var(--overlay__z-index);
 }
 
-@media (max-width: env(--screen__m)) {
+@media (max-width: 768px) {
     .custom-slide {
         /*.lib-modal();*/
         /*.lib-modal-slide();*/
@@ -132,7 +132,7 @@ body._has-modal-custom .modal-custom-overlay {
     }
 }
 
-@media (min-width: env(--screen__m)) {
+@media (min-width: 768px) {
     .modal-popup.modal-slide .modal-footer {
         border-top: var(--modal-title__border);
         text-align: right;

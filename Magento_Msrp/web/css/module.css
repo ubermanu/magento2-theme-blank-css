@@ -63,7 +63,7 @@ button.map-show-info {
     /*.lib-button-as-link();*/
 }
 
-@media (max-width: env(--screen__m)) {
+@media (max-width: 768px) {
     .map-popup {
         max-width: 100%;
     }

@@ -59,7 +59,7 @@
 }
 
 
-@media (min-width: env(--screen__m)) {
+@media (min-width: 768px) {
     .block.newsletter {
         max-width: 44%;
         width: max-content;

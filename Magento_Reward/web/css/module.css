@@ -7,13 +7,13 @@
     margin-bottom: var(--indent__s);
 }
 
-@media (max-width: env(--screen__m)) {
+@media (max-width: 768px) {
     .reward-settings + .actions-toolbar {
         margin-top: 10px;
     }
 }
 
-@media (min-width: env(--screen__m)) {
+@media (min-width: 768px) {
     .reward-settings + .actions-toolbar {
         margin-top: -32px;
     }

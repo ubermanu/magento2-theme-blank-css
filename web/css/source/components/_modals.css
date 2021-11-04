@@ -178,7 +178,7 @@ body._has-modal {
     text-align: right;
 }
 
-@media (max-width: env(--screen__m)) {
+@media (max-width: 768px) {
     .modal-popup.modal-slide {
         left: var(--modal-slide__first__indent-left);
         z-index: var(--modal-slide__z-index);

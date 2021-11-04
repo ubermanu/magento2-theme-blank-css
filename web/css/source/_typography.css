@@ -3,7 +3,7 @@
 @import "_typography-heading.css";
 @import "_typography-links.css";
 
-@media (min-width: env(--screen__m)) {
+@media (min-width: 768px) {
     h1 {
         font-size: var(--h1__font-size-desktop);
         margin-bottom: var(--h1__margin-bottom__desktop);

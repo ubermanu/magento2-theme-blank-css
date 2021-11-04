@@ -159,7 +159,7 @@
     margin-bottom: var(--indent__s);
 }
 
-@media (max-width: env(--screen__m)) {
+@media (max-width: 768px) {
     .block-search .block-content {
         margin-bottom: 0;
     }

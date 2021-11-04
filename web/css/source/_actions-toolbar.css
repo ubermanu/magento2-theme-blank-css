@@ -16,7 +16,7 @@
     margin-bottom: 0;
 }
 
-@media (min-width: env(--screen__m)) {
+@media (min-width: 768px) {
     .actions-toolbar {
         display: flex;
         align-items: center;

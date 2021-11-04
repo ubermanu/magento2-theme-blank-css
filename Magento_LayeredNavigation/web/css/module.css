@@ -90,7 +90,7 @@
     margin-bottom: 35px;
 }
 
-@media (max-width: env(--screen__m)) {
+@media (max-width: 768px) {
     .page-with-filter .columns .sidebar-main {
         order: 0;
     }

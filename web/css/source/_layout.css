@@ -41,7 +41,7 @@
     order: 2;
 }
 
-@media (max-width: env(--screen__m)) {
+@media (max-width: 768px) {
     .navigation,
     .breadcrumbs,
     .page-header .header.panel,
@@ -63,7 +63,7 @@
     }
 }
 
-@media (min-width: env(--screen__m)) {
+@media (min-width: 768px) {
     .navigation,
     .breadcrumbs,
     .page-header .header.panel,

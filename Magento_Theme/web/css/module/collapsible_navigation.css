@@ -50,7 +50,7 @@
     margin: var(--indent__s) 1.8rem;
 }
 
-@media (max-width: env(--screen__m)) {
+@media (max-width: 768px) {
     .block-collapsible-nav {
         left: 0;
         position: absolute;
@@ -73,7 +73,7 @@
     }
 }
 
-@media (min-width: env(--screen__m)) {
+@media (min-width: 768px) {
     .block-collapsible-nav .title {
         /*&:extend(.abs-visually-hidden-desktop all);*/
     }
