@@ -228,7 +228,7 @@ body {
     padding: 0;
 }
 
-@media (min-width: env(--screen__m)) {
+@media (min-width: 768px) {
     .page-wrapper > :is(.breadcrumbs, .top-container, .widget) {
         box-sizing: border-box;
         width: 100%;
@@ -241,11 +241,13 @@ body {
     .header.panel > .header.links {
         float: right;
         font-size: 0;
-        /*.lib-list-inline();*/
         margin-left: auto;
+        list-style-type: none;
     }
 
     .header.panel > .header.links > li {
+        display: inline-block;
+        vertical-align: top;
         font-size: var(--font-size__base);
         margin: 0 0 0 15px;
     }
