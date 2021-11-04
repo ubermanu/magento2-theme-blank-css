@@ -19,13 +19,15 @@
 }
 
 .block.newsletter .field .control {
-    /*.lib-icon-font(*/
-    /*    @icon-envelope,*/
-    /*    @_icon-font-size: 35px,*/
-    /*    @_icon-font-line-height: 33px,*/
-    /*    @_icon-font-color: var(--form-element-input-placeholder__color)*/
-    /*);*/
     display: block;
+}
+
+.block.newsletter .field .control:before {
+    font-family: var(--icon-font);
+    content: var(--icon-envelope);
+    font-size: 35px;
+    line-height: 33px;
+    color: var(--form-element-input-placeholder__color);
 }
 
 .block.newsletter .field .control:before {
