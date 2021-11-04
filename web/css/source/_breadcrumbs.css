@@ -5,7 +5,11 @@
 .breadcrumbs .items {
     font-size: var(--breadcrumbs__font-size);
     color: var(--breadcrumbs-current__color);
-    /*.lib-list-inline();*/
+}
+
+.breadcrumbs .items > li {
+    display: inline-block;
+    vertical-align: top;
 }
 
 .breadcrumbs .item {
@@ -55,15 +59,12 @@
     content: var(--breadcrumbs-separator__symbol);
 }
 
-.breadcrumbs .item:not(:last-child) {
-    /*.lib-icon-font(*/
-    /*    @_icon-font-content: var(--breadcrumbs_icon-font-content),*/
-    /*    @_icon-font: var(--breadcrumbs_icon-font),*/
-    /*    @_icon-font-size: var(--breadcrumbs_icon-font-size),*/
-    /*    @_icon-font-line-height: var(--breadcrumbs_icon-font-line-height),*/
-    /*    @_icon-font-color: var(--breadcrumbs_icon-font-color),*/
-    /*    @_icon-font-margin: var(--breadcrumbs_icon-font-margin),*/
-    /*    @_icon-font-vertical-align: var(--breadcrumbs_icon-font-vertical-align),*/
-    /*    @_icon-font-position: after*/
-    /*);*/
+.breadcrumbs .item:not(:last-child):after {
+    content: var(--breadcrumbs-icon__font-content);
+    font-family: var(--breadcrumbs-icon__font);
+    font-size: var(--breadcrumbs-icon__font-size);
+    line-height: var(--breadcrumbs-icon__font-line-height);
+    color: var(--breadcrumbs-icon__font-color);
+    margin: var(--breadcrumbs-icon__font-margin);
+    vertical-align: var(--breadcrumbs-icon__font-vertical-align);
 }
