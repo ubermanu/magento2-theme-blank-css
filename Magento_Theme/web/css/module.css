@@ -146,6 +146,9 @@ body {
 
 .footer.content ul {
     /*&:extend(.abs-reset-list all);*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .footer.content .links > li {
@@ -176,6 +179,7 @@ body {
     /*    @_icon-font-line-height: 22 px,*/
     /*    @_dropdown-list-min-width: 160 px*/
     /*);*/
+    display: none;
 }
 
 :is(.page-header .panel.wrapper, .page-footer) .switcher .options ul.dropdown a {
