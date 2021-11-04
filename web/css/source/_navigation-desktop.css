@@ -1,0 +1,221 @@
+@media (min-width: 768px) {
+
+    .navigation {
+        background: var(--navigation__background);
+        border: var(--navigation__border);
+        font-size: var(--navigation-desktop__font-size);
+        font-weight: var(--navigation-desktop__font-weight);
+        height: inherit;
+        left: auto;
+        overflow: inherit;
+        padding: 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .navigation:empty {
+        display: none;
+    }
+
+    .navigation ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .navigation li.level0 {
+        border-top: none;
+    }
+
+    .navigation li.level1 {
+        position: relative;
+    }
+
+    .navigation .level0 {
+        margin: var(--navigation-desktop-level0-item__margin);
+        display: inline-block;
+        position: relative;
+    }
+
+    .navigation .level0:last-child {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .navigation .level0:hover:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 10px;
+        height: calc(100% + 3px);
+        z-index: 1;
+    }
+
+    .navigation .level0 > .level-top {
+        background: var(--navigation-desktop-level0-item__background);
+        border: var(--navigation-desktop-level0-item__border);
+        color: var(--navigation-desktop-level0-item__color);
+        line-height: var(--navigation-desktop-level0-item__line-height);
+        padding: var(--navigation-desktop-level0-item__padding);
+        text-decoration: var(--navigation-desktop-level0-item__text-decoration);
+        box-sizing: border-box;
+        position: relative;
+        display: inline-block;
+    }
+
+    .navigation .level0 > .level-top:is(:hover, .ui-state-focus) {
+        background: var(--navigation-desktop-level0-item__hover__background);
+        border: var(--navigation-desktop-level0-item__hover__border);
+        color: var(--navigation-desktop-level0-item__hover__color);
+        text-decoration: var(--navigation-desktop-level0-item__hover__text-decoration);
+    }
+
+    .navigation .level0:is(.active, .has-active) > .level-top {
+        background: var(--navigation-desktop-level0-item__active__background);
+        border-color: var(--navigation-desktop-level0-item__active__border-color);
+        border-width: var(--navigation-desktop-level0-item__active__border-width);
+        color: var(--navigation-desktop-level0-item__active__color);
+        text-decoration: var(--navigation-desktop-level0-item__active__text-decoration);
+        display: inline-block;
+    }
+
+    .navigation .level0.parent:hover > .submenu {
+        overflow: visible !important;
+    }
+
+    .navigation .level0.parent > .level-top {
+        padding-right: 20px;
+    }
+
+    .navigation .level0.parent > .level-top > .ui-menu-icon {
+        position: absolute;
+        right: 0;
+    }
+
+    .navigation .level0.parent > .level-top > .ui-menu-icon:after {
+        font-family: var(--icon-font);
+        font-size: 12px;
+        line-height: 20px;
+        content: var(--icon-down);
+    }
+
+    .navigation .level0.parent > .level-top > .ui-menu-icon > span {
+        font-size: 0;
+        visibility: hidden;
+    }
+
+    .navigation .level0 .submenu {
+        background: var(--submenu-desktop__background);
+        border: var(--submenu-desktop__border-width) var(--submenu-desktop__border-style) var(--submenu-desktop__border-color);
+        box-shadow: var(--submenu-desktop__box-shadow);
+        font-size: var(--submenu-desktop__font-size);
+        font-weight: var(--submenu-desktop__font-weight);
+        min-width: var(--submenu-desktop__min-width);
+        padding: var(--submenu-desktop__padding);
+        display: none;
+        left: 0;
+        margin: 0 !important;
+        position: absolute;
+        z-index: 1;
+        /*._lib-submenu-arrow();*/
+    }
+
+    .navigation .level0 .submenu:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        left: 0;
+        top: -4px;
+        z-index: 1;
+    }
+
+    .navigation .level0 .submenu a {
+        display: block;
+        line-height: inherit;
+        background: var(--submenu-desktop-item__background);
+        border: var(--submenu-desktop-item__border);
+        color: var(--submenu-desktop-item__color);
+        padding: var(--submenu-desktop-item__padding);
+        text-decoration: var(--submenu-desktop-item__text-decoration);
+    }
+
+    .navigation .level0 .submenu a:is(:hover, .ui-state-focus) {
+        background: var(--submenu-desktop-item__hover__background);
+        border: var(--submenu-desktop-item__hover__border);
+        color: var(--submenu-desktop-item__hover__color);
+        text-decoration: var(--submenu-desktop-item__hover__text-decoration);
+    }
+
+    .navigation .level0 .submenu .active > a {
+        background: var(--submenu-desktop-item__active__background);
+        border-color: var(--submenu-desktop-item__active__border-color);
+        border-style: var(--submenu-desktop-item__active__border-style);
+        border-width: var(--submenu-desktop-item__active__border-width);
+        color: var(--submenu-desktop-item__active__color);
+        text-decoration: var(--submenu-desktop-item__active__text-decoration);
+    }
+
+    .navigation .level0 .submenu .submenu {
+        top: -1px !important;
+        left: 100% !important;
+    }
+
+    .navigation .level0 .submenu .submenu-reverse {
+        left: auto !important;
+        right: 100%;
+    }
+
+    .navigation .level0 .submenu li {
+        margin: 0;
+        position: relative;
+    }
+
+    .navigation .level0 .submenu li.parent > a > .ui-menu-icon {
+        position: absolute;
+        right: 3px;
+    }
+
+    .navigation .level0 .submenu li.parent > a > .ui-menu-icon > span {
+        display: none;
+    }
+
+    .navigation .level0 .submenu li.parent > a > .ui-menu-icon:after {
+        font-family: var(--icon-font);
+        content: var(--icon-next);
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .navigation .level0.more {
+        position: relative;
+    }
+
+    .navigation .level0.more:before {
+        display: none;
+    }
+
+    .navigation .level0.more:after {
+        font-family: var(--icon-font);
+        content: var(--icon-pointer-down);
+        font-size: 26px;
+        cursor: pointer;
+        padding: 8px 12px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .navigation .level0.more:hover > .submenu  {
+        overflow: visible !important;
+    }
+
+    .navigation .level0.more li {
+        display: block;
+    }
+}

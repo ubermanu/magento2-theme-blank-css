@@ -1,4 +1,5 @@
 @import '_navigation-mobile.css';
+@import '_navigation-desktop.css';
 
 :root {
     --active-nav-indent: 54px;
@@ -236,7 +237,7 @@
     }
 }
 
-@media (min-width: env(--screen__m)) {
+@media (min-width: 768px) {
     .nav-toggle {
         display: none;
     }
