@@ -11,13 +11,6 @@
 }
 
 .nav-toggle {
-    /*.lib-icon-font(*/
-    /*    @icon-menu,*/
-    /*    @_icon-font-size: 28px,*/
-    /*    @_icon-font-color: var(--header-icons-color),*/
-    /*    @_icon-font-color-hover: var(--header-icons-color-hover)*/
-    /*);*/
-    /*.lib-icon-text-hide();*/
     cursor: pointer;
     display: block;
     font-size: 0;
@@ -27,32 +20,45 @@
     z-index: 14;
 }
 
+.nav-toggle::before {
+    font-family: var(--icon-font);
+    content: var(--icon-menu);
+    font-size: 28px;
+    color: var(--header-icons-color);
+}
+
+.nav-toggle:hover::before {
+    color: var(--header-icons-color-hover);
+}
+
+/*.lib-icon-text-hide();*/
+.nav-toggle > span {
+    visibility: hidden;
+    font-size: 0;
+    tab-index: -1;
+}
+
 @media (max-width: env(--screen__m)) {
     .navigation {
         padding: 0;
     }
 
     .navigation .parent .level-top {
-        /*.lib-icon-font(*/
-        /*    @_icon-font-content: var(--icon-down),*/
-        /*    @_icon-font-size: 42 px,*/
-        /*    @_icon-font-position: after,*/
-        /*    @_icon-font-display: block*/
-        /*);*/
         position: relative;
+        display: block;
     }
 
     .navigation .parent .level-top:after {
+        content: var(--icon-down);
+        font-family: var(--icon-font);
+        font-size: 42px;
         position: absolute;
         right: 7px;
         top: -8px;
     }
 
-    .navigation .parent .level-top.ui-state-active {
-        /*.lib-icon-font-symbol(*/
-        /*    @_icon-font-content: var(--icon-up),*/
-        /*    @_icon-font-position: after*/
-        /*);*/
+    .navigation .parent .level-top.ui-state-active:after {
+        content: var(--icon-up);
     }
 
     .nav-sections {
@@ -84,26 +90,21 @@
     }
 
     .nav-sections .switcher-trigger strong {
-        /*.lib-icon-font(*/
-        /*    @_icon-font-content: var(--icon-down),*/
-        /*    @_icon-font-size: 42 px,*/
-        /*    @_icon-font-position: after,*/
-        /*    @_icon-font-display: block*/
-        /*);*/
         position: relative;
+        display: block;
     }
 
     .nav-sections .switcher-trigger strong:after {
+        content: var(--icon-down);
+        font-family: var(--icon-font);
+        font-size: 42px;
         position: absolute;
         right: -40px;
         top: -16px;
     }
 
-    .nav-sections .switcher-trigger.active strong {
-        /*.lib-icon-font-symbol(*/
-        /*    @_icon-font-content: var(--icon-up),*/
-        /*    @_icon-font-position: after*/
-        /*);*/
+    .nav-sections .switcher-trigger.active strong:after {
+        content: var(--icon-up);
     }
 
     .nav-sections .switcher-dropdown {
