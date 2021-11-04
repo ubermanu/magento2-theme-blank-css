@@ -19,17 +19,29 @@
 }
 
 .block-search .label {
-    /*.lib-icon-font(*/
-    /*    @_icon-font-content: var(--icon-search),*/
-    /*    @_icon-font-size: 35 px,*/
-    /*    @_icon-font-line-height: 33 px,*/
-    /*    @_icon-font-color: var(--header-icons-color),*/
-    /*    @_icon-font-color-hover: var(--header-icons-color-hover),*/
-    /*    @_icon-font-color-active: var(--header-icons-color-hover),*/
-    /*    @_icon-font-text-hide: true*/
-    /*);*/
     display: inline-block;
     float: right;
+}
+
+.block-search .label > span {
+    visibility: hidden;
+    font-size: 0 !important;
+}
+
+.block-search .label::before {
+    content: var(--icon-search);
+    font-family: var(--icon-font);
+    font-size: 35px;
+    line-height: 33px;
+    color: var(--header-icons-color);
+}
+
+.block-search .label::before:hover {
+    color: var(--header-icons-color-hover);
+}
+
+.block-search .label::before:active {
+    color: var(--header-icons-color-hover);
 }
 
 .block-search .label.active + .control input {
@@ -59,7 +71,7 @@
 }
 
 .search-autocomplete {
-    /*&:extend(.abs-add-box-sizing all);*/
+    box-sizing: border-box;
     display: none;
     margin-top: -15px;
     overflow: hidden;
@@ -159,7 +171,7 @@
     }
 }
 
-@media (min-width: env(--screen__m)) {
+@media (min-width: 768px) {
     .block-search {
         float: right;
         padding-left: 15px;
@@ -170,6 +182,7 @@
 
     .block-search .label {
         /*&:extend(.abs-visually-hidden-desktop all);*/
+        display: none;
     }
 
     .block-search .control {
@@ -193,17 +206,27 @@
 
     .block-search .action.search {
         display: inline-block;
-        /*.lib-button-icon(*/
-        /*    @_icon-font-content: var(--icon-search),*/
-        /*    @_icon-font-text-hide: true,*/
-        /*    @_icon-font-color: var(--header-icons-color)*/
-        /*);*/
-        /*.lib-button-reset();*/
+        border: none;
+        margin: 0;
+        width: auto;
+        overflow: visible;
+        background: transparent;
         padding: var(--indent__xs) 0;
         position: absolute;
         right: 10px;
         top: 0;
         z-index: 1;
+    }
+
+    .block-search .action.search:before {
+        font-family: var(--icon-font);
+        content: var(--icon-search);
+        color: var(--header-icons-color);
+    }
+
+    .block-search .action.search > span {
+        font-size: 0;
+        visibility: hidden;
     }
 
     .block-search .action.search:focus:before {
