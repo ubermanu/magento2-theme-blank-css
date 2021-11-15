@@ -1,8 +1,8 @@
 .cart {
     &-summary {
-        .block {
+        & .block {
             &.giftcard {
-                .action.check {
+                & .action.check {
                     //.lib-button-s();
                     //&:extend(.abs-action-button-as-link all);
                     margin-top: var(--indent__base);
@@ -13,21 +13,21 @@
 }
 
 .page-product-giftcard {
-    .giftcard-amount {
+    & .giftcard-amount {
         margin-bottom: 0;
         text-align: left;
 
-        .field:last-child {
+        & .field:last-child {
             padding-bottom: var(--form-field__vertical-indent);
         }
     }
 
-    .product-options-wrapper .field:first-of-type {
+    & .product-options-wrapper .field:first-of-type {
         margin-top: var(--form-field__vertical-indent);
     }
 
-    .fieldset.giftcard {
-        >.legend {
+    & .fieldset.giftcard {
+        & >.legend {
             //&:extend(.abs-visually-hidden all);
             + br {
                 //&:extend(.abs-no-display all);

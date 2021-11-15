@@ -2,7 +2,7 @@
     //.lib-loader();
     position: absolute;
 
-    > span {
+    & > span {
         display: none;
     }
 }
@@ -11,19 +11,19 @@
     //.lib-loading-mask();
     background: rgba(255, 255, 255, .5);
 
-    .loader {
-        > img {
+    & .loader {
+        & > img {
             //.lib-loading-mask();
         }
 
-        > p {
+        & > p {
             display: none;
         }
     }
 }
 
 body {
-    > .loading-mask {
+    & > .loading-mask {
         z-index: var(--loader-overlay__z-index);
     }
 }

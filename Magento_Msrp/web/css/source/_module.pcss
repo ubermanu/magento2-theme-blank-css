@@ -1,5 +1,5 @@
 .map-popup-wrapper.popup {
-    .action.close {
+    & .action.close {
         top: var(--popup-button-close__position-top);
     }
 }
@@ -15,14 +15,14 @@
     //);
     box-sizing: border-box;
 
-    .map-info-price {
+    & .map-info-price {
         //&:extend(.abs-add-clearfix all);
         margin-bottom: 15px;
 
-        .price-box {
+        & .price-box {
             margin: 0 0 var(--indent__base);
 
-            .label {
+            & .label {
                 &:after {
                     content: ': ';
                 }
@@ -30,8 +30,8 @@
         }
     }
 
-    .regular-price {
-        .price-label {
+    & .regular-price {
+        & .price-label {
             display: none;
         }
     }
@@ -51,7 +51,7 @@
 .map-old-price {
     text-decoration: none;
 
-    .price-wrapper {
+    & .price-wrapper {
         text-decoration: line-through;
     }
 }
@@ -60,7 +60,7 @@
     display: inline-block;
     text-align: center;
 
-    img {
+    & img {
         display: block;
         margin: 0 auto;
     }

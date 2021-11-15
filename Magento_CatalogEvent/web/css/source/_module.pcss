@@ -17,54 +17,54 @@
         margin-bottom: var(--indent__s);
     }
 
-    .block-title {
+    & .block-title {
         margin: 0 0 var(--indent__s);
 
-        strong {
+        & strong {
             font-size: 15rem;
             font-weight: var(--font-weight__light);
         }
     }
 
-    .ticker {
+    & .ticker {
         //.lib-list-reset-styles();
 
-        li {
+        & li {
             display: none;
             margin: 0 15px;
         }
 
-        .value {
+        & .value {
             font-size: 18rem;
             font-weight: var(--font-weight__light);
         }
 
-        .label {
+        & .label {
             font-size: 10rem;
             display: block;
             text-transform: lowercase;
         }
     }
 
-    .dates {
+    & .dates {
         display: table;
         margin: 0 auto;
 
-        .start,
-        .end {
+        & .start,
+        & .end {
             display: table-cell;
             vertical-align: top;
         }
 
-        .date {
+        & .date {
             font-size: 18rem;
         }
 
-        .time {
+        & .time {
             display: block;
         }
 
-        .start {
+        & .start {
             padding-right: var(--indent__xl);
             position: relative;
 
@@ -91,36 +91,36 @@
             padding: var(--indent__s) 0 var(--indent__l);
         }
 
-        .block-title {
+        & .block-title {
             margin: 0;
 
-            strong {
+            & strong {
                 font-size: 24rem;
             }
         }
 
-        .ticker {
-            li {
+        & .ticker {
+            & li {
                 display: none;
                 margin: 0 50px;
             }
 
-            .value {
+            & .value {
                 font-size: 60rem;
             }
 
-            .label {
+            & .label {
                 font-size: 14rem;
                 text-transform: none;
             }
         }
 
-        .dates {
-            .date {
+        & .dates {
+            & .date {
                 font-size: 50rem;
             }
 
-            .start {
+            & .start {
                 padding-right: 50px;
 
                 &:after {

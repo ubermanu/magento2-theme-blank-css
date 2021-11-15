@@ -31,22 +31,22 @@
     &._active {
         z-index: var(--checkout-tooltip__hover__z-index);
 
-        .field-tooltip-content {
+        & .field-tooltip-content {
             display: block;
         }
 
-        .field-tooltip-action {
+        & .field-tooltip-action {
             &:before {
                 color: var(--checkout-tooltip-icon__hover__color);
             }
         }
     }
 
-    .label {
+    & .label {
         //.lib-visually-hidden();
     }
 
-    .field-tooltip-action {
+    & .field-tooltip-action {
         //.lib-icon-font(
         //    var(--checkout-tooltip-icon__content),
         //    var(--_icon-font-size): var(--checkout-tooltip-icon__font-size),
@@ -61,7 +61,7 @@
         }
 
         &:focus {
-            ._keyfocus & {
+            & ._keyfocus & {
                 z-index: var(--checkout-tooltip__hover__z-index);
 
                 + .field-tooltip-content {
@@ -75,7 +75,7 @@
         }
     }
 
-    .field-tooltip-content {
+    & .field-tooltip-content {
         background: var(--checkout-tooltip-content__background-color);
         border: var(--checkout-tooltip-content__border-width) solid var(--checkout-tooltip-content__border-color);
         border-radius: var(--checkout-tooltip-content__border-width);
@@ -123,8 +123,8 @@
 
 @media (max-width: env(--screen__xs)) {
     .modal-popup {
-        .field-tooltip {
-            .field-tooltip-content {
+        & .field-tooltip {
+            & .field-tooltip-content {
                 width: var(--checkout-tooltip-content-mobile-popup__width);
             }
         }
@@ -133,7 +133,7 @@
 
 @media (max-width: env(--screen__m)) {
     .field-tooltip {
-        .field-tooltip-content {
+        & .field-tooltip-content {
             right: var(--checkout-tooltip-content-mobile__right);
             top: var(--checkout-tooltip-content-mobile__top);
             left: auto;

@@ -14,18 +14,18 @@ table {
             //@_table_border-width: @table__border-width
             //);
 
-            tfoot {
-                > tr {
+            & tfoot {
+                & > tr {
                     &:first-child {
-                        th,
-                        td {
+                        & th,
+                        & td {
                             border-top: var(--table__border-width) var(--table__border-style) var(--table__border-color);
                             padding-top: var(--indent__base);
                         }
                     }
                 }
 
-                .mark {
+                & .mark {
                     font-weight: var(--font-weight__regular);
                     text-align: right;
                 }
@@ -43,29 +43,29 @@ table {
         //.lib-table-overflow();
         position: relative; // To hide unnecessary horizontal scrollbar in Safari
 
-        .table {
+        & .table {
             &:not(.cart) {
                 &:not(.totals) {
                     &:not(.table-comparison) {
                         //.lib-table-responsive();
 
-                        tbody > tr {
-                            > td:first-child {
+                        & tbody > tr {
+                            & > td:first-child {
                                 padding-top: var(--indent__base);
                             }
 
-                            > td:last-child {
+                            & > td:last-child {
                                 padding-bottom: var(--indent__base);
                             }
                         }
 
                         &.additional-attributes {
-                            tbody {
-                                th {
+                            & tbody {
+                                & th {
                                     //&:extend(.abs-no-display-s all);
                                 }
 
-                                td {
+                                & td {
                                     &:last-child {
                                         border: none;
                                         padding: 0 0 var(--indent__xs);
@@ -81,22 +81,22 @@ table {
         .table {
             &:not(.totals) {
                 &:not(.table-comparison) {
-                    tfoot {
+                    & tfoot {
                         display: block;
 
-                        tr {
+                        & tr {
                             display: block;
                             //&:extend(.abs-add-clearfix-mobile all);
 
                             &:first-child {
-                                th,
-                                td {
+                                & th,
+                                & td {
                                     padding-top: var(--indent__base);
                                 }
                             }
                         }
 
-                        th {
+                        & th {
                             box-sizing: border-box;
                             float: left;
                             padding-left: 0;
@@ -105,7 +105,7 @@ table {
                             width: 70%;
                         }
 
-                        td {
+                        & td {
                             box-sizing: border-box;
                             float: left;
                             padding-left: 0;
@@ -120,16 +120,16 @@ table {
     }
 
     .data-table-definition-list {
-        thead {
+        & thead {
             display: none;
         }
 
-        tbody th {
+        & tbody th {
             padding-bottom: 0;
         }
 
-        tbody th,
-        tbody td {
+        & tbody th,
+        & tbody td {
             display: block;
             padding-left: 0;
             padding-right: 0;

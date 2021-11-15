@@ -1,47 +1,47 @@
 .form-create-return {
     //&:extend(.abs-add-fields all);
 
-    .field {
-        .control > span,
-        address {
+    & .field {
+        & .control > span,
+        & address {
             display: inline-block;
             padding-top: var(--form-field-type-label-inline__padding-top);
         }
     }
 
-    .additional {
+    & .additional {
         &:first-child {
             margin-top: 0;
         }
 
-        .field:nth-last-child(2) {
+        & .field:nth-last-child(2) {
             margin-bottom: 0;
         }
 
-        .field {
+        & .field {
             &:last-child {
                 margin-top: var(--form-field__vertical-indent);
             }
         }
     }
 
-    .field.comment {
+    & .field.comment {
         margin-top: 55px;
     }
 }
 
 .block-returns-comments {
-    .returns-comments {
-        dt,
-        dd {
+    & .returns-comments {
+        & dt,
+        & dd {
             margin: 0;
         }
 
-        dt {
+        & dt {
             font-weight: var(--font-weight__regular);
         }
 
-        dd {
+        & dd {
             margin-bottom: 15px;
 
             &:last-child {
@@ -50,7 +50,7 @@
         }
     }
 
-    .fieldset {
+    & .fieldset {
         margin-bottom: 20px;
     }
 }
@@ -62,8 +62,8 @@
 .magento-rma-returns-returns,
 .magento-rma-guest-returns,
 .magento-rma-returns-view {
-    .page-title-wrapper {
-        .page-title {
+    & .page-title-wrapper {
+        & .page-title {
             margin-right: 25px;
         }
     }
@@ -74,8 +74,8 @@
 //  ---------------------------------------------
 
 .magento-rma-guest-returns {
-    .column.main {
-        .block:not(.widget) {
+    & .column.main {
+        & .block:not(.widget) {
             //&:extend(.abs-account-blocks all);
         }
     }
@@ -87,19 +87,19 @@
 
 @media (max-width: env(--screen__m)) {
     .form-create-return {
-        .fieldset {
-            > .actions-toolbar {
+        & .fieldset {
+            & > .actions-toolbar {
                 //&:extend(.abs-add-clearfix-mobile-m all);
             }
         }
     }
 
     .account {
-        .column.main {
-            .returns-details-items {
-                .block-returns-tracking {
-                    .block-title {
-                        > .action.track {
+        & .column.main {
+            & .returns-details-items {
+                & .block-returns-tracking {
+                    & .block-title {
+                        & > .action.track {
                             display: block;
                             float: none;
                             margin: var(--indent__s) 0 0;
@@ -118,8 +118,8 @@
 @media (min-width: env(--screen__m)) {
     .form-create-return {
         //&:extend(.abs-add-fields-desktop all);
-        .additional {
-            .field:last-child {
+        & .additional {
+            & .field:last-child {
                 margin-top: var(--form-field__vertical-indent__desktop);
             }
         }
@@ -130,12 +130,12 @@
     //  ---------------------------------------------
 
     .magento-rma-guest-returns {
-        .column.main {
-            .block:not(.widget) {
-                .block-content {
+        & .column.main {
+            & .block:not(.widget) {
+                & .block-content {
                     //&:extend(.abs-add-clearfix-desktop all);
 
-                    .box {
+                    & .box {
                         //&:extend(.abs-blocks-2columns all);
                         margin-bottom: var(--indent__base);
                     }
@@ -145,12 +145,12 @@
     }
 
     .block-returns-tracking {
-        .block-title {
-            .action {
+        & .block-title {
+            & .action {
                 margin: 0 0 0 30px;
             }
 
-            .actions-track {
+            & .actions-track {
                 float: right;
                 margin-top: 12px;
             }

@@ -1,14 +1,14 @@
 .form-giftregistry-share,
 .form-giftregistry-edit {
     //&:extend(.abs-add-fields all);
-    .actions-toolbar:not(:last-child) {
+    & .actions-toolbar:not(:last-child) {
         margin-bottom: var(--indent__xl);
     }
 
-    .fieldset {
-        .nested {
-            .field:not(.choice) {
-                .control {
+    & .fieldset {
+        & .nested {
+            & .field:not(.choice) {
+                & .control {
                     width: 100%;
                 }
             }
@@ -17,7 +17,7 @@
 }
 
 .form.giftregistry.items {
-    .actions-toolbar {
+    & .actions-toolbar {
         //&:extend(.abs-reset-left-margin all);
     }
 }
@@ -27,30 +27,30 @@
 }
 
 .table-giftregistry-items {
-    .field.qty .qty {
+    & .field.qty .qty {
         //&:extend(.abs-input-qty all);
     }
 
-    .product-image {
+    & .product-image {
         float: left;
         margin-right: var(--indent__s);
     }
 }
 
 .form.giftregistry .fieldset {
-    .cart-summary & {
+    & .cart-summary & {
         margin: 25px 0 var(--indent__xs);
 
-        .field {
+        & .field {
             margin: 0 0 var(--indent__s);
 
-            .control {
+            & .control {
                 float: none;
                 width: auto;
             }
         }
 
-        .action.primary {
+        & .action.primary {
             margin-bottom: 0;
             //&:extend(.abs-revert-secondary-color all);
             //&:extend(.abs-revert-secondary-size all);
@@ -61,74 +61,74 @@
 .form-giftregistry-search {
     margin-bottom: calc(var(--indent__l) * 2);
 
-    .legend {
+    & .legend {
         //&:extend(.abs-account-title all);
     }
 
-    .fields-specific-options {
-        .field {
+    & .fields-specific-options {
+        & .field {
             &:nth-last-of-type(1) {
                 margin-bottom: 0;
             }
         }
 
-        .datetime-picker {
+        & .datetime-picker {
             //&:extend(.abs-field-date-input all);
         }
     }
 }
 
 .block-giftregistry-results {
-    .block-title {
+    & .block-title {
         //&:extend(.abs-block-title all);
     }
 
-    .toolbar-giftregistry-results {
+    & .toolbar-giftregistry-results {
         text-align: center;
     }
 }
 
 .block-giftregistry {
-    .actions-toolbar {
+    & .actions-toolbar {
         margin: 17px 0 0;
     }
 }
 
 .block-giftregistry-shared {
-    .item-options {
-        .item-value {
+    & .item-options {
+        & .item-value {
             margin: 0 0 var(--indent__m);
         }
     }
 }
 
 .block-giftregistry-shared-items {
-    .block-title {
+    & .block-title {
         //&:extend(.abs-block-title all);
     }
 
-    .product-image-wrapper {
+    & .product-image-wrapper {
         //&:extend(.abs-reset-image-wrapper all);
     }
 
-    .item {
+    & .item {
         border-bottom: var(--border-width__base) solid var(--border-color__base);
     }
 
-    .qty {
-        .qty {
+    & .qty {
+        & .qty {
             //&:extend(.abs-input-qty all);
         }
     }
 
-    .col {
+    & .col {
         padding: var(--indent__base) 8px var(--indent__s);
 
-        .price-box {
+        & .price-box {
             display: inline-block;
         }
 
-        .price-wrapper {
+        & .price-wrapper {
             font-size: 18rem;
             display: block;
             font-weight: var(--font-weight__bold);
@@ -136,8 +136,8 @@
         }
     }
 
-    .product {
-        .item-options {
+    & .product {
+        & .item-options {
             //&:extend(.abs-product-options-list all);
             //&:extend(.abs-add-clearfix all);
             margin-bottom: 0;
@@ -162,21 +162,21 @@
 
 @media (max-width: env(--screen__s)) {
     .table-giftregistry-items {
-        .col.product {
+        & .col.product {
             &:before {
                 //&:extend(.abs-visually-hidden-mobile all);
             }
             //&:extend(.abs-add-clearfix-mobile all);
         }
 
-        .field.choice,
-        .field.qty {
+        & .field.choice,
+        & .field.qty {
             display: inline-block;
         }
     }
 
     .form-giftregistry-search {
-        .fieldset {
+        & .fieldset {
             margin-bottom: 15px;
         }
     }
@@ -197,11 +197,11 @@
     }
 
     .form-giftregistry-search {
-        .fieldset {
+        & .fieldset {
             margin-bottom: var(--form-field__vertical-indent__desktop);
-            > .fields-specific-options {
-                > .field {
-                    .lib-form-field-type-revert();
+            & > .fields-specific-options {
+                & > .field {
+                    //.lib-form-field-type-revert();
                 }
             }
         }
@@ -212,20 +212,20 @@
     }
 
     .block-giftregistry-shared {
-        .item-options {
+        & .item-options {
             //&:extend(.abs-product-options-list-desktop all);
             //&:extend(.abs-add-clearfix-desktop all);
         }
     }
 
     .block-giftregistry-shared-items {
-        .column.main & {
-            .actions-toolbar {
+        & .column.main & {
+            & .actions-toolbar {
                 //&:extend(.abs-reset-left-margin-desktop all);
             }
         }
 
-        .product {
+        & .product {
             &-item-photo {
                 display: table-cell;
                 max-width: 100%;
@@ -242,7 +242,7 @@
             }
         }
 
-        .col {
+        & .col {
             &.product {
                 width: 48%;
             }
@@ -256,7 +256,7 @@
             }
         }
 
-        .input-text {
+        & .input-text {
             &.qty {
                 margin-top: -4px;
             }

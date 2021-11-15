@@ -36,24 +36,24 @@
     //  Shipping Address
     //  ---------------------------------------------
 
-    .form-login,
-    .form-shipping-address {
+    & .form-login,
+    & .form-shipping-address {
         margin-top: var(--checkout-shipping-address__margin-top);
         margin-bottom: var(--indent__base);
 
-        .fieldset {
-            .note {
+        & .fieldset {
+            & .note {
                 font-size: var(--font-size__base);
                 margin-top: var(--indent__s);
             }
         }
     }
 
-    .shipping-address-items {
+    & .shipping-address-items {
         font-size: 0;
     }
 
-    .shipping-address-item {
+    & .shipping-address-item {
         //&:extend(.abs-add-box-sizing all);
         border: var(--checkout-shipping-item__border);
         line-height: var(--checkout-shipping-item__line-height);
@@ -88,16 +88,16 @@
         }
     }
 
-    .field {
+    & .field {
         &.addresses {
             //&:extend(.abs-add-clearfix all);
         }
     }
 
-    .action-show-popup {
+    & .action-show-popup {
         margin: 0 0 var(--indent__base);
 
-        > span {
+        & > span {
             &:before {
                 content: '+';
                 padding-right: var(--indent__xs);
@@ -105,12 +105,12 @@
         }
     }
 
-    .action-select-shipping-item {
+    & .action-select-shipping-item {
         float: right;
         margin: var(--indent__base) 0 0;
     }
 
-    .edit-address-link {
+    & .edit-address-link {
         //&:extend(.abs-action-button-as-link all);
         display: block;
         float: left;
@@ -123,18 +123,18 @@
 //  ---------------------------------------------
 
 .checkout-shipping-method {
-    .step-title {
+    & .step-title {
         margin-bottom: 0;
     }
 
-    .no-quotes-block {
+    & .no-quotes-block {
         margin: var(--indent__base) 0;
     }
 }
 
 .methods-shipping {
-    .actions-toolbar {
-        .action {
+    & .actions-toolbar {
+        & .action {
             &.primary {
                 //&:extend(.abs-button-l all);
                 margin: var(--indent__base) 0 0;
@@ -144,14 +144,14 @@
 }
 
 .table-checkout-shipping-method {
-    thead {
-        th {
+    & thead {
+        & th {
             display: none;
         }
     }
 
-    tbody {
-        td {
+    & tbody {
+        & td {
             border-top: var(--checkout-shipping-method__border);
             padding-bottom: var(--checkout-shipping-method__padding);
             padding-top: var(--checkout-shipping-method__padding);
@@ -163,16 +163,16 @@
             }
         }
 
-        tr {
+        & tr {
             &:first-child {
-                td {
+                & td {
                     border-top: none;
                 }
             }
         }
 
-        .row-error {
-            td {
+        & .row-error {
+            & td {
                 border-top: none;
                 padding-bottom: var(--indent__s);
                 padding-top: 0;
@@ -187,13 +187,13 @@
 
 @media (max-width: env(--screen__s)) {
     .opc-wrapper {
-        .form-login {
+        & .form-login {
             border-bottom: 1px solid var(--checkout-shipping-item-before__border-color);
             margin: var(--checkout-shipping-item-mobile__padding);
             padding: var(--checkout-shipping-item-mobile__padding);
         }
 
-        .shipping-address-item {
+        & .shipping-address-item {
             border-bottom: 1px solid var(--checkout-shipping-item-before__border-color);
             margin: var(--checkout-shipping-item-mobile__margin);
             padding: var(--checkout-shipping-item-mobile__padding);
@@ -203,28 +203,28 @@
                 padding: var(--checkout-shipping-item-mobile__active__padding);
                 border-bottom-width: 2px;
 
-                .edit-address-link {
+                & .edit-address-link {
                     right: var(--checkout-shipping-item-icon__selected__width) + var(--indent__s);
                 }
             }
         }
 
-        .form-login,
-        .form-shipping-address {
+        & .form-login,
+        & .form-shipping-address {
             margin-top: var(--checkout-shipping-address__margin-top);
         }
 
-        .action-select-shipping-item {
+        & .action-select-shipping-item {
             float: none;
             margin-top: var(--indent__s);
             width: 100%;
         }
 
-        .action-show-popup {
+        & .action-show-popup {
             width: 100%;
         }
 
-        .edit-address-link {
+        & .edit-address-link {
             //.lib-icon-font(
             //    var(--icon-settings),
             //    var(--_icon-font-size): 28px,
@@ -248,12 +248,12 @@
 
 @media (min-width: env(--screen__m)) {
     .checkout-shipping-method {
-        .actions-toolbar {
-            > .primary {
+        & .actions-toolbar {
+            & > .primary {
                 float: right;
             }
 
-            .action {
+            & .action {
                 &.primary {
                     margin: 0;
                 }
@@ -262,8 +262,8 @@
     }
 
     .opc-wrapper {
-        .form-login,
-        .form-shipping-address {
+        & .form-login,
+        & .form-shipping-address {
             max-width: var(--checkout-shipping-address__max-width);
         }
     }
@@ -275,7 +275,7 @@
 
 @media (min-width: env(--screen__l)) {
     .opc-wrapper {
-        .shipping-address-item {
+        & .shipping-address-item {
             width: var(--checkout-shipping-item__width);
 
             &:before {

@@ -7,14 +7,14 @@
 //  ---------------------------------------------
 
 .email-items {
-    .bundle-option-label {
-        > td {
+    & .bundle-option-label {
+        & > td {
             padding: 0 var(--email-content__padding__base) 0 var(--email-content__padding__l);
         }
     }
 
-    .bundle-option-value {
-        > td {
+    & .bundle-option-value {
+        & > td {
             padding: 0 var(--email-content__padding__base) var(--email-content__padding__base);
 
             &.item-info {
@@ -23,8 +23,8 @@
         }
     }
 
-    tr.bundle-option-value + tr {
-        > td.item-extra {
+    & tr.bundle-option-value + tr {
+        & > td.item-extra {
             padding-top: var(--email-content__padding__base);
         }
     }

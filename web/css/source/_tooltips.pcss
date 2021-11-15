@@ -5,23 +5,23 @@
     //    @_tooltip-selector-toggle: ~'.tooltip.toggle'
     //);
 
-    .tooltip.content {
-        dl {
+    & .tooltip.content {
+        & dl {
             margin-bottom: 0;
         }
 
-        dd {
+        & dd {
             white-space: normal;
         }
 
-        .subtitle {
+        & .subtitle {
             display: inline-block;
             font-size: 16px;
             font-weight: 500;
             margin-bottom: 15px;
         }
 
-        .label {
+        & .label {
             margin-top: var(--indent__s);
 
             &:first-child {
@@ -29,7 +29,7 @@
             }
         }
 
-        .values {
+        & .values {
             margin: 0;
         }
     }
@@ -46,7 +46,7 @@
 
 @media (max-width: env(--screen__xs)) {
     .tooltip.wrapper {
-        .tooltip.content {
+        & .tooltip.content {
             min-width: 10rem;
         }
     }

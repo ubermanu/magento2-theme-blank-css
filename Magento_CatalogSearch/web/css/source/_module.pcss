@@ -9,17 +9,17 @@
 .block-search {
     margin-bottom: 0;
 
-    .block {
+    & .block {
         &-title {
             display: none;
         }
     }
 
-    .block-content {
+    & .block-content {
         margin-bottom: 0;
     }
 
-    .label {
+    & .label {
         //.lib-icon-font(
         //    var(--_icon-font-content): var(--icon-search),
         //    var(--_icon-font-size): 35px,
@@ -34,32 +34,32 @@
 
         &.active {
             + .control {
-                input {
+                & input {
                     position: static;
                 }
             }
         }
     }
 
-    .action.search {
+    & .action.search {
         display: none;
     }
 
-    .control {
+    & .control {
         border-top: 1px solid var(--border-color__base);
         clear: both;
         margin: 0 calc(-1 * var(--layout__width-xs-indent)) -1px;
         padding: 0 var(--layout__width-xs-indent);
     }
 
-    input {
+    & input {
         font-size: 16px;
         left: -300%;
         margin: 15px 0;
         position: absolute;
     }
 
-    .nested {
+    & .nested {
         display: none;
     }
 }
@@ -72,10 +72,10 @@
     position: absolute;
     z-index: 3;
 
-    ul {
+    & ul {
         //.lib-list-reset-styles();
 
-        li {
+        & li {
             border-top: var(--autocomplete-item__border);
             cursor: pointer;
             margin: 0;
@@ -99,7 +99,7 @@
                 background: var(--autocomplete-item__hover__color);
             }
 
-            .amount {
+            & .amount {
                 color: var(--autocomplete-item-amount__color);
                 position: absolute;
                 right: 7px;
@@ -110,12 +110,12 @@
 }
 
 .form.search.advanced {
-    .fields.range {
-        .field {
+    & .fields.range {
+        & .field {
             &:first-child {
                 position: relative;
 
-                .control {
+                & .control {
                     padding-right: 25px;
 
                     &:after {
@@ -133,7 +133,7 @@
             &:last-child {
                 position: relative;
 
-                div.mage-error[generated] {
+                & div.mage-error[generated] {
                     left: 0;
                     position: absolute;
                     top: 32px;
@@ -141,16 +141,16 @@
             }
 
             &.with-addon {
-                .control {
+                & .control {
                     padding-right: 45px;
                 }
             }
         }
     }
 
-    .group.price {
-        .addon {
-            .addafter {
+    & .group.price {
+        & .addon {
+            & .addafter {
                 background: none;
                 border: 0;
                 padding-top: 6px;
@@ -172,7 +172,7 @@
 
 @media (max-width: env(--screen__m)) {
     .block-search {
-        .block-content {
+        & .block-content {
             margin-bottom: 0;
         }
     }
@@ -196,30 +196,30 @@
         width: 250px;
         z-index: 4;
 
-        .label {
+        & .label {
             //&:extend(.abs-visually-hidden-desktop all);
         }
 
-        .control {
+        & .control {
             border-top: 0;
             margin: 0;
             padding: 0 0 25px;
         }
 
-        .nested {
+        & .nested {
             display: block;
             padding-top: 5px;
             position: absolute;
         }
 
-        input {
+        & input {
             //.lib-input-placeholder(var(--form-element-input-placeholder__color));
             margin: 0;
             padding-right: 35px;
             position: static;
         }
 
-        .action.search {
+        & .action.search {
             display: inline-block;
             //.lib-button-icon(
             //    var(--_icon-font-content): var(--icon-search),

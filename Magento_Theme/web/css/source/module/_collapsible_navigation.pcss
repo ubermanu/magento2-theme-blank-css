@@ -14,25 +14,25 @@
 //  -----------------------------------------
 
 .block-collapsible-nav {
-    .content {
+    & .content {
         background: var(--collapsible-nav-background);
         padding: 15px 0;
     }
-    .item {
+    & .item {
         margin: 3px 0 0;
         &:first-child {
             margin-top: 0;
         }
 
-        a,
-        > strong {
+        & a,
+        & > strong {
             border-left: 3px solid transparent;
             color: var(--collapsible-nav-color);
             display: block;
             padding: 5px 18px 5px 15px;
         }
 
-        a {
+        & a {
             text-decoration: none;
 
             &:hover {
@@ -41,19 +41,19 @@
         }
 
         &.current {
-            a,
-            > strong {
+            & a,
+            & > strong {
                 border-color: var(--collapsible-nav-current-border-color);
                 color: var(--collapsible-nav-current-color);
                 font-weight: var(--collapsible-nav-current-font-weight);
             }
 
-            a {
+            & a {
                 border-color: var(--collapsible-nav-current-border-color);
             }
         }
 
-        .delimiter {
+        & .delimiter {
             border-top: 1px solid var(--collapsible-nav-delimiter__border-color);
             display: block;
             margin: var(--indent__s) 1.8rem;
@@ -66,8 +66,8 @@
 //  _____________________________________________
 
 @media (min-width: env(--screen__m)) {
-    .block-collapsible-nav {
-        .title {
+    & .block-collapsible-nav {
+        & .title {
             //&:extend(.abs-visually-hidden-desktop all);
         }
     }
@@ -78,18 +78,18 @@
 //  _____________________________________________
 
 @media (max-width: env(--screen__m)) {
-    .block-collapsible-nav {
+    & .block-collapsible-nav {
         left: 0;
         position: absolute;
         top: -21px;
         width: 100%;
         z-index: 5;
 
-        .title {
+        & .title {
             //&:extend(.abs-toggling-title-mobile all);
         }
 
-        .content {
+        & .content {
             border-bottom: var(--border-width__base) solid var(--border-color__base);
             display: none;
 

@@ -3,7 +3,7 @@
 //  _____________________________________________
 
 .email-summary {
-    h1 {
+    & h1 {
         margin-bottom: var(--indent__xs);
     }
 }
@@ -11,7 +11,7 @@
 @media (max-width: env(--screen__xs)) {
     //  Shrink order number in order email so it will fit on single line on small screens
     .email-summary {
-        h1 {
+        & h1 {
             font-size: calc(1.7 * var(--font-size__base)) !important; // 24px
         }
     }
@@ -24,38 +24,38 @@
 .order-details {
     width: 100%;
 
-    tr {
-        > .address-details,
-        > .method-info {
+    & tr {
+        & > .address-details,
+        & > .method-info {
             padding: var(--email-content__padding__base) var(--email-content__padding__base) var(--email-content__padding__base) 0;
             width: 50%;
 
-            h3 {
+            & h3 {
                 margin-top: 0;
             }
         }
 
         //  Prevent extra spacing on Payment & Shipping Method row
         & + .method-info {
-            > td {
+            & > td {
                 padding: 0 0 var(--email-content__padding__base);
             }
         }
     }
 
-    .payment-method {
+    & .payment-method {
         margin-bottom: var(--indent__s);
 
-        .title {
+        & .title {
             font-weight: var(--font-weight__regular);
         }
 
-        .data.table {
-            > caption {
+        & .data.table {
+            & > caption {
                 display: none;
             }
 
-            th {
+            & th {
                 padding-right: var(--email-content__padding__base);
             }
         }
@@ -63,22 +63,22 @@
 }
 
 //  Remove address and phone number link color on iOS
-.email-non-inline() {
-    .address-details a {
-        //&:extend(.no-link a);
-    }
-}
+//.email-non-inline() {
+//    & .address-details a {
+//        //&:extend(.no-link a);
+//    }
+//}
 
 @media (max-width: env(--screen__xs)) {
     //  Stack columns
     .order-details {
-        .address-details,
-        .method-info {
+        & .address-details,
+        & .method-info {
             display: block;
             padding: var(--email-content__padding__base) 0 !important;
             width: auto !important;
 
-            h3 {
+            & h3 {
                 margin-bottom: var(--indent__xs) !important;
                 margin-top: 0 !important;
             }
@@ -93,19 +93,19 @@
 .shipment-track {
     //.lib-table(var(--table__width), 0);
 
-    thead,
-    tbody {
-        > tr {
-            > th,
-            > td {
+    & thead,
+    & tbody {
+        & > tr {
+            & > th,
+            & > td {
                 background-color: var(--color-gray95);
                 padding: var(--email-content__padding__base);
                 width: 50%;
             }
 
             & + tr {
-                th,
-                td {
+                & th,
+                & td {
                     padding-top: 0;
                 }
             }
@@ -118,27 +118,27 @@
 //  ----------------------------------------------
 
 .email-items {
-    .lib-table(var(--table__width), 0);
+    //.lib-table(var(--table__width), 0);
     border: var(--table__border-width) var(--table__border-style) var(--table__border-color);
 
-    thead,
-    tfoot {
-        > tr {
-            > th,
-            > td {
+    & thead,
+    & tfoot {
+        & > tr {
+            & > th,
+            & > td {
                 background-color: var(--color-gray95)
             }
         }
     }
 
-    > thead,
-    > tbody {
-        > tr {
-            > th {
+    & > thead,
+    & > tbody {
+        & > tr {
+            & > th {
                 padding: var(--email-content__padding__base);
             }
 
-            > td {
+            & > td {
                 padding: var(--email-content__padding__base);
 
                 &.message-gift {
@@ -149,87 +149,87 @@
         }
     }
 
-    > tbody,
-    > tfoot {
-        > tr {
-            > th,
-            > td {
+    & > tbody,
+    & > tfoot {
+        & > tr {
+            & > th,
+            & > td {
                 border-top: var(--table__border-width) var(--table__border-style) var(--table__border-color);
             }
 
             & + tr {
-                > th,
-                > td {
+                & > th,
+                & > td {
                     border-top: 0;
                 }
             }
         }
     }
 
-    p {
+    & p {
         margin-bottom: 0;
     }
 
-    .product-name {
+    & .product-name {
         font-weight: var(--font-weight__bold);
         margin-bottom: var(--email-content__padding__s);
     }
 
-    .has-extra .sku {
+    & .has-extra .sku {
         margin-bottom: var(--email-content__padding__base);
     }
 
-    .item-info {
-        dl {
+    & .item-info {
+        & dl {
             margin-bottom: 0;
             padding-left: var(--email-content__padding__m);
 
-            dt,
-            dd {
+            & dt,
+            & dd {
                 margin-bottom: 0;
                 padding-bottom: 0;
             }
 
-            dd {
+            & dd {
                 padding-left: var(--email-content__padding__base);
             }
         }
     }
 
-    .item-qty {
+    & .item-qty {
         text-align: center;
     }
 
-    .item-price,
-    .item-subtotal {
+    & .item-price,
+    & .item-subtotal {
         text-align: right;
     }
 
-    .item-extra {
+    & .item-extra {
         padding-top: 0;
     }
 
-    .order-totals {
-        > tr {
-            > th {
+    & .order-totals {
+        & > tr {
+            & > th {
                 font-weight: var(--font-weight__regular);
             }
 
-            > th,
-            > td {
+            & > th,
+            & > td {
                 padding: var(--email-content__padding__base);
                 text-align: right;
             }
 
             & + tr {
-                th,
-                td {
+                & th,
+                & td {
                     padding-top: 0;
                 }
             }
         }
 
-        .price {
+        & .price {
             white-space: nowrap;
         }
     }

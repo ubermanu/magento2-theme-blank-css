@@ -1,12 +1,12 @@
 .sidebar {
-    .block-addbysku {
-        .fieldset {
+    & .block-addbysku {
+        & .fieldset {
             margin: 0;
 
-            .fields {
+            & .fields {
                 position: relative;
 
-                .field {
+                & .field {
                     display: inline-block;
                     margin-bottom: var(--indent__s);
                     vertical-align: top;
@@ -19,7 +19,7 @@
                     }
 
                     &.qty {
-                        .qty {
+                        & .qty {
                             //&:extend(.abs-input-qty all);
                             + .mage-error {
                                 width: 80px;
@@ -28,7 +28,7 @@
                     }
                 }
 
-                .actions-toolbar {
+                & .actions-toolbar {
                     position: absolute;
                     right: 0;
                     top: 6px;
@@ -36,26 +36,26 @@
             }
         }
 
-        .form-addbysku {
-            .actions-toolbar {
+        & .form-addbysku {
+            & .actions-toolbar {
                 margin-bottom: var(--indent__base);
 
-                .primary {
+                & .primary {
                     text-align: left;
 
-                    .action {
+                    & .action {
                         width: auto;
                     }
                 }
 
-                .secondary {
+                & .secondary {
                     float: none;
                     text-align: left;
                 }
             }
         }
 
-        .action {
+        & .action {
             &.add {
                 //.lib-button-icon(
                 //    @_icon-font-content: @icon-expand,

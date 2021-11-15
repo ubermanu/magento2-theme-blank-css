@@ -13,7 +13,7 @@
 }
 
 .block.widget {
-    .products-grid .product-item {
+    & .products-grid .product-item {
         margin-left: 2%;
         width: calc((100% - 2%) / 2);
 
@@ -22,27 +22,27 @@
         }
     }
 
-    .product-item-info {
+    & .product-item-info {
         width: auto;
     }
 
-    .pager {
+    & .pager {
         padding: 0;
 
-        .toolbar-amount {
+        & .toolbar-amount {
             float: none;
             font-size: 12rem;
         }
 
-        .pages-item-previous {
+        & .pages-item-previous {
             padding-left: 0;
         }
 
-        .pages-item-next {
+        & .pages-item-next {
             position: relative;
         }
 
-        .items {
+        & .items {
             white-space: nowrap;
         }
     }
@@ -54,8 +54,8 @@
 
 @media (max-width: env(--screen__m)) {
     .sidebar .block-viewed-products-grid {
-        .products-grid {
-            .product-item {
+        & .products-grid {
+            & .product-item {
                 margin-left: 2%;
                 width: calc((100% - 2%) / 2);
 
@@ -64,16 +64,16 @@
                 }
             }
 
-            .product-item-photo {
+            & .product-item-photo {
                 display: block;
                 position: relative;
             }
 
-            .product-item-details {
+            & .product-item-details {
                 margin: 0;
             }
 
-            .product-item-info {
+            & .product-item-info {
                 text-align: center;
             }
         }
@@ -105,11 +105,11 @@
     .block.widget .products-grid .product-item {
         width: calc(100% / 3);
 
-        .sidebar & {
+        & .sidebar & {
             margin-left: 0;
             width: 100%;
 
-            .actions-secondary {
+            & .actions-secondary {
                 display: block;
                 padding: 10px 0;
             }
@@ -134,14 +134,14 @@
     }
 
     .sidebar .block.widget .pager {
-        .item:not(.pages-item-next):not(.pages-item-previous) {
+        & .item:not(.pages-item-next):not(.pages-item-previous) {
             //&:extend(.abs-no-display-desktop all);
         }
 
-        .pages-item-next {
+        & .pages-item-next {
             padding: 0;
 
-            .action {
+            & .action {
                 margin: 0;
             }
         }

@@ -1,19 +1,19 @@
 .downloadable.samples {
     margin-bottom: var(--indent__base);
 
-    dd {
+    & dd {
         margin: 0 0 var(--indent__s);
     }
 }
 
 .table-downloadable-products {
-    .product-name {
+    & .product-name {
         margin-right: 15px;
     }
 }
 
 .field.downloads {
-    .price-container {
+    & .price-container {
         display: inline;
         white-space: nowrap;
 
@@ -23,7 +23,7 @@
         }
     }
 
-    .price-excluding-tax {
+    & .price-excluding-tax {
         display: inline;
 
         &:before {
@@ -35,33 +35,33 @@
         }
     }
 
-    .price-including-tax {
+    & .price-including-tax {
         font-size: 14rem;
         display: inline;
         font-weight: var(--font-weight__semibold);
     }
 
-    .sample.link {
+    & .sample.link {
         float: right;
     }
 }
 
 .page-product-downloadable {
-    .product-add-form {
+    & .product-add-form {
         //&:extend(.abs-add-clearfix all);
         clear: both;
         margin-bottom: var(--indent__m);
     }
 
-    .product-options-bottom {
-        .field.qty {
+    & .product-options-bottom {
+        & .field.qty {
             display: none !important;
         }
     }
 
-    .product-options-wrapper {
-        .fieldset {
-            .legend.links-title {
+    & .product-options-wrapper {
+        & .fieldset {
+            & .legend.links-title {
                 //&:extend(.abs-visually-hidden all);
             }
         }
@@ -74,20 +74,20 @@
 
 @media (min-width: env(--screen__m)) {
     .page-product-downloadable {
-        .product-add-form {
+        & .product-add-form {
             //&:extend(.clearer all);
         }
 
-        .product-options-wrapper {
+        & .product-options-wrapper {
             float: left;
             width: 55%;
         }
 
-        .product-options-bottom {
+        & .product-options-bottom {
             float: right;
             width: 40%;
 
-            .field.qty {
+            & .field.qty {
                 & + .actions {
                     padding-top: 0;
                 }

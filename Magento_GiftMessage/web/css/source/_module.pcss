@@ -5,10 +5,10 @@
 }
 
 .gift-message {
-    .field {
+    & .field {
         margin-bottom: var(--indent__base);
 
-        .label {
+        & .label {
             color: var(--gift-message-field-label__color);
             font-weight: var(--font-weight__regular);
         }
@@ -18,8 +18,8 @@
 .gift-options {
     //&:extend(.abs-add-clearfix all);
 
-    .actions-toolbar {
-        .action-cancel {
+    & .actions-toolbar {
+        & .action-cancel {
             //&:extend(.abs-action-button-as-link all);
             display: none;
         }
@@ -31,17 +31,17 @@
 }
 
 .gift-options-content {
-    .fieldset {
+    & .fieldset {
         margin: 0 0 var(--indent__base);
     }
 }
 
 .gift-summary {
-    .actions-toolbar {
-        > .secondary {
+    & .actions-toolbar {
+        & > .secondary {
             float: none;
 
-            .action {
+            & .action {
                 margin: var(--indent__s) var(--indent__base) 0 0;
             }
         }
@@ -73,7 +73,7 @@
 
 .cart {
     &.table-wrapper {
-        .gift-content {
+        & .gift-content {
             box-sizing: border-box;
             clear: left;
             display: none;
@@ -97,7 +97,7 @@
     margin: 0;
 
     &._active {
-        .title {
+        & .title {
             //.lib-icon-font-symbol(
             //    var(--icon-up),
             //    var(--_icon-font-position): after
@@ -105,7 +105,7 @@
         }
     }
 
-    .title {
+    & .title {
         font-weight: var(--font-weight__bold);
         border-radius: 3px;
 
@@ -125,7 +125,7 @@
         }
     }
 
-    .content {
+    & .content {
         //&:extend(.abs-add-clearfix all);
         border-bottom: var(--gift-item-block__border-width) solid var(--gift-item-block__border-color);
         padding: var(--indent__s) var(--indent__s) var(--indent__base);
@@ -138,10 +138,10 @@
 //  ---------------------------------------------
 
 .order-details-items {
-    .order-gift-message,
-    .block-order-details-gift-message {
-        .item-options {
-            dt {
+    & .order-gift-message,
+    & .block-order-details-gift-message {
+        & .item-options {
+            & dt {
                 font-weight: var(--font-weight__regular);
                 margin: var(--indent__s) 0;
             }
@@ -149,33 +149,33 @@
 
         //&:extend(.abs-add-clearfix all);
 
-        dt {
+        & dt {
             &:after {
                 content: '';
             }
         }
 
-        .label {
+        & .label {
             //&:extend(.abs-colon all);
         }
 
-        .item-message {
+        & .item-message {
             clear: left;
         }
     }
 
-    .order-items {
-        .order-gift-message {
+    & .order-items {
+        & .order-gift-message {
             &:not(.expanded-content) {
                 //&:extend(.abs-hidden);
             }
 
-            .action.close {
+            & .action.close {
                 //&:extend(.abs-no-display all);
             }
         }
 
-        .action.show {
+        & .action.show {
             //.lib-icon-font(
             //var(--_icon-font-content): var(--icon-down),
             //var(--_icon-font-size): 22px,
@@ -213,8 +213,8 @@
 
 @media (max-width: env(--screen__m)) {
     .gift-options {
-        .actions-toolbar {
-            .action-update {
+        & .actions-toolbar {
+            & .action-update {
                 font-size: 20rem;
                 padding: 15px;
                 width: 100%;
@@ -229,7 +229,7 @@
 
     .cart {
         &.table-wrapper {
-            .gift-content {
+            & .gift-content {
                 margin-right: calc(-1 * var(--indent__s));
             }
         }
@@ -239,7 +239,7 @@
 @media (max-width: env(--screen__s)) {
     .cart {
         &.table-wrapper {
-            .gift-content {
+            & .gift-content {
                 border-bottom: var(--border-width__base) solid var(--border-color__base);
                 margin-bottom: var(--indent__base);
             }
@@ -253,7 +253,7 @@
 
 @media (min-width: env(--screen__m)) {
     .gift-message {
-        .field {
+        & .field {
             margin-bottom: var(--indent__base);
         }
     }
@@ -262,20 +262,20 @@
         position: relative;
         z-index: 1;
 
-        .actions-toolbar {
+        & .actions-toolbar {
             clear: both;
             float: right;
             position: static;
 
-            .secondary {
+            & .secondary {
                 float: right;
 
-                .action {
+                & .action {
                     float: right;
                     margin-left: var(--indent__base);
                 }
 
-                .action-cancel {
+                & .action-cancel {
                     display: block;
                     float: left;
                     margin-top: 6px;
@@ -305,13 +305,13 @@
 
     .gift-summary,
     .cart.table-wrapper .gift-summary {
-        .actions-toolbar {
+        & .actions-toolbar {
             //&:extend(.abs-reset-left-margin-desktop all);
         }
     }
 
     .cart-container {
-        .cart-gift-item {
+        & .cart-gift-item {
             //&:extend(.abs-shopping-cart-items-desktop all);
         }
     }
@@ -322,7 +322,7 @@
 
     .cart {
         &.table-wrapper {
-            .action-gift {
+            & .action-gift {
                 float: left;
             }
         }
@@ -334,7 +334,7 @@
 
     .order-options,
     .table-order-review {
-        .gift-wrapping {
+        & .gift-wrapping {
             max-width: 50%;
         }
     }

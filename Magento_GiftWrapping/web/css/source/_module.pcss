@@ -14,12 +14,12 @@
 }
 
 .gift-wrapping {
-    .label {
+    & .label {
         margin: var(--form-field-type-label-block__margin);
         display: inline-block;
     }
 
-    .field {
+    & .field {
         margin-bottom: var(--indent__s);
     }
 }
@@ -36,7 +36,7 @@
     margin: var(--indent__base) 0 var(--indent__s);
     padding: 0;
 
-    .no-image {
+    & .no-image {
         background: var(--gift-wrapping-no-image__background);
         //.lib-icon-font(
         //var(--icon-present),
@@ -72,7 +72,7 @@
     }
 
     &._active {
-        span {
+        & span {
             &:before {
                 border: var(--gift-wrapping-preview__active__border-width) solid var(--gift-wrapping-preview__active__border-color);
                 box-sizing: border-box;
@@ -86,7 +86,7 @@
         }
     }
 
-    > span {
+    & > span {
         height: var(--gift-wrapping-thumbnail__height);
         width: var(--gift-wrapping-thumbnail__width);
     }
@@ -95,14 +95,14 @@
 .gift-wrapping-title {
     margin: var(--indent__s) 0;
 
-    .action-remove {
+    & .action-remove {
         margin-left: var(--indent__xs);
     }
 }
 
 .gift-options-content {
-    .fieldset {
-        > .field {
+    & .fieldset {
+        & > .field {
             margin: 0 0 var(--indent__xs);
 
             &:before {
@@ -113,7 +113,7 @@
 }
 
 .gift-wrapping-summary {
-    .gift-wrapping-title {
+    & .gift-wrapping-title {
         border: 0;
         display: inline-block;
         padding: 0;
@@ -123,18 +123,18 @@
 .opc-wrapper .data.table,
 .table-order-items,
 .table-order-review {
-    .gift-wrapping {
+    & .gift-wrapping {
         //&:extend(.abs-add-clearfix all);
         margin: var(--indent__base) 0;
 
-        .title {
+        & .title {
             float: none;
         }
 
-        .content {
+        & .content {
             margin: 0;
 
-            > img {
+            & > img {
                 float: left;
                 margin: 0 var(--indent__s) 0 0;
                 max-height: 50px;
@@ -148,16 +148,16 @@
 .gift-options {
     //&:extend(.abs-adjustment-incl-excl-tax all);
 
-    .price-box {
+    & .price-box {
         margin-left: 22px;
     }
 
-    .regular-price {
+    & .regular-price {
         &:before {
             content: attr(data-label)': ';
         }
 
-        .price {
+        & .price {
             font-weight: var(--font-weight__bold);
         }
     }
@@ -168,21 +168,21 @@
 //  ---------------------------------------------
 
 .order-options {
-    .item {
+    & .item {
         padding-bottom: var(--indent__base);
     }
 
-    .product {
+    & .product {
         //&:extend(.abs-add-clearfix all);
         margin-bottom: var(--indent__s);
     }
 
-    .product-image-container {
+    & .product-image-container {
         float: left;
         padding-right: var(--indent__s);
     }
 
-    .gift-wrapping {
+    & .gift-wrapping {
         margin-bottom: var(--indent__s);
     }
 }
@@ -203,16 +203,16 @@
     }
 
     .gift-wrapping-preview {
-        img {
+        & img {
             width: 100%;
         }
     }
 
     .item-actions {
-        .actions-toolbar {
-            .gift-options {
-                .gift-wrapping,
-                .gift-message {
+        & .actions-toolbar {
+            & .gift-options {
+                & .gift-wrapping,
+                & .gift-message {
                     display: block;
                 }
             }
@@ -226,14 +226,14 @@
 
 @media (min-width: env(--screen__m)) {
     .gift-wrapping {
-        .nested {
+        & .nested {
             //&:extend(.abs-add-clearfix-desktop all);
         }
     }
 
     .table {
-        .gift-wrapping {
-            .content {
+        & .gift-wrapping {
+            & .content {
                 //&:extend(.abs-add-clearfix-desktop all);
             }
         }
@@ -241,7 +241,7 @@
 
     .gift-options-cart-item,
     .cart-gift-item {
-        .gift-wrapping {
+        & .gift-wrapping {
             box-sizing: border-box;
             float: left;
             padding-right: var(--indent__base);

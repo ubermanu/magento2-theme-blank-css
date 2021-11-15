@@ -8,19 +8,19 @@
     margin: 0 0 15px;
     padding: 18px 15px;
 
-    .estimated-block {
+    & .estimated-block {
         font-size: var(--checkout-step-title-mobile__font-size);
         font-weight: var(--font-weight__bold);
         float: left;
 
-        .estimated-label {
+        & .estimated-label {
             display: block;
             margin: 0 0 var(--indent__xs);
         }
     }
 
-    .minicart-wrapper {
-        .action {
+    & .minicart-wrapper {
+        & .action {
             &.showcart {
                 &:before {
                     color: var(--button__color);
@@ -39,7 +39,7 @@
 //  _____________________________________________
 
 @media (min-width: env(--screen__m)) {
-    .opc-estimated-wrapper {
+    & .opc-estimated-wrapper {
         //&:extend(.abs-no-display-desktop all);
     }
 }

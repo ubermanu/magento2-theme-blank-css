@@ -20,19 +20,19 @@
     }
 
     //  Black prints faster: h5bp.com/s
-    a,
-    a:visited {
+    & a,
+    & a:visited {
         text-decoration: underline !important;
     }
 
     //  Don't show links for images, or javascript/internal links
-    pre,
-    blockquote {
+    & pre,
+    & blockquote {
         border: 1px solid var(--color-gray60);
         page-break-inside: avoid;
     }
 
-    thead {
+    & thead {
         display: table-header-group;
     }
 
@@ -51,12 +51,12 @@
     }
 
     .box,
-    tr,
-    img {
+    & tr,
+    & img {
         page-break-inside: avoid;
     }
 
-    img {
+    & img {
         max-width: 100% !important;
     }
 
@@ -65,9 +65,9 @@
     }
 
     .block-content,
-    p,
-    h2,
-    h3 {
+    & p,
+    & h2,
+    & h3 {
         orphans: 3;
         widows: 3;
     }
@@ -77,8 +77,8 @@
     }
 
     .block-title,
-    h2,
-    h3 {
+    & h2,
+    & h3 {
         page-break-after: avoid;
     }
 

@@ -145,34 +145,34 @@ body {
 .modal-slide {
     //.lib-modal-slide();
     &._inner-scroll {
-        .modal-inner-wrap {
+        & .modal-inner-wrap {
             overflow-y: visible;
             //.lib-vendor-prefix-display(flex);
             //.lib-vendor-prefix-flex-direction(column);
         }
 
-        .modal-header,
-        .modal-footer {
+        & .modal-header,
+        & .modal-footer {
             //.lib-vendor-prefix-flex-grow(0);
             //.lib-vendor-prefix-flex-shrink(0);
         }
 
-        .modal-content {
+        & .modal-content {
             overflow-y: auto;
         }
 
-        .modal-footer {
+        & .modal-footer {
             margin-top: auto;
         }
     }
 
-    .modal-header,
-    .modal-content,
-    .modal-footer {
+    & .modal-header,
+    & .modal-content,
+    & .modal-footer {
         padding: 0 var(--modal-slide__padding) var(--modal-slide__padding);
     }
 
-    .modal-header {
+    & .modal-header {
         padding-bottom: var(--modal-slide-header__padding-vertical);
         padding-top: var(--modal-slide-header__padding-vertical);
     }
@@ -185,48 +185,48 @@ body {
     &._inner-scroll {
         overflow-y: visible;
 
-        .ie11 & {
+        & .ie11 & {
             overflow-y: auto;
         }
 
-        .modal-inner-wrap {
+        & .modal-inner-wrap {
             max-height: 90%;
 
-            .ie11 & {
+            & .ie11 & {
                 max-height: none;
             }
         }
 
-        .modal-content {
+        & .modal-content {
             overflow-y: auto;
         }
     }
 
-    .modal-header,
-    .modal-content,
-    .modal-footer {
+    & .modal-header,
+    & .modal-content,
+    & .modal-footer {
         padding-left: var(--modal-popup__padding);
         padding-right: var(--modal-popup__padding);
     }
 
-    .modal-header,
-    .modal-footer {
+    & .modal-header,
+    & .modal-footer {
         //.lib-vendor-prefix-flex-grow(0);
         //.lib-vendor-prefix-flex-shrink(0);
     }
 
-    .modal-header {
+    & .modal-header {
         padding-bottom: var(--modal-popup__padding) / 2.5;
         padding-top: var(--modal-popup__padding);
     }
 
-    .modal-footer {
+    & .modal-footer {
         margin-top: auto;
         padding-bottom: var(--modal-popup__padding);
         padding-top: var(--modal-popup__padding);
     }
 
-    .modal-footer-actions {
+    & .modal-footer-actions {
         text-align: right;
     }
 }
@@ -241,7 +241,7 @@ body {
         &.modal-slide {
             //.lib-modal-slide();
 
-            .modal-inner-wrap {
+            & .modal-inner-wrap {
                 margin: 0;
                 max-height: none;
             }

@@ -19,43 +19,43 @@
     padding: var(--checkout-summary__padding);
     margin: 0 0 var(--indent__base);
 
-    > .title {
+    & > .title {
         //&:extend(.abs-checkout-title all);
         display: block;
     }
 
     //  Totals table
-    .table-totals {
+    & .table-totals {
         //&:extend(.abs-sidebar-totals all);
     }
 
-    .mark {
-        .value {
+    & .mark {
+        & .value {
             color: var(--checkout-summary-mark-value__color);
             display: block;
         }
     }
 
-    .discount.coupon {
+    & .discount.coupon {
         display: none;
     }
 
-    .grand.incl {
+    & .grand.incl {
         & + .grand.excl {
-            .mark,
-            .amount {
+            & .mark,
+            & .amount {
                 border-top: 0;
                 font-size: 14rem;
                 padding-top: 0;
 
-                strong {
+                & strong {
                     font-weight: var(--font-weight__regular);
                 }
             }
         }
     }
 
-    .not-calculated {
+    & .not-calculated {
         font-style: italic;
     }
 
@@ -64,8 +64,8 @@
     //  ---------------------------------------------
 
     //  Block title
-    .items-in-cart {
-        > .title {
+    & .items-in-cart {
+        & > .title {
             border-bottom: var(--border-width__base) solid var(--border-color__base);
             padding: var(--indent__s) var(--indent__xl) var(--indent__s) 0;
             cursor: pointer;
@@ -87,7 +87,7 @@
                 top: var(--indent__s);
             }
 
-            strong {
+            & strong {
                 font-size: 18rem;
                 font-weight: var(--font-weight__light);
                 margin: 0;
@@ -95,7 +95,7 @@
         }
 
         &.active {
-            > .title {
+            & > .title {
                 //.lib-icon-font-symbol(
                 //var(--_icon-font-content): var(--icon-up),
                 //var(--_icon-font-position): after
@@ -103,9 +103,9 @@
             }
         }
 
-        .product {
+        & .product {
             position: relative;
-            .item-options {
+            & .item-options {
                 //&:extend(.abs-product-options-list all);
                 //&:extend(.abs-add-clearfix all);
             }
@@ -113,59 +113,59 @@
     }
 
     //  Cart items
-    .minicart-items-wrapper {
+    & .minicart-items-wrapper {
         margin: 0 calc(-1 * var(--checkout-summary-items__padding)) 0 0;
         max-height: var(--checkout-summary-items__max-height);
         padding: var(--checkout-summary-items__padding) var(--checkout-summary-items__padding) 0 0;
         border: 0;
     }
 
-    .column.main & {
-        .product-item {
+    & .column.main & {
+        & .product-item {
             margin: 0;
             padding-left: 0;
         }
     }
 
-    .product-item {
-        .product-item-inner {
+    & .product-item {
+        & .product-item-inner {
             display: table;
             margin: 0 0 var(--indent__s);
             width: 100%;
         }
 
-        .product-item-name-block {
+        & .product-item-name-block {
             display: table-cell;
             padding-right: var(--indent__xs);
             text-align: left;
         }
 
-        .subtotal {
+        & .subtotal {
             display: table-cell;
             text-align: right;
         }
 
-        .price {
+        & .price {
             font-size: 16rem;
             font-weight: var(--font-weight__regular);
         }
 
-        .price-including-tax {
+        & .price-including-tax {
             & + .price-excluding-tax {
                 margin: 0;
 
-                .price {
+                & .price {
                     font-size: 10rem;
                 }
             }
         }
     }
 
-    .actions-toolbar {
+    & .actions-toolbar {
         position: relative;
         z-index: 1;
 
-        .secondary {
+        & .secondary {
             border-top: var(--border-width__base) solid var(--border-color__base);
             display: block;
             float: none;
@@ -173,7 +173,7 @@
             padding: 15px 0 0;
             text-align: left;
 
-            .action {
+            & .action {
                 margin: 0;
             }
         }
@@ -186,8 +186,8 @@
 
 @media (min-width: env(--screen__m)) {
     .opc-summary-wrapper {
-        .modal-header {
-            .action-close {
+        & .modal-header {
+            & .action-close {
                 display: none;
             }
         }

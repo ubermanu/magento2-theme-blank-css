@@ -9,30 +9,30 @@
         margin-bottom: var(--indent__base);
     }
 
-    > .field,
-    > .fields > .field {
+    & > .field,
+    & > .fields > .field {
         //.lib-form-field();
 
         &.no-label {
-            > .label {
+            & > .label {
                 //&:extend(.abs-visually-hidden all);
             }
         }
 
         &.choice {
-            .label {
+            & .label {
                 display: inline;
                 font-weight: normal;
             }
         }
 
-        .label {
-            .column:not(.main) & {
+        & .label {
+            & .column:not(.main) & {
                 font-weight: normal;
             }
         }
 
-        .field.choice {
+        & .field.choice {
             margin-bottom: var(--indent__s);
 
             &:last-child {
@@ -40,7 +40,7 @@
             }
         }
 
-        input[type=file] {
+        & input[type=file] {
             margin: var(--indent__xs) 0;
         }
     }
@@ -52,7 +52,7 @@
 }
 
 .legend {
-    strong {
+    & strong {
         margin-left: var(--indent__xs);
     }
 }
@@ -66,14 +66,14 @@ fieldset.field {
     &.date {
         //&:extend(.abs-field-date all);
 
-        .time-picker {
+        & .time-picker {
             display: inline-block;
             margin-top: var(--indent__s);
             white-space: nowrap;
         }
     }
 
-    .message {
+    & .message {
         &.warning {
             margin-top: var(--indent__s);
         }
@@ -90,9 +90,9 @@ div.mage-error[generated] {
 }
 
 .product-options-wrapper {
-    .date {
+    & .date {
         &.required {
-            div[for*='options'] {
+            & div[for*='options'] {
                 &.mage-error {
                     display: none !important;
                 }
@@ -103,7 +103,7 @@ div.mage-error[generated] {
 
 .field .tooltip {
     //.lib-tooltip(right);
-    .tooltip-content {
+    & .tooltip-content {
         min-width: 200px;
         white-space: normal;
     }
@@ -140,23 +140,23 @@ select:focus ~ .tooltip .tooltip-content {
 //  -----------------------------------------
 
 .sidebar {
-    .fieldset {
+    & .fieldset {
         margin: 0;
 
-        > .field:not(.choice) >,
-        .fields > .field {
+        & > .field:not(.choice) >,
+        & .fields > .field {
             &:not(:last-child) {
                 margin: 0 0 var(--form-field__vertical-indent);
             }
 
-            .label {
+            & .label {
                 margin: 0 0 4px;
                 padding: 0 0 var(--indent__xs);
                 text-align: left;
                 width: 100%;
             }
 
-            .control {
+            & .control {
                 width: 100%;
             }
         }
@@ -168,12 +168,12 @@ select:focus ~ .tooltip .tooltip-content {
 //  _____________________________________________
 
 @media (min-width: env(--screen__m)) {
-    .fieldset {
-        .legend {
+    & .fieldset {
+        & .legend {
             //&:extend(.abs-margin-for-forms-desktop all);
         }
 
-        > .field {
+        & > .field {
             //.lib-form-field-type-revert();
             margin: 0 0 var(--form-field__vertical-indent__desktop);
         }

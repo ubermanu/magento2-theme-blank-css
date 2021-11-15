@@ -1,20 +1,20 @@
 .my-credit-cards {
-    .status {
+    & .status {
         font-style: italic;
     }
 
-    .action.delete {
+    & .action.delete {
         //.lib-button-reset();
         //.lib-button-as-link();
     }
 }
 
 .my-credit-cards-popup {
-    .modal-footer {
+    & .modal-footer {
         text-align: right;
     }
 
-    .action.secondary {
+    & .action.secondary {
         //.lib-button-reset();
         //.lib-button-as-link();
         margin-right: var(--indent__base);
@@ -27,8 +27,8 @@
 
 @media (max-width: env(--screen__m)) {
     .my-credit-cards {
-        .table:not(.totals):not(.cart):not(.table-comparison) {
-            .status {
+        & .table:not(.totals):not(.cart):not(.table-comparison) {
+            & .status {
                 display: none;
 
                 &:before {
@@ -41,8 +41,8 @@
             }
         }
 
-        .card-type {
-            img {
+        & .card-type {
+            & img {
                 vertical-align: middle;
             }
         }
@@ -55,8 +55,8 @@
 
 @media (min-width: env(--screen__m)) {
     .my-credit-cards {
-        .card-type {
-            img {
+        & .card-type {
+            & img {
                 display: block;
             }
         }

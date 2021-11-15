@@ -2,22 +2,22 @@
 .block.newsletter {
     margin-bottom: var(--indent__xl);
 
-    .form.subscribe {
+    & .form.subscribe {
         display: table;
         width: 100%;
     }
 
-    .fieldset {
+    & .fieldset {
         display: table-cell;
         margin: 0;
         padding: 0;
         vertical-align: top;
     }
 
-    .field {
+    & .field {
         margin: 0;
 
-        .control {
+        & .control {
             //.lib-icon-font(
             //var(--icon-envelope),
             //var(--_icon-font-size): 35px,
@@ -32,26 +32,26 @@
         }
     }
 
-    input {
+    & input {
         margin-right: 35px;
         padding: 0 0 0 35px; // Reset some default Safari padding values.
     }
 
-    .title {
+    & .title {
         display: none;
     }
 
-    .label {
+    & .label {
         //&:extend(.abs-visually-hidden all);
     }
 
-    .actions {
+    & .actions {
         display: table-cell;
         vertical-align: top;
         width: 1%;
     }
 
-    .action.subscribe {
+    & .action.subscribe {
         border-bottom-left-radius: 0;
         border-top-left-radius: 0;
         margin-left: -1px;
@@ -67,19 +67,19 @@
         max-width: 44%;
         width: max-content;
 
-        .field {
+        & .field {
             margin-right: 5px;
 
             &.newsletter {
                 max-width: 220px;
             }
 
-            .control {
+            & .control {
                 width: 100%;
             }
         }
 
-        .action.subscribe {
+        & .action.subscribe {
             border-radius: 3px;
         }
     }

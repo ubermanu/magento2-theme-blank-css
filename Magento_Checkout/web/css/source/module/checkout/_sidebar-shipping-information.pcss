@@ -17,13 +17,13 @@
 .opc-block-shipping-information {
     padding: 0 var(--checkout-sidebar-shipping-information__padding);
 
-    .shipping-information-title {
+    & .shipping-information-title {
         //&:extend(.abs-checkout-title all);
         border-bottom: var(--checkout-step-title__border);
         margin: 0 0 var(--indent__base);
         position: relative;
 
-        .action-edit {
+        & .action-edit {
             //&:extend(.abs-action-button-as-link all);
             top: var(--checkout-sidebar-shipping-information-edit-icon__top);
             //.lib-icon-font(
@@ -41,22 +41,22 @@
         }
     }
 
-    .shipping-information-content {
+    & .shipping-information-content {
         line-height: var(--checkout-sidebar-shipping-information__line-height);
-        .actions-toolbar {
+        & .actions-toolbar {
             margin-left: 0;
         }
     }
 
-    .ship-to,
-    .ship-via {
+    & .ship-to,
+    & .ship-via {
         margin: 0 0 var(--indent__base);
     }
 }
 
 @media (max-width: env(--screen__s)) {
     .opc-block-shipping-information {
-        .shipping-information-title {
+        & .shipping-information-title {
             font-size: 2.3rem;
         }
     }

@@ -1,13 +1,13 @@
 .block-event {
-    .columns & {
+    & .columns & {
         position: relative;
         z-index: 2;
     }
 
-    .block-content {
+    & .block-content {
         position: relative;
 
-        >  .action {
+        & >  .action {
             cursor: pointer;
             margin-top: -6px;
             position: absolute;
@@ -56,16 +56,16 @@
         }
     }
 
-    .slider-panel {
+    & .slider-panel {
         overflow: hidden;
         position: relative;
         z-index: 2;
 
-        .slider {
+        & .slider {
             //&:extend(.abs-reset-list all);
             white-space: nowrap;
 
-            .item {
+            & .item {
                 background: var(--catalog-event-background-color);
                 display: inline-block;
                 text-align: center;
@@ -73,51 +73,51 @@
                 white-space: normal;
                 width: 16.35%;
 
-                .sidebar-main &,
-                .sidebar-additional & {
+                & .sidebar-main &,
+                & .sidebar-additional & {
                     width: 100%;
                 }
 
-                img {
+                & img {
                     max-width: 100%;
                 }
 
-                .category-name {
+                & .category-name {
                     display: inline-block;
                     font-size: 18rem;
                     padding: 15px 5px 0;
                     word-break: break-all;
                 }
 
-                .ticker {
+                & .ticker {
                     //.lib-list-reset-styles();
 
-                    li {
+                    & li {
                         display: none;
                         margin: 0 5px;
                     }
 
-                    .value {
+                    & .value {
                         font-size: 26rem;
                         font-weight: var(--font-weight__light);
                     }
 
-                    .label {
+                    & .label {
                         display: block;
                         font-size: 13rem;
                     }
                 }
 
-                .dates {
+                & .dates {
                     font-weight: var(--font-weight__light);
 
-                    .start,
-                    .end,
-                    .date {
+                    & .start,
+                    & .end,
+                    & .date {
                         display: block;
                     }
 
-                    .start {
+                    & .start {
                         &:after {
                             font-size: 18rem;
                             content: '\2013';
@@ -125,40 +125,40 @@
                         }
                     }
 
-                    .date {
+                    & .date {
                         font-size: 18rem;
                         font-weight: var(--font-weight__light);
                     }
 
-                    .time {
+                    & .time {
                         font-size: 13rem;
                     }
                 }
 
-                .box-event {
-                    .box-content {
+                & .box-event {
+                    & .box-content {
                         padding: 5px 0 var(--indent__s);
                     }
 
-                    .box-title {
+                    & .box-title {
                         display: block;
                         font-weight: var(--font-weight__light);
                         margin: var(--indent__s) 0 0;
                     }
                 }
 
-                .action {
+                & .action {
                     &.show {
                         //&:extend(.abs-add-box-sizing all);
                         display: block;
                         padding: 0;
 
-                        .category.name {
+                        & .category.name {
                             display: inline-block;
                             padding: 30px 10px 0;
                         }
 
-                        img {
+                        & img {
                             display: block;
                         }
                     }

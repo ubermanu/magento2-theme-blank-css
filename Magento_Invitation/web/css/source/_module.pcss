@@ -1,6 +1,6 @@
 .form-add-invitations {
     //&:extend(.abs-add-fields all);
-    .action {
+    & .action {
         &.add {
             //.lib-button-icon(
             //    var(--_icon-font-content): var(--icon-expand),
@@ -15,9 +15,9 @@
 }
 
 @media (max-width: env(--screen__m)) {
-    .form-add-invitations {
-        .additional,
-        .field.text {
+    & .form-add-invitations {
+        & .additional,
+        & .field.text {
             margin-top: var(--form-field__vertical-indent);
         }
     }
@@ -28,16 +28,16 @@
 //  _____________________________________________
 
 @media (min-width: env(--screen__m)) {
-    .form-add-invitations {
+    & .form-add-invitations {
         //&:extend(.abs-add-fields-desktop all);
-        .additional,
-        .field.text {
+        & .additional,
+        & .field.text {
             margin-top: var(--form-field__vertical-indent__desktop);
         }
     }
 
-    .table-invitations {
-        .col {
+    & .table-invitations {
+        & .col {
             width: 50%;
         }
     }
