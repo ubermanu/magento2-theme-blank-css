@@ -7,162 +7,162 @@
 //  Variables
 //  _____________________________________________
 
-@checkout-payment-option-title__border: @checkout-payment-method-title__border;
-@checkout-payment-option-title__color: @link__color;
-@checkout-payment-option-title__padding: @checkout-payment-method-title__padding;
-@checkout-payment-option-title-mobile__padding: @checkout-payment-method-title-mobile__padding;
+:root {
+    --checkout-payment-option-title__border: var(--checkout-payment-method-title__border);
+    --checkout-payment-option-title__color: var(--link__color);
+    --checkout-payment-option-title__padding: var(--checkout-payment-method-title__padding);
+    --checkout-payment-option-title-mobile__padding: var(--checkout-payment-method-title-mobile__padding);
 
-@checkout-payment-option-title-icon__font-size: 32px;
-@checkout-payment-option-title-icon__line-height: 16px;
-@checkout-payment-option-title-icon__margin: 0;
-@checkout-payment-option-title-icon__color: @minicart-icons-color;
-@checkout-payment-option-title-icon__hover__color: @primary__color;
+    --checkout-payment-option-title-icon__font-size: 32px;
+    --checkout-payment-option-title-icon__line-height: 16px;
+    --checkout-payment-option-title-icon__margin: 0;
+    --checkout-payment-option-title-icon__color: var(--minicart-icons-color);
+    --checkout-payment-option-title-icon__hover__color: var(--primary__color);
 
-@checkout-payment-option-content__padding__xl: @checkout-payment-method-content__padding__xl;
+    --checkout-payment-option-content__padding__xl: var(--checkout-payment-method-content__padding__xl);
+}
 
 //
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .checkout-payment-method {
-        .payment-option {
+.checkout-payment-method {
+    .payment-option {
+        &._active {
+            .payment-option-title {
+                .action-toggle {
+                    &:after {
+                        content: var(--icon-up);
+                    }
+                }
+            }
+        }
+
+        &._collapsible {
+            .payment-option-title {
+                cursor: pointer;
+            }
+
+            .payment-option-content {
+                display: none;
+            }
+        }
+    }
+
+    .payment-option-title {
+        border-top: var(--checkout-payment-option-title__border);
+        padding: var(--checkout-payment-option-title__padding) 0;
+
+        .action-toggle {
+            color: var(--checkout-payment-option-title__color);
+            //.lib-icon-font(
+            //    var(--icon-down),
+            //    var(--_icon-font-size): var(--checkout-payment-option-title-icon__font-size),
+            //    var(--_icon-font-line-height): var(--checkout-payment-option-title-icon__line-height),
+            //    var(--_icon-font-color): var(--checkout-payment-option-title-icon__color),
+            //    var(--_icon-font-color-hover): var(--checkout-payment-option-title-icon__hover__color),
+            //    var(--_icon-font-color-active): var(--checkout-payment-option-title-icon__color),
+            //    var(--_icon-font-margin): var(--checkout-payment-option-title-icon__margin),
+            //    var(--_icon-font-position): after
+            //);
+        }
+    }
+
+    .payment-option-content {
+        padding: 0 0 var(--indent__base) var(--checkout-payment-option-content__padding__xl);
+    }
+
+    .payment-option-inner {
+        margin: 0 0 var(--indent__base);
+    }
+
+    .credit-card-types {
+        padding: 0;
+
+        .item {
+            display: inline-block;
+            list-style: none;
+            margin: 0 var(--indent__xs) 0 0;
+            vertical-align: top;
+
             &._active {
-                .payment-option-title {
-                    .action-toggle {
-                        &:after {
-                            content: @icon-up;
-                        }
-                    }
+                font-weight: var(--font-weight__bold);
+
+                img {
+                    -webkit-filter: grayscale(0%);
                 }
             }
 
-            &._collapsible {
-                .payment-option-title {
-                    cursor: pointer;
-                }
-
-                .payment-option-content {
-                    display: none;
-                }
+            &._inactive {
+                opacity: .4;
             }
-        }
 
-        .payment-option-title {
-            .lib-css(border-top, @checkout-payment-option-title__border);
-            .lib-css(padding, @checkout-payment-option-title__padding 0);
-
-            .action-toggle {
-                .lib-css(color, @checkout-payment-option-title__color);
-                .lib-icon-font(
-                    @icon-down,
-                    @_icon-font-size: @checkout-payment-option-title-icon__font-size,
-                    @_icon-font-line-height: @checkout-payment-option-title-icon__line-height,
-                    @_icon-font-color: @checkout-payment-option-title-icon__color,
-                    @_icon-font-color-hover: @checkout-payment-option-title-icon__hover__color,
-                    @_icon-font-color-active: @checkout-payment-option-title-icon__color,
-                    @_icon-font-margin: @checkout-payment-option-title-icon__margin,
-                    @_icon-font-position: after
-                );
-            }
-        }
-
-        .payment-option-content {
-            .lib-css(padding, 0 0 @indent__base @checkout-payment-option-content__padding__xl);
-        }
-
-        .payment-option-inner {
-            margin: 0 0 @indent__base;
-        }
-
-        .credit-card-types {
-            padding: 0;
-
-            .item {
+            span {
                 display: inline-block;
-                list-style: none;
-                margin: 0 @indent__xs 0 0;
+                padding-top: 6px;
                 vertical-align: top;
-
-                &._active {
-                    font-weight: @font-weight__bold;
-
-                    img {
-                        -webkit-filter: grayscale(0%);
-                    }
-                }
-
-                &._inactive {
-                    opacity: .4;
-                }
-
-                span {
-                    display: inline-block;
-                    padding-top: 6px;
-                    vertical-align: top;
-                }
-            }
-
-            img {
-                -webkit-filter: grayscale(100%); // For Webkit browsers
-                -webkit-transition: all .6s ease; // Fade to color for Chrome and Safari
             }
         }
 
-        .ccard {
-            .legend {
-                &:extend(.abs-visually-hidden all);
+        img {
+            -webkit-filter: grayscale(100%); // For Webkit browsers
+            -webkit-transition: all .6s ease; // Fade to color for Chrome and Safari
+        }
+    }
+
+    .ccard {
+        .legend {
+            //&:extend(.abs-visually-hidden all);
+        }
+
+        .fields {
+            > .year {
+                padding-left: var(--indent__xs);
             }
 
-            .fields {
-                > .year {
-                    padding-left: @indent__xs;
-                }
-
-                .select {
-                    padding-left: @indent__xs;
-                    padding-right: @indent__xs;
-                }
+            .select {
+                padding-left: var(--indent__xs);
+                padding-right: var(--indent__xs);
             }
+        }
 
-            .month {
-                .select {
-                    width: 140px;
-                }
+        .month {
+            .select {
+                width: 140px;
             }
+        }
 
-            .year {
-                .select {
-                    width: 80px;
-                }
+        .year {
+            .select {
+                width: 80px;
             }
+        }
 
-            .captcha,
-            .number {
-                .input-text {
-                    width: 225px;
-                }
+        .captcha,
+        .number {
+            .input-text {
+                width: 225px;
             }
+        }
 
-            > .field.cvv {
-                > .control {
-                    padding-right: @indent__base;
-                    width: auto;
-                }
+        > .field.cvv {
+            > .control {
+                padding-right: var(--indent__base);
+                width: auto;
             }
+        }
 
-            .cvv {
-                .input-text {
-                    width: 55px;
-                }
+        .cvv {
+            .input-text {
+                width: 55px;
             }
+        }
 
-            &.fieldset {
-                > .field {
-                    .fields.group.group-2 {
-                        .field {
-                            width: auto !important;
-                        }
+        &.fieldset {
+            > .field {
+                .fields.group.group-2 {
+                    .field {
+                        width: auto !important;
                     }
                 }
             }
@@ -174,17 +174,17 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+@media (max-width: env(--screen__m)) {
     .checkout-payment-method {
         .payment-option {
-            .lib-css(margin, 0 -(@checkout-payment-option-title-mobile__padding));
+            margin: 0 calc(-1 * var(--checkout-payment-option-title-mobile__padding));
 
             .payment-option-title {
-                .lib-css(padding, @checkout-payment-option-title-mobile__padding)
+                padding: var(--checkout-payment-option-title-mobile__padding);
             }
 
             .payment-option-content {
-                .lib-css(padding, 0 @checkout-payment-option-title-mobile__padding @indent__base);
+                padding: 0 var(--checkout-payment-option-title-mobile__padding) var(--indent__base);
             }
         }
     }
@@ -194,10 +194,10 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .checkout-payment-method {
         .payment-option-title {
-            .lib-css(padding-left, @checkout-payment-option-content__padding__xl);
+            padding-left: var(--checkout-payment-option-content__padding__xl);
         }
 
         .payment-option-content {

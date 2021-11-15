@@ -3,88 +3,83 @@
 //  * See COPYING.txt for license details.
 //  */
 
-@catalog-event-background-color: @color-gray94;
-@catalog-event-color: @primary__color;
+:root {
+    --catalog-event-background-color: var(--color-gray94);
+    --catalog-event-color: var(--primary__color);
+}
 
 //
-//  Common
-//  _____________________________________________
+//  Catalog Events
+//  ---------------------------------------------
 
-& when (@media-common = true) {
+.block-category-event {
+    background: var(--catalog-event-background-color);
+    color: var(--catalog-event-color);
+    padding: var(--indent__s) 0 15px;
+    text-align: center;
 
-    //
-    //  Catalog Events
-    //  ---------------------------------------------
+    &.block:last-child {
+        margin-bottom: var(--indent__s);
+    }
 
-    .block-category-event {
-        .lib-css(background, @catalog-event-background-color);
-        .lib-css(color, @catalog-event-color);
-        padding: @indent__s 0 15px;
-        text-align: center;
+    .block-title {
+        margin: 0 0 var(--indent__s);
 
-        &.block:last-child {
-            margin-bottom: @indent__s;
+        strong {
+            font-size: 15rem;
+            font-weight: var(--font-weight__light);
+        }
+    }
+
+    .ticker {
+        //.lib-list-reset-styles();
+
+        li {
+            display: none;
+            margin: 0 15px;
         }
 
-        .block-title {
-            margin: 0 0 @indent__s;
-
-            strong {
-                .lib-font-size(15);
-                font-weight: @font-weight__light;
-            }
+        .value {
+            font-size: 18rem;
+            font-weight: var(--font-weight__light);
         }
 
-        .ticker {
-            .lib-list-reset-styles();
+        .label {
+            font-size: 10rem;
+            display: block;
+            text-transform: lowercase;
+        }
+    }
 
-            li {
-                display: none;
-                margin: 0 15px;
-            }
+    .dates {
+        display: table;
+        margin: 0 auto;
 
-            .value {
-                .lib-font-size(18);
-                font-weight: @font-weight__light;
-            }
+        .start,
+        .end {
+            display: table-cell;
+            vertical-align: top;
+        }
 
-            .label {
-                .lib-font-size(10);
+        .date {
+            font-size: 18rem;
+        }
+
+        .time {
+            display: block;
+        }
+
+        .start {
+            padding-right: var(--indent__xl);
+            position: relative;
+
+            &:after {
+                font-size: 18rem;
+                content: '\2013';
                 display: block;
-                text-transform: lowercase;
-            }
-        }
-
-        .dates {
-            display: table;
-            margin: 0 auto;
-
-            .start,
-            .end {
-                display: table-cell;
-                vertical-align: top;
-            }
-
-            .date {
-                .lib-font-size(18);
-            }
-
-            .time {
-                display: block;
-            }
-
-            .start {
-                padding-right: @indent__xl;
-                position: relative;
-
-                &:after {
-                    .lib-font-size(18);
-                    content: '\2013';
-                    display: block;
-                    position: absolute;
-                    right: 15px;
-                    top: 0;
-                }
+                position: absolute;
+                right: 15px;
+                top: 0;
             }
         }
     }
@@ -94,18 +89,18 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .block-category-event {
         &.block:last-child {
-            margin-bottom: @indent__l;
-            padding: @indent__s 0 @indent__l;
+            margin-bottom: var(--indent__l);
+            padding: var(--indent__s) 0 var(--indent__l);
         }
 
         .block-title {
             margin: 0;
 
             strong {
-                .lib-font-size(24);
+                font-size: 24rem;
             }
         }
 
@@ -116,25 +111,25 @@
             }
 
             .value {
-                .lib-font-size(60);
+                font-size: 60rem;
             }
 
             .label {
-                .lib-font-size(14);
+                font-size: 14rem;
                 text-transform: none;
             }
         }
 
         .dates {
             .date {
-                .lib-font-size(50);
+                font-size: 50rem;
             }
 
             .start {
                 padding-right: 50px;
 
                 &:after {
-                    .lib-font-size(50);
+                    font-size: 50rem;
                     right: 10px;
                 }
             }

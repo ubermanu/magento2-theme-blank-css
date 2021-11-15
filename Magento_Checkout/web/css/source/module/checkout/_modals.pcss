@@ -7,19 +7,19 @@
 //  Variables
 //  _____________________________________________
 
-@checkout-modal-popup__width: 800px;
+:root {
+    --checkout-modal-popup__width: 800px;
+}
 
 //
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .checkout-index-index {
-        .modal-popup {
-            .field-tooltip {
-                .field-tooltip-content {
-                    &:extend(.abs-checkout-tooltip-content-position-top all);
-                }
+.checkout-index-index {
+    .modal-popup {
+        .field-tooltip {
+            .field-tooltip-content {
+                //&:extend(.abs-checkout-tooltip-content-position-top all);
             }
         }
     }
@@ -29,33 +29,33 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .checkout-index-index {
         .modal-popup {
             .form-shipping-address {
-                .lib-css(max-width, @checkout-shipping-address__max-width);
+                max-width: var(--checkout-shipping-address__max-width);
             }
 
             .modal-footer {
                 .action-save-address {
                     float: right;
-                    margin: 0 0 0 @indent__s;
+                    margin: 0 0 0 var(--indent__s);
                 }
 
                 .action-hide-popup {
-                    &:extend(.abs-action-button-as-link all);
+                    //&:extend(.abs-action-button-as-link all);
                 }
             }
         }
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+@media (min-width: env(--screen__l)) {
     .checkout-index-index {
         .modal-popup {
             .modal-inner-wrap {
-                .lib-css(margin-left, -(@checkout-modal-popup__width/2));
-                .lib-css(width, @checkout-modal-popup__width);
+                margin-left: calc(-1 * var(--checkout-modal-popup__width) / 2);
+                width: var(--checkout-modal-popup__width);
                 left: 50%;
             }
         }

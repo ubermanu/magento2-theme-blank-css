@@ -7,17 +7,19 @@
 //  Variables
 //  _____________________________________________
 
-@checkout-sidebar__margin: @indent__base;
-@checkout-sidebar__margin__xl: 46px;
-@checkout-sidebar__columns: 4;
+:root {
+    --checkout-sidebar__margin: var(--indent__base);
+    --checkout-sidebar__margin__xl: 46px;
+    --checkout-sidebar__columns: 4;
+}
 
 //
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .opc-sidebar {
-        .lib-css(margin, @checkout-sidebar__margin__xl 0 @checkout-sidebar__margin);
-        .lib-layout-column(2, 2, @checkout-sidebar__columns);
+        margin: var(--checkout-sidebar__margin__xl) 0 var(--checkout-sidebar__margin);
+        //.lib-layout-column(2, 2, var(--checkout-sidebar__columns));
     }
 }
