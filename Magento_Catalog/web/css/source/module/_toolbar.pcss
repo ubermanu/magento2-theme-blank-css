@@ -7,113 +7,113 @@
 //  Variables
 //  ---------------------------------------------
 
-@toolbar-mode-icon-font-size: 24px;
-@toolbar-element-background: @panel__background-color;
+:root {
+    --toolbar-mode-icon-font-size: 24px;
+    --toolbar-element-background: var(--panel__background-color);
+}
 
 //
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .page-products {
-        .columns {
-            position: relative;
-            z-index: 1;
-        }
+.page-products {
+    .columns {
+        position: relative;
+        z-index: 1;
     }
+}
 
-    .toolbar {
-        &:extend(.abs-add-clearfix all);
-    }
+.toolbar {
+    //&:extend(.abs-add-clearfix all);
+}
 
-    .toolbar-amount {
-        display: block;
-        line-height: @toolbar-mode-icon-font-size + 2;
-        margin: 0;
-        padding: 8px 0 0;
-        vertical-align: middle;
+.toolbar-amount {
+    display: block;
+    line-height: var(--toolbar-mode-icon-font-size) + 2;
+    margin: 0;
+    padding: 8px 0 0;
+    vertical-align: middle;
 
-        .products.wrapper ~ .toolbar & {
-            display: none;
-        }
-    }
-
-    .toolbar-products {
-        margin-bottom: @indent__xl;
-        padding: 0 @indent__s;
-        text-align: center;
-        &:extend(.abs-add-clearfix all);
-
-        .pages {
-            display: none;
-
-            .products.wrapper ~ & {
-                display: block;
-            }
-        }
-
-        .limiter {
-            .control {
-                display: inline-block;
-            }
-        }
-    }
-
-    .sorter {
-        padding: 4px 0 0;
-
-        .products.wrapper ~ .toolbar & {
-            display: none;
-        }
-
-        .sorter-action {
-            position: relative;
-            top: -2px;
-        }
-    }
-
-    .sorter-options {
-        margin: 0 0 0 7px;
-        width: auto;
-    }
-
-    .sorter-action {
-        vertical-align: top;
-        .lib-icon-font(
-            @icon-arrow-up,
-            @_icon-font-size: 28px,
-            @_icon-font-line-height: 32px,
-            @_icon-font-color: @header-icons-color,
-            @_icon-font-color-hover: @header-icons-color-hover,
-            @_icon-font-text-hide: true
-        );
-    }
-
-    .sorter {
-        .sort-desc {
-            &:before {
-                content: @icon-arrow-down;
-            }
-        }
-    }
-
-    .modes {
+    .products.wrapper ~ .toolbar & {
         display: none;
     }
+}
 
-    .limiter-options {
-        margin: 0 5px 0 7px;
-        width: auto;
-    }
+.toolbar-products {
+    margin-bottom: var(--indent__xl);
+    padding: 0 var(--indent__s);
+    text-align: center;
+    //&:extend(.abs-add-clearfix all);
 
-    .limiter-label {
-        font-weight: @font-weight__regular;
+    .pages {
+        display: none;
+
+        .products.wrapper ~ & {
+            display: block;
+        }
     }
 
     .limiter {
-        .page-products .toolbar & {
-            display: none;
+        .control {
+            display: inline-block;
         }
+    }
+}
+
+.sorter {
+    padding: 4px 0 0;
+
+    .products.wrapper ~ .toolbar & {
+        display: none;
+    }
+
+    .sorter-action {
+        position: relative;
+        top: -2px;
+    }
+}
+
+.sorter-options {
+    margin: 0 0 0 7px;
+    width: auto;
+}
+
+.sorter-action {
+    vertical-align: top;
+    //.lib-icon-font(
+    //    var(--icon-arrow-up),
+    //    @_icon-font-size: 28px,
+    //    @_icon-font-line-height: 32px,
+    //    @_icon-font-color: var(--header-icons-color),
+    //    @_icon-font-color-hover: var(--header-icons-color-hover),
+    //    @_icon-font-text-hide: true
+    //);
+}
+
+.sorter {
+    .sort-desc {
+        &:before {
+            content: var(--icon-arrow-down);
+        }
+    }
+}
+
+.modes {
+    display: none;
+}
+
+.limiter-options {
+    margin: 0 5px 0 7px;
+    width: auto;
+}
+
+.limiter-label {
+    font-weight: var(--font-weight__regular);
+}
+
+.limiter {
+    .page-products .toolbar & {
+        display: none;
     }
 }
 
@@ -121,7 +121,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .page-products {
         .columns {
             padding-top: 0;
@@ -147,7 +147,7 @@
     .modes {
         display: inline-block;
         float: left;
-        margin-right: @indent__base;
+        margin-right: var(--indent__base);
 
         .products.wrapper ~ .toolbar & {
             display: none;
@@ -155,45 +155,45 @@
     }
 
     .modes-label {
-        &:extend(.abs-visually-hidden-desktop all);
+        //&:extend(.abs-visually-hidden-desktop all);
     }
 
     .modes-mode {
-        .lib-css(color, @text__color__muted);
-        border: 1px solid @border-color__base;
+        color: var(--text__color__muted);
+        border: 1px solid var(--border-color__base);
         border-right: 0;
         float: left;
-        font-weight: @font-weight__regular;
+        font-weight: var(--font-weight__regular);
         line-height: 1;
         padding: 7px 10px;
         text-align: center;
 
         &:not(.active) {
             &:hover {
-                .lib-css(color, @text__color__muted);
-                background: darken(@toolbar-element-background, 7%);
+                color: var(--text__color__muted);
+                //background: darken(var(--toolbar-element-background), 7%);
             }
         }
 
         &:last-child {
-            border-right: 1px solid @border-color__base;
+            border-right: 1px solid var(--border-color__base);
         }
 
         &.active {
-            .lib-css(color, @primary__color__light);
+            color: var(--primary__color__light);
         }
 
-        .lib-icon-font(
-            @icon-grid,
-            @_icon-font-size: @toolbar-mode-icon-font-size,
-            @_icon-font-text-hide: true,
-            @_icon-font-color: @text__color__muted,
-            @_icon-font-color-hover: @text__color__muted
-        );
+        //.lib-icon-font(
+        //    var(--icon-grid),
+        //    var(--_icon-font-size): var(--toolbar-mode-icon-font-size),
+        //    var(--_icon-font-text-hide): true,
+        //    var(--_icon-font-color): var(--text__color__muted),
+        //    var(--_icon-font-color-hover): var(--text__color__muted)
+        //);
     }
 
     .mode-list {
-        .lib-icon-font-symbol(@icon-list);
+        //.lib-icon-font-symbol(var(--icon-list));
     }
 
     .toolbar {
