@@ -185,16 +185,8 @@ body {
     &._inner-scroll {
         overflow-y: visible;
 
-        .ie11 & {
-            overflow-y: auto;
-        }
-
         & .modal-inner-wrap {
             max-height: 90%;
-
-            .ie11 & {
-                max-height: none;
-            }
         }
 
         & .modal-content {
@@ -228,6 +220,16 @@ body {
 
     & .modal-footer-actions {
         text-align: right;
+    }
+}
+
+.ie11 .modal-popup {
+    &._inner-scroll {
+        overflow-y: auto;
+
+        & .modal-inner-wrap {
+            max-height: none;
+        }
     }
 }
 
