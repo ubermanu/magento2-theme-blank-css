@@ -1,0 +1,63 @@
+:root {
+    --popup-marker__size: 7px;
+}
+
+//  Popup working with dropdown dialog
+.ui-dialog {
+    &.popup {
+        .action {
+            &.close {
+                bottom: var(--popup-button-close__position-bottom);
+                left: var(--popup-button-close__position-left);
+                position: var(--popup-button-close__position);
+                height: 40px;
+                right: 0;
+                top: 0;
+                width: 40px;
+                z-index: 1001;
+                //.lib-popup-button-close-icon(
+                //@popup-button-close__icon,
+                //@popup-icon-font__content,
+                //@popup-icon-font,
+                //@popup-icon-font__size,
+                //@popup-icon-font__line-height,
+                //@popup-icon-font__color,
+                //@popup-icon-font__color-hover,
+                //@popup-icon-font__color-active,
+                //@popup-icon-font__margin,
+                //@popup-icon-font__vertical-align,
+                //@popup-icon-font__position,
+                //@popup-icon-font__text-hide
+                //);
+                //._lib-popup-button-close-reset(
+                //@popup-button-close__reset
+                //);
+            }
+        }
+    }
+}
+
+.popup-pointer {
+    //.lib-pointer(
+    //@_size: @popup-marker__size,
+    //@_background-color: @popup__background,
+    //@_border-color: @popup__border-color,
+    //@_position__vertical__value: 2px,
+    //@_position__horizontal__value: 2px
+    //);
+    margin-left: calc(-1 * var(--popup-marker__size) * 2);
+    position: absolute;
+    top: calc(-1 * var(--popup-marker__size) * 2);
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+@media (min-width: env(--screen__s)) {
+    .ui-dialog {
+        &.popup {
+            width: 420px;
+        }
+    }
+}
