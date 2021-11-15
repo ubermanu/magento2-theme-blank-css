@@ -1,20 +1,76 @@
-//  Using buttons mixins
-button,
-a.action.primary {
+button, a.action {
+    background-image: none; // Reset unusual Firefox-on-Android default style
+    background: var(--button__background);
+    border: var(--button__border);
+    color: var(--button__color);
+    cursor: var(--button__cursor);
+    display: var(--button__display);
+    font-family: var(--button__font-family);
+    font-weight: var(--button__font-weight);
+    margin: var(--button__margin);
+    padding: var(--button__padding);
+    font-size: var(--button__font-size);
+    line-height: var(--button__line-height);
+    box-sizing: border-box;
+    vertical-align: middle;
     border-radius: var(--button__border-radius);
-}
 
-button {
+    &:focus,
+    &:active {
+        background: var(--button__active__background);
+        border: var(--button__active__border);
+        color: var(--button__active__color);
+    }
+
     &:active {
         box-shadow: var(--button__shadow);
     }
+
+    &:hover {
+        background: var(--button__hover__background);
+        border: var(--button__hover__border);
+        color: var(--button__hover__color);
+    }
 }
 
-a.action.primary {
-    //.lib-link-as-button();
+button.disabled,
+button[disabled],
+fieldset[disabled] button {
+    opacity: var(--button__disabled__opacity);
+    cursor: default;
+    pointer-events: none;
 }
 
-.action.primary,
-.action-primary {
-    //.lib-button-primary();
+// Link as button
+a.action {
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
+}
+
+// Primary button
+.action.primary {
+    --button__background: var(--button-primary__background);
+    --button__border: var(--button-primary__border);
+    --button__color: var(--button-primary__color);
+    --button__font-family: var(--button-primary__font-family);
+    --button__font-weight: var(--button-primary__font-weight);
+    --button__margin: var(--button-primary__margin);
+    --button__padding: var(--button-primary__padding);
+    --button__font-size: var(--button-primary__font-size);
+    --button__line-height: var(--button-primary__line-height);
+
+    &:focus, &:active {
+        --button__active__background: var(--button-primary__active__background);
+        --button__active__border: var(--button-primary__active__border);
+        --button__active__color: var(--button-primary__active__color);
+    }
+
+    &:hover {
+        --button__hover__background: var(--button-primary__hover__background);
+        --button__hover__border: var(--button-primary__hover__border);
+        --button__hover__color: var(--button-primary__hover__color);
+    }
 }
