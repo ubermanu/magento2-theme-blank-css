@@ -16,6 +16,7 @@ module.exports = {
     plugins: [
         postcssImport(),
         postcssNesting({ allowDeclarationsAfterNestedRules: true }),
-        // postcssEnvFunction({ environmentVariables }),
+        // TODO: This does not work with the single line comments parser
+        // postcssEnvFunction({ importFrom: [{ environmentVariables }] }),
     ]
 }
