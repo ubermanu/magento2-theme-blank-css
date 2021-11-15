@@ -225,7 +225,7 @@
 
 .block {
     //&:extend(.abs-margin-for-blocks-and-widgets all);
-    & .column.main & {
+    .column.main & {
         &:last-child {
             margin-bottom: 0;
         }
@@ -236,7 +236,7 @@
 
         & strong {
             //.lib-heading(h4);
-            & .column.main & {
+            .column.main & {
                 font-size: var(--h3__font-size);
             }
         }
@@ -288,35 +288,35 @@
         z-index: -1;
     }
 
-    & .password-none & {
+    .password-none & {
         &:before {
             background-color: var(--_password-default);
             width: 100%;
         }
     }
 
-    & .password-weak & {
+    .password-weak & {
         &:before {
             background-color: var(--_password-weak);
             width: 25%;
         }
     }
 
-    & .password-medium & {
+    .password-medium & {
         &:before {
             background-color: var(--_password-medium);
             width: 50%;
         }
     }
 
-    & .password-strong & {
+    .password-strong & {
         &:before {
             background-color: var(--_password-strong);
             width: 75%;
         }
     }
 
-    & .password-very-strong & {
+    .password-very-strong & {
         &:before {
             background-color: var(--_password-very-strong);
             width: 100%;

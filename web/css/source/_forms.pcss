@@ -27,7 +27,7 @@
         }
 
         & .label {
-            & .column:not(.main) & {
+            .column:not(.main) & {
                 font-weight: normal;
             }
         }
@@ -115,7 +115,7 @@ select:focus ~ .tooltip .tooltip-content {
 }
 
 ._has-datepicker {
-    ~ .ui-datepicker-trigger {
+    & ~ .ui-datepicker-trigger {
         //.lib-button-reset();
         //.lib-icon-font(
         //@_icon-font-content: @icon-calendar,
@@ -168,7 +168,7 @@ select:focus ~ .tooltip .tooltip-content {
 //  _____________________________________________
 
 @media (min-width: env(--screen__m)) {
-    & .fieldset {
+    .fieldset {
         & .legend {
             //&:extend(.abs-margin-for-forms-desktop all);
         }

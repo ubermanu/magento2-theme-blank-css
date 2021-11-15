@@ -21,7 +21,7 @@
     padding: 8px 0 0;
     vertical-align: middle;
 
-    & .products.wrapper ~ .toolbar & {
+    .products.wrapper ~ .toolbar & {
         display: none;
     }
 }
@@ -35,7 +35,7 @@
     & .pages {
         display: none;
 
-        & .products.wrapper ~ & {
+        .products.wrapper ~ & {
             display: block;
         }
     }
@@ -50,7 +50,7 @@
 .sorter {
     padding: 4px 0 0;
 
-    & .products.wrapper ~ .toolbar & {
+    .products.wrapper ~ .toolbar & {
         display: none;
     }
 
@@ -99,7 +99,7 @@
 }
 
 .limiter {
-    & .page-products .toolbar & {
+    .page-products .toolbar & {
         display: none;
     }
 }
@@ -118,7 +118,7 @@
     }
 
     .toolbar {
-        & .products.wrapper ~ & .pages {
+        .products.wrapper ~ & .pages {
             float: left;
         }
     }
@@ -136,7 +136,7 @@
         float: left;
         margin-right: var(--indent__base);
 
-        & .products.wrapper ~ .toolbar & {
+        .products.wrapper ~ .toolbar & {
             display: none;
         }
     }
@@ -184,7 +184,7 @@
     }
 
     .toolbar {
-        & .products.wrapper ~ & .limiter {
+        .products.wrapper ~ & .limiter {
             display: block;
             float: right;
         }
