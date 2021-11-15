@@ -1,6 +1,9 @@
 # Magento 2 Blank
 
-This is a custom blank theme for Magento 2.4
+This is a custom blank theme for Magento 2.4.
+
+This theme uses PostCSS so we can access some new CSS features in our current browsers.<br>
+In the future everything could be converted to pure CSS.
 
 ### Variables
 
@@ -19,7 +22,7 @@ Might re-implement them later if necessary.
 ### Colors
 
 Color variations are handled using `rgba()`, this is a temporary fix tho.<br>
-The css property `filter` should make a better job at this. 
+The css property `filter` should make a better job at this.
 
 ### Font-size
 
