@@ -1,19 +1,78 @@
-.message.info {
-    //.lib-message-icon-inner(info);
+.message {
+    margin: var(--message__margin);
+    padding: var(--message__padding);
+    display: block;
+    color: var(--message__color);
+    font-size: var(--message__font-size);
+    font-family: var(--message__font-family);
+    font-weight: var(--message__font-weight);
+    font-style: var(--message__font-style);
+    line-height: var(--message__line-height);
+    border: var(--message__border-width) var(--message__border-style) var(--message__border-color);
+    border-radius: var(--message__border-radius);
+
+    // Links
+    & a {
+        color: var(--message-link__color);
+
+        &:hover {
+            color: var(--message-link__color-hover);
+        }
+
+        &:active {
+            color: var(--message-link__color-active);
+        }
+    }
+
+    // Icon
+    &:before {
+        content: var(--message-icon);
+        font-family: var(--icon-font);
+        font-size: var(--message-icon__font-size);
+        line-height: var(--message-icon__font-line-height);
+        padding-left: var(--message-icon__inner-padding-left);
+    }
 }
 
-.message.error {
-    //.lib-message-icon-inner(error);
-}
-
-.message.warning {
-    //.lib-message-icon-inner(warning);
-}
-
+//  Information message
+.message.info,
+.message.warning,
 .message.notice {
-    //.lib-message-icon-inner(notice);
+    --message__color: var(--color-brownie1);
+    --message__background: var(--color-yellow-light1);
+
+    --message-icon: var(--icon-warning);
+    --message-icon__color-inner: var(--color-brownie-light1);
+    --message-icon__color-lateral: var(--color-white);
+    --message-icon__background: var(--color-brownie1);
 }
 
+//  Error message
+.message.error {
+    --message__color: var(--error__color);
+    --message__background: var(--color-pink1);
+
+    --message-icon: var(--icon-warning);
+    --message-icon__color-inner: var(--color-red11);
+    --message-icon__color-lateral: var(--color-white);
+    --message-icon__background: var(--color-red11);
+    --message-icon__top: var(--message-icon__top);
+    --message-icon__right: var(--message-icon__right);
+    --message-icon__bottom: var(--message-icon__bottom);
+    --message-icon__left: var(--message-icon__left);
+}
+
+//  Success message
 .message.success {
-    //.lib-message-icon-inner(success);
+    --message__color: var(--color-dark-green1);
+    --message__background: var(--color-gray-light1);
+
+    --message-icon: var(--icon-checkmark);
+    --message-icon__color-inner: var(--color-dark-green1);
+    --message-icon__color-lateral: var(--color-white);
+    --message-icon__background: var(--color-dark-green1);
+    --message-icon__top: var(--message-icon__top);
+    --message-icon__right: var(--message-icon__right);
+    --message-icon__bottom: var(--message-icon__bottom);
+    --message-icon__left: var(--message-icon__left);
 }
