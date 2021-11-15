@@ -330,7 +330,7 @@
                     color: var(--navigation-level0-item__active__color);
                     text-decoration: var(--navigation-level0-item__active__text-decoration);
 
-                    span:not(.ui-menu-icon) {
+                    & span:not(.ui-menu-icon) {
                         margin-left: calc(-1 * var(--submenu-item__active__border));
                     }
                 }
@@ -366,8 +366,8 @@
                 top: auto !important;
                 transition: left .3s ease-out;
 
-                > li {
-                    > a {
+                & > li {
+                    & > a {
                         padding-left: var(--nav__indent-side);
                     }
 
