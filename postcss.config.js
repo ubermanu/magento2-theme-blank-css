@@ -1,4 +1,6 @@
+const postcssImport = require('postcss-import');
 const postcssEnvFunction = require('postcss-env-function');
+const postcssNesting = require('postcss-nesting')
 
 const environmentVariables = {
     '--screen__xxs': '320px',
@@ -10,7 +12,10 @@ const environmentVariables = {
 }
 
 module.exports = {
+    parser: require('postcss-comment'),
     plugins: [
-        postcssEnvFunction({ environmentVariables })
+        postcssImport(),
+        postcssNesting({ allowDeclarationsAfterNestedRules: true }),
+        // postcssEnvFunction({ environmentVariables }),
     ]
 }
