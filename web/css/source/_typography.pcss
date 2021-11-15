@@ -30,6 +30,271 @@
 //    @font-display: swap
 //);
 
+html {
+    font-size: var(--root__font-size);
+    font-size-adjust: 100%;
+}
+
+body {
+    color: var(--text__color);
+    font-family: var(--font-family__base);
+    font-style: var(--font-style__base);
+    font-weight: var(--font-weight__regular);
+    line-height: var(--line-height__base);
+    font-size: var(--font-size__base);
+}
+
+p {
+    margin-top: var(--p__margin-top);
+    margin-bottom: var(--p__margin-bottom);
+}
+
+//  Abbreviations and acronyms
+abbr[title] {
+    border-bottom: 1px dotted var(--abbr__border-color);
+    cursor: help;
+}
+
+b,
+strong {
+    font-weight: var(--font-weight__bold);
+}
+
+em,
+i {
+    font-style: var(--font-style__emphasis);
+}
+
+mark {
+    background: var(--mark__background-color);
+    color: var(--mark__color);
+}
+
+small,
+.small {
+    font-size: var(--font-size__s);
+}
+
+hr {
+    border: 0;
+    border-top: var(--hr__border-width) var(--hr__border-style) var(--hr__border-color);
+    margin-bottom: var(--line-height__computed);
+    margin-top: var(--line-height__computed);
+}
+
+sub,
+sup {
+    font-size: calc(var(--font-size__xs) / var(--font-size__base) * 100%);
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -.5em;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+dfn {
+    font-style: var(--font-style__emphasis);
+}
+
+//
+//  Headings
+//  ---------------------------------------------
+
+h1 {
+    //.lib-heading(h1);
+}
+
+h2 {
+    //.lib-heading(h2);
+}
+
+h3 {
+    //.lib-heading(h3);
+}
+
+h4 {
+    //.lib-heading(h4);
+}
+
+h5 {
+    //.lib-heading(h5);
+}
+
+h6 {
+    //.lib-heading(h6);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    & small,
+    & .small {
+        font-size: var(--heading__small-size);
+        color: var(--heading__small-color);
+        line-height: var(--heading__small-line-height);
+    }
+}
+
+//
+//  Links
+//  ---------------------------------------------
+
+a,
+.alink {
+    //.lib-link();
+}
+
+//
+//  Unordered and Ordered lists
+//  ---------------------------------------------
+
+ul,
+ol {
+    margin-top: var(--list__margin-top);
+    margin-bottom: var(--list__margin-bottom);
+
+    > li {
+        margin-top: var(--list-item__margin-top);
+        margin-bottom: var(--list-item__margin-bottom);
+    }
+
+    ul,
+    ol {
+        margin-bottom: 0;
+    }
+}
+
+dl {
+    margin-bottom: var(--dl__margin-bottom);
+    margin-top: var(--dl__margin-top);
+}
+
+dt {
+    font-weight: var(--dt__font-weight);
+    margin-bottom: var(--dt__margin-bottom);
+    margin-top: var(--dt__margin-top);
+}
+
+dd {
+    margin-bottom: var(--dd__margin-bottom);
+    margin-top: var(--dd__margin-top);
+    margin-left: 0;
+}
+
+//
+//  Code (inline and block)
+//  ---------------------------------------------
+
+code,
+kbd,
+pre,
+samp {
+    font-family: var(--font-family__monospace);
+}
+
+//  Inline code
+code {
+    background: var(--code__background-color);
+    color: var(--code__color);
+    padding: var(--code__padding);
+    font-size: var(--code__font-size);
+    white-space: nowrap;
+}
+
+//  User input typically entered via keyboard
+kbd {
+    background: var(--kbd__background-color);
+    color: var(--kbd__color);
+    padding: var(--code__padding);
+    font-size: var(--code__font-size);
+}
+
+//  Blocks of code
+pre {
+    background: var(--pre__background-color);
+    border: var(--pre__border-width) solid var(--pre__border-color);
+    color: var(--pre__color);
+    line-height: var(--line-height__base);
+    margin: 0 0 var(--indent__s);
+    padding: var(--indent__s);
+    font-size: var(--code__font-size);
+    display: block;
+    word-wrap: break-word;
+
+    code {
+        background-color: transparent;
+        border-radius: 0;
+        color: inherit;
+        font-size: inherit;
+        padding: 0;
+        white-space: pre-wrap;
+    }
+}
+
+//
+//  Blockquotes
+//  ---------------------------------------------
+
+blockquote {
+    border-left: var(--blockquote__border-width) solid var(--blockquote__border-color);
+    margin: var(--blockquote__margin);
+    padding: var(--blockquote__padding);
+    font-size: var(--blockquote__font-size);
+    font-style: var(--blockquote__font-style);
+
+    p,
+    ul,
+    ol {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    footer,
+    small,
+    .small {
+        color: var(--blockquote-small__color);
+        line-height: var(--line-height__base);
+        font-size: var(--blockquote-small__font-size);
+        display: block;
+
+        &:before {
+            content: var(--blockquote__content-before);
+        }
+    }
+
+    cite {
+        font-style: var(--cite__font-style);
+    }
+}
+
+//  Quotes
+blockquote {
+    &:before,
+    &:after {
+        content: '';
+    }
+}
+
+q {
+    quotes: none;
+
+    &:before,
+    &:after {
+        content: '';
+        content: none;
+    }
+}
+
+//  Undo browser default styling
+cite {
+    font-style: var(--cite__font-style);
+}
+
 //
 //  Desktop
 //  _____________________________________________
