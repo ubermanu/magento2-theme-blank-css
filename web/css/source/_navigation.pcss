@@ -1,5 +1,6 @@
 :root {
     --active-nav-indent: 54px;
+    --nav__indent-side: 15px;
 }
 
 .panel.header {
@@ -258,6 +259,172 @@
     }
 
     //.lib-main-navigation();
+    .navigation {
+        background: var(--navigation__background);
+        border: var(--navigation__border);
+        box-sizing: border-box;
+
+        & ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        & li {
+            margin: 0;
+        }
+
+        & a {
+            display: block;
+            padding: var(--submenu__padding-top) var(--submenu__padding-right) var(--submenu__padding-bottom) var(--submenu__padding-left);
+        }
+
+        & a,
+        & a:hover {
+            color: var(--navigation-level0-item__color);
+            text-decoration: var(--navigation-level0-item__text-decoration);
+        }
+
+        & .level0 {
+            border-top: var(--navigation-level0-item__border);
+            font-size: var(--navigation-level0-item__font-size);
+
+            & > .level-top {
+                background: var(--navigation-level0-item__background);
+                font-weight: var(--navigation-level0-item__font-weight);
+                line-height: var(--navigation-level0-item__line-height);
+                padding: var(--navigation-level0-item__padding);
+                text-transform: var(--navigation-level0-item__text-transform);
+                word-wrap: break-word;
+
+                &:hover {
+                    color: var(--navigation-level0-item__hover__color);
+                }
+            }
+
+            &.active {
+                & .all-category {
+                    & .ui-state-focus {
+                        background: var(--navigation-level0-item__active__background);
+                        border-color: var(--navigation-level0-item__active__border-color);
+                        border-style: var(--navigation-level0-item__active__border-style);
+                        border-width: var(--navigation-level0-item__active__border-width);
+                        color: var(--navigation-level0-item__active__color);
+                        padding-left: calc(var(--nav__indent-side) - var(--submenu-item__active__border));
+                        text-decoration: var(--navigation-level0-item__active__text-decoration);
+                        display: inline-block;
+                    }
+                }
+            }
+
+            & > .level1 {
+                font-weight: var(--font-weight__semibold);
+            }
+
+            &.active,
+            &.has-active { // ToDo UI: remove "has_active" here, when mobile navigation default open state is implemented
+                & > a:not(.ui-state-active) {
+                    background: var(--navigation-level0-item__active__background);
+                    border-color: var(--navigation-level0-item__active__border-color);
+                    border-style: var(--navigation-level0-item__active__border-style);
+                    border-width: var(--navigation-level0-item__active__border-width);
+                    color: var(--navigation-level0-item__active__color);
+                    text-decoration: var(--navigation-level0-item__active__text-decoration);
+
+                    span:not(.ui-menu-icon) {
+                        margin-left: calc(-1 * var(--submenu-item__active__border));
+                    }
+                }
+            }
+        }
+
+        & li.level0 {
+            &:last-child {
+                border-bottom: var(--navigation-level0-item__border);
+            }
+        }
+
+        & .submenu {
+            & > li {
+                word-wrap: break-word;
+                & > a {
+                    &:hover {
+                        color: var(--navigation-level0-item__hover__color);
+                    }
+                }
+            }
+
+            &:not(:first-child) {
+                background: var(--submenu__background);
+                border: var(--submenu__border);
+                font-size: var(--submenu__font-size);
+                font-weight: var(--submenu__font-weight);
+                line-height: var(--submenu-item__line-height);
+                left: auto !important;
+                overflow-x: hidden;
+                padding: 0;
+                position: relative;
+                top: auto !important;
+                transition: left .3s ease-out;
+
+                > li {
+                    > a {
+                        padding-left: var(--nav__indent-side);
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                & ul {
+                    display: block;
+                    padding-left: var(--submenu__padding-left);
+
+                    & > li {
+                        margin: 0;
+
+                        & a {
+                            background: var(--submenu-item__background);
+                            border: var(--submenu-item__border);
+                            color: var(--submenu-item__color);
+                            text-decoration: var(--submenu-item__text-decoration);
+                            display: block;
+                            line-height: normal;
+                            &:hover {
+                                color: var(--navigation-level0-item__hover__color);
+                            }
+                        }
+                    }
+                }
+
+                &.expanded {
+                    display: block !important;
+                    padding-right: 0;
+                    top: 0 !important;
+                }
+
+                & .active {
+                    & > a {
+                        background: var(--submenu-item__active__background);
+                        border-color: var(--submenu-item__active__border-color);
+                        border-style: var(--submenu-item__active__border-style);
+                        border-width: var(--submenu-item__active__border-width);
+                        color: var(--submenu-item__active__color);
+                        padding-left: calc(var(--nav__indent-side) - var(--submenu-item__active__border));
+                        text-decoration: var(--submenu-item__active__text-decoration);
+                    }
+                }
+
+                & .level1 {
+                    &.active {
+                        & > a {
+                            padding-left: calc(var(--nav__indent-side) - var(--submenu-item__active__border));
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 //
