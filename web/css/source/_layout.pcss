@@ -7,26 +7,26 @@
     //#lib-layout-columns();
 
     & .column.main {
-        //&:extend(.abs-add-box-sizing all);
+        box-sizing: border-box;
         padding-bottom: var(--indent__xl);
-        //.lib-vendor-prefix-flex-basis(auto);
-        //.lib-vendor-prefix-flex-grow(1);
-        //.lib-vendor-prefix-order(1);
+        flex-basis: auto;
+        flex-grow: 1;
+        order: 1;
         width: 100%;
     }
 
     & .sidebar-main {
-        //&:extend(.abs-add-box-sizing all);
-        //.lib-vendor-prefix-flex-grow(1);
-        //.lib-vendor-prefix-flex-basis(100%);
-        //.lib-vendor-prefix-order(1);
+        box-sizing: border-box;
+        flex-grow: 1;
+        flex-basis: 100%;
+        order: 1;
     }
 
     & .sidebar-additional {
-        //&:extend(.abs-add-box-sizing all);
-        //.lib-vendor-prefix-flex-grow(1);
-        //.lib-vendor-prefix-flex-basis(100%);
-        //.lib-vendor-prefix-order(2);
+        box-sizing: border-box;
+        flex-grow: 1;
+        flex-basis: 100%;
+        order: 2;
     }
 }
 
