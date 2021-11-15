@@ -215,13 +215,13 @@ ol {
     margin-top: var(--list__margin-top);
     margin-bottom: var(--list__margin-bottom);
 
-    > li {
+    & > li {
         margin-top: var(--list-item__margin-top);
         margin-bottom: var(--list-item__margin-bottom);
     }
 
-    ul,
-    ol {
+    & ul,
+    & ol {
         margin-bottom: 0;
     }
 }
@@ -283,7 +283,7 @@ pre {
     display: block;
     word-wrap: break-word;
 
-    code {
+    & code {
         background-color: transparent;
         border-radius: 0;
         color: inherit;
@@ -304,17 +304,17 @@ blockquote {
     font-size: var(--blockquote__font-size);
     font-style: var(--blockquote__font-style);
 
-    p,
-    ul,
-    ol {
+    & p,
+    & ul,
+    & ol {
         &:last-child {
             margin-bottom: 0;
         }
     }
 
-    footer,
-    small,
-    .small {
+    & footer,
+    & small,
+    & .small {
         color: var(--blockquote-small__color);
         line-height: var(--line-height__base);
         font-size: var(--blockquote-small__font-size);
@@ -325,7 +325,7 @@ blockquote {
         }
     }
 
-    cite {
+    & cite {
         font-style: var(--cite__font-style);
     }
 }
