@@ -1,6 +1,10 @@
 {
+  "scripts": {
+    "build": "postcss web/css/*.pcss --dir pub/static/frontend/Ubermanu/blank"
+  },
   "devDependencies": {
     "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2",
     "postcss-env-function": "^4.0.1"
   }
 }
