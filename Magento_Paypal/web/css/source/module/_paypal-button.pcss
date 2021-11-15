@@ -7,50 +7,47 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-
-    //  PayPal checkout button
-    .paypal {
-        &.after {
-            &:before {
-                content: '- ' attr(data-label) ' -';
-                display: block;
-                margin: @indent__xs @indent__xs @indent__s;
-                text-transform: uppercase;
-            }
-        }
-
-        &.before {
-            &:before {
-                content: '- ' attr(data-label) ' -';
-                display: block;
-                margin: @indent__s @indent__xs;
-                text-align: center;
-                text-transform: uppercase;
-            }
-        }
-
-        &.acceptance {
+//  PayPal checkout button
+.paypal {
+    &.after {
+        &:before {
+            content: '- ' attr(data-label) ' -';
             display: block;
-            margin: 0 0 @indent__base;
-
-            img {
-                max-width: 100%;
-            }
+            margin: var(--indent__xs) var(--indent__xs) var(--indent__s);
+            text-transform: uppercase;
         }
     }
 
-    .box-tocart,
-    .block-minicart {
-        .paypal img {
+    &.before {
+        &:before {
+            content: '- ' attr(data-label) ' -';
             display: block;
-            margin: 0 auto;
+            margin: var(--indent__s) var(--indent__xs);
+            text-align: center;
+            text-transform: uppercase;
         }
     }
 
-    .paypal-button-widget {
-        .paypal-button {
-            &:extend(.abs-action-button-as-link all);
+    &.acceptance {
+        display: block;
+        margin: 0 0 var(--indent__base);
+
+        img {
+            max-width: 100%;
         }
+    }
+}
+
+.box-tocart,
+.block-minicart {
+    .paypal img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.paypal-button-widget {
+    .paypal-button {
+        //&:extend(.abs-action-button-as-link all);
     }
 }

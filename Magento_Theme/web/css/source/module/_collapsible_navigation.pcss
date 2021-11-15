@@ -7,70 +7,65 @@
 //  Variables
 //  _____________________________________________
 
-@collapsible-nav-background: @sidebar__background-color;
-@collapsible-nav-color: @color-gray34;
-@collapsible-nav-current-border: 3px solid transparent;
-@collapsible-nav-current-border-color: @active__color;
-@collapsible-nav-current-color: @color-black;
-@collapsible-nav-current-font-weight: @font-weight__semibold;
-@collapsible-nav-delimiter__border-color: @color-gray82;
-@collapsible-nav-item-hover: @color-gray91;
+:root {
+    --collapsible-nav-background: var(--sidebar__background-color);
+    --collapsible-nav-color: var(--color-gray34);
+    --collapsible-nav-current-border: 3px solid transparent;
+    --collapsible-nav-current-border-color: var(--active__color);
+    --collapsible-nav-current-color: var(--color-black);
+    --collapsible-nav-current-font-weight: var(--font-weight__semibold);
+    --collapsible-nav-delimiter__border-color: var(--color-gray82);
+    --collapsible-nav-item-hover: var(--color-gray91);
+}
 
 //
-//  Common
-//  _____________________________________________
+//  Collapsible navigation
+//  -----------------------------------------
 
-& when (@media-common = true) {
-
-    //
-    //  Collapsible navigation
-    //  -----------------------------------------
-
-    .block-collapsible-nav {
-        .content {
-            .lib-css(background, @collapsible-nav-background);
-            padding: 15px 0;
+.block-collapsible-nav {
+    .content {
+        background: var(--collapsible-nav-background);
+        padding: 15px 0;
+    }
+    .item {
+        margin: 3px 0 0;
+        &:first-child {
+            margin-top: 0;
         }
-        .item {
-            margin: 3px 0 0;
-            &:first-child {
-                margin-top: 0;
-            }
 
+        a,
+        > strong {
+            border-left: 3px solid transparent;
+            color: var(--collapsible-nav-color);
+            display: block;
+            padding: 5px 18px 5px 15px;
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                background: var(--collapsible-nav-item-hover);
+            }
+        }
+
+        &.current {
             a,
             > strong {
-                border-left: 3px solid transparent;
-                .lib-css(color, @collapsible-nav-color);
-                display: block;
-                padding: 5px 18px 5px 15px;
+                border-color: var(--collapsible-nav-current-border-color);
+                color: var(--collapsible-nav-current-color);
+                font-weight: var(--collapsible-nav-current-font-weight);
             }
 
             a {
-                text-decoration: none;
-
-                &:hover {
-                    .lib-css(background, @collapsible-nav-item-hover);
-                }
+                border-color: var(--collapsible-nav-current-border-color);
             }
+        }
 
-            &.current {
-                a,
-                > strong {
-                    .lib-css(border-color, @collapsible-nav-current-border-color);
-                    .lib-css(color, @collapsible-nav-current-color);
-                    .lib-css(font-weight, @collapsible-nav-current-font-weight);
-                }
-
-                a {
-                    .lib-css(border-color, @collapsible-nav-current-border-color);
-                }
-            }
-
-            .delimiter {
-                border-top: 1px solid @collapsible-nav-delimiter__border-color;
-                display: block;
-                margin: @indent__s 1.8rem;
-            }
+        .delimiter {
+            border-top: 1px solid var(--collapsible-nav-delimiter__border-color);
+            display: block;
+            margin: var(--indent__s) 1.8rem;
         }
     }
 }
@@ -79,10 +74,10 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .block-collapsible-nav {
         .title {
-            &:extend(.abs-visually-hidden-desktop all);
+            //&:extend(.abs-visually-hidden-desktop all);
         }
     }
 }
@@ -91,7 +86,7 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+@media (max-width: env(--screen__m)) {
     .block-collapsible-nav {
         left: 0;
         position: absolute;
@@ -100,11 +95,11 @@
         z-index: 5;
 
         .title {
-            &:extend(.abs-toggling-title-mobile all);
+            //&:extend(.abs-toggling-title-mobile all);
         }
 
         .content {
-            border-bottom: @border-width__base solid @border-color__base;
+            border-bottom: var(--border-width__base) solid var(--border-color__base);
             display: none;
 
             &.active {

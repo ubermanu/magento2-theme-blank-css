@@ -7,29 +7,27 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
-    .form-add-invitations {
-        &:extend(.abs-add-fields all);
-        .action {
-            &.add {
-                .lib-button-icon(
-                    @_icon-font-content: @icon-expand,
-                    @_icon-font-text-hide: true,
-                    @_icon-font-size: 31px
-                );
-                line-height: normal;
-                padding: 2px 0;
-                width: auto;
-            }
+.form-add-invitations {
+    //&:extend(.abs-add-fields all);
+    .action {
+        &.add {
+            //.lib-button-icon(
+            //    var(--_icon-font-content): var(--icon-expand),
+            //    var(--_icon-font-text-hide): true,
+            //    var(--_icon-font-size): 31px
+            //);
+            line-height: normal;
+            padding: 2px 0;
+            width: auto;
         }
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+@media (max-width: env(--screen__m)) {
     .form-add-invitations {
         .additional,
         .field.text {
-            .lib-css(margin-top, @form-field__vertical-indent);
+            margin-top: var(--form-field__vertical-indent);
         }
     }
 }
@@ -38,12 +36,12 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: env(--screen__m)) {
     .form-add-invitations {
-        &:extend(.abs-add-fields-desktop all);
+        //&:extend(.abs-add-fields-desktop all);
         .additional,
         .field.text {
-            .lib-css(margin-top, @form-field__vertical-indent__desktop);
+            margin-top: var(--form-field__vertical-indent__desktop);
         }
     }
 

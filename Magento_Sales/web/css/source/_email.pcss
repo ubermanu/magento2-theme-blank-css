@@ -9,15 +9,15 @@
 
 .email-summary {
     h1 {
-        margin-bottom: @indent__xs;
+        margin-bottom: var(--indent__xs);
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+@media (max-width: env(--screen__xs)) {
     //  Shrink order number in order email so it will fit on single line on small screens
     .email-summary {
         h1 {
-            font-size: ceil(1.7 * @font-size__base) !important; // 24px
+            font-size: calc(1.7 * var(--font-size__base)) !important; // 24px
         }
     }
 }
@@ -32,7 +32,7 @@
     tr {
         > .address-details,
         > .method-info {
-            padding: @email-content__padding__base @email-content__padding__base @email-content__padding__base 0;
+            padding: var(--email-content__padding__base) var(--email-content__padding__base) var(--email-content__padding__base) 0;
             width: 50%;
 
             h3 {
@@ -43,16 +43,16 @@
         //  Prevent extra spacing on Payment & Shipping Method row
         & + .method-info {
             > td {
-                padding: 0 0 @email-content__padding__base;
+                padding: 0 0 var(--email-content__padding__base);
             }
         }
     }
 
     .payment-method {
-        margin-bottom: @indent__s;
+        margin-bottom: var(--indent__s);
 
         .title {
-            font-weight: @font-weight__regular;
+            font-weight: var(--font-weight__regular);
         }
 
         .data.table {
@@ -61,7 +61,7 @@
             }
 
             th {
-                padding-right: @email-content__padding__base;
+                padding-right: var(--email-content__padding__base);
             }
         }
     }
@@ -70,21 +70,21 @@
 //  Remove address and phone number link color on iOS
 .email-non-inline() {
     .address-details a {
-        &:extend(.no-link a);
+        //&:extend(.no-link a);
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+@media (max-width: env(--screen__xs)) {
     //  Stack columns
     .order-details {
         .address-details,
         .method-info {
             display: block;
-            padding: @email-content__padding__base 0 !important;
+            padding: var(--email-content__padding__base) 0 !important;
             width: auto !important;
 
             h3 {
-                margin-bottom: @indent__xs !important;
+                margin-bottom: var(--indent__xs) !important;
                 margin-top: 0 !important;
             }
         }
@@ -96,15 +96,15 @@
 //  ----------------------------------------------
 
 .shipment-track {
-    .lib-table(@table__width, 0);
+    //.lib-table(var(--table__width), 0);
 
     thead,
     tbody {
         > tr {
             > th,
             > td {
-                background-color: @color-gray95;
-                padding: @email-content__padding__base;
+                background-color: var(--color-gray95);
+                padding: var(--email-content__padding__base);
                 width: 50%;
             }
 
@@ -123,15 +123,15 @@
 //  ----------------------------------------------
 
 .email-items {
-    .lib-table(@table__width, 0);
-    border: @table__border-width @table__border-style @table__border-color;
+    .lib-table(var(--table__width), 0);
+    border: var(--table__border-width) var(--table__border-style) var(--table__border-color);
 
     thead,
     tfoot {
         > tr {
             > th,
             > td {
-                background-color: @color-gray95
+                background-color: var(--color-gray95)
             }
         }
     }
@@ -140,11 +140,11 @@
     > tbody {
         > tr {
             > th {
-                padding: @email-content__padding__base;
+                padding: var(--email-content__padding__base);
             }
 
             > td {
-                padding: @email-content__padding__base;
+                padding: var(--email-content__padding__base);
 
                 &.message-gift {
                     border-top: none;
@@ -159,7 +159,7 @@
         > tr {
             > th,
             > td {
-                border-top: @table__border-width @table__border-style @table__border-color;
+                border-top: var(--table__border-width) var(--table__border-style) var(--table__border-color);
             }
 
             & + tr {
@@ -176,18 +176,18 @@
     }
 
     .product-name {
-        font-weight: @font-weight__bold;
-        margin-bottom: @email-content__padding__s;
+        font-weight: var(--font-weight__bold);
+        margin-bottom: var(--email-content__padding__s);
     }
 
     .has-extra .sku {
-        margin-bottom: @email-content__padding__base;
+        margin-bottom: var(--email-content__padding__base);
     }
 
     .item-info {
         dl {
             margin-bottom: 0;
-            padding-left: @email-content__padding__m;
+            padding-left: var(--email-content__padding__m);
 
             dt,
             dd {
@@ -196,7 +196,7 @@
             }
 
             dd {
-                padding-left: @email-content__padding__base;
+                padding-left: var(--email-content__padding__base);
             }
         }
     }
@@ -217,12 +217,12 @@
     .order-totals {
         > tr {
             > th {
-                font-weight: @font-weight__regular;
+                font-weight: var(--font-weight__regular);
             }
 
             > th,
             > td {
-                padding: @email-content__padding__base;
+                padding: var(--email-content__padding__base);
                 text-align: right;
             }
 
@@ -240,8 +240,8 @@
     }
 }
 
-.email-non-inline() {
-    .email-items {
-        .lib-table-overflow();
-    }
-}
+//.email-non-inline() {
+//    .email-items {
+//        .lib-table-overflow();
+//    }
+//}
