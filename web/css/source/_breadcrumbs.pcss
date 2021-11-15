@@ -1,3 +1,65 @@
 .breadcrumbs {
-    //.lib-breadcrumbs();
+    margin: var(--breadcrumbs__container-margin);
+
+    & .items {
+        font-size: var(--breadcrumbs__font-size);
+        color: var(--breadcrumbs-current__color);
+
+        & > li {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+
+    & .item {
+        margin: 0;
+    }
+
+    & a {
+        background: var(--breadcrumbs-link__background);
+        border: var(--breadcrumbs-link__border);
+        color: var(--breadcrumbs-link__color);
+        display: var(--breadcrumbs__display);
+        padding: var(--breadcrumbs__padding);
+        text-decoration: var(--breadcrumbs-link__text-decoration);
+
+        &:visited {
+            background: var(--breadcrumbs-link__visited__background);
+            border: var(--breadcrumbs-link__visited__border);
+            color: var(--breadcrumbs-link__visited__color);
+            text-decoration: var(--breadcrumbs-link__visited__text-decoration);
+        }
+
+        &:hover {
+            background: var(--breadcrumbs-link__hover__background);
+            border: var(--breadcrumbs-link__hover__border);
+            color: var(--breadcrumbs-link__hover__color);
+            text-decoration: var(--breadcrumbs-link__hover__text-decoration);
+        }
+
+        &:active {
+            background: var(--breadcrumbs-link__active__background);
+            border: var(--breadcrumbs-link__active__border);
+            color: var(--breadcrumbs-link__active__color);
+            text-decoration: var(--breadcrumbs-link__active__text-decoration);
+        }
+    }
+
+    & strong {
+        background: var(--breadcrumbs-current__background);
+        border: var(--breadcrumbs-current__border);
+        display: var(--breadcrumbs__display);
+        font-weight: var(--breadcrumbs-current__font-weight);
+        padding: var(--breadcrumbs__padding);
+    }
+
+    // Use a character as separator
+    & .item:not(:last-child) {
+        &:after {
+            color: var(--breadcrumbs-separator__color);
+            content: var(--breadcrumbs-separator__symbol);
+        }
+    }
+
+    // TODO: Use font icon as a separating symbol
 }
