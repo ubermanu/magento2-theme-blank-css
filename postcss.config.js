@@ -1,6 +1,7 @@
+const postcssMagentoImport = require('postcss-magento-import');
 const postcssImport = require('postcss-import');
 const postcssEnvFunction = require('postcss-env-function');
-const postcssNesting = require('postcss-nesting')
+const postcssNesting = require('postcss-nesting');
 
 const environmentVariables = {
     '--screen__xxs': '320px',
@@ -14,6 +15,8 @@ const environmentVariables = {
 module.exports = {
     parser: require('postcss-comment'),
     plugins: [
+        // TODO: This does not work with the single line comments parser
+        // postcssMagentoImport({ phpConfigFile: '../../../../etc/config.php' }),
         postcssImport(),
         postcssNesting({ allowDeclarationsAfterNestedRules: true }),
         // TODO: This does not work with the single line comments parser
